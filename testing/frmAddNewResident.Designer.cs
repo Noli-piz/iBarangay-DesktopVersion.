@@ -51,18 +51,21 @@ namespace testing
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tbPhoneNo = new System.Windows.Forms.TextBox();
+            this.btnChooseFile = new System.Windows.Forms.Button();
+            this.tbContactNo = new System.Windows.Forms.TextBox();
             this.tbEmailAddress = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.cboCamera = new System.Windows.Forms.ComboBox();
             this.tbSname = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tbCedulaNo = new System.Windows.Forms.TextBox();
+            this.dtDateOfRgstrtn = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblProgress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +100,7 @@ namespace testing
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 387);
+            this.label1.Location = new System.Drawing.Point(31, 445);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 3;
@@ -106,7 +109,7 @@ namespace testing
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 462);
+            this.label2.Location = new System.Drawing.Point(28, 517);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 4;
@@ -115,31 +118,31 @@ namespace testing
             // tbFname
             // 
             this.tbFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFname.Location = new System.Drawing.Point(34, 418);
+            this.tbFname.Location = new System.Drawing.Point(31, 473);
             this.tbFname.Name = "tbFname";
-            this.tbFname.Size = new System.Drawing.Size(220, 30);
+            this.tbFname.Size = new System.Drawing.Size(236, 30);
             this.tbFname.TabIndex = 5;
             // 
             // tbMname
             // 
             this.tbMname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMname.Location = new System.Drawing.Point(31, 493);
+            this.tbMname.Location = new System.Drawing.Point(31, 548);
             this.tbMname.Name = "tbMname";
-            this.tbMname.Size = new System.Drawing.Size(220, 30);
+            this.tbMname.Size = new System.Drawing.Size(236, 30);
             this.tbMname.TabIndex = 6;
             // 
             // tbLname
             // 
             this.tbLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLname.Location = new System.Drawing.Point(31, 568);
+            this.tbLname.Location = new System.Drawing.Point(31, 613);
             this.tbLname.Name = "tbLname";
-            this.tbLname.Size = new System.Drawing.Size(220, 30);
+            this.tbLname.Size = new System.Drawing.Size(236, 30);
             this.tbLname.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 537);
+            this.label3.Location = new System.Drawing.Point(28, 585);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 7;
@@ -248,9 +251,9 @@ namespace testing
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(338, 561);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 17);
+            this.label10.Size = new System.Drawing.Size(82, 17);
             this.label10.TabIndex = 21;
-            this.label10.Text = "Phone No:";
+            this.label10.Text = "Contact No:";
             // 
             // label11
             // 
@@ -261,22 +264,23 @@ namespace testing
             this.label11.TabIndex = 22;
             this.label11.Text = "Email Address:";
             // 
-            // button3
+            // btnChooseFile
             // 
-            this.button3.Location = new System.Drawing.Point(34, 319);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 36);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Choose File";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnChooseFile.Location = new System.Drawing.Point(34, 319);
+            this.btnChooseFile.Name = "btnChooseFile";
+            this.btnChooseFile.Size = new System.Drawing.Size(108, 36);
+            this.btnChooseFile.TabIndex = 23;
+            this.btnChooseFile.Text = "Choose File";
+            this.btnChooseFile.UseVisualStyleBackColor = true;
+            this.btnChooseFile.Click += new System.EventHandler(this.button3_Click);
             // 
-            // tbPhoneNo
+            // tbContactNo
             // 
-            this.tbPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPhoneNo.Location = new System.Drawing.Point(338, 589);
-            this.tbPhoneNo.Name = "tbPhoneNo";
-            this.tbPhoneNo.Size = new System.Drawing.Size(239, 30);
-            this.tbPhoneNo.TabIndex = 24;
+            this.tbContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContactNo.Location = new System.Drawing.Point(338, 589);
+            this.tbContactNo.Name = "tbContactNo";
+            this.tbContactNo.Size = new System.Drawing.Size(239, 30);
+            this.tbContactNo.TabIndex = 24;
             // 
             // tbEmailAddress
             // 
@@ -288,7 +292,7 @@ namespace testing
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(478, 743);
+            this.btnSubmit.Location = new System.Drawing.Point(469, 802);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(108, 41);
             this.btnSubmit.TabIndex = 26;
@@ -296,23 +300,25 @@ namespace testing
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // button5
+            // btnCancel
             // 
-            this.button5.Location = new System.Drawing.Point(350, 743);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 41);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Cancel";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(341, 802);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(108, 41);
+            this.btnCancel.TabIndex = 27;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button6
+            // btnClear
             // 
-            this.button6.Location = new System.Drawing.Point(222, 743);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 41);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Clear";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(213, 802);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(108, 41);
+            this.btnClear.TabIndex = 28;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // dtBirthDate
             // 
@@ -335,15 +341,15 @@ namespace testing
             // tbSname
             // 
             this.tbSname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSname.Location = new System.Drawing.Point(34, 645);
+            this.tbSname.Location = new System.Drawing.Point(31, 682);
             this.tbSname.Name = "tbSname";
-            this.tbSname.Size = new System.Drawing.Size(220, 30);
+            this.tbSname.Size = new System.Drawing.Size(236, 30);
             this.tbSname.TabIndex = 32;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(31, 614);
+            this.label12.Location = new System.Drawing.Point(28, 654);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 17);
             this.label12.TabIndex = 31;
@@ -366,23 +372,52 @@ namespace testing
             this.tbCedulaNo.Size = new System.Drawing.Size(239, 30);
             this.tbCedulaNo.TabIndex = 34;
             // 
+            // dtDateOfRgstrtn
+            // 
+            this.dtDateOfRgstrtn.CustomFormat = "";
+            this.dtDateOfRgstrtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateOfRgstrtn.Location = new System.Drawing.Point(338, 729);
+            this.dtDateOfRgstrtn.Name = "dtDateOfRgstrtn";
+            this.dtDateOfRgstrtn.Size = new System.Drawing.Size(236, 30);
+            this.dtDateOfRgstrtn.TabIndex = 35;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(338, 703);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(134, 17);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Date of Registration";
+            // 
+            // lblProgress
+            // 
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Location = new System.Drawing.Point(139, 133);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(0, 17);
+            this.lblProgress.TabIndex = 37;
+            // 
             // frmAddNewResident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 796);
+            this.ClientSize = new System.Drawing.Size(647, 855);
+            this.Controls.Add(this.lblProgress);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.dtDateOfRgstrtn);
             this.Controls.Add(this.tbCedulaNo);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.tbSname);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cboCamera);
             this.Controls.Add(this.dtBirthDate);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbEmailAddress);
-            this.Controls.Add(this.tbPhoneNo);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.tbContactNo);
+            this.Controls.Add(this.btnChooseFile);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cbVoterStatus);
@@ -407,6 +442,7 @@ namespace testing
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmAddNewResident";
             this.Text = "frmAddNewResident";
+            this.Load += new System.EventHandler(this.frmAddNewResident_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -437,17 +473,20 @@ namespace testing
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox tbPhoneNo;
+        private System.Windows.Forms.Button btnChooseFile;
+        private System.Windows.Forms.TextBox tbContactNo;
         private System.Windows.Forms.TextBox tbEmailAddress;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.ComboBox cboCamera;
         private System.Windows.Forms.TextBox tbSname;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbCedulaNo;
+        private System.Windows.Forms.DateTimePicker dtDateOfRgstrtn;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblProgress;
     }
 }

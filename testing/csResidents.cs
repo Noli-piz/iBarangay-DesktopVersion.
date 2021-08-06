@@ -11,28 +11,87 @@ namespace testing
     {        
         public void InsertData()
         {
-            String query = "INSERT INTO tbl_residentinfo()";
+            try {
 
-            csConnection cs = new csConnection();
-            cs.conn.Open();
-            cs.command = new MySqlCommand("tbl_residentinfo", cs.conn);
-            cs.command.CommandType = System.Data.CommandType.StoredProcedure;
-            cs.command.Parameters.AddWithValue("Fname", Fname);
-            cs.command.Parameters.AddWithValue("Mname", Mname);
-            cs.command.Parameters.AddWithValue("Lname", Lname);
-            cs.command.Parameters.AddWithValue("Sname", Sname);
-            cs.command.Parameters.AddWithValue("BirthDate", BirthDate);
-            cs.command.Parameters.AddWithValue("BirthPlace", BirthPlace);
-            cs.command.Parameters.AddWithValue("CivilStatus", CivilStatus);
-            cs.command.Parameters.AddWithValue("Gender", Gender);
-            cs.command.Parameters.AddWithValue("Purok", Purok);
-            cs.command.Parameters.AddWithValue("VoterStatus", VoterStatus);
-            cs.command.Parameters.AddWithValue("CedulaNo", CedulaNo);
-            cs.command.Parameters.AddWithValue("PhoneNo", PhoneNo);
-            cs.command.Parameters.AddWithValue("EmailAddress", EmailAddress);
-            cs.command.ExecuteNonQuery();
-            
+                csConnection cs = new csConnection();
+
+                String table, query, value, finalquery;
+
+                table = "(Fname, Mname, Lname, Sname, Birthplace, Birthdate, CivilStatus, Gender, id_purok, VoterStatus, DateOfRegistration, ContactNo, CedulaNo, Email, Image)";
+                query = "(SELECT id_purok FROM tbl_purok WHERE Name = '" + Purok +"')";
+                value = Fname + "','" + Mname + "','" + Lname +"','"+ Sname +"','"+ BirthPlace +"','"+ BirthDate + "','" + CivilStatus +"','"+ Gender +"',"+ query +",'"+ VoterStatus + "','" + DateOfRegistration +"','"+ ContactNo + "','" + CedulaNo + "','" + Email + "','" + Image;
+                finalquery = "INSERT INTO "+ cs.DBname() +".tbl_residentinfo" + table + " VALUES('" + value + "');";
+
+
+                cs.conn.Open();
+                MySqlCommand cmd = new MySqlCommand(finalquery, cs.conn);
+                if (cmd.ExecuteNonQuery()==1)
+                {
+                    Message = "Successfully Added";
+                }
+                else
+                {
+                    Message = "Failed to Add";
+                }
+
+                cmd.Dispose();
+                cs.conn.Close();
+            }
+            catch (Exception e) {
+                Message = e.Message;
+            }
         }
+
+        public void UpdateData()
+        {
+            try
+            {
+                csConnection cs = new csConnection();
+                String query = "UPDATE ibarangaydb.tbl_residentinfo " +
+                               "SET columename1='', " +
+                               "WHERE id_resident =";
+                
+                
+                cs.conn.Open();
+                MySqlCommand command = new MySqlCommand(query, cs.conn);
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    Message = "Successfully Updated";
+                }
+                else
+                {
+                    Message = "Failed to Update";
+                }
+
+            }
+            catch (Exception e)
+            {
+                Message = e.Message;
+            }
+        }
+
+        public void ResetData()
+        {
+            Message = "";
+            Fname = "";
+            Mname = "";
+            Lname = "";
+            Sname = "";
+            BirthDate = "";
+            BirthPlace = "";
+            CivilStatus = "";
+            Gender = "";
+            Purok = "";
+            VoterStatus = "";
+            CedulaNo = "";
+            ContactNo = "";
+            Email = "";
+            DateOfRegistration = "";
+            Image = "";
+        }
+
+        public string Message { get; set; }
+
         public string Fname { get; set; }
 
         public string Mname { get; set; }
@@ -55,10 +114,13 @@ namespace testing
 
         public string CedulaNo { get; set; }
 
-        public string PhoneNo { get; set; }
+        public string ContactNo { get; set; }
 
-        public string EmailAddress { get; set; }
+        public string Email { get; set; }
 
+        public string DateOfRegistration { get; set; }
+
+        public string Image { get; set; }
 
     }
 }

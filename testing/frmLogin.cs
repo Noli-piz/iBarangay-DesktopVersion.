@@ -19,7 +19,43 @@ namespace testing
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (tbUsername.Text == null || tbUsername.Text == "")
+            {
+                MessageBox.Show("Username is Empty!");
+            }
+            else if (tbPassword.Text == null || tbPassword.Text == "")
+            {
+                MessageBox.Show("Password is Empty!");
+            }
+            else
+            {
+                Login();
+            }
+        }
 
+        private void Login()
+        {
+            csLogin log = new csLogin();
+            log.Login(tbUsername.Text, tbPassword.Text);
+            MessageBox.Show(log.Message);
+
+            if (log.GetReady() == log.GetUtype1())
+            {
+                log.Reset();
+                this.Hide();
+                var frm = new frmMenuAdmin();
+                frm.Closed += (s, args) => this.Close();
+                frm.Show();
+            }
+            else if (log.GetReady() == log.GetUtype2())
+            {
+                log.Reset();
+                this.Hide();
+                var frm = new frmMenu();
+                frm.Closed += (s, args) => this.Close();
+                frm.Show();
+            }
+            else { }
         }
     }
 }

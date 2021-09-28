@@ -30,15 +30,15 @@ namespace testing
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnResident = new System.Windows.Forms.Button();
+            this.btnBlotter = new System.Windows.Forms.Button();
+            this.btnIssue = new System.Windows.Forms.Button();
+            this.btnRequest = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnMain = new System.Windows.Forms.Button();
+            this.btnMisService = new System.Windows.Forms.Button();
+            this.tbnAppointment = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,59 +46,61 @@ namespace testing
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(284, -2);
+            this.panel1.Location = new System.Drawing.Point(241, -2);
+            this.panel1.MaximumSize = new System.Drawing.Size(1628, 1021);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1512, 1021);
+            this.panel1.Size = new System.Drawing.Size(1587, 1021);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.Location = new System.Drawing.Point(84, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 55);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Dashboard";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHome.Location = new System.Drawing.Point(32, 234);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(203, 55);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button2
+            // btnResident
             // 
-            this.button2.Location = new System.Drawing.Point(84, 308);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 55);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Resident Records";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnResident.Location = new System.Drawing.Point(32, 309);
+            this.btnResident.Name = "btnResident";
+            this.btnResident.Size = new System.Drawing.Size(203, 55);
+            this.btnResident.TabIndex = 4;
+            this.btnResident.Text = "Resident Records";
+            this.btnResident.UseVisualStyleBackColor = true;
+            this.btnResident.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnBlotter
             // 
-            this.button3.Location = new System.Drawing.Point(84, 384);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 55);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Blotter Records";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBlotter.Location = new System.Drawing.Point(32, 385);
+            this.btnBlotter.Name = "btnBlotter";
+            this.btnBlotter.Size = new System.Drawing.Size(203, 55);
+            this.btnBlotter.TabIndex = 5;
+            this.btnBlotter.Text = "Blotter Records";
+            this.btnBlotter.UseVisualStyleBackColor = true;
+            this.btnBlotter.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnIssue
             // 
-            this.button4.Location = new System.Drawing.Point(84, 464);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(203, 55);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Issue Certificate";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnIssue.Location = new System.Drawing.Point(32, 465);
+            this.btnIssue.Name = "btnIssue";
+            this.btnIssue.Size = new System.Drawing.Size(203, 55);
+            this.btnIssue.TabIndex = 6;
+            this.btnIssue.Text = "Issue Certificate";
+            this.btnIssue.UseVisualStyleBackColor = true;
+            this.btnIssue.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnRequest
             // 
-            this.button5.Location = new System.Drawing.Point(84, 540);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(203, 55);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Barangay Official List";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnRequest.Location = new System.Drawing.Point(32, 541);
+            this.btnRequest.Name = "btnRequest";
+            this.btnRequest.Size = new System.Drawing.Size(203, 55);
+            this.btnRequest.TabIndex = 7;
+            this.btnRequest.Text = "Request Module";
+            this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // pictureBox2
             // 
@@ -106,9 +108,9 @@ namespace testing
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::testing.Properties.Resources._1024px_Sangguniang_Kabataan_logo_svg;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 191);
+            this.pictureBox2.Size = new System.Drawing.Size(155, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -118,57 +120,60 @@ namespace testing
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 1021);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 1021);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button6
+            // btnMisService
             // 
-            this.button6.Location = new System.Drawing.Point(84, 616);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(203, 55);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Appointment";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnMisService.Location = new System.Drawing.Point(32, 617);
+            this.btnMisService.Name = "btnMisService";
+            this.btnMisService.Size = new System.Drawing.Size(203, 55);
+            this.btnMisService.TabIndex = 8;
+            this.btnMisService.Text = "Miscellaneous Services";
+            this.btnMisService.UseVisualStyleBackColor = true;
+            this.btnMisService.Click += new System.EventHandler(this.btnMisService_Click);
             // 
-            // btnMain
+            // tbnAppointment
             // 
-            this.btnMain.Location = new System.Drawing.Point(84, 693);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(203, 55);
-            this.btnMain.TabIndex = 9;
-            this.btnMain.Text = "Maintenance";
-            this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            this.tbnAppointment.Location = new System.Drawing.Point(32, 694);
+            this.tbnAppointment.Name = "tbnAppointment";
+            this.tbnAppointment.Size = new System.Drawing.Size(203, 55);
+            this.tbnAppointment.TabIndex = 9;
+            this.tbnAppointment.Text = "Appointment";
+            this.tbnAppointment.UseVisualStyleBackColor = true;
+            this.tbnAppointment.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(84, 769);
+            this.button8.Location = new System.Drawing.Point(32, 770);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(203, 55);
             this.button8.TabIndex = 10;
             this.button8.Text = "Logout";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1797, 1021);
+            this.ClientSize = new System.Drawing.Size(1835, 1021);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.btnMain);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbnAppointment);
+            this.Controls.Add(this.btnMisService);
+            this.Controls.Add(this.btnRequest);
+            this.Controls.Add(this.btnIssue);
+            this.Controls.Add(this.btnBlotter);
+            this.Controls.Add(this.btnResident);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -182,13 +187,13 @@ namespace testing
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnMain;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnResident;
+        private System.Windows.Forms.Button btnBlotter;
+        private System.Windows.Forms.Button btnIssue;
+        private System.Windows.Forms.Button btnRequest;
+        private System.Windows.Forms.Button btnMisService;
+        private System.Windows.Forms.Button tbnAppointment;
         private System.Windows.Forms.Button button8;
     }
 }

@@ -98,9 +98,16 @@ namespace testing
             {
                 if (e.ColumnIndex == 6)
                 {
-                    MessageBox.Show(ID[e.RowIndex].ToString());
+                    csResidents res = new csResidents();
+                    res.GetID(ID[e.RowIndex].ToString());
+
+                    frmUpdateResident frm = new frmUpdateResident();
+                    frm.ShowDialog(this);
+
+                    RetrieveData();
                 }
-            }catch(Exception ex){
+            }
+            catch(Exception ex){
                 MessageBox.Show(ex.Message);
             }
         }

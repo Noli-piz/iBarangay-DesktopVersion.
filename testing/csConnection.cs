@@ -12,12 +12,12 @@ namespace testing
 
         public MySqlConnection conn;
         public MySqlCommand command;
-        private string newDBname = "sql6428094", oldDBname = "ibarangaydb";
+        private string newDBname = "sql6439916", oldDBname = "ibarangaydb";
 
         public csConnection()
         {
             String connection = "server=localhost;port=3306;username=root;password=;database=ibarangaydb;sslmode=none";
-            String connection2 = "server=sql6.freemysqlhosting.net;port=3306;username=sql6428094;password=ZWQtrHpqH6;database=sql6428094;sslmode=none";
+            String connection2 = "server=sql6.freemysqlhosting.net;port=3306;username=sql6439916;password=pU3V3LZ6vd;database=sql6439916;sslmode=none";
             conn = new MySqlConnection(connection);
         }
 

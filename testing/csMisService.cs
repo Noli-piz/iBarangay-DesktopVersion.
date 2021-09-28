@@ -14,7 +14,7 @@ namespace testing
             try
             {
                 csConnection cs = new csConnection();
-                String query = "SELECT i.ItemName , ser.Quantity, ser.Purpose, ser.DateOfRequest, ser.Deadline, ser.Status, d.Options FROM tbl_misservices AS ser " +
+                String query = "SELECT i.ItemName , ser.Quantity, ser.Purpose, ser.DateOfRequest, DATE_FORMAT(ser.Deadline, \" %Y %m %d\"), ser.Status, d.Options FROM tbl_misservices AS ser " +
                     "INNER JOIN tbl_items AS i ON i.id_items = ser.id_items " +
                     "INNER JOIN tbl_deliveryoption AS d ON d.id_deliveryoption = ser.id_deliveryoption " +
                     "WHERE ser.id_misservices = '"+ ID +"'";

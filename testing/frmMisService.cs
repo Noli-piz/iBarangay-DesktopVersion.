@@ -55,7 +55,7 @@ namespace testing
             try
             {
                 csConnection cs = new csConnection();
-                String query = "SELECT ser.id_misservices, res.Fname, res.Mname, res.Lname, res.Sname, res.Birthdate, res.VoterStatus, i.ItemName , ser.Quantity, ser.DateOfRequest, ser.Status, ser.Deadline FROM tbl_misservices AS ser " +
+                String query = "SELECT ser.id_misservices, res.Fname, res.Mname, res.Lname, res.Sname, res.Birthdate, res.VoterStatus, i.ItemName , ser.Quantity, ser.DateOfRequest, ser.Status, DATE_FORMAT(ser.Deadline, \" %Y %m %d\") FROM tbl_misservices AS ser " +
                     "INNER JOIN tbl_account AS a ON a.id_account = ser.id_account " +
                     "INNER JOIN tbl_residentinfo AS res ON res.id_resident = a.id_resident " +
                     "INNER JOIN tbl_items AS i ON i.id_items = ser.id_items";

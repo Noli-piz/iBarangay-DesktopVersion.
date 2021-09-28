@@ -1,0 +1,226 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace testing
+{
+    public partial class frmBlotterRec3 : Form
+    {
+        private csConnection cs = new csConnection();
+        private csBlotter blot = new csBlotter();
+        private ArrayList arraySuggest;
+
+        public frmBlotterRec3()
+        {
+            InitializeComponent();
+        }
+
+        private void frmBlotterRec3_Load(object sender, EventArgs e)
+        {
+            mnpltDataGrid();
+            loadData("");
+            SelectedAssailant();
+        }
+
+        private void tbSearch1_TextChanged(object sender, EventArgs e)
+        {
+            String query, text = tbSearch1.Text.Trim();
+            query = " WHERE CONCAT_WS(' ', Fname, Mname, Lname) LIKE '%" + text + "%'";
+            data1.Rows.Clear();
+            loadData(query);
+        }
+
+        private void mnpltDataGrid()
+        {
+            ID.Clear();
+            data1.Rows.Clear();
+            data1.Columns.Clear();
+            data1.Visible = false;
+
+            data1.Columns.Add("no", "No.");
+            data1.Columns.Add("flname", "Fullname");
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Text = "Add";
+            btn.UseColumnTextForButtonValue = true;
+            data1.Columns.Add(btn);
+
+
+        }
+
+        List<string> ID = new List<string>();
+        private void loadData(String q)
+        {
+            try
+            {
+                csConnection cs = new csConnection();
+                String query = "SELECT id_resident, Fname,Mname, Lname, Sname FROM tbl_residentinfo "+q;
+
+                cs.conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(query, cs.conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                ArrayList AL = new ArrayList();
+                int count = 1;
+                while (rdr.Read())
+                {
+                    ID.Add(rdr[0].ToString());
+
+                    AL = new ArrayList();
+                    AL.Add(count.ToString());
+                    AL.Add(rdr[1].ToString() +" "+ rdr[2].ToString() +" "+rdr[3].ToString() +" "+rdr[4].ToString());
+                    data1.Rows.Add(AL.ToArray());
+                    count++;
+                }
+                rdr.Close();
+                cmd.Dispose();
+                cs.conn.Close();
+
+
+                data1.AutoResizeColumns();
+                data1.AutoResizeRows();
+
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                data1.Visible = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void btnGenerate_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 2)
+                {
+                    String fname = data1.Rows[e.RowIndex].Cells[1].Value.ToString(); 
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to add " + fname + "?", "Add", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        AssailantRes assres = new AssailantRes();
+                        assres.id = Int32.Parse(ID[e.RowIndex].ToString());
+                        assres.name = fname;
+
+                        bool exist = false;
+                        foreach (var str in blot.GetArrAssailant())
+                        {
+                            if (str.id == assres.id && str.name == assres.name)
+                            {
+                                MessageBox.Show("This Person is already Exist!");
+                                exist = true;
+                                break;
+                            }
+                        }
+
+                        if (exist == false)
+                        {
+                            blot.AddAssailant(assres);
+                            SelectedAssailant();
+                        }
+                    }
+                }
+            }
+            catch (ArgumentOutOfRangeException outOfRange)
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btnOkay_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            AssailantRes assres = new AssailantRes();
+            assres.id = 0;
+            assres.name = tbEnterName.Text;
+
+            bool exist = false;
+            foreach (var str in blot.GetArrAssailant())
+            {
+                if (str.id == assres.id && str.name == assres.name)
+                {
+                    MessageBox.Show("This Person is already Exist!");
+                    exist = true;
+                    break;
+                }
+            }
+
+            if (exist == false) {
+                blot.AddAssailant(assres);
+                SelectedAssailant(); 
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            Button btnRem = (Button)sender;
+            int strID = Int32.Parse(btnRem.Tag.ToString());
+            String strName = btnRem.Name;
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove "+strName+"?", "Remove", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                blot.RemoveAssailant(new AssailantRes() { id = strID, name = strName });
+                SelectedAssailant();
+            }
+        }
+
+        private void SelectedAssailant()
+        {
+
+            boxpanel.Controls.Clear();
+            boxpanel.RowCount = blot.GetArrAssailant().Count;
+            int x = 0;
+            foreach (var str in blot.GetArrAssailant())
+            {
+                TableLayoutPanel p = new TableLayoutPanel();
+                p.ColumnCount = 2;
+                p.Dock = DockStyle.Fill;
+                p.Height = 40;
+                p.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+                p.Visible = true;
+
+                Label l = new Label();
+                l.Text = str.name.ToString();
+                l.Margin = new Padding(5, 5, 5, 10);
+                l.Visible = true;
+
+                Button btn = new Button();
+                btn.Text = "Remove";
+                btn.Tag = str.id.ToString();
+                btn.Name = str.name.ToString();
+                btn.Margin = new Padding(5, 5, 5, 10);
+                btn.AutoSize = true;
+                btn.Visible = true;
+                btn.Click += new EventHandler(btnRemove_Click);
+
+                p.Controls.Add(l);
+                p.Controls.Add(btn);
+                boxpanel.Controls.Add(p);
+            }
+        }
+    }
+}

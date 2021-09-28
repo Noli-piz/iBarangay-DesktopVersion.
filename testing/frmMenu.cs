@@ -18,9 +18,14 @@ namespace testing
             InitializeComponent();
         }
 
-        private void ClearPanel()
+        private void frmMenu_Load(object sender, EventArgs e)
         {
-            this.panel1.Controls.Clear();
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,85 +49,27 @@ namespace testing
 
         private void button4_Click(object sender, EventArgs e)
         {
-            btnClearance(sender, e);
-        }
-
-        private void btnClearance(object sender, EventArgs e)
-        {
             ClearPanel();
-
-            Label lblclearance = new Label();
-            lblclearance.Text = "Clearance";
-            lblclearance.AutoSize = true;
-            lblclearance.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
-            lblclearance.Location = new System.Drawing.Point(10, 10);
-            lblclearance.Click += new EventHandler(btnClearance);
-            panel1.Controls.Add(lblclearance);
-
-            Label lblindigency = new Label();
-            lblindigency.Text = "Indigency";
-            lblindigency.AutoSize = true;
-            lblindigency.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Regular);
-            lblindigency.Click += new EventHandler(btnIndigency);
-            lblindigency.Location = new System.Drawing.Point(180, 10);
-            panel1.Controls.Add(lblindigency);
-            
-            
-            frmIssueBrgyClearance frm = new frmIssueBrgyClearance() { Location = new System.Drawing.Point(0, 40), TopLevel = false, TopMost = false };
+            frmIssuance frm = new frmIssuance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
 
         }
-        private void btnIndigency(object sender, EventArgs e)
+
+
+
+        private void btnRequest_Click(object sender, EventArgs e)
         {
             ClearPanel();
-
-            Label lblclearance = new Label();
-            lblclearance.Text = "Clearance";
-            lblclearance.AutoSize = true;
-            lblclearance.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Regular);
-            lblclearance.Location = new System.Drawing.Point(10, 10);
-            lblclearance.Click += new EventHandler(btnClearance);
-            panel1.Controls.Add(lblclearance);
-
-            Label lblindigency = new Label();
-            lblindigency.Text = "Indigency";
-            lblindigency.AutoSize = true;
-            lblindigency.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
-            lblindigency.Click += new EventHandler(btnIndigency);
-            lblindigency.Location = new System.Drawing.Point(180, 10);
-            panel1.Controls.Add(lblindigency);
-
-            frmIssueBrgyIndigency frm = new frmIssueBrgyIndigency() { Location = new System.Drawing.Point(0, 40), TopLevel = false, TopMost = false };
+            frmRequest frm = new frmRequest() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void btnMisService_Click(object sender, EventArgs e)
         {
             ClearPanel();
-
-            frmAppointment frm = new frmAppointment() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.panel1.Controls.Add(frm);
-            frm.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ClearPanel();
-
-            frmBrgyOfficialList frm = new frmBrgyOfficialList() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmMisService frm = new frmMisService() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
@@ -130,10 +77,29 @@ namespace testing
         private void btnMain_Click(object sender, EventArgs e)
         {
             ClearPanel();
-
-            frmMaintenance frm = new frmMaintenance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmAppointment frm = new frmAppointment() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
         }
+
+        
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you to logout?", "Logout", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin frm = new frmLogin();
+                frm.Closed += (s, args) => this.Close();
+                frm.Show();
+            }
+        }
+
+        private void ClearPanel()
+        {
+            this.panel1.Controls.Clear();
+        }
+
+
     }
 }

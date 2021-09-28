@@ -1,7 +1,7 @@
 ﻿
 namespace testing
 {
-    partial class frmAddNewBlotter
+    partial class frmBlotterRec2
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,8 @@ namespace testing
             this.btnAddAssailant = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.tbWitness = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.data1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
             // rbDetails
@@ -65,11 +66,15 @@ namespace testing
             // dtTime
             // 
             this.dtTime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTime.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtTime.Location = new System.Drawing.Point(647, 214);
             this.dtTime.Name = "dtTime";
+            this.dtTime.ShowUpDown = true;
             this.dtTime.Size = new System.Drawing.Size(238, 30);
             this.dtTime.TabIndex = 38;
+            this.dtTime.Value = new System.DateTime(2021, 8, 11, 16, 36, 0, 0);
             // 
             // dtDate
             // 
@@ -79,6 +84,7 @@ namespace testing
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(238, 30);
             this.dtDate.TabIndex = 37;
+            this.dtDate.Value = new System.DateTime(2021, 8, 12, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -210,6 +216,7 @@ namespace testing
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -219,6 +226,7 @@ namespace testing
             this.btnSubmit.TabIndex = 21;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label1
             // 
@@ -238,6 +246,7 @@ namespace testing
             this.btnAddAssailant.TabIndex = 40;
             this.btnAddAssailant.Text = "Add Assailant";
             this.btnAddAssailant.UseVisualStyleBackColor = true;
+            this.btnAddAssailant.Click += new System.EventHandler(this.btnAddAssailant_Click);
             // 
             // label10
             // 
@@ -257,20 +266,27 @@ namespace testing
             this.tbWitness.Size = new System.Drawing.Size(238, 30);
             this.tbWitness.TabIndex = 42;
             // 
-            // panel1
+            // data1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(199, 130);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 111);
-            this.panel1.TabIndex = 43;
+            this.data1.AllowUserToAddRows = false;
+            this.data1.AllowUserToDeleteRows = false;
+            this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data1.Location = new System.Drawing.Point(199, 121);
+            this.data1.MultiSelect = false;
+            this.data1.Name = "data1";
+            this.data1.ReadOnly = true;
+            this.data1.RowHeadersVisible = false;
+            this.data1.RowHeadersWidth = 51;
+            this.data1.RowTemplate.Height = 24;
+            this.data1.Size = new System.Drawing.Size(240, 123);
+            this.data1.TabIndex = 43;
             // 
-            // frmAddNewBlotter
+            // frmBlotterRec2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 613);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(946, 613);
+            this.Controls.Add(this.data1);
             this.Controls.Add(this.tbWitness);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnAddAssailant);
@@ -293,9 +309,10 @@ namespace testing
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label1);
-            this.Name = "frmAddNewBlotter";
+            this.Name = "frmBlotterRec2";
             this.Text = "frmAddNewBlotter";
             this.Load += new System.EventHandler(this.frmAddNewBlotter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +342,6 @@ namespace testing
         private System.Windows.Forms.Button btnAddAssailant;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbWitness;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView data1;
     }
 }

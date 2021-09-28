@@ -21,8 +21,8 @@ namespace testing
 
         private void frmRequest2_Load(object sender, EventArgs e)
         {
-            LoadData();
             LoadComboBoxes();
+            LoadData();
         }
 
         private void LoadData()
@@ -33,6 +33,7 @@ namespace testing
             rbPurpose.Text = cs.Purpose;
             lblCurrentStatus.Text = cs.CurrentStatus;
             lblDeliveryOption.Text = cs.DeliveryOption;
+            cbStatus.Text = cs.CurrentStatus;
         }
 
         private void LoadComboBoxes()

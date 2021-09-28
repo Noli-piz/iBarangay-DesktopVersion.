@@ -21,8 +21,8 @@ namespace testing
 
         private void frmMisService2_Load(object sender, EventArgs e)
         {
-            LoadData();
             LoadComboBoxes();
+            LoadData();
         }
 
         private void LoadData()
@@ -34,6 +34,7 @@ namespace testing
             lblCurrentStatus.Text = ser.Status;
             lblDeliveryOption.Text = ser.deliveryOption;
             lblQuantity.Text = ser.Quantity;
+            cbStatus.Text = ser.Status;
         }
 
         private void LoadComboBoxes()

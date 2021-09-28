@@ -16,7 +16,7 @@ namespace testing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMisService());
+            Application.Run(new frmAppointment());
         }
     }
 }

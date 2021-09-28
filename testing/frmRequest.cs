@@ -55,7 +55,7 @@ namespace testing
             try
             {
                 csConnection cs = new csConnection();
-                String query = "SELECT req.id_request ,res.Fname, res.Mname, res.Lname, res.Sname ,res.Birthdate ,res.Gender, res.VoterStatus, (SELECT COUNT(id_assailant_resident) FROM tbl_assailantresident WHERE id_resident =res.id_resident ) AS Blotter ,cer.Types , req.DateOfRequest, req.Status " +
+                String query = "SELECT req.id_request ,res.Fname, res.Mname, res.Lname, res.Sname ,res.Birthdate ,res.Gender, res.VoterStatus, (SELECT COUNT(id_assailant_resident) FROM tbl_assailantresident WHERE id_resident =res.id_resident AND Deleted =0) AS Blotter ,cer.Types , req.DateOfRequest, req.Status " +
                     "FROM tbl_request AS req " +
                     "INNER JOIN tbl_account AS a ON a.id_account = req.id_account " +
                     "INNER JOIN tbl_residentinfo AS res ON res.id_resident = a.id_resident " +
@@ -94,7 +94,7 @@ namespace testing
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.ToString());
+                MessageBox.Show(ex.Message );
             }
         }
 

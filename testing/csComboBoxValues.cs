@@ -155,5 +155,101 @@ namespace testing
             return ArrStatusService;
         }
 
+
+        /// For Form Announcement
+        private static ArrayList ArrLevel;
+
+        public void RetrieveArrLevel()
+        {
+            try
+            {
+                csConnection cs = new csConnection();
+                String query = "SELECT LevelName FROM tbl_alertlevel";
+                cs.conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(query, cs.conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                ArrLevel = new ArrayList();
+                while (rdr.Read())
+                {
+                    ArrLevel.Add(rdr[0].ToString());
+                }
+                rdr.Close();
+                cmd.Dispose();
+                cs.conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public ArrayList GetArrLevel()
+        {
+            return ArrLevel;
+        }
+
+
+        /// For Form User Management
+        /// 
+        private static ArrayList ArrLevelOfAccess, ArrUserStatus;
+
+        public void RetrieveArrLevelOfAccess()
+        {
+            ArrLevelOfAccess = new ArrayList()
+            {
+                "Admin", "Employee"
+            };
+        }
+
+        public ArrayList GetArrLevelOfAccess()
+        {
+            return ArrLevelOfAccess;
+        }
+
+        public void RetrieveArrUserStatus()
+        {
+            ArrUserStatus = new ArrayList()
+            {
+                "Enabled", "Disabled"
+            };
+        }
+
+        public ArrayList GetArrUserStatus()
+        {
+            return ArrUserStatus;
+        }
+
+
+        // For Blotter
+
+        private static ArrayList ArrType, ArrBlotterStat;
+
+        public void RetrieveArrType()
+        {
+            ArrType = new ArrayList()
+            {
+                "Incident", "Blotter", "Complaint"
+            };
+        }
+
+        public ArrayList GetArrType()
+        {
+            return ArrType;
+        }
+
+        public void RetrieveArrBlotterStat()
+        {
+            ArrBlotterStat = new ArrayList()
+            {
+                "Scheduled", "Active", "Settled"
+            };
+        }
+
+        public ArrayList GetArrBlotterStat()
+        {
+            return ArrBlotterStat;
+        }
     }
 }

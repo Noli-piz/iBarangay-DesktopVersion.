@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -9,79 +11,69 @@ namespace testing
 {
     class csLogin
     {
-        private csConnection cs = new csConnection();
-        private string uname,pass;
+        csHostConfiguration host = new csHostConfiguration();
+        private string uname,pass,utype;
 
-        public void Login(String uname, String pass)
+        public void Login(String uname, String pass, String utype)
         {
             this.uname = uname;
             this.pass = pass;
-            log();
+            this.utype = utype;
+            Logins();
         }
 
-        private void log()
+        private async void Logins()
         {
             try
             {
-                cs.conn.Open();
-                String query = "SELECT COUNT(*), LevelOfAccess FROM tbl_users WHERE Username = @uname AND Password= @pass AND Status = @stat";
-                cs.command = new MySqlCommand();
-                cs.command.CommandText = query;
-                cs.command.Parameters.AddWithValue("@uname", uname);
-                cs.command.Parameters.AddWithValue("@pass", pass);
-                cs.command.Parameters.AddWithValue("@stat", 0);
-                cs.command.Connection =cs.conn;
+                var uri = host.IP() + "/iBar/ibar_login.php";
 
-                MySqlDataReader rdr = cs.command.ExecuteReader();
-                if (rdr.Read())
+                string responseFromServer;
+                using (var wb = new WebClient())
                 {
-                    if (rdr[0].ToString() =="1")
+                    var datas = new NameValueCollection();
+                    datas["Username"] = uname;
+                    datas["Password"] = pass;
+                    datas["Usertype"] = utype;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                Console.WriteLine(responseFromServer);
+
+                if (responseFromServer == "Login Success")
+                {
+                    if (utype == "Admin")
                     {
-                        Message = "Successfully Login.";
-                        ready = rdr[1].ToString();
-                        //if (rdr[1].ToString() == "Admin")
-                        //{
-                        //    frmMenuAdmin frm = new frmMenuAdmin();
-                        //    frm.Show();
-                        //}
-                        //else if (rdr[1].ToString() == "Employee")
-                        //{
-                        //    frmMenu frm = new frmMenu();
-                        //    frm.Show();
-                        //}
+                        frmMenuAdmin frm = new frmMenuAdmin();
+                        frm.Show();
                     }
                     else
                     {
-                        Message = "Username or Password is incorrect!";
+                        frmMenu frm = new frmMenu();
+                        frm.Show();
                     }
+
+                    Message = responseFromServer;
                 }
+                else
+                {
+                    Message = responseFromServer;
+                }
+
+
             }
-            catch(Exception e)
+            catch (Exception ex)
             {
-                Message = e.Message;
+                Message = ex.Message;
+
             }
         }
 
         public void Reset()
         {
-            ready = "";
             Message = "";
-        }
-
-
-        private static string ready;
-
-        public String GetReady()
-        {
-            return ready;
-        }
-        public String GetUtype1()
-        {
-            return "Admin";
-        }
-        public String GetUtype2()
-        {
-            return "Employee";
         }
 
         public string Message{ get; private set; }

@@ -129,9 +129,12 @@ namespace testing
             // 
             // dtTimeEnd
             // 
+            this.dtTimeEnd.CustomFormat = "hh:mm tt";
             this.dtTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtTimeEnd.Location = new System.Drawing.Point(237, 291);
             this.dtTimeEnd.Name = "dtTimeEnd";
+            this.dtTimeEnd.ShowUpDown = true;
             this.dtTimeEnd.Size = new System.Drawing.Size(143, 30);
             this.dtTimeEnd.TabIndex = 25;
             // 
@@ -155,15 +158,19 @@ namespace testing
             // 
             // dtTimeStart
             // 
+            this.dtTimeStart.CustomFormat = "hh:mm tt";
             this.dtTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtTimeStart.Location = new System.Drawing.Point(51, 291);
             this.dtTimeStart.Name = "dtTimeStart";
+            this.dtTimeStart.ShowUpDown = true;
             this.dtTimeStart.Size = new System.Drawing.Size(143, 30);
             this.dtTimeStart.TabIndex = 22;
             // 
             // dtDate
             // 
             this.dtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDate.Location = new System.Drawing.Point(51, 216);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(329, 30);

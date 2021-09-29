@@ -21,12 +21,12 @@ using MySql.Data.MySqlClient;
 
 namespace testing
 {
-    public partial class frmAddNewResident : Form
+    public partial class frmResident_insert : Form
     {
         csResidents res = new csResidents();
         String path ="";
 
-        public frmAddNewResident()
+        public frmResident_insert()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace testing
 
         private void Reset()
         {
-            foreach (Control field in frmAddNewResident.ActiveForm.Controls)
+            foreach (Control field in frmResident_insert.ActiveForm.Controls)
             {
                 if (field is TextBox)
                     ((TextBox)field).Clear();

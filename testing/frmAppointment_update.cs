@@ -47,8 +47,8 @@ namespace testing
                     datas["Title"] = tbTitle.Text;
                     datas["Name"] = tbName.Text;
                     datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
-                    datas["EndTime"] = dtTimeEnd.Value.ToString("yyyy-MM-dd");
-                    datas["StartTime"] = dtTimeStart.Value.ToString("yyyy-MM-dd");
+                    datas["EndTime"] = dtTimeEnd.Value.ToString("hh:mm:ss tt");
+                    datas["StartTime"] = dtTimeStart.Value.ToString("hh:mm:ss tt");
                     datas["Details"] = rbDetails.Text;
                     datas["Status"] = cbDone.Checked ? "True" : "False";
 
@@ -58,7 +58,8 @@ namespace testing
 
                 if (responseFromServer == "Operation Success")
                 {
-                    MessageBox.Show("Update Successfully");
+                    MessageBox.Show("Update Successfully"); 
+                    this.Close();
                 }
                 else
                 {
@@ -95,6 +96,7 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Delete Successfully");
+                    this.Close();
                 }
                 else
                 {
@@ -138,6 +140,20 @@ namespace testing
                         tbTitle.Text = jo["Title"].ToString();
                         tbName.Text = jo["Name"].ToString();
                         rbDetails.Text = jo["Details"].ToString();
+
+                        String strDate, strStartTime, strEndTime;
+                        strDate = jo["Date"].ToString();
+                        strEndTime = jo["EndTime"].ToString();
+                        strStartTime = jo["StartTime"].ToString();
+
+                        dtDate.Value = DateTime.ParseExact(strDate, "yyyy-MM-dd", null);
+                        dtTimeEnd.Value = DateTime.ParseExact(strEndTime, "hh:mm:ss tt", null);
+                        dtTimeStart.Value = DateTime.ParseExact(strStartTime, "hh:mm:ss tt", null);
+
+                        if (jo["Status"].ToString() == "True")
+                        {
+                            cbDone.Checked = true;
+                        }
                     }
                 }
                 else if (success == "0")

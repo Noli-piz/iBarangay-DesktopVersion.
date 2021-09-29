@@ -1,7 +1,7 @@
 ﻿
 namespace testing
 {
-    partial class frmAddNewResident
+    partial class frmResident_insert
     {
         /// <summary>
         /// Required designer variable.

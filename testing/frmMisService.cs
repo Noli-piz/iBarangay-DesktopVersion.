@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +17,9 @@ namespace testing
 {
     public partial class frmMisService : Form
     {
+        csHostConfiguration host = new csHostConfiguration();
+        private List<string> ID = new List<string>();
+
         public frmMisService()
         {
             InitializeComponent();
@@ -22,7 +28,7 @@ namespace testing
         private void frmMisService_Load(object sender, EventArgs e)
         {
             mnpltDataGrid();
-            RetrieveData();
+            LoadData();
         }
 
         private void mnpltDataGrid()
@@ -32,6 +38,7 @@ namespace testing
             data1.Columns.Clear();
 
             data1.Columns.Add("no", "No.");
+            data1.Columns.Add("id", "ID");
             data1.Columns.Add("fullname", "Full Name");
             data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("vstatus", "Voter Status");
@@ -49,51 +56,69 @@ namespace testing
             data1.Columns.Add(btn);
         }
 
-        List<string> ID = new List<string>();
-        private void RetrieveData()
+        private async void LoadData()
         {
             try
             {
-                csConnection cs = new csConnection();
-                String query = "SELECT ser.id_misservices, res.Fname, res.Mname, res.Lname, res.Sname, res.Birthdate, res.VoterStatus, i.ItemName , ser.Quantity, ser.DateOfRequest, ser.Status, DATE_FORMAT(ser.Deadline, \" %Y %m %d\") FROM tbl_misservices AS ser " +
-                    "INNER JOIN tbl_account AS a ON a.id_account = ser.id_account " +
-                    "INNER JOIN tbl_residentinfo AS res ON res.id_resident = a.id_resident " +
-                    "INNER JOIN tbl_items AS i ON i.id_items = ser.id_items";
 
-                cs.conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand(query, cs.conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_misservice.php";
+                string responseBody = await client.GetStringAsync(uri);
 
                 ArrayList AL = new ArrayList();
-                int count = 1;
-                while (rdr.Read())
-                {
-                    ID.Add(rdr[0].ToString());
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
 
-                    AL = new ArrayList();
-                    AL.Add(count.ToString());
-                    AL.Add(rdr[1].ToString() + " " + rdr[2].ToString() + " " + rdr[3].ToString() + " " + rdr[4].ToString());
-                    AL.Add(rdr[5].ToString());
-                    AL.Add(rdr[6].ToString());
-                    AL.Add(rdr[7].ToString());
-                    AL.Add(rdr[8].ToString());
-                    AL.Add(rdr[9].ToString());
-                    AL.Add(rdr[10].ToString());
-                    AL.Add(rdr[11].ToString());
-                    data1.Rows.Add(AL.ToArray());
-                    count++;
+                List<int> colorInt = new List<int>();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["service"])
+                    {
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(jo["id_misservices"]);
+                        ID.Add(jo["id_misservices"].ToString());
+                        AL.Add(jo["Fname"] +" "+ jo["Mname"] +" "+ jo["Lname"] + " " + jo["Sname"]);
+                        AL.Add(jo["Birthdate"]);
+                        AL.Add(jo["VoterStatus"]);
+                        AL.Add(jo["ItemName"]);
+                        AL.Add(jo["Quantity"]);
+                        AL.Add(jo["DateOfRequest"]);
+                        AL.Add(jo["Status"]);
+                        AL.Add(jo["Date"]);
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+
+
+                    for (int x = 0; x < data1.Rows.Count; x++)
+                    {
+                        if (colorInt.Contains(x))
+                        {
+                            data1.Rows[x - 1].DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+                        }
+                    }
+
+
                 }
-                rdr.Close();
-                cmd.Dispose();
-                cs.conn.Close();
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
+                }
+
+
 
                 data1.AutoResizeColumns();
+                data1.AutoResizeRows();
+
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                data1.Visible = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -101,7 +126,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 9)
+                if (e.ColumnIndex == 10)
                 {
                     csMisService ser = new csMisService();
                     ser.GetID(ID[e.RowIndex].ToString());

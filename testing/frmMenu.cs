@@ -32,7 +32,7 @@ namespace testing
         {
             ClearPanel();
 
-            frmResidentRec frm = new frmResidentRec() { Dock = DockStyle.Fill, TopLevel= false , TopMost = true };
+            frmResident frm = new frmResident() { Dock = DockStyle.Fill, TopLevel= false , TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
         }

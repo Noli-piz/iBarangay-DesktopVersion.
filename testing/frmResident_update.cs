@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace testing
 {
-    public partial class frmUpdateResident : Form
+    public partial class frmResident_update : Form
     {
         csResidents res = new csResidents();
         String path = "";
 
-        public frmUpdateResident()
+        public frmResident_update()
         {
             InitializeComponent();
         }
@@ -99,7 +99,7 @@ namespace testing
 
         private void Reset()
         {
-            foreach (Control field in frmAddNewResident.ActiveForm.Controls)
+            foreach (Control field in frmResident_insert.ActiveForm.Controls)
             {
                 if (field is TextBox)
                     ((TextBox)field).Clear();

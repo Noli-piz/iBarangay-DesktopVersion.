@@ -45,7 +45,7 @@ namespace testing
             this.label6 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.data1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,7 @@ namespace testing
             // dtDate
             // 
             this.dtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDate.Location = new System.Drawing.Point(899, 242);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(329, 30);
@@ -75,11 +76,15 @@ namespace testing
             // 
             // dtTimeStart
             // 
+            this.dtTimeStart.CustomFormat = "hh:mm tt";
             this.dtTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtTimeStart.Location = new System.Drawing.Point(899, 317);
             this.dtTimeStart.Name = "dtTimeStart";
+            this.dtTimeStart.ShowUpDown = true;
             this.dtTimeStart.Size = new System.Drawing.Size(143, 30);
             this.dtTimeStart.TabIndex = 3;
+            this.dtTimeStart.Value = new System.DateTime(2021, 9, 29, 14, 32, 0, 0);
             // 
             // rbDetails
             // 
@@ -101,9 +106,12 @@ namespace testing
             // 
             // dtTimeEnd
             // 
+            this.dtTimeEnd.CustomFormat = "hh:mm tt";
             this.dtTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtTimeEnd.Location = new System.Drawing.Point(1085, 317);
             this.dtTimeEnd.Name = "dtTimeEnd";
+            this.dtTimeEnd.ShowUpDown = true;
             this.dtTimeEnd.Size = new System.Drawing.Size(143, 30);
             this.dtTimeEnd.TabIndex = 7;
             // 
@@ -200,21 +208,22 @@ namespace testing
             this.data1.TabIndex = 17;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data1_CellClick);
             // 
-            // button1
+            // btnClear
             // 
-            this.button1.Location = new System.Drawing.Point(1012, 606);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 35);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(1012, 606);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(104, 35);
+            this.btnClear.TabIndex = 18;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1255, 693);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label6);
@@ -258,6 +267,6 @@ namespace testing
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView data1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
     }
 }

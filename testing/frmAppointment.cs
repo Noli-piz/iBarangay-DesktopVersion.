@@ -146,8 +146,8 @@ namespace testing
                     datas["Name"] = tbName.Text;
                     datas["Details"] = rbDetails.Text;
                     datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
-                    datas["EndTime"] = dtTimeEnd.Value.ToString("yyyy-MM-dd");
-                    datas["StartTime"] = dtTimeStart.Value.ToString("yyyy-MM-dd");
+                    datas["EndTime"] = dtTimeEnd.Value.ToString("hh:mm:ss tt");
+                    datas["StartTime"] = dtTimeStart.Value.ToString("hh:mm:ss tt");
                     datas["Status"] = cbDone.Checked ? "True" : "False";
 
                     var response = wb.UploadValues(uri, "POST", datas);
@@ -173,6 +173,7 @@ namespace testing
                 ID.Clear();
                 data1.Rows.Clear();
                 LoadData();
+                btnClear_Click(sender, e);
             }
         }
 
@@ -197,6 +198,19 @@ namespace testing
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            foreach (Control field in frmAppointment.ActiveForm.Controls)
+            {
+                if (field is TextBox)
+                    ((TextBox)field).Clear();
+                if (field is RichTextBox)
+                    ((RichTextBox)field).Clear();
+                if (field is CheckBox)
+                    ((CheckBox)field).Checked = false;
             }
         }
     }

@@ -332,11 +332,11 @@
     <Compile Include="frmOfficials_update.Designer.cs">
       <DependentUpon>frmOfficials_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateResident.cs">
+    <Compile Include="frmResident_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateResident.Designer.cs">
-      <DependentUpon>frmUpdateResident.cs</DependentUpon>
+    <Compile Include="frmResident_update.Designer.cs">
+      <DependentUpon>frmResident_update.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserMngmnt3.cs">
       <SubType>Form</SubType>
@@ -350,11 +350,11 @@
     <Compile Include="frmBlotterRec2.Designer.cs">
       <DependentUpon>frmBlotterRec2.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddNewResident.cs">
+    <Compile Include="frmResident_insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddNewResident.Designer.cs">
-      <DependentUpon>frmAddNewResident.cs</DependentUpon>
+    <Compile Include="frmResident_insert.Designer.cs">
+      <DependentUpon>frmResident_insert.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAnnouncement.cs">
       <SubType>Form</SubType>
@@ -428,11 +428,11 @@
     <Compile Include="frmRequest2.Designer.cs">
       <DependentUpon>frmRequest2.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmResidentRec.cs">
+    <Compile Include="frmResident.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmResidentRec.Designer.cs">
-      <DependentUpon>frmResidentRec.cs</DependentUpon>
+    <Compile Include="frmResident.Designer.cs">
+      <DependentUpon>frmResident.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserMngmnt2.cs">
       <SubType>Form</SubType>
@@ -499,8 +499,8 @@
     <EmbeddedResource Include="frmOfficials_update.resx">
       <DependentUpon>frmOfficials_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateResident.resx">
-      <DependentUpon>frmUpdateResident.cs</DependentUpon>
+    <EmbeddedResource Include="frmResident_update.resx">
+      <DependentUpon>frmResident_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserMngmnt3.resx">
       <DependentUpon>frmUserMngmnt3.cs</DependentUpon>
@@ -508,8 +508,8 @@
     <EmbeddedResource Include="frmBlotterRec2.resx">
       <DependentUpon>frmBlotterRec2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddNewResident.resx">
-      <DependentUpon>frmAddNewResident.cs</DependentUpon>
+    <EmbeddedResource Include="frmResident_insert.resx">
+      <DependentUpon>frmResident_insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAnnouncement.resx">
       <DependentUpon>frmAnnouncement.cs</DependentUpon>
@@ -547,8 +547,8 @@
     <EmbeddedResource Include="frmRequest2.resx">
       <DependentUpon>frmRequest2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResidentRec.resx">
-      <DependentUpon>frmResidentRec.cs</DependentUpon>
+    <EmbeddedResource Include="frmResident.resx">
+      <DependentUpon>frmResident.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserMngmnt2.resx">
       <DependentUpon>frmUserMngmnt2.cs</DependentUpon>

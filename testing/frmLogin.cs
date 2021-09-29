@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +16,7 @@ namespace testing
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -27,35 +32,21 @@ namespace testing
             {
                 MessageBox.Show("Password is Empty!");
             }
+            else if (cbUsertype.SelectedItem.ToString() == "")
+            {
+                MessageBox.Show("Please select Usertype.");
+            }
             else
             {
-                Login();
-            }
-        }
+                csLogin cs = new csLogin();
+                cs.Login(tbUsername.Text, tbPassword.Text, cbUsertype.SelectedItem.ToString());
 
-        private void Login()
-        {
-            csLogin log = new csLogin();
-            log.Login(tbUsername.Text, tbPassword.Text);
-            MessageBox.Show(log.Message);
-
-            if (log.GetReady() == log.GetUtype1())
-            {
-                log.Reset();
-                this.Hide();
-                var frm = new frmMenuAdmin();
-                frm.Closed += (s, args) => this.Close();
-                frm.Show();
+                MessageBox.Show(cs.Message);
+                if (cs.Message == "Login Success")
+                {
+                    this.Hide();
+                }
             }
-            else if (log.GetReady() == log.GetUtype2())
-            {
-                log.Reset();
-                this.Hide();
-                var frm = new frmMenu();
-                frm.Closed += (s, args) => this.Close();
-                frm.Show();
-            }
-            else { }
         }
     }
 }

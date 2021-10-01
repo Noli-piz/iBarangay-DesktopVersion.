@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +14,8 @@ namespace testing
 {
     public partial class frmUserMngmnt2 : Form
     {
-        csUserMngmnt man = new csUserMngmnt();
+        csHostConfiguration host = new csHostConfiguration();
+
         public frmUserMngmnt2()
         {
             InitializeComponent();
@@ -25,19 +28,43 @@ namespace testing
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (tbPassword.Text == tbRetypePassword.Text)
+           if (tbPassword.Text == tbRetypePassword.Text)
             {
-                man.Fullname = tbFullName.Text;
-                man.Username = tbUsername.Text;
-                man.Password = tbPassword.Text;
-                man.LevelOfAccess = cbLevelOfAccess.SelectedItem.ToString();
-                man.Status = cbStatus.SelectedItem.ToString();
-                man.addUser();
+                try
+                {
+                    DateTime dateToday = DateTime.Now;
 
-                MessageBox.Show(man.Message);
-                man.Reset();
+                    var uri = host.IP() + "/iBar/ibar_usermanagement_insert.php";
 
-                this.Close();
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Fullname"] = tbFullName.Text;
+                        datas["Username"] = tbUsername.Text;
+                        datas["Password"] = tbPassword.Text;
+                        datas["LevelOfAccess"] = cbLevelOfAccess.SelectedItem.ToString();
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
             }
             else
             {
@@ -61,7 +88,6 @@ namespace testing
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            man.Reset();
             this.Close();
         }
     }

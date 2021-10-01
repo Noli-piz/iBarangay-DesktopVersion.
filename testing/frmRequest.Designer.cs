@@ -30,10 +30,11 @@ namespace testing
         private void InitializeComponent()
         {
             this.data1 = new System.Windows.Forms.DataGridView();
-            this.cb1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,56 +58,81 @@ namespace testing
             this.data1.TabIndex = 0;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
-            // cb1
+            // cbStatus
             // 
-            this.cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb1.FormattingEnabled = true;
-            this.cb1.Location = new System.Drawing.Point(12, 154);
-            this.cb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(217, 33);
-            this.cb1.TabIndex = 1;
+            this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "All",
+            "Pending",
+            "Approved",
+            "Disapproved",
+            "Delivered"});
+            this.cbStatus.Location = new System.Drawing.Point(12, 154);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(217, 33);
+            this.cbStatus.TabIndex = 1;
+            this.cbStatus.Text = "All";
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cb1_SelectedIndexChanged);
             // 
-            // textBox1
+            // tbSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(13, 48);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 30);
-            this.textBox1.TabIndex = 2;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(13, 48);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(231, 30);
+            this.tbSearch.TabIndex = 2;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(261, 48);
+            this.btnSearch.Location = new System.Drawing.Point(460, 48);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 30);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(373, 48);
+            this.btnCancel.Location = new System.Drawing.Point(572, 48);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 30);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Items.AddRange(new object[] {
+            "ID",
+            "Name"});
+            this.cbCategory.Location = new System.Drawing.Point(263, 48);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(174, 33);
+            this.cbCategory.TabIndex = 5;
+            this.cbCategory.Text = "ID";
             // 
             // frmRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 750);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cb1);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.data1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRequest";
@@ -121,9 +147,10 @@ namespace testing
         #endregion
 
         private System.Windows.Forms.DataGridView data1;
-        private System.Windows.Forms.ComboBox cb1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbCategory;
     }
 }

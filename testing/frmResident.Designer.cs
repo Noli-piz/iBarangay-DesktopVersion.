@@ -108,8 +108,8 @@ namespace testing
             this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
-            "Name",
-            "ID"});
+            "ID",
+            "Name"});
             this.cbCategory.Location = new System.Drawing.Point(328, 67);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(131, 33);

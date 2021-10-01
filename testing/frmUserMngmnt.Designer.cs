@@ -30,8 +30,8 @@ namespace testing
         private void InitializeComponent()
         {
             this.btnSearch = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.data1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -47,23 +47,29 @@ namespace testing
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // comboBox1
+            // cbCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(295, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
-            this.comboBox1.TabIndex = 1;
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Items.AddRange(new object[] {
+            "Name",
+            "Username",
+            "ID"});
+            this.cbCategory.Location = new System.Drawing.Point(295, 50);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(121, 33);
+            this.cbCategory.TabIndex = 1;
+            this.cbCategory.Text = "Name";
             // 
-            // textBox1
+            // tbSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 30);
-            this.textBox1.TabIndex = 2;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(12, 49);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(277, 30);
+            this.tbSearch.TabIndex = 2;
             // 
             // btnCancel
             // 
@@ -74,6 +80,7 @@ namespace testing
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // data1
             // 
@@ -105,8 +112,8 @@ namespace testing
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnSearch);
             this.Name = "frmUserMngmnt";
             this.Text = "frmUserMngmnt";
@@ -120,8 +127,8 @@ namespace testing
         #endregion
 
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridView data1;
         private System.Windows.Forms.Button btnAdd;

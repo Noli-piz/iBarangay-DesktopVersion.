@@ -242,7 +242,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csAccountMngmnt.cs" />
     <Compile Include="csBlotter.cs" />
     <Compile Include="csComboBoxValues.cs" />
     <Compile Include="csConnection.cs" />
@@ -251,9 +250,7 @@
     <Compile Include="csMaintenance.cs" />
     <Compile Include="csMisService.cs" />
     <Compile Include="csRand.cs" />
-    <Compile Include="csRequest.cs" />
     <Compile Include="csResidents.cs" />
-    <Compile Include="csUserMngmnt.cs" />
     <Compile Include="Form Issue Certificate\frmIssueBrgyClearance.cs">
       <SubType>Form</SubType>
     </Compile>

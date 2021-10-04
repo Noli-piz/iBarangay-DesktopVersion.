@@ -329,6 +329,12 @@
     <Compile Include="frmOfficials_update.Designer.cs">
       <DependentUpon>frmOfficials_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResident_update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -495,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOfficials_update.resx">
       <DependentUpon>frmOfficials_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResident_update.resx">
       <DependentUpon>frmResident_update.cs</DependentUpon>

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,18 @@ namespace testing
 {
     public partial class frmMenu : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+
+            int nLeft,
+            int nTop,
+            int nRight,
+            int nBottom,
+            int nWidthEllipse,
+            int nHeightEllipse
+
+            );
+
         public frmMenu()
         {
             InitializeComponent();
@@ -20,7 +33,7 @@ namespace testing
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            RoundButton();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -99,6 +112,14 @@ namespace testing
         {
             this.panel1.Controls.Clear();
         }
+
+
+
+        private void RoundButton()
+        {
+            //btnHome.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,btnHome.Width,btnHome.Height,10,50));
+        }
+
 
 
     }

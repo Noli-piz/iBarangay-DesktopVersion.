@@ -156,7 +156,16 @@ namespace testing
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                //MessageBox.Show(e.Message);
+
+                var webClient = new System.Net.WebClient();
+                var storage = new FirebaseStorage("ibarangay-23725.appspot.com")
+                    .Child("images")
+                    .Child("n.jpg")
+                    .GetDownloadUrlAsync();
+
+                var url = await storage;
+                DisplayImage(url);
             }
         }
 

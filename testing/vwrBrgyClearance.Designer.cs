@@ -53,6 +53,7 @@ namespace testing
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "vwrBrgyClearance";
             this.Text = "vwrBrgyClearance";
+            this.Load += new System.EventHandler(this.vwrBrgyClearance_Load);
             this.ResumeLayout(false);
 
         }
@@ -60,6 +61,6 @@ namespace testing
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private rptBrgyClearance rptBrgyClearance1;
+        public rptBrgyClearance rptBrgyClearance1;
     }
 }

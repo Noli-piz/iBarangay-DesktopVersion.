@@ -106,7 +106,10 @@ namespace testing
             {
                 if (e.ColumnIndex == 6)
                 {
-                    frmAnnouncement2 frm = new frmAnnouncement2(ID[e.RowIndex].ToString());
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    frmAnnouncement2 frm = new frmAnnouncement2(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

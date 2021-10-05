@@ -44,9 +44,25 @@ namespace testing
                 MessageBox.Show(cs.Message);
                 if (cs.Message == "Login Success")
                 {
+                    if (cs.uType == "Admin")
+                    {
+                        frmMenuAdmin frm = new frmMenuAdmin();
+                        frm.Show();
+                    }
+                    else
+                    {
+                        frmMenu frm = new frmMenu();
+                        frm.Show();
+                    }
+
                     this.Hide();
                 }
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

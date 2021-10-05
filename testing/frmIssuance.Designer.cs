@@ -31,10 +31,10 @@ namespace testing
         {
             this.label1 = new System.Windows.Forms.Label();
             this.data1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,56 +64,58 @@ namespace testing
             this.data1.TabIndex = 26;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
-            // textBox1
+            // tbSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 34);
-            this.textBox1.TabIndex = 25;
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.Location = new System.Drawing.Point(12, 38);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(309, 34);
+            this.tbSearch.TabIndex = 25;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Location = new System.Drawing.Point(603, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 37);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(603, 35);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(104, 37);
+            this.btnClear.TabIndex = 24;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(484, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 37);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(484, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(113, 37);
+            this.btnSearch.TabIndex = 23;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // comboBox1
+            // cbCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Items.AddRange(new object[] {
             "Name",
             "ID"});
-            this.comboBox1.Location = new System.Drawing.Point(328, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 33);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.Text = "ID";
+            this.cbCategory.Location = new System.Drawing.Point(328, 38);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(150, 33);
+            this.cbCategory.TabIndex = 28;
+            this.cbCategory.Text = "ID";
             // 
             // frmIssuance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 832);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSearch);
             this.Name = "frmIssuance";
             this.Text = "frmIssuance";
             this.Load += new System.EventHandler(this.frmIssuance_Load);
@@ -127,9 +129,9 @@ namespace testing
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView data1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cbCategory;
     }
 }

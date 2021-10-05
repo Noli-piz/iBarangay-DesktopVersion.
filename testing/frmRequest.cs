@@ -113,7 +113,11 @@ namespace testing
             {
                 if (e.ColumnIndex == 10)
                 {
-                    frmRequest2 frm = new frmRequest2(ID[e.RowIndex].ToString());
+
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    frmRequest2 frm = new frmRequest2(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

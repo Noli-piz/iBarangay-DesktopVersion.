@@ -171,8 +171,11 @@ namespace testing
             {
                 if (e.ColumnIndex == 7)
                 {
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
                     csResidents res = new csResidents();
-                    res.GetID(ID[e.RowIndex].ToString());
+                    res.GetID(identifier);
 
                     frmResident_update frm = new frmResident_update();
                     frm.ShowDialog(this);

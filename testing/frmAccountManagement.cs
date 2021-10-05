@@ -111,7 +111,10 @@ namespace testing
             {
                 if (e.ColumnIndex == 6)
                 {
-                    frmAccountMngmnt2 frm = new frmAccountMngmnt2(ID[e.RowIndex].ToString());
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    frmAccountMngmnt2 frm = new frmAccountMngmnt2(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

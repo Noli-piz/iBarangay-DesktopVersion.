@@ -251,6 +251,14 @@
     <Compile Include="csMisService.cs" />
     <Compile Include="csRand.cs" />
     <Compile Include="csResidents.cs" />
+    <Compile Include="DTofficials.cs">
+      <DependentUpon>DTofficials.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTofficials.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTofficials.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form Issue Certificate\frmIssueBrgyClearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,6 +465,12 @@
       <DependentUpon>rptBrgyClearance.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptOfficialsName.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOfficialsName.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="vwrBrgyClearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,9 +590,24 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBrgyClearance.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptOfficialsName.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOfficialsName.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="vwrBrgyClearance.resx">
       <DependentUpon>vwrBrgyClearance.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DTofficials.xsc">
+      <DependentUpon>DTofficials.xsd</DependentUpon>
+    </None>
+    <None Include="DTofficials.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DTofficials.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DTofficials.xss">
+      <DependentUpon>DTofficials.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

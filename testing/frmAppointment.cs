@@ -183,7 +183,10 @@ namespace testing
             {
                 if (e.ColumnIndex == 9)
                 {
-                    frmAppointment_update frm = new frmAppointment_update(ID[e.RowIndex].ToString());
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    frmAppointment_update frm = new frmAppointment_update(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

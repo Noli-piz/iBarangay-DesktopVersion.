@@ -44,18 +44,9 @@ namespace testing
 
                 if (responseFromServer == "Login Success")
                 {
-                    if (utype == "Admin")
-                    {
-                        frmMenuAdmin frm = new frmMenuAdmin();
-                        frm.Show();
-                    }
-                    else
-                    {
-                        frmMenu frm = new frmMenu();
-                        frm.Show();
-                    }
 
                     Message = responseFromServer;
+                    uType = utype;
                 }
                 else
                 {
@@ -77,6 +68,7 @@ namespace testing
         }
 
         public string Message{ get; private set; }
+        public string uType{ get; private set; }
 
     }
 }

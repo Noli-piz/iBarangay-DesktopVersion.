@@ -128,8 +128,12 @@ namespace testing
             {
                 if (e.ColumnIndex == 10)
                 {
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
                     csMisService ser = new csMisService();
-                    ser.GetID(ID[e.RowIndex].ToString());
+                    ser.GetID(identifier);
+                    //ser.GetID(ID[e.RowIndex].ToString());
 
                     frmMisService2 frm = new frmMisService2();
                     frm.ShowDialog(this);

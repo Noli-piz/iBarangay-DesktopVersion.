@@ -49,8 +49,8 @@ namespace testing.Form_Issue_Certificate
         {
             if (e.ColumnIndex == 3)
             {
-                vwrBrgyClearance vwr = new vwrBrgyClearance();
-                vwr.ShowDialog(this);
+                /*vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.ColumnIndex].ToS);
+                vwr.ShowDialog(this);*/
             }
         }
     }

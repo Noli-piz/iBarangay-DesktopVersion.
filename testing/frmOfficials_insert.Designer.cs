@@ -44,7 +44,7 @@ namespace testing
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(103, 36);
             this.btnInsert.TabIndex = 0;
-            this.btnInsert.Text = "button1";
+            this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 

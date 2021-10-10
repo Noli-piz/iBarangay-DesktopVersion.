@@ -138,6 +138,9 @@ namespace testing
                     frmMisService2 frm = new frmMisService2();
                     frm.ShowDialog(this);
 
+                    ID.Clear();
+                    data1.Rows.Clear();
+                    LoadData();
                 }
             }
             catch (ArgumentOutOfRangeException outOfRange)

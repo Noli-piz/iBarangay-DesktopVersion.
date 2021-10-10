@@ -61,7 +61,7 @@ namespace testing
                     cmd.CommandText = "UPDATE tbl_misservices SET Status = '" + UpdatedStatus + "' WHERE id_misservices = '" + ID + "'";
                     cmd.ExecuteNonQuery();
                     myTrans.Commit();
-                    Message = "The data updated successfully";
+                    Message = "Successfully Updated";
                 }
                 catch (Exception e)
                 {
@@ -96,7 +96,7 @@ namespace testing
                         cmd.CommandText = "UPDATE tbl_misservices SET Status = '"+ UpdatedStatus +"', Deadline = '"+ UpdatedDeadline +"' WHERE id_misservices = '"+ ID +"'";
                         cmd.ExecuteNonQuery();
                         myTrans.Commit();
-                        Message = "The the inserted successfully";
+                        Message = "Successfully Updated";
                     }
                     else
                     {

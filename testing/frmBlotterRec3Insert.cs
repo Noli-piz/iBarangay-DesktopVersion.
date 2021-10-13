@@ -12,13 +12,13 @@ using MySql.Data.MySqlClient;
 
 namespace testing
 {
-    public partial class frmBlotterRec3 : Form
+    public partial class frmBlotterRec3Insert : Form
     {
         private csConnection cs = new csConnection();
         private csBlotter blot = new csBlotter();
         private ArrayList arraySuggest;
 
-        public frmBlotterRec3()
+        public frmBlotterRec3Insert()
         {
             InitializeComponent();
         }
@@ -130,7 +130,17 @@ namespace testing
                         {
                             blot.AddAssailant(assres);
                             SelectedAssailant();
+
+
                         }
+
+                        // Temporary Store
+                        TemporaryAssailant tempAss = new TemporaryAssailant();
+                        tempAss.id = Int32.Parse(ID[e.RowIndex].ToString());
+                        tempAss.name = fname;
+
+                        TempBlot temp = new TempBlot();
+                        temp.AddTempAssailant(tempAss);
                     }
                 }
             }
@@ -147,6 +157,8 @@ namespace testing
 
         private void btnOkay_Click(object sender, EventArgs e)
         {
+            TempBlot tempAss = new TempBlot();
+            tempAss.RemoveTempAssailant();
             this.Close();
         }
 
@@ -169,7 +181,15 @@ namespace testing
 
             if (exist == false) {
                 blot.AddAssailant(assres);
-                SelectedAssailant(); 
+                SelectedAssailant();
+
+                TemporaryAssailant tempAss = new TemporaryAssailant();
+                tempAss.from = "insertnonresident";
+                tempAss.id = 0;
+                tempAss.name = tbEnterName.Text;
+
+                TempBlot temp = new TempBlot();
+                temp.AddTempAssailant(tempAss);
             }
         }
 
@@ -222,5 +242,55 @@ namespace testing
                 boxpanel.Controls.Add(p);
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            TempBlot tempAss = new TempBlot();
+
+            foreach (var str in tempAss.GetTempArrAssailant())
+            {
+                blot.RemoveAssailant(new AssailantRes() { id = str.id, name = str.name });
+            }
+
+            this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            boxpanel.Controls.Clear();
+            blot.ResetAssailant();
+            //this.Close();
+        }
+
+
+        public class TempBlot
+        {
+
+            public static List<TemporaryAssailant> temp = new List<TemporaryAssailant>();
+
+            public void AddTempAssailant(TemporaryAssailant a)
+            {
+                temp.Add(a);
+            }
+
+            public void RemoveTempAssailant()
+            {
+                temp = new List<TemporaryAssailant>();
+            }
+
+            public List<TemporaryAssailant> GetTempArrAssailant()
+            {
+                return temp;
+            }
+
+        }
+
+        public class TemporaryAssailant
+        {
+            public string from { get; set; }
+            public int id { get; set; }
+            public string name { get; set; }
+        }
+
     }
 }

@@ -16,6 +16,9 @@ namespace testing
     {
         private csConnection cs = new csConnection();
         private csBlotter blot = new csBlotter();
+        private AssailantRes2 assres2 = new AssailantRes2();
+        
+
 
         public frmBlotterRec3Update()
         {
@@ -107,20 +110,33 @@ namespace testing
                     DialogResult dialogResult = MessageBox.Show("Are you sure you want to add " + fname + "?", "Add", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        AssailantRes2 assres2 = new AssailantRes2();
                         assres2.from = "insertresident";
                         assres2.id = Int32.Parse(ID[e.RowIndex].ToString());
                         assres2.name = fname;
 
                         bool exist = false;
-                        foreach (var str in blot.GetArrAssailant())
+                        foreach (var str in blot.GetArrAssailant2())
                         {
-                            if (str.id == assres2.id && str.name == assres2.name)
+
+
+                            Console.WriteLine("\n\n STR " + str.id + " = " + str.name + " = " + str.from);
+                            Console.WriteLine(" AssRes " + assres2.id + " = " + assres2.from + " = " + assres2.name + " = " + assres2.idresident);
+
+                            if (str.id == assres2.id && str.name == assres2.name && str.from == assres2.from)
+                            { 
+
+                                MessageBox.Show("This Person is already Exist!");
+                                exist = true;
+                                break;
+
+                            }
+                            else if(str.idresident == assres2.id && str.name == assres2.name && "resident" == str.from)
                             {
                                 MessageBox.Show("This Person is already Exist!");
                                 exist = true;
                                 break;
                             }
+
                         }
 
                         if (exist == false)
@@ -128,6 +144,16 @@ namespace testing
                             blot.AddAssailant2(assres2);
                             SelectedAssailant();
                         }
+
+                        // Temporary Store
+                        TemporaryAssailant2 tempAss = new TemporaryAssailant2();
+                        tempAss.from = "insertresident";
+                        tempAss.id = Int32.Parse(ID[e.RowIndex].ToString());
+                        tempAss.name = fname;
+
+                        TempBlot temp = new TempBlot();
+                        temp.AddTempAssailant2(tempAss);
+
                     }
                 }
             }
@@ -163,6 +189,14 @@ namespace testing
             {
                 blot.AddAssailant2(assres2);
                 SelectedAssailant();
+
+                TemporaryAssailant2 tempAss = new TemporaryAssailant2();
+                tempAss.from = "insertnonresident";
+                tempAss.id = 0;
+                tempAss.name = tbEnterName.Text;
+
+                TempBlot temp = new TempBlot();
+                temp.AddTempAssailant2(tempAss);
             }
         }
 
@@ -219,13 +253,63 @@ namespace testing
 
         private void btnOkay_Click(object sender, EventArgs e)
         {
+            TempBlot tempAss = new TempBlot();
+            tempAss.RemoveTempAssailant2();
             this.Close();
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            TempBlot tempAss = new TempBlot();
+
+            foreach (var str in tempAss.GetTempArrAssailant2())
+            {
+                blot.RemoveAssailant2(new AssailantRes2() { id = str.id, name = str.name });
+            }
+
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            boxpanel.Controls.Clear();
+            blot.ResetAssailant();
+            //this.Close();
+        }
+
+
+
+
+        public class TempBlot
+        {
+
+            public static List<TemporaryAssailant2> temp = new List<TemporaryAssailant2>();
+
+            public void AddTempAssailant2(TemporaryAssailant2 a)
+            {
+                temp.Add(a);
+            }
+
+            public void RemoveTempAssailant2()
+            {
+                temp = new List<TemporaryAssailant2>();
+            }
+
+            public List<TemporaryAssailant2> GetTempArrAssailant2()
+            {
+                return temp;
+            }
+
+        }
+
+        public class TemporaryAssailant2
+        {
+            public string from { get; set; }
+            public int id { get; set; }
+            public string name { get; set; }
+        }
     }
+
+
 }

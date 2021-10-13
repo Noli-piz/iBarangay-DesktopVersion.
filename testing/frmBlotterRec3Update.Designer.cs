@@ -34,12 +34,13 @@ namespace testing
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.tbEnterName = new System.Windows.Forms.TextBox();
             this.btnSearch1 = new System.Windows.Forms.Button();
             this.tbSearch1 = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,16 +101,16 @@ namespace testing
             this.label1.TabIndex = 18;
             this.label1.Text = "Search name for residents";
             // 
-            // btnCancel
+            // btnClear
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(966, 673);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 36);
-            this.btnCancel.TabIndex = 17;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(966, 673);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(90, 36);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnOkay
             // 
@@ -161,22 +162,34 @@ namespace testing
             this.tbSearch1.TabIndex = 11;
             this.tbSearch1.TextChanged += new System.EventHandler(this.tbSearch1_TextChanged);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(846, 673);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(88, 36);
+            this.btnCancel.TabIndex = 22;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmBlotterRec3Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 719);
+            this.ClientSize = new System.Drawing.Size(1233, 721);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.boxpanel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.tbEnterName);
             this.Controls.Add(this.btnSearch1);
             this.Controls.Add(this.tbSearch1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmBlotterRec3Update";
             this.Text = "frmBlotterRec3Update";
             this.Load += new System.EventHandler(this.frmBlotterRec3Update_Load);
@@ -193,11 +206,12 @@ namespace testing
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnOkay;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.TextBox tbEnterName;
         private System.Windows.Forms.Button btnSearch1;
         private System.Windows.Forms.TextBox tbSearch1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

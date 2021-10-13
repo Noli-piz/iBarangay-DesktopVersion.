@@ -44,6 +44,9 @@ namespace testing
                 MessageBox.Show(cs.Message);
                 if (cs.Message == "Login Success")
                 {
+                    csUser us = new csUser();
+                    us.usercredentials(tbUsername.Text);
+
                     if (cs.uType == "Admin")
                     {
                         frmMenuAdmin frm = new frmMenuAdmin();

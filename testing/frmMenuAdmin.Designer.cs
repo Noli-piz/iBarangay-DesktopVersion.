@@ -40,6 +40,8 @@ namespace testing
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,9 +132,9 @@ namespace testing
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::testing.Properties.Resources._1024px_Sangguniang_Kabataan_logo_svg;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(22, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(83, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 191);
+            this.pictureBox2.Size = new System.Drawing.Size(166, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -153,11 +155,31 @@ namespace testing
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(154, 203);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.TabIndex = 23;
+            this.lblName.Text = "Name";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(145, 174);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(73, 17);
+            this.lblUsername.TabIndex = 22;
+            this.lblUsername.Text = "Username";
+            // 
             // frmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1900, 860);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnGReports);
@@ -172,9 +194,11 @@ namespace testing
             this.MinimumSize = new System.Drawing.Size(1918, 907);
             this.Name = "frmMenuAdmin";
             this.Text = "frmMenuAdmin";
+            this.Load += new System.EventHandler(this.frmMenuAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -191,5 +215,7 @@ namespace testing
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblUsername;
     }
 }

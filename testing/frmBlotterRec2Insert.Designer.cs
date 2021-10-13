@@ -1,7 +1,7 @@
 ﻿
 namespace testing
 {
-    partial class frmBlotterRec2
+    partial class frmBlotterRec2Insert
     {
         /// <summary>
         /// Required designer variable.

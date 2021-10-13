@@ -70,7 +70,8 @@ namespace testing
 
             data1.Columns[0].Visible = false;
             data1.Columns[1].Visible = false;
-            data1.Columns[2].HeaderText = "Name";
+            data1.Columns[2].Visible = false;
+            data1.Columns[3].HeaderText = "Name";
 
             data1.AutoResizeColumns();
             data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

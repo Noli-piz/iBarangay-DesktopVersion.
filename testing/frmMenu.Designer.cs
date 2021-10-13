@@ -40,6 +40,8 @@ namespace testing
             this.btnMisService = new System.Windows.Forms.Button();
             this.tbnAppointment = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,11 +156,31 @@ namespace testing
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(98, 176);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(73, 17);
+            this.lblUsername.TabIndex = 11;
+            this.lblUsername.Text = "Username";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(107, 205);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.TabIndex = 12;
+            this.lblName.Text = "Name";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1835, 1021);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.tbnAppointment);
             this.Controls.Add(this.btnMisService);
@@ -179,6 +201,7 @@ namespace testing
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -195,5 +218,7 @@ namespace testing
         private System.Windows.Forms.Button btnMisService;
         private System.Windows.Forms.Button tbnAppointment;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblName;
     }
 }

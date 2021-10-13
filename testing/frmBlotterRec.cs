@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,14 +8,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace testing
 {
+
     public partial class frmBlotterRec : Form
     {
+        csHostConfiguration host = new csHostConfiguration();
         private csBlotter blot = new csBlotter();
         public frmBlotterRec()
         {
@@ -22,28 +27,73 @@ namespace testing
         private void frmBlotterRec_Load(object sender, EventArgs e)
         {
             mnpltDataGrid();
-            RetrieveData();
+            //RetrieveData();
+            LoadData();
         }
 
         private void mnpltDataGrid()
         {
             ID.Clear();
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
+            data1.Rows.Clear();
+            data1.Columns.Clear();
 
-            dataGridView1.Columns.Add("no", "No.");
-            dataGridView1.Columns.Add("com", "Compliant");
-            dataGridView1.Columns.Add("ass", "Assailant");
-            dataGridView1.Columns.Add("det", "Detail");
-            dataGridView1.Columns.Add("cstatus", "Case Status");
-            dataGridView1.Columns.Add("date", "Date");
+            data1.Columns.Add("no", "No.");
+            data1.Columns.Add("id", "ID.");
+            data1.Columns.Add("com", "Compliant");
+            data1.Columns.Add("ass", "Assailant");
+            data1.Columns.Add("det", "Detail");
+            data1.Columns.Add("cstatus", "Case Status");
+            data1.Columns.Add("date", "Date");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
             btn.Text = "View/Edit";
             btn.UseColumnTextForButtonValue = true;
-            dataGridView1.Columns.Add(btn);
+            data1.Columns.Add(btn);
+        }
+
+        private async void LoadData()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_blotter.php";
+                string responseBody = await client.GetStringAsync(uri);
+
+                ArrayList AL = new ArrayList();
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["blotter"])
+                    {
+
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(jo["id_blotter"]);
+                        AL.Add(jo["Compliant"]);
+                        AL.Add(jo["Assailant1"] +" "+ jo["Assailant2"]);
+                        AL.Add(jo["Details"]);
+                        AL.Add(jo["Status"]);
+                        AL.Add(jo["Date"]);
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
+                }
+
+                data1.AutoResizeColumns();
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         List<string> ID = new List<string>();
@@ -75,15 +125,15 @@ namespace testing
                     AL.Add(rdr[4].ToString());
                     AL.Add(rdr[5].ToString());
                     AL.Add(rdr[6].ToString());
-                    dataGridView1.Rows.Add(AL.ToArray());
+                    data1.Rows.Add(AL.ToArray());
                     count++;
                 }
                 rdr.Close();
                 cmd.Dispose();
                 cs.conn.Close();
 
-                dataGridView1.AutoResizeColumns();
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                data1.AutoResizeColumns();
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
@@ -95,34 +145,34 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 7)
                 {
-                    blot.GetID(ID[e.RowIndex].ToString());
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    blot.GetID(identifier);
+                    //blot.GetID(ID[e.RowIndex].ToString());
 
                     frmBlotterRec2Update frm = new frmBlotterRec2Update();
                     frm.ShowDialog(this);
 
-                    dataGridView1.Rows.Clear();
-                    RetrieveData();
+                    data1.Rows.Clear();
+                    //RetrieveData();
+                    LoadData();
                 }
             }catch(ArgumentOutOfRangeException ex)
             {
                 
             }
         }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_AddBlotter_Click(object sender, EventArgs e)
         {
-            frmBlotterRec2 frm = new frmBlotterRec2();
+            frmBlotterRec2Insert frm = new frmBlotterRec2Insert();
             frm.ShowDialog(this);
 
-            dataGridView1.Rows.Clear();
-            RetrieveData();
+            data1.Rows.Clear();
+            LoadData();
         }
 
         private void btnActive_Click(object sender, EventArgs e)

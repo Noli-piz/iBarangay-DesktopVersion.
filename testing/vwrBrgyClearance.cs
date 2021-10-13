@@ -118,6 +118,8 @@ namespace testing
 
                     ReportDocument cryRpt = new ReportDocument();
                     cryRpt.Load("C:\\Users\\Lenovo\\source\\repos\\testing\\testing\\rptBrgyClearance.rpt");
+                    //MessageBox.Show(Application.StartupPath);
+                    //cryRpt.Load("\\testing\\testing\\rptBrgyClearance.rpt");
                     cryRpt.SetDataSource(ds);
 
                     crystalReportViewer1.ReportSource = cryRpt;

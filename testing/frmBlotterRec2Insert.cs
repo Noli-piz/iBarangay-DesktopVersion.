@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace testing
 {
-    public partial class frmBlotterRec2 : Form
+    public partial class frmBlotterRec2Insert : Form
     {
         csBlotter blot = new csBlotter();
 
-        public frmBlotterRec2()
+        public frmBlotterRec2Insert()
         {
             InitializeComponent();
         }
@@ -55,7 +55,7 @@ namespace testing
 
         private void btnAddAssailant_Click(object sender, EventArgs e)
         {
-            frmBlotterRec3 frm = new frmBlotterRec3();
+            frmBlotterRec3Insert frm = new frmBlotterRec3Insert();
             frm.ShowDialog(this);
 
             list();

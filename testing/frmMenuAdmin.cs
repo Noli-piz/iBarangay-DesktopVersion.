@@ -17,6 +17,12 @@ namespace testing
             InitializeComponent();
         }
 
+        private void frmMenuAdmin_Load(object sender, EventArgs e)
+        {
+            csUser user = new csUser();
+            lblUsername.Text = user.username();
+            lblName.Text = user.name();
+        }
         private void btnAnnouncement_Click(object sender, EventArgs e)
         {
             ClearPanel();
@@ -88,5 +94,7 @@ namespace testing
         {
             ClearPanel();
         }
+
+
     }
 }

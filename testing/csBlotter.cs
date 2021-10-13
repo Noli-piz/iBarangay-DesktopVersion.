@@ -226,7 +226,9 @@ namespace testing
                 }
                 rdr.Close();
 
-                cs.command.CommandText = "SELECT a.id, r.Fname, r.Mname, r.Lname, r.Sname FROM tbl_assailantresident AS a " +
+                // Logical error
+
+                cs.command.CommandText = "SELECT a.id, a.id_resident, r.Fname, r.Mname, r.Lname, r.Sname FROM tbl_assailantresident AS a " +
                     "LEFT JOIN tbl_residentinfo AS r ON r.id_resident = a.id_resident " +
                     "WHERE a.id_assailant_resident = @keyid AND Deleted = 0";
                 cs.command.Parameters.AddWithValue("@keyid", KeyIDResident);
@@ -235,8 +237,10 @@ namespace testing
                 while (rdr.Read())
                 {
                     int intID = Int32.Parse(rdr[0].ToString());
-                    String fullname = rdr[1].ToString() + " " + rdr[2].ToString() + " " + rdr[3].ToString() + " " + rdr[4].ToString();
-                    AddAssailant2(new AssailantRes2() { from = "resident", id = intID, name = fullname });
+                    int intIDResident = Int32.Parse(rdr[1].ToString());
+                    String fullname = rdr[2].ToString() + " " + rdr[3].ToString() + " " + rdr[4].ToString() + " " + rdr[5].ToString();
+                    AddAssailant2(new AssailantRes2() { from = "resident", id = intID, idresident= intIDResident, name = fullname });
+                    Console.WriteLine(intID  +" = resident = "+ fullname);
                 }
                 rdr.Close();
 
@@ -249,6 +253,7 @@ namespace testing
                     int intID = Int32.Parse(rdr[0].ToString());
                     String fullname = rdr[1].ToString();
                     AddAssailant2(new AssailantRes2() { from = "nonresident", id = intID, name = fullname });
+                    Console.WriteLine(intID + " = nonresident = " + fullname);
                 }
                 rdr.Close();
             }
@@ -390,6 +395,12 @@ namespace testing
         {
             AssRes2.RemoveAll(a => a.id == b.id && a.name == b.name);
         }
+        public void ResetAssailant()
+        {
+            AssRes2 = new List<AssailantRes2>();
+            AssRes = new List<AssailantRes>();
+        }
+
         public List<AssailantRes2> GetArrAssailant2()
         {
             return AssRes2;
@@ -408,6 +419,7 @@ namespace testing
     {
         public string from { get; set; }
         public int id { get; set; }
+        public int idresident { get; set; }
         public string name { get; set; }
 
     }

@@ -251,5 +251,23 @@ namespace testing
         {
             return ArrBlotterStat;
         }
+
+        //  
+        // For frmReports
+        //
+
+        private static ArrayList ArrReports;
+        public void RetrieveArrReports()
+        {
+            ArrReports = new ArrayList()
+            {
+                "Issuance Reports", "Request Reports", "Appointment Reports"
+            };
+        }
+
+        public ArrayList GetArrReports()
+        {
+            return ArrReports;
+        }
     }
 }

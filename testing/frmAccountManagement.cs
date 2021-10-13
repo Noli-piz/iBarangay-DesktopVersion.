@@ -201,7 +201,7 @@ namespace testing
             tbSearch.Text = "";
             ID.Clear();
             data1.Rows.Clear();
-
+            loadData();
         }
     }
 }

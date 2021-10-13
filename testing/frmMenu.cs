@@ -29,6 +29,9 @@ namespace testing
         public frmMenu()
         {
             InitializeComponent();
+            csUser user = new csUser();
+            lblUsername.Text = user.username();
+            lblName.Text = user.name();
         }
 
         private void frmMenu_Load(object sender, EventArgs e)

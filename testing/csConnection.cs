@@ -18,12 +18,12 @@ namespace testing
         {
             String connection = "server=localhost;port=3306;username=root;password=;database=ibarangaydb;sslmode=none";
             String connection2 = "server=sql6.freemysqlhosting.net;port=3306;username=sql6439916;password=pU3V3LZ6vd;database=sql6439916;sslmode=none";
-            conn = new MySqlConnection(connection2);
+            conn = new MySqlConnection(connection);
         }
 
         public string DBname()
         {
-            return newDBname;
+            return oldDBname;
         }
 
         //public void Backup()

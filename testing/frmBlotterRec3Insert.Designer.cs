@@ -1,7 +1,7 @@
 ﻿
 namespace testing
 {
-    partial class frmBlotterRec3
+    partial class frmBlotterRec3Insert
     {
         /// <summary>
         /// Required designer variable.
@@ -33,13 +33,14 @@ namespace testing
             this.btnSearch1 = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.tbEnterName = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnOkay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.boxpanel = new System.Windows.Forms.TableLayoutPanel();
             this.data1 = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,15 +83,16 @@ namespace testing
             this.tbEnterName.Size = new System.Drawing.Size(315, 30);
             this.tbEnterName.TabIndex = 3;
             // 
-            // btnCancel
+            // btnClear
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(933, 652);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 36);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(933, 652);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(90, 36);
+            this.btnClear.TabIndex = 6;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnOkay
             // 
@@ -160,23 +162,36 @@ namespace testing
             this.data1.TabIndex = 10;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
-            // frmBlotterRec3
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(824, 652);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(90, 36);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // frmBlotterRec3Insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 719);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.boxpanel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.tbEnterName);
             this.Controls.Add(this.btnSearch1);
             this.Controls.Add(this.tbSearch1);
-            this.Name = "frmBlotterRec3";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmBlotterRec3Insert";
             this.Text = "frmBlotterRec3";
             this.Load += new System.EventHandler(this.frmBlotterRec3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
@@ -191,12 +206,13 @@ namespace testing
         private System.Windows.Forms.Button btnSearch1;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.TextBox tbEnterName;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnOkay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel boxpanel;
         private System.Windows.Forms.DataGridView data1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

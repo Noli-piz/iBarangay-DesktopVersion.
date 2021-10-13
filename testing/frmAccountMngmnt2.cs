@@ -143,5 +143,10 @@ namespace testing
             cbAccountStat.Items.AddRange(cb.GetArrUserStatus().ToArray());
             cbAccountStat.SelectedIndex = 0;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

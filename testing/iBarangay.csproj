@@ -251,6 +251,15 @@
     <Compile Include="csMisService.cs" />
     <Compile Include="csRand.cs" />
     <Compile Include="csResidents.cs" />
+    <Compile Include="csUser.cs" />
+    <Compile Include="DTReport.cs">
+      <DependentUpon>DTReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTofficials.cs">
       <DependentUpon>DTofficials.xsd</DependentUpon>
     </Compile>
@@ -295,11 +304,11 @@
     <Compile Include="frmBlotterRec2Update.Designer.cs">
       <DependentUpon>frmBlotterRec2Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBlotterRec3.cs">
+    <Compile Include="frmBlotterRec3Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBlotterRec3.Designer.cs">
-      <DependentUpon>frmBlotterRec3.cs</DependentUpon>
+    <Compile Include="frmBlotterRec3Insert.Designer.cs">
+      <DependentUpon>frmBlotterRec3Insert.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBlotterRec3Update.cs">
       <SubType>Form</SubType>
@@ -355,11 +364,11 @@
     <Compile Include="frmUserMngmnt3.Designer.cs">
       <DependentUpon>frmUserMngmnt3.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBlotterRec2.cs">
+    <Compile Include="frmBlotterRec2Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBlotterRec2.Designer.cs">
-      <DependentUpon>frmBlotterRec2.cs</DependentUpon>
+    <Compile Include="frmBlotterRec2Insert.Designer.cs">
+      <DependentUpon>frmBlotterRec2Insert.cs</DependentUpon>
     </Compile>
     <Compile Include="frmResident_insert.cs">
       <SubType>Form</SubType>
@@ -459,10 +468,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptAppointmentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAppointmentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptBrgyClearance.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptBrgyClearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptIssuanceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIssuanceReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptOfficialsName.cs">
@@ -471,11 +492,35 @@
       <DependentUpon>rptOfficialsName.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptRequestReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRequestReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="vwrAppointmentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrAppointmentReport.Designer.cs">
+      <DependentUpon>vwrAppointmentReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="vwrBrgyClearance.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vwrBrgyClearance.Designer.cs">
       <DependentUpon>vwrBrgyClearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vwrIssuanceReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrIssuanceReports.Designer.cs">
+      <DependentUpon>vwrIssuanceReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vwrRequestReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrRequestReports.Designer.cs">
+      <DependentUpon>vwrRequestReports.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form Issue Certificate\frmIssueBrgyClearance.resx">
       <DependentUpon>frmIssueBrgyClearance.cs</DependentUpon>
@@ -495,8 +540,8 @@
     <EmbeddedResource Include="frmBlotterRec2Update.resx">
       <DependentUpon>frmBlotterRec2Update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBlotterRec3.resx">
-      <DependentUpon>frmBlotterRec3.cs</DependentUpon>
+    <EmbeddedResource Include="frmBlotterRec3Insert.resx">
+      <DependentUpon>frmBlotterRec3Insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBlotterRec3Update.resx">
       <DependentUpon>frmBlotterRec3Update.cs</DependentUpon>
@@ -525,8 +570,8 @@
     <EmbeddedResource Include="frmUserMngmnt3.resx">
       <DependentUpon>frmUserMngmnt3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBlotterRec2.resx">
-      <DependentUpon>frmBlotterRec2.cs</DependentUpon>
+    <EmbeddedResource Include="frmBlotterRec2Insert.resx">
+      <DependentUpon>frmBlotterRec2Insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResident_insert.resx">
       <DependentUpon>frmResident_insert.cs</DependentUpon>
@@ -586,17 +631,49 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptAppointmentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAppointmentReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptBrgyClearance.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBrgyClearance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptIssuanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIssuanceReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptOfficialsName.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptOfficialsName.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptRequestReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRequestReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vwrAppointmentReport.resx">
+      <DependentUpon>vwrAppointmentReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vwrBrgyClearance.resx">
       <DependentUpon>vwrBrgyClearance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vwrIssuanceReports.resx">
+      <DependentUpon>vwrIssuanceReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vwrRequestReports.resx">
+      <DependentUpon>vwrRequestReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DTReport.xsc">
+      <DependentUpon>DTReport.xsd</DependentUpon>
+    </None>
+    <None Include="DTReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DTReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DTReport.xss">
+      <DependentUpon>DTReport.xsd</DependentUpon>
+    </None>
     <None Include="DTofficials.xsc">
       <DependentUpon>DTofficials.xsd</DependentUpon>
     </None>

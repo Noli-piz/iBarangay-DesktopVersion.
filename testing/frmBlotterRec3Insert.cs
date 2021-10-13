@@ -131,7 +131,6 @@ namespace testing
                             blot.AddAssailant(assres);
                             SelectedAssailant();
 
-
                         }
 
                         // Temporary Store

@@ -240,7 +240,7 @@ namespace testing
                     int intIDResident = Int32.Parse(rdr[1].ToString());
                     String fullname = rdr[2].ToString() + " " + rdr[3].ToString() + " " + rdr[4].ToString() + " " + rdr[5].ToString();
                     AddAssailant2(new AssailantRes2() { from = "resident", id = intID, idresident= intIDResident, name = fullname });
-                    Console.WriteLine(intID  +" = resident = "+ fullname);
+                    Console.WriteLine(intID  +" = resident = "+ fullname +" ===="+ intIDResident);
                 }
                 rdr.Close();
 

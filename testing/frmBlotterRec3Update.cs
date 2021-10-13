@@ -16,7 +16,6 @@ namespace testing
     {
         private csConnection cs = new csConnection();
         private csBlotter blot = new csBlotter();
-        private AssailantRes2 assres2 = new AssailantRes2();
         
 
 
@@ -110,6 +109,7 @@ namespace testing
                     DialogResult dialogResult = MessageBox.Show("Are you sure you want to add " + fname + "?", "Add", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
+                        AssailantRes2 assres2 = new AssailantRes2();
                         assres2.from = "insertresident";
                         assres2.id = Int32.Parse(ID[e.RowIndex].ToString());
                         assres2.name = fname;
@@ -118,12 +118,14 @@ namespace testing
                         foreach (var str in blot.GetArrAssailant2())
                         {
 
-
-                            Console.WriteLine("\n\n STR " + str.id + " = " + str.name + " = " + str.from);
-                            Console.WriteLine(" AssRes " + assres2.id + " = " + assres2.from + " = " + assres2.name + " = " + assres2.idresident);
-
                             if (str.id == assres2.id && str.name == assres2.name && str.from == assres2.from)
-                            { 
+                            {
+
+
+                                Console.WriteLine("====================================== IF ======================== ");
+                                Console.WriteLine(str.id + " = " + assres2.id);
+                                Console.WriteLine(str.name + " = " + assres2.name);
+                                Console.WriteLine(str.from + " = " + assres2.from);
 
                                 MessageBox.Show("This Person is already Exist!");
                                 exist = true;
@@ -132,6 +134,11 @@ namespace testing
                             }
                             else if(str.idresident == assres2.id && str.name == assres2.name && "resident" == str.from)
                             {
+                                Console.WriteLine( "====================================== ELSE IF ======================== ");
+                                Console.WriteLine( str.idresident + " = " + assres2.id);
+                                Console.WriteLine( str.name + " = " + assres2.name);
+                                Console.WriteLine( str.from + " = " + "resident");
+
                                 MessageBox.Show("This Person is already Exist!");
                                 exist = true;
                                 break;
@@ -143,6 +150,8 @@ namespace testing
                         {
                             blot.AddAssailant2(assres2);
                             SelectedAssailant();
+
+                            Console.WriteLine("------ " + exist + " ---------");
                         }
 
                         // Temporary Store
@@ -153,6 +162,7 @@ namespace testing
 
                         TempBlot temp = new TempBlot();
                         temp.AddTempAssailant2(tempAss);
+
 
                     }
                 }

@@ -18,13 +18,15 @@ using System.IO;
 using System.Threading;
 using Firebase.Storage;
 using MySql.Data.MySqlClient;
+using Microsoft.WindowsAzure.Storage;
+using System.Net;
 
 namespace testing
 {
     public partial class frmResident_insert : Form
     {
         csResidents res = new csResidents();
-        String path ="";
+        String path ="", strImageUrl;
 
         public frmResident_insert()
         {
@@ -112,8 +114,51 @@ namespace testing
         }
 
 
+       private async void UploadImage()
+        {
+            try
+            {
 
-        private async void UploadImage()
+                byte[] file = System.IO.File.ReadAllBytes(path);
+                MemoryStream inputStream = new MemoryStream(file);
+
+
+                var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=ibarangaystorage;AccountKey=SuJ5YP5ovCzjeBc9sLKwbbhrk8GIWjrSyO493EnTRLc7tpNxApS/sdsIvk+qXWOhohgVASKI6VjFgrCYGYiuEw==;EndpointSuffix=core.windows.net");
+                var client = account.CreateCloudBlobClient();
+                var container = client.GetContainerReference("profileimages");
+                await container.CreateIfNotExistsAsync();
+                var name = Guid.NewGuid().ToString();
+                var blockBlob = container.GetBlockBlobReference($"{name}.png");
+                await blockBlob.UploadFromStreamAsync(inputStream);
+                string URL = blockBlob.Uri.OriginalString;
+                strImageUrl = URL;
+
+
+                MessageBox.Show("Upload Successful");
+                res.Image = strImageUrl;
+                DownloadImage();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "Upload Failed");
+            }
+        }
+
+
+        private async void DownloadImage()
+        {
+            var request = WebRequest.Create(strImageUrl);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+
+                Image img = new Bitmap(stream);
+                pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+            }
+        }
+
+        private async void UploadImageFirebase()
         {
             using (var stream = File.Open(@path, FileMode.Open)) {
 

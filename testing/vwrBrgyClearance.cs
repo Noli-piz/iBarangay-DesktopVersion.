@@ -21,21 +21,23 @@ namespace testing
     {
 
         csHostConfiguration host = new csHostConfiguration();
-        String ID;
+        String ID, Purpose;
         DTofficials ds = new DTofficials();
 
 
-        public vwrBrgyClearance(String id)
+        public vwrBrgyClearance(String id, String purpose)
         {
             InitializeComponent();
             ID = id;
-            crystalReportViewer1.ToolPanelView = ToolPanelViewType.None;
+            Purpose = purpose;
         }
 
         private void vwrBrgyClearance_Load(object sender, EventArgs e)
         {
             LoadOfficials();
             SelectData();
+            crystalReportViewer1.ToolPanelView = ToolPanelViewType.None;
+
         }
 
         static TextObject txtResidentName, txtResidentAge, txtResidentStatus, txtResidentPurpose;
@@ -71,12 +73,14 @@ namespace testing
                     int i = 0;
                     foreach (var jo in (JArray)((JObject)data)["issuance"])
                     {
-                        ds.Resident.Rows.Add( i, jo["FullName"].ToString(), jo["Age"].ToString(), jo["CivilStatus"].ToString(), "");
-/*
-                        txtResidentName.Text = jo["FullName"].ToString();
-                        txtResidentAge.Text = jo["Age"].ToString();
-                        txtResidentStatus.Text = jo["CivilStatus"].ToString();
-                        //txtResidentPurpose.Text = jo["Purpose"].ToString();*/
+
+                        String localURL = @"D:\TempImage\temp.png";
+                        using (WebClient client = new WebClient())
+                        {
+                            client.DownloadFileAsync(new Uri(jo["Image"].ToString()), localURL);
+                        }
+
+                        ds.Resident.Rows.Add( i, jo["FullName"].ToString(), jo["Age"].ToString(), jo["CivilStatus"].ToString(), Purpose, localURL);
                         i++;
                     }
                 }
@@ -89,6 +93,20 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private async void DownloadImage(String url)
+        {
+            var request = WebRequest.Create(url);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+
+
+                //Image img = new Bitmap(stream);
+                //return img.GetThumbnailImage(200, 200, null, new IntPtr());
             }
         }
 

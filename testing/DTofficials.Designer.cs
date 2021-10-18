@@ -624,6 +624,8 @@ namespace testing {
             
             private global::System.Data.DataColumn columnPurpose;
             
+            private global::System.Data.DataColumn columnImageLoc;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ResidentDataTable() {
@@ -699,6 +701,14 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ImageLocColumn {
+                get {
+                    return this.columnImageLoc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -734,14 +744,15 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ResidentRow AddResidentRow(string ID, string FullName, string Age, string Status, string Purpose) {
+            public ResidentRow AddResidentRow(string ID, string FullName, string Age, string Status, string Purpose, string ImageLoc) {
                 ResidentRow rowResidentRow = ((ResidentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         FullName,
                         Age,
                         Status,
-                        Purpose};
+                        Purpose,
+                        ImageLoc};
                 rowResidentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowResidentRow);
                 return rowResidentRow;
@@ -776,6 +787,7 @@ namespace testing {
                 this.columnAge = base.Columns["Age"];
                 this.columnStatus = base.Columns["Status"];
                 this.columnPurpose = base.Columns["Purpose"];
+                this.columnImageLoc = base.Columns["ImageLoc"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -791,6 +803,8 @@ namespace testing {
                 base.Columns.Add(this.columnStatus);
                 this.columnPurpose = new global::System.Data.DataColumn("Purpose", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPurpose);
+                this.columnImageLoc = new global::System.Data.DataColumn("ImageLoc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImageLoc);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("ID", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
@@ -1122,6 +1136,22 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ImageLoc {
+                get {
+                    try {
+                        return ((string)(this[this.tableResident.ImageLocColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ImageLoc\' in table \'Resident\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableResident.ImageLocColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsFullNameNull() {
                 return this.IsNull(this.tableResident.FullNameColumn);
             }
@@ -1166,6 +1196,18 @@ namespace testing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPurposeNull() {
                 this[this.tableResident.PurposeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsImageLocNull() {
+                return this.IsNull(this.tableResident.ImageLocColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetImageLocNull() {
+                this[this.tableResident.ImageLocColumn] = global::System.Convert.DBNull;
             }
         }
         

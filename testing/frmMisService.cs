@@ -131,11 +131,11 @@ namespace testing
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
 
-                    csMisService ser = new csMisService();
-                    ser.GetID(identifier);
-                    //ser.GetID(ID[e.RowIndex].ToString());
+                    //csMisService ser = new csMisService();
+                    //ser.GetID(identifier);
 
-                    frmMisService2 frm = new frmMisService2();
+                    ////ser.GetID(ID[e.RowIndex].ToString());
+                    frmMisService2 frm = new frmMisService2(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

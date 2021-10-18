@@ -42,14 +42,14 @@ namespace testing
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.rptBrgyClearance1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1075, 638);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1235, 740);
             this.crystalReportViewer1.TabIndex = 0;
             // 
             // vwrBrgyClearance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 638);
+            this.ClientSize = new System.Drawing.Size(1235, 740);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "vwrBrgyClearance";
             this.Text = "vwrBrgyClearance";

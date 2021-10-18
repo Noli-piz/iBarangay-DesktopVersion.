@@ -77,7 +77,7 @@ namespace testing
 
                         AL = new ArrayList();
                         AL.Add(i.ToString());
-                        AL.Add(jo["id_request"]);
+                        AL.Add(jo["id_resident"]);
                         ID.Add(jo["id_request"].ToString());
                         AL.Add(jo["Fname"] +" " + jo["Mname"] +" "+ jo["Lname"]+" "+ jo["Sname"]);
                         AL.Add(jo["Birthdate"]);

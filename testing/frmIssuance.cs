@@ -162,11 +162,11 @@ namespace testing
                 DataGridViewRow row = data1.Rows[e.RowIndex];
                 String identifier = row.Cells[1].Value.ToString();
 
-                vwrBrgyClearance vwr = new vwrBrgyClearance(identifier);
+                vwrBrgyClearance vwr = new vwrBrgyClearance(identifier, "Purpose");
                 vwr.ShowDialog(this);
             }else if (e.ColumnIndex == 9)
             {
-                vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString());
+                vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
                 vwr.ShowDialog(this);
             }
         }

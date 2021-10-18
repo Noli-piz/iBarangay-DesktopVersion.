@@ -134,5 +134,24 @@ namespace testing
         {
             this.Close();
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            if (lblDocument.Text == "Barangay Clearance")
+            {
+                vwrBrgyClearance vwr = new vwrBrgyClearance(ID, rbPurpose.Text);
+                vwr.ShowDialog(this);
+
+
+            }
+            else if(lblDocument.Text == "Good Moral")
+            {
+
+            }
+            else if ( lblDocument.Text == "Indigency" )
+            {
+
+            }
+        }
     }
 }

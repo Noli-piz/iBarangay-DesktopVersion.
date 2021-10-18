@@ -39,6 +39,7 @@ namespace testing
             // 
             // data1
             // 
+            this.data1.AllowUserToAddRows = false;
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 93);
             this.data1.Name = "data1";

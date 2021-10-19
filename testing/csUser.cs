@@ -67,6 +67,7 @@ namespace testing
         }
 
         public string Message { get; private set; }
+        public string strID() { return id; }
         public string username() { return Username; }
         public string name()  { return Name; }
     }

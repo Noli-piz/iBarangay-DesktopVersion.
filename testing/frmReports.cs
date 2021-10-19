@@ -219,7 +219,6 @@ namespace testing
                 data1.Columns.Add("", "End Time");
                 data1.Columns.Add("", "Details");
                 data1.Columns.Add("", "Status");
-                data1.Columns.Add("", "Deleted");
                 data1.Columns.Add("", "Date");
 
 
@@ -260,7 +259,6 @@ namespace testing
                         AL.Add(jo["EndTime"]);
                         AL.Add(jo["Details"]);
                         AL.Add(jo["Status"]);
-                        AL.Add(jo["Deleted"]);
                         AL.Add(jo["Date"]);
                         data1.Rows.Add(AL.ToArray());
                         i++;

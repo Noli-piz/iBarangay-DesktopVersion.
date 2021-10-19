@@ -107,6 +107,8 @@ namespace testing
                 {
                     MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
                 }
+                
+                data1.Columns["ID"].Visible = false;
 
                 data1.AutoResizeColumns();
                 data1.AutoResizeRows();

@@ -19,12 +19,13 @@ namespace testing
     public partial class frmRequest2 : Form
     {
         csHostConfiguration host = new csHostConfiguration();
-        private String ID = "";
+        private String ID = "", ResID;
 
-        public frmRequest2(String id)
+        public frmRequest2(String id, String ResID)
         {
             InitializeComponent();
             ID = id;
+            this.ResID = ResID;
         }
 
         private void frmRequest2_Load(object sender, EventArgs e)
@@ -97,6 +98,9 @@ namespace testing
                     datas["ID"] = ID;
                     datas["Status"] = cbStatus.SelectedItem.ToString();
 
+                    csUser user = new csUser();
+                    datas["UserID"] = user.strID();
+
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
                 }
@@ -139,7 +143,7 @@ namespace testing
         {
             if (lblDocument.Text == "Barangay Clearance")
             {
-                vwrBrgyClearance vwr = new vwrBrgyClearance(ID, rbPurpose.Text);
+                vwrBrgyClearance vwr = new vwrBrgyClearance(ResID, rbPurpose.Text);
                 vwr.ShowDialog(this);
 
 

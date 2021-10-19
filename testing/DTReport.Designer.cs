@@ -768,8 +768,6 @@ namespace testing {
             
             private global::System.Data.DataColumn columnStatus;
             
-            private global::System.Data.DataColumn columnDeleted;
-            
             private global::System.Data.DataColumn columnDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -879,14 +877,6 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DeletedColumn {
-                get {
-                    return this.columnDeleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn DateColumn {
                 get {
                     return this.columnDate;
@@ -930,7 +920,7 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dataAppointmentReportRow AdddataAppointmentReportRow(string ID, string Fullname, string Title, string Name, string _ap_Date, string StartTime, string EndTime, string Details, string Status, string Deleted, string Date) {
+            public dataAppointmentReportRow AdddataAppointmentReportRow(string ID, string Fullname, string Title, string Name, string _ap_Date, string StartTime, string EndTime, string Details, string Status, string Date) {
                 dataAppointmentReportRow rowdataAppointmentReportRow = ((dataAppointmentReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -942,7 +932,6 @@ namespace testing {
                         EndTime,
                         Details,
                         Status,
-                        Deleted,
                         Date};
                 rowdataAppointmentReportRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdataAppointmentReportRow);
@@ -975,7 +964,6 @@ namespace testing {
                 this.columnEndTime = base.Columns["EndTime"];
                 this.columnDetails = base.Columns["Details"];
                 this.columnStatus = base.Columns["Status"];
-                this.columnDeleted = base.Columns["Deleted"];
                 this.columnDate = base.Columns["Date"];
             }
             
@@ -1002,8 +990,6 @@ namespace testing {
                 base.Columns.Add(this.columnDetails);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
-                this.columnDeleted = new global::System.Data.DataColumn("Deleted", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDeleted);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
             }
@@ -2002,22 +1988,6 @@ namespace testing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Deleted {
-                get {
-                    try {
-                        return ((string)(this[this.tabledataAppointmentReport.DeletedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Deleted\' in table \'dataAppointmentReport\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledataAppointmentReport.DeletedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Date {
                 get {
                     try {
@@ -2138,18 +2108,6 @@ namespace testing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetStatusNull() {
                 this[this.tabledataAppointmentReport.StatusColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDeletedNull() {
-                return this.IsNull(this.tabledataAppointmentReport.DeletedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDeletedNull() {
-                this[this.tabledataAppointmentReport.DeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

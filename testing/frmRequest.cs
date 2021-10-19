@@ -77,8 +77,8 @@ namespace testing
 
                         AL = new ArrayList();
                         AL.Add(i.ToString());
-                        AL.Add(jo["id_resident"]);
-                        ID.Add(jo["id_request"].ToString());
+                        AL.Add(jo["id_request"]);
+                        ID.Add(jo["id_resident"].ToString());
                         AL.Add(jo["Fname"] +" " + jo["Mname"] +" "+ jo["Lname"]+" "+ jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);
@@ -95,6 +95,8 @@ namespace testing
                 {
                     MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
                 }
+
+                data1.Columns["ID"].Visible = false;
 
                 data1.AutoResizeColumns();
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -117,7 +119,7 @@ namespace testing
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
 
-                    frmRequest2 frm = new frmRequest2(identifier);
+                    frmRequest2 frm = new frmRequest2(identifier, ID[e.RowIndex].ToString());
                     frm.ShowDialog(this);
 
                     ID.Clear();
@@ -206,7 +208,7 @@ namespace testing
                         AL = new ArrayList();
                         AL.Add(i.ToString());
                         AL.Add(jo["id_request"]);
-                        ID.Add(jo["id_request"].ToString());
+                        ID.Add(jo["id_resident"].ToString());
                         AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);

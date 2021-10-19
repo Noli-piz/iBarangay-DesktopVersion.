@@ -55,6 +55,7 @@ namespace testing
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(281, 38);
             this.tbUsername.TabIndex = 1;
+            this.tbUsername.Text = "emp";
             // 
             // tbPassword
             // 
@@ -63,6 +64,7 @@ namespace testing
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(281, 38);
             this.tbPassword.TabIndex = 2;
+            this.tbPassword.Text = "emp";
             // 
             // label1
             // 

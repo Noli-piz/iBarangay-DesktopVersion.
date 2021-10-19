@@ -150,6 +150,9 @@ namespace testing
                     datas["StartTime"] = dtTimeStart.Value.ToString("hh:mm:ss tt");
                     datas["Status"] = cbDone.Checked ? "True" : "False";
 
+                    csUser user = new csUser();
+                    datas["UserID"] = user.strID();
+
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
                 }

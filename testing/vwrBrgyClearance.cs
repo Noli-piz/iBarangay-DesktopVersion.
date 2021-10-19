@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Collections.Specialized;
+using System.Drawing.Printing;
 
 namespace testing
 {
@@ -28,8 +29,54 @@ namespace testing
         public vwrBrgyClearance(String id, String purpose)
         {
             InitializeComponent();
+
+            foreach (ToolStrip ts in crystalReportViewer1.Controls.OfType<ToolStrip>())
+            {
+                foreach (ToolStripButton tsb in ts.Items.OfType<ToolStripButton>())
+                {
+                    //hacky but should work. you can probably figure out a better method
+                    if (tsb.ToolTipText.ToLower().Contains("export"))
+                    {
+                        //Adding a handler for our propose
+                        tsb.Click += new EventHandler(printButton_Click);
+                    }
+
+                    else if (tsb.ToolTipText.ToLower().Contains("print"))
+                    {
+                        //Adding a handler for our propose
+                        tsb.Click += new EventHandler(printButton_Click);
+                    }
+                }
+            }
+
             ID = id;
             Purpose = purpose;
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                csUser users = new csUser();
+                var uri = host.IP() + "/iBar/ibar_issuancereport_insert.php";
+
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["UserID"] = users.strID();
+                    datas["Types"] = "Barangay Clearance";
+                    datas["ResidentID"] = ID;
+                    datas["Purpose"] = Purpose;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
         }
 
         private void vwrBrgyClearance_Load(object sender, EventArgs e)
@@ -38,20 +85,13 @@ namespace testing
             SelectData();
             crystalReportViewer1.ToolPanelView = ToolPanelViewType.None;
 
-        }
 
-        static TextObject txtResidentName, txtResidentAge, txtResidentStatus, txtResidentPurpose;
+        }
 
         private async void SelectData()
         {
             try
             {
-
-
-/*                txtResidentName = (TextObject)rptBrgyClearance1.ReportDefinition.ReportObjects["strResidentName"];
-                txtResidentAge = (TextObject)rptBrgyClearance1.ReportDefinition.ReportObjects["strAge"];
-                txtResidentStatus = (TextObject)rptBrgyClearance1.ReportDefinition.ReportObjects["strResidentStatus"];
-                txtResidentPurpose = (TextObject)rptBrgyClearance1.ReportDefinition.ReportObjects["strResidentPurpose"];*/
 
                 var uri = host.IP() + "/iBar/ibar_issuance_specific.php";
 
@@ -96,19 +136,6 @@ namespace testing
             }
         }
 
-        private async void DownloadImage(String url)
-        {
-            var request = WebRequest.Create(url);
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
-            {
-
-
-                //Image img = new Bitmap(stream);
-                //return img.GetThumbnailImage(200, 200, null, new IntPtr());
-            }
-        }
 
         private async void LoadOfficials()
         {
@@ -131,9 +158,6 @@ namespace testing
                         i++;
                     }
 
-                    //TextObject txtChairman = (TextObject)rptBrgyClearance1.ReportDefinition.ReportObjects["strBarangayChairman"];
-                    //txtChairman.Text =Cname; 
-
                     ReportDocument cryRpt = new ReportDocument();
                     cryRpt.Load("C:\\Users\\Lenovo\\source\\repos\\testing\\testing\\rptBrgyClearance.rpt");
                     //MessageBox.Show(Application.StartupPath);
@@ -155,5 +179,14 @@ namespace testing
             }
 
         }
+
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+
     }
 }

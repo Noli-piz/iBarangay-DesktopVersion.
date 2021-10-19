@@ -70,7 +70,6 @@ namespace testing
                         String end = jo["EndTime"].ToString();
                         String det = jo["Details"].ToString();
                         String status = jo["Status"].ToString();
-                        String deleted = jo["Deleted"].ToString();
                         String date = jo["Date"].ToString();
 
                         ds.dataAppointmentReport.Rows.Add(
@@ -84,7 +83,6 @@ namespace testing
                             end,
                             det,
                             status,
-                            deleted,
                             date
                             );
                     }

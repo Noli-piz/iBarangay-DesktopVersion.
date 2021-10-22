@@ -13,7 +13,7 @@ namespace testing
         private String ip3 = "http://192.168.43.253"; // noo
 
         public string IP(){
-            return ip3;    
+            return ip;    
         }
     }
 }

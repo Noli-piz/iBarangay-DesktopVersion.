@@ -111,16 +111,13 @@ namespace testing
                         lblName.Text = jo["Fname"].ToString() +" "+ jo["Mname"].ToString() + " " + jo["Lname"].ToString() +" "+ jo["Sname"].ToString();
                         tbUsername.Text = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
+                        cbAccountStat.Text = jo["Status"].ToString() == "0"? "Enabled" : "Disabled";
 
-                        if (jo["Status"].ToString() == "0")
+                        if (jo["Valid"].ToString() != "0")
                         {
-                            cbAccountStat.Text = "Enabled";
+                            DownloadImage(jo["img_idcloseup"].ToString());
+                            DownloadImage2(jo["img_facewithid"].ToString());
                         }
-                        else
-                        {
-                            cbAccountStat.Text = "Disabled";
-                        }
-
                     }
                 }
                 else if (success == "0")
@@ -132,6 +129,32 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private async void DownloadImage(String url)
+        {
+            var request = WebRequest.Create(url);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+
+                Image img = new Bitmap(stream);
+                pbImage1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+            }
+        }
+
+        private async void DownloadImage2(String url)
+        {
+            var request = WebRequest.Create(url);
+
+            using (var response = request.GetResponse())
+            using (var stream = response.GetResponseStream())
+            {
+
+                Image img = new Bitmap(stream);
+                pbImage2.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
             }
         }
 
@@ -147,6 +170,23 @@ namespace testing
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHide1_Click(object sender, EventArgs e)
+        {
+            tbCPassword.PasswordChar = tbCPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+
+        }
+
+        private void btnHide2_Click(object sender, EventArgs e)
+        {
+            tbNPassword.PasswordChar = tbNPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+        }
+
+        private void btnHide3_Click(object sender, EventArgs e)
+        {
+            tbRPassword.PasswordChar = tbRPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+
         }
     }
 }

@@ -40,12 +40,13 @@ namespace testing
             data1.Columns.Clear();
             data1.Visible = false;
 
-            data1.Columns.Add("no", "No.");
-            data1.Columns.Add("id", "ID.");
-            data1.Columns.Add("uname", "Username");
-            data1.Columns.Add("fname", "Fullname");
-            data1.Columns.Add("vstat", "Voter Status");
-            data1.Columns.Add("vstat", "Account Status");
+            data1.Columns.Add("", "No.");
+            data1.Columns.Add("", "ID.");
+            data1.Columns.Add("", "Username");
+            data1.Columns.Add("", "Fullname");
+            data1.Columns.Add("", "Voter Status");
+            data1.Columns.Add("", "Validation");
+            data1.Columns.Add("", "Account Status");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
@@ -79,11 +80,8 @@ namespace testing
                         AL.Add(jo["Username"]);
                         AL.Add(jo["Fname"] +" "+ jo["Mname"] +" "+ jo["Lname"] +" "+ jo["Same"]);
                         AL.Add(jo["VoterStatus"]);
-
-                        if (jo["Status"].ToString() == "0")
-                            AL.Add("Enabled");
-                        else
-                            AL.Add("Disabled");
+                        AL.Add(jo["Valid"].ToString() == "0" ? "Not Validated" :  "Validated");
+                        AL.Add(jo["Status"].ToString() == "0" ? "Enabled" :  "Disabled");
 
                         data1.Rows.Add(AL.ToArray());
                         i++;
@@ -109,7 +107,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 7)
                 {
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();

@@ -50,11 +50,13 @@ namespace testing
                     if (cs.uType == "Admin")
                     {
                         frmMenuAdmin frm = new frmMenuAdmin();
+                        frm.Closed += (s, args) => this.Close();
                         frm.Show();
                     }
                     else
                     {
                         frmMenu frm = new frmMenu();
+                        frm.Closed += (s, args) => this.Close();
                         frm.Show();
                     }
 

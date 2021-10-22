@@ -46,6 +46,14 @@ namespace testing
             this.tbNPassword = new System.Windows.Forms.TextBox();
             this.tbCPassword = new System.Windows.Forms.TextBox();
             this.tbRPassword = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pbImage1 = new System.Windows.Forms.PictureBox();
+            this.pbImage2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -69,7 +77,7 @@ namespace testing
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(493, 612);
+            this.btnUpdate.Location = new System.Drawing.Point(1105, 606);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(134, 51);
             this.btnUpdate.TabIndex = 2;
@@ -89,7 +97,7 @@ namespace testing
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(336, 612);
+            this.btnCancel.Location = new System.Drawing.Point(944, 606);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 51);
             this.btnCancel.TabIndex = 4;
@@ -106,6 +114,7 @@ namespace testing
             this.btnHide1.TabIndex = 5;
             this.btnHide1.Text = "hide/unhide";
             this.btnHide1.UseVisualStyleBackColor = true;
+            this.btnHide1.Click += new System.EventHandler(this.btnHide1_Click);
             // 
             // btnHide2
             // 
@@ -116,6 +125,7 @@ namespace testing
             this.btnHide2.TabIndex = 6;
             this.btnHide2.Text = "hide/unhide";
             this.btnHide2.UseVisualStyleBackColor = true;
+            this.btnHide2.Click += new System.EventHandler(this.btnHide2_Click);
             // 
             // btnHide3
             // 
@@ -126,6 +136,7 @@ namespace testing
             this.btnHide3.TabIndex = 7;
             this.btnHide3.Text = "hide/unhide";
             this.btnHide3.UseVisualStyleBackColor = true;
+            this.btnHide3.Click += new System.EventHandler(this.btnHide3_Click);
             // 
             // label1
             // 
@@ -183,15 +194,16 @@ namespace testing
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(55, 455);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 25);
+            this.label6.Size = new System.Drawing.Size(151, 25);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Account Status";
+            this.label6.Text = "Account Status:";
             // 
             // tbNPassword
             // 
             this.tbNPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNPassword.Location = new System.Drawing.Point(219, 300);
             this.tbNPassword.Name = "tbNPassword";
+            this.tbNPassword.PasswordChar = '*';
             this.tbNPassword.Size = new System.Drawing.Size(266, 30);
             this.tbNPassword.TabIndex = 14;
             // 
@@ -200,6 +212,7 @@ namespace testing
             this.tbCPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCPassword.Location = new System.Drawing.Point(219, 227);
             this.tbCPassword.Name = "tbCPassword";
+            this.tbCPassword.PasswordChar = '*';
             this.tbCPassword.ReadOnly = true;
             this.tbCPassword.Size = new System.Drawing.Size(266, 30);
             this.tbCPassword.TabIndex = 15;
@@ -209,14 +222,83 @@ namespace testing
             this.tbRPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRPassword.Location = new System.Drawing.Point(219, 376);
             this.tbRPassword.Name = "tbRPassword";
+            this.tbRPassword.PasswordChar = '*';
             this.tbRPassword.Size = new System.Drawing.Size(266, 30);
             this.tbRPassword.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(708, 448);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Validation Status:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Validated",
+            "Not Validated"});
+            this.comboBox1.Location = new System.Drawing.Point(893, 448);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(266, 33);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // pbImage1
+            // 
+            this.pbImage1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbImage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImage1.Location = new System.Drawing.Point(700, 133);
+            this.pbImage1.Name = "pbImage1";
+            this.pbImage1.Size = new System.Drawing.Size(253, 271);
+            this.pbImage1.TabIndex = 19;
+            this.pbImage1.TabStop = false;
+            // 
+            // pbImage2
+            // 
+            this.pbImage2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbImage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImage2.Location = new System.Drawing.Point(997, 133);
+            this.pbImage2.Name = "pbImage2";
+            this.pbImage2.Size = new System.Drawing.Size(253, 271);
+            this.pbImage2.TabIndex = 20;
+            this.pbImage2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(695, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(167, 25);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Front Image of ID:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(994, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(124, 25);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Face and ID:";
             // 
             // frmAccountMngmnt2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 693);
+            this.ClientSize = new System.Drawing.Size(1276, 693);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pbImage2);
+            this.Controls.Add(this.pbImage1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbRPassword);
             this.Controls.Add(this.tbCPassword);
             this.Controls.Add(this.tbNPassword);
@@ -237,6 +319,8 @@ namespace testing
             this.Name = "frmAccountMngmnt2";
             this.Text = "frmAccountMngmnt2";
             this.Load += new System.EventHandler(this.frmAccountMngmnt2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +345,11 @@ namespace testing
         private System.Windows.Forms.TextBox tbNPassword;
         private System.Windows.Forms.TextBox tbCPassword;
         private System.Windows.Forms.TextBox tbRPassword;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pbImage1;
+        private System.Windows.Forms.PictureBox pbImage2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -21,6 +21,7 @@ namespace testing
     {
         csHostConfiguration host = new csHostConfiguration();
 
+
         public frmAnnouncement()
         {
             InitializeComponent();

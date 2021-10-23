@@ -46,6 +46,7 @@ namespace testing
                         datas["ID"] = ID;
                         datas["Username"] = tbUsername.Text;
                         datas["Password"] = tbNPassword.Text == "" ? tbCPassword.Text : tbNPassword.Text;
+                        datas["Valid"] = cbValid.SelectedItem.ToString();
 
                         if (cbAccountStat.SelectedItem.ToString() == "Enabled")
                         {
@@ -112,13 +113,15 @@ namespace testing
                         tbUsername.Text = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
                         cbAccountStat.Text = jo["Status"].ToString() == "0"? "Enabled" : "Disabled";
+                        cbValid.Text = jo["Valid"].ToString() == "0" ? "Not Validated" : "Validated";
 
-                        if (jo["Valid"].ToString() != "0")
+                        string valid = jo["img_idcloseup"].ToString();
+                        if ( valid != "0")
                         {
                             DownloadImage(jo["img_idcloseup"].ToString());
                             DownloadImage2(jo["img_facewithid"].ToString());
-
                         }
+                        
                     }
                 }
                 else if (success == "0")

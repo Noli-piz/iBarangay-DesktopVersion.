@@ -141,9 +141,9 @@ namespace testing
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(283, -2);
+            this.panel1.Location = new System.Drawing.Point(282, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1512, 1021);
+            this.panel1.Size = new System.Drawing.Size(1640, 859);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox1
@@ -177,7 +177,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1900, 860);
+            this.ClientSize = new System.Drawing.Size(1924, 853);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogout);
@@ -191,7 +191,8 @@ namespace testing
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.MinimumSize = new System.Drawing.Size(1918, 907);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmMenuAdmin";
             this.Text = "frmMenuAdmin";
             this.Load += new System.EventHandler(this.frmMenuAdmin_Load);

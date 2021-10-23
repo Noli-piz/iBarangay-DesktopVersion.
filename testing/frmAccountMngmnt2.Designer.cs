@@ -47,7 +47,7 @@ namespace testing
             this.tbCPassword = new System.Windows.Forms.TextBox();
             this.tbRPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbValid = new System.Windows.Forms.ComboBox();
             this.pbImage1 = new System.Windows.Forms.PictureBox();
             this.pbImage2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -236,17 +236,18 @@ namespace testing
             this.label7.TabIndex = 17;
             this.label7.Text = "Validation Status:";
             // 
-            // comboBox1
+            // cbValid
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbValid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbValid.FormattingEnabled = true;
+            this.cbValid.Items.AddRange(new object[] {
             "Validated",
             "Not Validated"});
-            this.comboBox1.Location = new System.Drawing.Point(893, 448);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 33);
-            this.comboBox1.TabIndex = 18;
+            this.cbValid.Location = new System.Drawing.Point(893, 448);
+            this.cbValid.Name = "cbValid";
+            this.cbValid.Size = new System.Drawing.Size(266, 33);
+            this.cbValid.TabIndex = 18;
+            this.cbValid.Text = "Not Validated";
             // 
             // pbImage1
             // 
@@ -297,7 +298,7 @@ namespace testing
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pbImage2);
             this.Controls.Add(this.pbImage1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbValid);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbRPassword);
             this.Controls.Add(this.tbCPassword);
@@ -346,7 +347,7 @@ namespace testing
         private System.Windows.Forms.TextBox tbCPassword;
         private System.Windows.Forms.TextBox tbRPassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbValid;
         private System.Windows.Forms.PictureBox pbImage1;
         private System.Windows.Forms.PictureBox pbImage2;
         private System.Windows.Forms.Label label8;

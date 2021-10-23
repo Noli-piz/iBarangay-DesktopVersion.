@@ -167,7 +167,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 799);
+            this.ClientSize = new System.Drawing.Size(1329, 700);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.cbLevel);
             this.Controls.Add(this.dtDate);
@@ -180,7 +180,11 @@ namespace testing
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.tbSubject);
             this.Controls.Add(this.lbl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(2000, 2000);
             this.Name = "frmAnnouncement";
+            this.ShowInTaskbar = false;
             this.Text = "frmAnnouncement";
             this.Load += new System.EventHandler(this.frmAnnouncement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();

@@ -117,6 +117,7 @@ namespace testing
                         {
                             DownloadImage(jo["img_idcloseup"].ToString());
                             DownloadImage2(jo["img_facewithid"].ToString());
+
                         }
                     }
                 }

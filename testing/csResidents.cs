@@ -8,12 +8,13 @@ using MySql.Data.MySqlClient;
 namespace testing
 {
     class csResidents
-    {        
+    {
+
+        csConnection cs = new csConnection();
+
         public void InsertData()
         {
             try {
-
-                csConnection cs = new csConnection();
 
                 String table, query, value, finalquery;
 
@@ -46,7 +47,6 @@ namespace testing
         {
             try
             {
-                csConnection cs = new csConnection();
                 String query = "UPDATE "+cs.DBname()+".tbl_residentinfo " +
                                "SET Fname=@fname, Mname=@mname, Lname=@lname, Sname=@sname, Birthplace=@bplace, Birthdate=@bday, CivilStatus=@cstatus, Gender=@gender, " +
                                "id_purok=(SELECT id_purok FROM tbl_purok WHERE Name =@purok ), VoterStatus=@vstatus, CedulaNo=@cedno, ContactNo=@conno, Email=@email, " +
@@ -98,7 +98,6 @@ namespace testing
             try
             {
                 String query = "SELECT *,(SELECT Name FROM tbl_purok WHERE id_purok = r.id_purok)  FROM tbl_residentinfo AS r WHERE id_resident='" + strID+"'";
-                csConnection cs = new csConnection();
                 cs.conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, cs.conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -122,6 +121,9 @@ namespace testing
                     Image = rdr[15].ToString();
                     Purok = rdr[16].ToString();
                 }
+
+                cmd.Dispose();
+                cs.conn.Close();
             }
             catch (Exception e)
             {

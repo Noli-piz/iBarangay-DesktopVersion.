@@ -41,9 +41,9 @@ namespace testing
             this.btnActive = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblActiveCases = new System.Windows.Forms.Label();
+            this.lblSettledCases = new System.Windows.Forms.Label();
+            this.lblScheduledCases = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +53,7 @@ namespace testing
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(301, 31);
+            this.btnSearch.Location = new System.Drawing.Point(525, 31);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(113, 37);
             this.btnSearch.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace testing
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(427, 32);
+            this.btnClear.Location = new System.Drawing.Point(651, 32);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(113, 37);
             this.btnClear.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace testing
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(22, 34);
+            this.tbSearch.Location = new System.Drawing.Point(22, 35);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(259, 34);
             this.tbSearch.TabIndex = 3;
@@ -165,41 +165,45 @@ namespace testing
             this.button6.Text = "Scheduled Cases";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblActiveCases
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1088, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 44);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "3";
+            this.lblActiveCases.AutoSize = true;
+            this.lblActiveCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveCases.Location = new System.Drawing.Point(1088, 235);
+            this.lblActiveCases.Name = "lblActiveCases";
+            this.lblActiveCases.Size = new System.Drawing.Size(41, 44);
+            this.lblActiveCases.TabIndex = 11;
+            this.lblActiveCases.Text = "0";
             // 
-            // label2
+            // lblSettledCases
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1088, 449);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 44);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "10";
+            this.lblSettledCases.AutoSize = true;
+            this.lblSettledCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSettledCases.Location = new System.Drawing.Point(1088, 449);
+            this.lblSettledCases.Name = "lblSettledCases";
+            this.lblSettledCases.Size = new System.Drawing.Size(41, 44);
+            this.lblSettledCases.TabIndex = 12;
+            this.lblSettledCases.Text = "0";
             // 
-            // label3
+            // lblScheduledCases
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1088, 658);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 44);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "2";
+            this.lblScheduledCases.AutoSize = true;
+            this.lblScheduledCases.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScheduledCases.Location = new System.Drawing.Point(1088, 658);
+            this.lblScheduledCases.Name = "lblScheduledCases";
+            this.lblScheduledCases.Size = new System.Drawing.Size(41, 44);
+            this.lblScheduledCases.TabIndex = 13;
+            this.lblScheduledCases.Text = "0";
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 104);
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID",
+            "Compliant",
+            "Assailant"});
+            this.comboBox1.Location = new System.Drawing.Point(296, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(212, 33);
             this.comboBox1.TabIndex = 14;
@@ -208,11 +212,11 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 804);
+            this.ClientSize = new System.Drawing.Size(1285, 804);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblScheduledCases);
+            this.Controls.Add(this.lblSettledCases);
+            this.Controls.Add(this.lblActiveCases);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnActive);
@@ -249,9 +253,9 @@ namespace testing
         private System.Windows.Forms.Button btnActive;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblActiveCases;
+        private System.Windows.Forms.Label lblSettledCases;
+        private System.Windows.Forms.Label lblScheduledCases;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

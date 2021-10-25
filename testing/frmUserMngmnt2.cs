@@ -90,5 +90,15 @@ namespace testing
         {
             this.Close();
         }
+
+        private void btnHide1_Click(object sender, EventArgs e)
+        {
+            tbPassword.PasswordChar = tbPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+        }
+
+        private void btnHide2_Click(object sender, EventArgs e)
+        {
+            tbRetypePassword.PasswordChar = tbRetypePassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+        }
     }
 }

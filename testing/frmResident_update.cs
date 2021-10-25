@@ -1,10 +1,13 @@
-﻿using Firebase.Storage;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using Firebase.Storage;
 using Microsoft.WindowsAzure.Storage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -12,13 +15,14 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testing.Properties;
 
 namespace testing
 {
     public partial class frmResident_update : Form
     {
         csResidents res = new csResidents();
-        String path = "";
+        String path = "", strImageUrl;
 
         public frmResident_update()
         {
@@ -29,6 +33,12 @@ namespace testing
         {
             LoadComboBoxes();
             LoadData();
+
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+                cboCamera.Items.Add(filterInfo.Name);
+            cboCamera.SelectedIndex = 0;
+            videoCaptureDevice = new VideoCaptureDevice();
         }   
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -89,6 +99,8 @@ namespace testing
         {
             try
             {
+                lblProgress.Visible = true;
+                lblProgress.Text = "Uploading...";
 
                 byte[] file = System.IO.File.ReadAllBytes(path);
                 MemoryStream inputStream = new MemoryStream(file);
@@ -106,6 +118,7 @@ namespace testing
 
 
                 MessageBox.Show("Upload Successful");
+                res.Image = strImageUrl;
                 DownloadImage(strImageUrl);
             }
             catch (Exception e)
@@ -117,14 +130,28 @@ namespace testing
 
         private async void DownloadImage(String strImageUrl)
         {
-            var request = WebRequest.Create(strImageUrl);
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
+            try
             {
+                lblProgress.Text = "Loading...";
 
-                Image img = new Bitmap(stream);
+                var request = WebRequest.Create(strImageUrl);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+
+                    Image img = new Bitmap(stream);
+                    pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+                }
+            }
+            catch (Exception e)
+            {
+                Image img = Resources.noimg;
                 pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+            }
+            finally
+            {
+                lblProgress.Text = "";
             }
         }
 
@@ -259,6 +286,60 @@ namespace testing
                 UploadImage();
             }
             ofd.Dispose();
+        }
+
+        // Open Camera
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+        private void btnOpenCamera_Click(object sender, EventArgs e)
+        {
+            if (btnOpenCamera.Text == "Open Camera")
+            {
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
+                videoCaptureDevice.VideoResolution = videoCaptureDevice.VideoCapabilities[2];
+                videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+                videoCaptureDevice.Start();
+                btnOpenCamera.Text = "Close Camera";
+            }
+            else
+            {
+                videoCaptureDevice.Stop();
+                pictureBox1.Image = null;
+                btnOpenCamera.Text = "Open Camera";
+            }
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bit = (Bitmap)eventArgs.Frame.Clone();
+            pictureBox1.Image = bit;
+        }
+
+        private void frmAddNewResident_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (videoCaptureDevice.IsRunning == true)
+                videoCaptureDevice.Stop();
+        }
+
+        //SaveImage
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap varBmp = new Bitmap(pictureBox1.Image);
+                Bitmap newBitmap = new Bitmap(varBmp);
+                varBmp.Save(@"D:\ImageProject\a.png", ImageFormat.Png);
+                varBmp.Dispose();
+                varBmp = null;
+
+                path = @"D:\ImageProject\a.png";
+                UploadImage();
+                btnOpenCamera_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("some");
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace testing
             mnpltDataGrid();
             //RetrieveData();
             LoadData();
+            fetchCount();
         }
 
         private void mnpltDataGrid()
@@ -159,8 +160,10 @@ namespace testing
                     data1.Rows.Clear();
                     //RetrieveData();
                     LoadData();
+                    fetchCount();
                 }
-            }catch(ArgumentOutOfRangeException ex)
+            }
+            catch(ArgumentOutOfRangeException ex)
             {
                 
             }
@@ -177,6 +180,37 @@ namespace testing
 
         private void btnActive_Click(object sender, EventArgs e)
         {
+        }
+
+        private async void fetchCount()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_blotter_count.php";
+                string responseBody = await client.GetStringAsync(uri);
+
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
+                if (success == "1")
+                {
+                    foreach (var jo in (JArray)((JObject)data)["count"])
+                    {
+                        lblActiveCases.Text = jo["Active"].ToString();
+                        lblSettledCases.Text = jo["Settled"].ToString();
+                        lblScheduledCases.Text = jo["Scheduled"].ToString();
+                    }
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

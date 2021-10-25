@@ -75,7 +75,7 @@ namespace testing
             this.pictureBox1.Location = new System.Drawing.Point(31, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(261, 238);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -87,6 +87,7 @@ namespace testing
             this.btnOpenCamera.TabIndex = 1;
             this.btnOpenCamera.Text = "Open Camera";
             this.btnOpenCamera.UseVisualStyleBackColor = true;
+            this.btnOpenCamera.Click += new System.EventHandler(this.btnOpenCamera_Click);
             // 
             // btnCapture
             // 
@@ -96,6 +97,7 @@ namespace testing
             this.btnCapture.TabIndex = 2;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
             // label1
             // 
@@ -393,12 +395,14 @@ namespace testing
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(139, 133);
+            this.lblProgress.Location = new System.Drawing.Point(124, 133);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(0, 17);
+            this.lblProgress.Size = new System.Drawing.Size(65, 17);
             this.lblProgress.TabIndex = 37;
+            this.lblProgress.Text = "Progress";
+            this.lblProgress.Visible = false;
             // 
-            // frmAddNewResident
+            // frmResident_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -440,8 +444,9 @@ namespace testing
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.btnOpenCamera);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmAddNewResident";
+            this.Name = "frmResident_insert";
             this.Text = "frmAddNewResident";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddNewResident_FormClosing);
             this.Load += new System.EventHandler(this.frmAddNewResident_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

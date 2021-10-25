@@ -15,6 +15,8 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Collections.Specialized;
 using System.Drawing.Printing;
+using testing.Properties;
+using System.IO;
 
 namespace testing
 {
@@ -117,7 +119,15 @@ namespace testing
                         String localURL = @"D:\TempImage\temp.png";
                         using (WebClient client = new WebClient())
                         {
-                            client.DownloadFileAsync(new Uri(jo["Image"].ToString()), localURL);
+                            try
+                            {
+                                client.DownloadFileAsync(new Uri(jo["Image"].ToString()), localURL);
+                                deletefileurl = localURL;
+                            }
+                            catch(Exception e)
+                            {
+                                MessageBox.Show("No image available for this resident.");
+                            }
                         }
 
                         ds.Resident.Rows.Add( i, jo["FullName"].ToString(), jo["Age"].ToString(), jo["CivilStatus"].ToString(), Purpose, localURL);
@@ -136,6 +146,14 @@ namespace testing
             }
         }
 
+        string deletefileurl="";
+        private void vwrBrgyClearance_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (File.Exists(deletefileurl))
+            {
+                File.Delete(deletefileurl);
+            }
+        }
 
         private async void LoadOfficials()
         {

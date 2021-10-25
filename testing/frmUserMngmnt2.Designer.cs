@@ -160,6 +160,7 @@ namespace testing
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(76, 237);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(360, 30);
             this.tbPassword.TabIndex = 11;
             // 
@@ -168,6 +169,7 @@ namespace testing
             this.tbRetypePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRetypePassword.Location = new System.Drawing.Point(76, 316);
             this.tbRetypePassword.Name = "tbRetypePassword";
+            this.tbRetypePassword.PasswordChar = '*';
             this.tbRetypePassword.Size = new System.Drawing.Size(360, 30);
             this.tbRetypePassword.TabIndex = 12;
             // 
@@ -188,6 +190,7 @@ namespace testing
             this.btnHide2.TabIndex = 14;
             this.btnHide2.Text = "Hide/Unhide";
             this.btnHide2.UseVisualStyleBackColor = true;
+            this.btnHide2.Click += new System.EventHandler(this.btnHide2_Click);
             // 
             // btnHide1
             // 
@@ -198,8 +201,9 @@ namespace testing
             this.btnHide1.TabIndex = 15;
             this.btnHide1.Text = "Hide/Unhide";
             this.btnHide1.UseVisualStyleBackColor = true;
+            this.btnHide1.Click += new System.EventHandler(this.btnHide1_Click);
             // 
-            // frmUserMngment2
+            // frmUserMngmnt2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,7 +224,7 @@ namespace testing
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmUserMngment2";
+            this.Name = "frmUserMngmnt2";
             this.Text = "frmUserMngment2";
             this.Load += new System.EventHandler(this.frmUserMngment2_Load);
             this.ResumeLayout(false);

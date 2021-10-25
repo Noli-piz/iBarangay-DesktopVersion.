@@ -72,10 +72,12 @@ namespace testing
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(136, 130);
+            this.lblProgress.Location = new System.Drawing.Point(116, 130);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(0, 17);
+            this.lblProgress.Size = new System.Drawing.Size(65, 17);
             this.lblProgress.TabIndex = 74;
+            this.lblProgress.Text = "Progress";
+            this.lblProgress.Visible = false;
             // 
             // label14
             // 
@@ -378,6 +380,7 @@ namespace testing
             this.btnCapture.TabIndex = 40;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
             // btnOpenCamera
             // 
@@ -387,6 +390,7 @@ namespace testing
             this.btnOpenCamera.TabIndex = 39;
             this.btnOpenCamera.Text = "Open Camera";
             this.btnOpenCamera.UseVisualStyleBackColor = true;
+            this.btnOpenCamera.Click += new System.EventHandler(this.btnOpenCamera_Click);
             // 
             // pictureBox1
             // 
@@ -398,7 +402,7 @@ namespace testing
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // frmUpdateResident
+            // frmResident_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -440,7 +444,7 @@ namespace testing
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.btnOpenCamera);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmUpdateResident";
+            this.Name = "frmResident_update";
             this.Text = "frmUpdateResident";
             this.Load += new System.EventHandler(this.frmUpdateResident_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

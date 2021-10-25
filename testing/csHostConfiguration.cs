@@ -11,10 +11,11 @@ namespace testing
         private String ip = "http://192.168.254.114"; // SHit
         private String ip2 = "http://192.168.43.166"; // xiao
         private String ip3 = "http://192.168.43.253"; // noo
-        private String ip4 = "http://192.168.1.7";
+        private String ip4 = "http://192.168.8.101"; // smartbro
+        private String ip5 = "http://localhost";
 
         public string IP(){
-            return ip4;    
+            return ip5;    
         }
     }
 }

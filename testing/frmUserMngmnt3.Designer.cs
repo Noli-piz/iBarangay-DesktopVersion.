@@ -53,22 +53,24 @@ namespace testing
             // btnHide1
             // 
             this.btnHide1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHide1.Location = new System.Drawing.Point(429, 309);
+            this.btnHide1.Location = new System.Drawing.Point(427, 236);
             this.btnHide1.Name = "btnHide1";
             this.btnHide1.Size = new System.Drawing.Size(100, 26);
             this.btnHide1.TabIndex = 31;
             this.btnHide1.Text = "Hide/Unhide";
             this.btnHide1.UseVisualStyleBackColor = true;
+            this.btnHide1.Click += new System.EventHandler(this.btnHide1_Click);
             // 
             // btnHide2
             // 
             this.btnHide2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHide2.Location = new System.Drawing.Point(429, 392);
+            this.btnHide2.Location = new System.Drawing.Point(427, 313);
             this.btnHide2.Name = "btnHide2";
             this.btnHide2.Size = new System.Drawing.Size(100, 26);
             this.btnHide2.TabIndex = 30;
             this.btnHide2.Text = "Hide/Unhide";
             this.btnHide2.UseVisualStyleBackColor = true;
+            this.btnHide2.Click += new System.EventHandler(this.btnHide2_Click);
             // 
             // tbUsername
             // 
@@ -83,6 +85,7 @@ namespace testing
             this.tbRetypePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRetypePassword.Location = new System.Drawing.Point(61, 388);
             this.tbRetypePassword.Name = "tbRetypePassword";
+            this.tbRetypePassword.PasswordChar = '*';
             this.tbRetypePassword.Size = new System.Drawing.Size(360, 30);
             this.tbRetypePassword.TabIndex = 28;
             // 
@@ -91,6 +94,7 @@ namespace testing
             this.tbNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNewPass.Location = new System.Drawing.Point(61, 309);
             this.tbNewPass.Name = "tbNewPass";
+            this.tbNewPass.PasswordChar = '*';
             this.tbNewPass.Size = new System.Drawing.Size(360, 30);
             this.tbNewPass.TabIndex = 27;
             // 
@@ -205,18 +209,20 @@ namespace testing
             // btnHide3
             // 
             this.btnHide3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHide3.Location = new System.Drawing.Point(429, 232);
+            this.btnHide3.Location = new System.Drawing.Point(427, 388);
             this.btnHide3.Name = "btnHide3";
             this.btnHide3.Size = new System.Drawing.Size(100, 26);
             this.btnHide3.TabIndex = 34;
             this.btnHide3.Text = "Hide/Unhide";
             this.btnHide3.UseVisualStyleBackColor = true;
+            this.btnHide3.Click += new System.EventHandler(this.btnHide3_Click);
             // 
             // tbCurrentPass
             // 
             this.tbCurrentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCurrentPass.Location = new System.Drawing.Point(61, 232);
             this.tbCurrentPass.Name = "tbCurrentPass";
+            this.tbCurrentPass.PasswordChar = '*';
             this.tbCurrentPass.ReadOnly = true;
             this.tbCurrentPass.Size = new System.Drawing.Size(360, 30);
             this.tbCurrentPass.TabIndex = 33;

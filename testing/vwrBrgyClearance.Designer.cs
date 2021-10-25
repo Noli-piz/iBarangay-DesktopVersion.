@@ -53,8 +53,10 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 740);
             this.Controls.Add(this.crystalReportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "vwrBrgyClearance";
             this.Text = "vwrBrgyClearance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.vwrBrgyClearance_FormClosing);
             this.Load += new System.EventHandler(this.vwrBrgyClearance_Load);
             this.ResumeLayout(false);
 

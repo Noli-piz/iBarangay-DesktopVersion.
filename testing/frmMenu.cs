@@ -36,7 +36,7 @@ namespace testing
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            RoundButton();
+            //RoundImage();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -118,9 +118,9 @@ namespace testing
 
 
 
-        private void RoundButton()
+        private void RoundImage()
         {
-            //btnHome.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,btnHome.Width,btnHome.Height,10,50));
+            pictureBox2.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,pictureBox2.Width, pictureBox2.Height,90,90));
         }
 
 

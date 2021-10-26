@@ -446,6 +446,7 @@ namespace testing
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmResident_update";
             this.Text = "frmUpdateResident";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmResident_FormClosing);
             this.Load += new System.EventHandler(this.frmUpdateResident_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

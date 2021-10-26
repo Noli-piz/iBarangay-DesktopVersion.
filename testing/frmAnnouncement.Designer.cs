@@ -56,18 +56,20 @@ namespace testing
             // 
             // tbSubject
             // 
+            this.tbSubject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSubject.Location = new System.Drawing.Point(893, 140);
+            this.tbSubject.Location = new System.Drawing.Point(850, 136);
             this.tbSubject.Name = "tbSubject";
             this.tbSubject.Size = new System.Drawing.Size(338, 30);
             this.tbSubject.TabIndex = 1;
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(983, 623);
+            this.btnClear.Location = new System.Drawing.Point(940, 714);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(114, 33);
+            this.btnClear.Size = new System.Drawing.Size(114, 38);
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -75,18 +77,20 @@ namespace testing
             // 
             // rbDetails
             // 
+            this.rbDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDetails.Location = new System.Drawing.Point(893, 369);
+            this.rbDetails.Location = new System.Drawing.Point(850, 365);
             this.rbDetails.Name = "rbDetails";
-            this.rbDetails.Size = new System.Drawing.Size(338, 207);
+            this.rbDetails.Size = new System.Drawing.Size(338, 307);
             this.rbDetails.TabIndex = 3;
             this.rbDetails.Text = "";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(888, 112);
+            this.label1.Location = new System.Drawing.Point(845, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 25);
             this.label1.TabIndex = 5;
@@ -94,9 +98,10 @@ namespace testing
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(888, 341);
+            this.label2.Location = new System.Drawing.Point(845, 337);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 6;
@@ -104,9 +109,10 @@ namespace testing
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(888, 188);
+            this.label3.Location = new System.Drawing.Point(845, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 25);
             this.label3.TabIndex = 7;
@@ -114,9 +120,10 @@ namespace testing
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(888, 252);
+            this.label4.Location = new System.Drawing.Point(845, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 8;
@@ -124,10 +131,11 @@ namespace testing
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1117, 623);
+            this.btnAdd.Location = new System.Drawing.Point(1074, 714);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(114, 33);
+            this.btnAdd.Size = new System.Drawing.Size(114, 38);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -135,17 +143,19 @@ namespace testing
             // 
             // dtDate
             // 
+            this.dtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDate.Location = new System.Drawing.Point(893, 217);
+            this.dtDate.Location = new System.Drawing.Point(850, 213);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(338, 22);
             this.dtDate.TabIndex = 12;
             // 
             // cbLevel
             // 
+            this.cbLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLevel.FormattingEnabled = true;
-            this.cbLevel.Location = new System.Drawing.Point(893, 281);
+            this.cbLevel.Location = new System.Drawing.Point(850, 277);
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(338, 33);
             this.cbLevel.TabIndex = 13;
@@ -153,21 +163,24 @@ namespace testing
             // data1
             // 
             this.data1.AllowUserToAddRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 112);
             this.data1.Name = "data1";
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
-            this.data1.Size = new System.Drawing.Size(854, 675);
-            this.data1.TabIndex = 14;
+            this.data1.Size = new System.Drawing.Size(812, 676);
+            this.data1.TabIndex = 4;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
             // frmAnnouncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 700);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.cbLevel);
             this.Controls.Add(this.dtDate);
@@ -182,9 +195,7 @@ namespace testing
             this.Controls.Add(this.lbl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(2000, 2000);
             this.Name = "frmAnnouncement";
-            this.ShowInTaskbar = false;
             this.Text = "frmAnnouncement";
             this.Load += new System.EventHandler(this.frmAnnouncement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();

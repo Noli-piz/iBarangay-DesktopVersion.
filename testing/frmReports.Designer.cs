@@ -41,6 +41,9 @@ namespace testing
             // data1
             // 
             this.data1.AllowUserToAddRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 148);
             this.data1.Name = "data1";
@@ -51,6 +54,7 @@ namespace testing
             // 
             // btnPrint
             // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrint.Location = new System.Drawing.Point(967, 89);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(113, 44);
@@ -110,6 +114,7 @@ namespace testing
             this.Controls.Add(this.dtStart);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.data1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReports";
             this.Text = "frmReports";
             this.Load += new System.EventHandler(this.frmReports_Load);

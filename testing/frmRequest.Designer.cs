@@ -43,6 +43,9 @@ namespace testing
             this.data1.AllowUserToAddRows = false;
             this.data1.AllowUserToDeleteRows = false;
             this.data1.AllowUserToOrderColumns = true;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 206);
             this.data1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -54,7 +57,7 @@ namespace testing
             this.data1.RowTemplate.Height = 24;
             this.data1.ShowCellToolTips = false;
             this.data1.ShowEditingIcon = false;
-            this.data1.Size = new System.Drawing.Size(1080, 523);
+            this.data1.Size = new System.Drawing.Size(1125, 533);
             this.data1.TabIndex = 0;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -134,6 +137,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.data1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRequest";
             this.Text = "frmRequest";

@@ -48,7 +48,7 @@ namespace testing
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(83, 769);
+            this.btnLogout.Location = new System.Drawing.Point(32, 774);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(203, 55);
             this.btnLogout.TabIndex = 21;
@@ -58,7 +58,7 @@ namespace testing
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(83, 693);
+            this.btnMain.Location = new System.Drawing.Point(32, 698);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(203, 55);
             this.btnMain.TabIndex = 20;
@@ -68,7 +68,7 @@ namespace testing
             // 
             // btnGReports
             // 
-            this.btnGReports.Location = new System.Drawing.Point(83, 616);
+            this.btnGReports.Location = new System.Drawing.Point(32, 621);
             this.btnGReports.Name = "btnGReports";
             this.btnGReports.Size = new System.Drawing.Size(203, 55);
             this.btnGReports.TabIndex = 19;
@@ -78,7 +78,7 @@ namespace testing
             // 
             // btnAccount
             // 
-            this.btnAccount.Location = new System.Drawing.Point(83, 540);
+            this.btnAccount.Location = new System.Drawing.Point(32, 545);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(203, 55);
             this.btnAccount.TabIndex = 18;
@@ -88,7 +88,7 @@ namespace testing
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(83, 464);
+            this.btnUser.Location = new System.Drawing.Point(32, 469);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(203, 55);
             this.btnUser.TabIndex = 17;
@@ -98,7 +98,7 @@ namespace testing
             // 
             // btnBarangay
             // 
-            this.btnBarangay.Location = new System.Drawing.Point(83, 384);
+            this.btnBarangay.Location = new System.Drawing.Point(32, 389);
             this.btnBarangay.Name = "btnBarangay";
             this.btnBarangay.Size = new System.Drawing.Size(203, 55);
             this.btnBarangay.TabIndex = 16;
@@ -108,7 +108,7 @@ namespace testing
             // 
             // btnAnnouncement
             // 
-            this.btnAnnouncement.Location = new System.Drawing.Point(83, 308);
+            this.btnAnnouncement.Location = new System.Drawing.Point(32, 313);
             this.btnAnnouncement.Name = "btnAnnouncement";
             this.btnAnnouncement.Size = new System.Drawing.Size(203, 55);
             this.btnAnnouncement.TabIndex = 15;
@@ -118,7 +118,7 @@ namespace testing
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(83, 233);
+            this.btnHome.Location = new System.Drawing.Point(32, 238);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(203, 55);
             this.btnHome.TabIndex = 14;
@@ -132,7 +132,7 @@ namespace testing
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::testing.Properties.Resources._1024px_Sangguniang_Kabataan_logo_svg;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(83, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,24 +141,30 @@ namespace testing
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(282, -2);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Location = new System.Drawing.Point(241, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1640, 859);
-            this.panel1.TabIndex = 12;
+            this.panel1.Size = new System.Drawing.Size(1233, 848);
+            this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Location = new System.Drawing.Point(-5, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 1021);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 859);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(154, 203);
+            this.lblName.Location = new System.Drawing.Point(103, 203);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(45, 17);
             this.lblName.TabIndex = 23;
@@ -167,7 +173,7 @@ namespace testing
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(145, 174);
+            this.lblUsername.Location = new System.Drawing.Point(94, 174);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(73, 17);
             this.lblUsername.TabIndex = 22;
@@ -177,7 +183,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 853);
+            this.ClientSize = new System.Drawing.Size(1480, 848);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogout);
@@ -192,7 +198,7 @@ namespace testing
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1498, 895);
             this.Name = "frmMenuAdmin";
             this.Text = "frmMenuAdmin";
             this.Load += new System.EventHandler(this.frmMenuAdmin_Load);

@@ -48,10 +48,13 @@ namespace testing
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Location = new System.Drawing.Point(241, -2);
-            this.panel1.MaximumSize = new System.Drawing.Size(1628, 1021);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1587, 1021);
+            this.panel1.Size = new System.Drawing.Size(1233, 848);
             this.panel1.TabIndex = 1;
             // 
             // btnHome
@@ -110,7 +113,7 @@ namespace testing
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::testing.Properties.Resources._1024px_Sangguniang_Kabataan_logo_svg;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 22);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(155, 140);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,10 +122,12 @@ namespace testing
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 1021);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 848);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -178,7 +183,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1835, 1021);
+            this.ClientSize = new System.Drawing.Size(1480, 848);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);
@@ -192,8 +197,7 @@ namespace testing
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1498, 895);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";

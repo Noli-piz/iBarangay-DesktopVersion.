@@ -40,12 +40,16 @@ namespace testing
             // data1
             // 
             this.data1.AllowUserToAddRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.data1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 93);
             this.data1.Name = "data1";
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
-            this.data1.Size = new System.Drawing.Size(1170, 582);
+            this.data1.Size = new System.Drawing.Size(1182, 602);
             this.data1.TabIndex = 10;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data1_CellClick);
             // 
@@ -103,6 +107,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAccountManagement";
             this.Text = "frmAccountManagement";
             this.Load += new System.EventHandler(this.frmAccountManagement_Load);

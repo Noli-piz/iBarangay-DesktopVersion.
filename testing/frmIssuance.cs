@@ -15,6 +15,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
 
 namespace testing
 {
@@ -162,8 +164,23 @@ namespace testing
                 DataGridViewRow row = data1.Rows[e.RowIndex];
                 String identifier = row.Cells[1].Value.ToString();
 
-                vwrBrgyClearance vwr = new vwrBrgyClearance(identifier, "Purpose");
-                vwr.ShowDialog(this);
+                string inputPurpose = "";
+                DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
+                if (dialogResult == DialogResult.OK)
+                {
+                    if (inputPurpose == "")
+                    {
+                        MessageBox.Show("Please input the Purpose for Requesting of this Document.");
+                    }
+                    else
+                    {
+                        vwrBrgyClearance vwr = new vwrBrgyClearance(identifier, inputPurpose);
+                        vwr.ShowDialog(this);
+                    }
+                }
+                
+
+
             }else if (e.ColumnIndex == 9)
             {
                 vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
@@ -232,6 +249,55 @@ namespace testing
             {
                 MessageBox.Show("Please Connect to the Internet!" + ex.Message);
             }
+        }
+
+        private static DialogResult ShowInputDialog(ref string input)
+        {
+            System.Drawing.Size size = new System.Drawing.Size(300, 130);
+            Form inputBox = new Form();
+            inputBox.StartPosition = FormStartPosition.CenterScreen;
+
+            inputBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            inputBox.ClientSize = size;
+            inputBox.Text = "Purpose";
+
+            Label prompt = new Label();
+            prompt.AutoSize = true;
+            prompt.Location = new System.Drawing.Point(5, 5);
+            prompt.Text = "Please enter the Purpose.";
+            inputBox.Controls.Add(prompt);
+
+            System.Windows.Forms.TextBox textBox = new TextBox();
+            textBox.Size = new System.Drawing.Size(size.Width - 10, 59);
+            textBox.Location = new System.Drawing.Point(5, 25);
+            textBox.Font = new Font("Times New Roman", 12.0f, FontStyle.Regular);
+            textBox.ScrollBars = ScrollBars.Vertical;
+            textBox.Multiline = true;
+            textBox.Text = input;
+            inputBox.Controls.Add(textBox);
+
+            Button okButton = new Button();
+            okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            okButton.Name = "okButton";
+            okButton.Size = new System.Drawing.Size(75, 23);
+            okButton.Text = "&OK";
+            okButton.Location = new System.Drawing.Point(size.Width - 80 - 80, 90);
+            inputBox.Controls.Add(okButton);
+
+            Button cancelButton = new Button();
+            cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new System.Drawing.Size(75, 23);
+            cancelButton.Text = "&Cancel";
+            cancelButton.Location = new System.Drawing.Point(size.Width - 80, 90);
+            inputBox.Controls.Add(cancelButton);
+
+            inputBox.AcceptButton = okButton;
+            inputBox.CancelButton = cancelButton;
+
+            DialogResult result = inputBox.ShowDialog();
+            input = textBox.Text;
+            return result;
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -315,10 +315,9 @@ namespace testing
             pictureBox1.Image = bit;
         }
 
-        private void frmAddNewResident_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmResident_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning == true)
-                videoCaptureDevice.Stop();
+
         }
 
         //SaveImage

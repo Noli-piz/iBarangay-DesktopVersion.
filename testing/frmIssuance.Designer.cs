@@ -51,6 +51,9 @@ namespace testing
             // 
             this.data1.AllowUserToAddRows = false;
             this.data1.AllowUserToOrderColumns = true;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 127);
@@ -60,7 +63,7 @@ namespace testing
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
-            this.data1.Size = new System.Drawing.Size(1187, 666);
+            this.data1.Size = new System.Drawing.Size(1215, 666);
             this.data1.TabIndex = 26;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -97,8 +100,8 @@ namespace testing
             this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
-            "Name",
-            "ID"});
+            "ID",
+            "Name"});
             this.cbCategory.Location = new System.Drawing.Point(328, 38);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(150, 33);
@@ -116,6 +119,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIssuance";
             this.Text = "frmIssuance";
             this.Load += new System.EventHandler(this.frmIssuance_Load);

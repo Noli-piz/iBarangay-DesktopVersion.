@@ -85,6 +85,9 @@ namespace testing
             // data1
             // 
             this.data1.AllowUserToAddRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(12, 121);
             this.data1.Name = "data1";
@@ -96,6 +99,7 @@ namespace testing
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(998, 50);
             this.btnAdd.Name = "btnAdd";
@@ -116,6 +120,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.btnSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUserMngmnt";
             this.Text = "frmUserMngmnt";
             this.Load += new System.EventHandler(this.frmUserMngmnt_Load);

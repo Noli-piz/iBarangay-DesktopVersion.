@@ -69,7 +69,8 @@ namespace testing
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1022, 70);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(974, 63);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 37);
             this.button3.TabIndex = 3;
@@ -81,6 +82,9 @@ namespace testing
             // 
             this.data1.AllowUserToAddRows = false;
             this.data1.AllowUserToDeleteRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data1.Location = new System.Drawing.Point(13, 155);
             this.data1.MultiSelect = false;
@@ -89,7 +93,7 @@ namespace testing
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
-            this.data1.Size = new System.Drawing.Size(1204, 637);
+            this.data1.Size = new System.Drawing.Size(1175, 633);
             this.data1.TabIndex = 4;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -119,7 +123,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 804);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data1);
@@ -127,6 +131,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmResident";
             this.Text = "frmResidentInfo";
             this.Load += new System.EventHandler(this.frmResidentInfo_Load);

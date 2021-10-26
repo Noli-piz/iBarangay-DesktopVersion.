@@ -37,17 +37,21 @@ namespace testing
             // data1
             // 
             this.data1.AllowUserToAddRows = false;
+            this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data1.Location = new System.Drawing.Point(12, 154);
+            this.data1.Location = new System.Drawing.Point(12, 125);
             this.data1.Name = "data1";
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
-            this.data1.Size = new System.Drawing.Size(1093, 434);
+            this.data1.Size = new System.Drawing.Size(1093, 487);
             this.data1.TabIndex = 0;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data1_CellClick);
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Location = new System.Drawing.Point(950, 67);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(117, 37);
@@ -63,6 +67,7 @@ namespace testing
             this.ClientSize = new System.Drawing.Size(1117, 616);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.data1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOfficials";
             this.Text = "frmOfiicials";
             this.Load += new System.EventHandler(this.frmOfficials_Load);

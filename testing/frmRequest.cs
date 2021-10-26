@@ -39,16 +39,17 @@ namespace testing
             data1.Rows.Clear();
             data1.Columns.Clear();
 
-            data1.Columns.Add("no", "No.");
-            data1.Columns.Add("id", "ID.");
-            data1.Columns.Add("fullname", "Full Name");
-            data1.Columns.Add("bday", "Birthdate");
-            data1.Columns.Add("gender", "Gender");
-            data1.Columns.Add("vstatus", "Voter Status");
-            data1.Columns.Add("blotter", "Blotter Case");
-            data1.Columns.Add("cert", "Type of Certificate");
-            data1.Columns.Add("date", "Requested Date");
-            data1.Columns.Add("rstatus", "Request Status");
+            data1.Columns.Add("", "No.");
+            data1.Columns.Add("id", "ID");
+            data1.Columns.Add("resid", "ResID.");
+            data1.Columns.Add("", "Full Name");
+            data1.Columns.Add("", "Birthdate");
+            data1.Columns.Add("", "Gender");
+            data1.Columns.Add("", "Voter Status");
+            data1.Columns.Add("", "Blotter Case");
+            data1.Columns.Add("", "Type of Certificate");
+            data1.Columns.Add("", "Requested Date");
+            data1.Columns.Add("", "Request Status");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
@@ -78,7 +79,7 @@ namespace testing
                         AL = new ArrayList();
                         AL.Add(i.ToString());
                         AL.Add(jo["id_request"]);
-                        ID.Add(jo["id_resident"].ToString());
+                        AL.Add(jo["id_resident"].ToString());
                         AL.Add(jo["Fname"] +" " + jo["Mname"] +" "+ jo["Lname"]+" "+ jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);
@@ -97,6 +98,7 @@ namespace testing
                 }
 
                 data1.Columns["ID"].Visible = false;
+                data1.Columns["resid"].Visible = false;
 
                 data1.AutoResizeColumns();
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -113,13 +115,14 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 10)
+                if (e.ColumnIndex == 11)
                 {
 
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
+                    String resID = row.Cells[2].Value.ToString();
 
-                    frmRequest2 frm = new frmRequest2(identifier, ID[e.RowIndex].ToString());
+                    frmRequest2 frm = new frmRequest2(identifier, resID);
                     frm.ShowDialog(this);
 
                     ID.Clear();
@@ -208,7 +211,7 @@ namespace testing
                         AL = new ArrayList();
                         AL.Add(i.ToString());
                         AL.Add(jo["id_request"]);
-                        ID.Add(jo["id_resident"].ToString());
+                        AL.Add(jo["id_resident"].ToString());
                         AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);

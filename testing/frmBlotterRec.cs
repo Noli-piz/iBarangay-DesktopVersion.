@@ -4,10 +4,12 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -211,6 +213,70 @@ namespace testing
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                data1.Rows.Clear();
+                var uri = host.IP() + "/iBar/ibar_blotter_search.php";
+
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["ID"] = tbSearch.Text;
+                    datas["Category"] = cbCategory.SelectedItem.ToString();
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                ArrayList AL = new ArrayList();
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["blotter"])
+                    {
+
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(jo["id_blotter"]);
+                        AL.Add(jo["Compliant"]);
+                        AL.Add(jo["Assailant1"] + " " + jo["Assailant2"]);
+                        AL.Add(jo["Details"]);
+                        AL.Add(jo["Status"]);
+                        AL.Add(jo["Date"]);
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                    LoadData();
+                }
+
+                data1.AutoResizeColumns();
+                data1.AutoResizeRows();
+
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                data1.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Connect to the Internet!" + ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbSearch.Text = "";
         }
     }
 }

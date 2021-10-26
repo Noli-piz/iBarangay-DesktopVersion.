@@ -156,19 +156,29 @@ namespace testing
 
         private async void DownloadImage()
         {
-            lblProgress.Text = "Loading...";
-
-            var request = WebRequest.Create(strImageUrl);
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
+            try
             {
+                lblProgress.Text = "Loading...";
 
-                Image img = new Bitmap(stream);
+                var request = WebRequest.Create(strImageUrl);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+
+                    Image img = new Bitmap(stream);
+                    pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+                }
+            }
+            catch (Exception ex)
+            {
+                Image img = Resources.noimg;
                 pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
             }
-
-            lblProgress.Text = "";
+            finally
+            {
+                lblProgress.Text = "";
+            }
         }
 
         private async void UploadImageFirebase()
@@ -252,6 +262,7 @@ namespace testing
 
                 path = @"D:\ImageProject\a.png";
                 UploadImage();
+                btnOpenCamera_Click(sender, e);
             }
             else
             {

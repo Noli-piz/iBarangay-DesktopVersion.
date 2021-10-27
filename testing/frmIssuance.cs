@@ -192,58 +192,64 @@ namespace testing
         {
             try
             {
-                data1.Rows.Clear();
-                var uri = host.IP() + "/iBar/ibar_issuance_search.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (Convert.ToString(cbCategory.SelectedItem) != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = tbSearch.Text;
-                    datas["Category"] = cbCategory.SelectedItem.ToString();
+                    data1.Rows.Clear();
+                    var uri = host.IP() + "/iBar/ibar_issuance_search.php";
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                ArrayList AL = new ArrayList();
-                var data = JsonConvert.DeserializeObject(responseFromServer);
-                string success = JObject.Parse(responseFromServer)["success"].ToString();
-                if (success == "1")
-                {
-                    int i = 1;
-                    foreach (var jo in (JArray)((JObject)data)["issuance"])
+                    string responseFromServer;
+                    using (var wb = new WebClient())
                     {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = tbSearch.Text;
+                        datas["Category"] = cbCategory.SelectedItem.ToString();
 
-                        AL = new ArrayList();
-                        ID.Add(jo["id_resident"].ToString());
-
-                        AL = new ArrayList();
-                        AL.Add(i.ToString());
-                        AL.Add(jo["id_resident"]);
-                        AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
-                        AL.Add(jo["Age"]);
-                        AL.Add(jo["Birthdate"]);
-                        AL.Add(jo["Gender"]);
-                        AL.Add(jo["VoterStatus"]);
-                        AL.Add(jo["Blotter"]);
-                        data1.Rows.Add(AL.ToArray());
-                        i++;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
                     }
+
+                    ArrayList AL = new ArrayList();
+                    var data = JsonConvert.DeserializeObject(responseFromServer);
+                    string success = JObject.Parse(responseFromServer)["success"].ToString();
+                    if (success == "1")
+                    {
+                        int i = 1;
+                        foreach (var jo in (JArray)((JObject)data)["issuance"])
+                        {
+
+                            AL = new ArrayList();
+                            ID.Add(jo["id_resident"].ToString());
+
+                            AL = new ArrayList();
+                            AL.Add(i.ToString());
+                            AL.Add(jo["id_resident"]);
+                            AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
+                            AL.Add(jo["Age"]);
+                            AL.Add(jo["Birthdate"]);
+                            AL.Add(jo["Gender"]);
+                            AL.Add(jo["VoterStatus"]);
+                            AL.Add(jo["Blotter"]);
+                            data1.Rows.Add(AL.ToArray());
+                            i++;
+                        }
+                    }
+                    else if (success == "0")
+                    {
+                        MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                        LoadData();
+                    }
+
+                    data1.AutoResizeColumns();
+                    data1.AutoResizeRows();
+
+                    data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                    data1.Visible = true;
                 }
-                else if (success == "0")
+                else
                 {
-                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
-                    LoadData();
+                    MessageBox.Show("No Category Selected.");
                 }
-
-                data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                data1.Visible = true;
-
             }
             catch (Exception ex)
             {

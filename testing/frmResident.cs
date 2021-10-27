@@ -49,12 +49,15 @@ namespace testing
             data1.Columns.Add("fullname", "Full Name");
             data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("gender", "Gender");
-            data1.Columns.Add("cstatus", "Civil Status");
-            data1.Columns.Add("vstatus", "Voter Status");
+            data1.Columns.Add("cstatus", "Civil Stat");
+            data1.Columns.Add("vstatus", "Voter Stat");
 
+
+            //DataGridViewImageColumn btn = new DataGridViewImageColumn();
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
+            //btn.Image = Properties.Resources.edit1;
             btn.Text = "Edit";
             btn.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn);
@@ -196,55 +199,60 @@ namespace testing
         {
             try
             {
-                data1.Rows.Clear();
-                var uri = host.IP() + "/iBar/ibar_resident_search.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (Convert.ToString(cbCategory.SelectedItem) != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = tbSearch.Text;
-                    datas["Category"] = cbCategory.SelectedItem.ToString(); ;
+                    data1.Rows.Clear();
+                    var uri = host.IP() + "/iBar/ibar_resident_search.php";
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                ArrayList AL = new ArrayList();
-                var data = JsonConvert.DeserializeObject(responseFromServer);
-                string success = JObject.Parse(responseFromServer)["success"].ToString();
-                if (success == "1")
-                {
-                    int i = 1;
-                    foreach (var jo in (JArray)((JObject)data)["resident"])
+                    string responseFromServer;
+                    using (var wb = new WebClient())
                     {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = tbSearch.Text;
+                        datas["Category"] = cbCategory.SelectedItem.ToString();
 
-                        AL = new ArrayList();
-                        AL.Add(i.ToString());
-                        AL.Add(jo["id_resident"]);
-                        ID.Add(jo["id_resident"].ToString());
-                        AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
-                        AL.Add(jo["Birthdate"]);
-                        AL.Add(jo["Gender"]);
-                        AL.Add(jo["CivilStatus"]);
-                        AL.Add(jo["VoterStatus"]);
-                        data1.Rows.Add(AL.ToArray());
-                        i++;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
                     }
+
+                    ArrayList AL = new ArrayList();
+                    var data = JsonConvert.DeserializeObject(responseFromServer);
+                    string success = JObject.Parse(responseFromServer)["success"].ToString();
+                    if (success == "1")
+                    {
+                        int i = 1;
+                        foreach (var jo in (JArray)((JObject)data)["resident"])
+                        {
+
+                            AL = new ArrayList();
+                            AL.Add(i.ToString());
+                            AL.Add(jo["id_resident"]);
+                            ID.Add(jo["id_resident"].ToString());
+                            AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
+                            AL.Add(jo["Birthdate"]);
+                            AL.Add(jo["Gender"]);
+                            AL.Add(jo["CivilStatus"]);
+                            AL.Add(jo["VoterStatus"]);
+                            data1.Rows.Add(AL.ToArray());
+                            i++;
+                        }
+                    }
+                    else if (success == "0")
+                    {
+                        MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                        LoadData();
+                    }
+
+                    data1.AutoResizeColumns();
+                    data1.AutoResizeRows();
+
+                    data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                    data1.Visible = true;
                 }
-                else if (success == "0")
-                {
-                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
-                    LoadData();
+                else{
+                    MessageBox.Show("No Category Selected.");
                 }
-
-                data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                data1.Visible = true;
-
             }
             catch (Exception ex)
             {

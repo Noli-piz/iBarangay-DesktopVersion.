@@ -219,54 +219,59 @@ namespace testing
         {
             try
             {
-                data1.Rows.Clear();
-                var uri = host.IP() + "/iBar/ibar_blotter_search.php";
+                if (Convert.ToString(cbCategory.SelectedItem) != "") {
+                    data1.Rows.Clear();
+                    var uri = host.IP() + "/iBar/ibar_blotter_search.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = tbSearch.Text;
-                    datas["Category"] = cbCategory.SelectedItem.ToString();
-
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                ArrayList AL = new ArrayList();
-                var data = JsonConvert.DeserializeObject(responseFromServer);
-                string success = JObject.Parse(responseFromServer)["success"].ToString();
-                if (success == "1")
-                {
-                    int i = 1;
-                    foreach (var jo in (JArray)((JObject)data)["blotter"])
+                    string responseFromServer;
+                    using (var wb = new WebClient())
                     {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = tbSearch.Text;
+                        datas["Category"] = cbCategory.SelectedItem.ToString();
 
-                        AL = new ArrayList();
-                        AL.Add(i.ToString());
-                        AL.Add(jo["id_blotter"]);
-                        AL.Add(jo["Compliant"]);
-                        AL.Add(jo["Assailant1"] + " " + jo["Assailant2"]);
-                        AL.Add(jo["Details"]);
-                        AL.Add(jo["Status"]);
-                        AL.Add(jo["Date"]);
-                        data1.Rows.Add(AL.ToArray());
-                        i++;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
                     }
+
+                    ArrayList AL = new ArrayList();
+                    var data = JsonConvert.DeserializeObject(responseFromServer);
+                    string success = JObject.Parse(responseFromServer)["success"].ToString();
+                    if (success == "1")
+                    {
+                        int i = 1;
+                        foreach (var jo in (JArray)((JObject)data)["blotter"])
+                        {
+
+                            AL = new ArrayList();
+                            AL.Add(i.ToString());
+                            AL.Add(jo["id_blotter"]);
+                            AL.Add(jo["Compliant"]);
+                            AL.Add(jo["Assailant1"] + " " + jo["Assailant2"]);
+                            AL.Add(jo["Details"]);
+                            AL.Add(jo["Status"]);
+                            AL.Add(jo["Date"]);
+                            data1.Rows.Add(AL.ToArray());
+                            i++;
+                        }
+                    }
+                    else if (success == "0")
+                    {
+                        MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                        LoadData();
+                    }
+
+                    data1.AutoResizeColumns();
+                    data1.AutoResizeRows();
+
+                    data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                    data1.Visible = true;
                 }
-                else if (success == "0")
+                else
                 {
-                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
-                    LoadData();
+                    MessageBox.Show("No Category Selected.");
                 }
-
-                data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                data1.Visible = true;
-
             }
             catch (Exception ex)
             {

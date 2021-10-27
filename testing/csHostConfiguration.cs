@@ -15,7 +15,7 @@ namespace testing
         private String ip5 = "http://localhost";
 
         public string IP(){
-            return ip5;    
+            return ip5;
         }
     }
 }

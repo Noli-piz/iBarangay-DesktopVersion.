@@ -159,22 +159,29 @@ namespace testing
         {
             try
             {
-                data1.Rows.Clear();
-                var uri = host.IP() + "/iBar/ibar_misservice_search.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (Convert.ToString(cbCategory.SelectedItem) != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = tbSearch.Text;
-                    datas["Category"] = cbCategory.SelectedItem.ToString();
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
+                    data1.Rows.Clear();
+                    var uri = host.IP() + "/iBar/ibar_misservice_search.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = tbSearch.Text;
+                        datas["Category"] = cbCategory.SelectedItem.ToString();
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    Result(responseFromServer);
                 }
-
-                Result(responseFromServer);
-
+                else
+                {
+                    MessageBox.Show("No Category Selected.");
+                }
             }
             catch (Exception ex)
             {

@@ -48,9 +48,9 @@ namespace testing
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(32, 774);
+            this.btnLogout.Location = new System.Drawing.Point(12, 774);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(203, 55);
+            this.btnLogout.Size = new System.Drawing.Size(223, 55);
             this.btnLogout.TabIndex = 21;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@ namespace testing
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(32, 698);
+            this.btnMain.Location = new System.Drawing.Point(12, 698);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(203, 55);
+            this.btnMain.Size = new System.Drawing.Size(223, 55);
             this.btnMain.TabIndex = 20;
             this.btnMain.Text = "Maintenance Module";
             this.btnMain.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@ namespace testing
             // 
             // btnGReports
             // 
-            this.btnGReports.Location = new System.Drawing.Point(32, 621);
+            this.btnGReports.Location = new System.Drawing.Point(12, 621);
             this.btnGReports.Name = "btnGReports";
-            this.btnGReports.Size = new System.Drawing.Size(203, 55);
+            this.btnGReports.Size = new System.Drawing.Size(223, 55);
             this.btnGReports.TabIndex = 19;
             this.btnGReports.Text = "Generate Reports";
             this.btnGReports.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@ namespace testing
             // 
             // btnAccount
             // 
-            this.btnAccount.Location = new System.Drawing.Point(32, 545);
+            this.btnAccount.Location = new System.Drawing.Point(12, 545);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(203, 55);
+            this.btnAccount.Size = new System.Drawing.Size(223, 55);
             this.btnAccount.TabIndex = 18;
             this.btnAccount.Text = "Account Management";
             this.btnAccount.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@ namespace testing
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(32, 469);
+            this.btnUser.Location = new System.Drawing.Point(12, 469);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(203, 55);
+            this.btnUser.Size = new System.Drawing.Size(223, 55);
             this.btnUser.TabIndex = 17;
             this.btnUser.Text = "User Management";
             this.btnUser.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@ namespace testing
             // 
             // btnBarangay
             // 
-            this.btnBarangay.Location = new System.Drawing.Point(32, 389);
+            this.btnBarangay.Location = new System.Drawing.Point(12, 389);
             this.btnBarangay.Name = "btnBarangay";
-            this.btnBarangay.Size = new System.Drawing.Size(203, 55);
+            this.btnBarangay.Size = new System.Drawing.Size(223, 55);
             this.btnBarangay.TabIndex = 16;
             this.btnBarangay.Text = "Barangay Officials";
             this.btnBarangay.UseVisualStyleBackColor = true;
@@ -108,9 +108,9 @@ namespace testing
             // 
             // btnAnnouncement
             // 
-            this.btnAnnouncement.Location = new System.Drawing.Point(32, 313);
+            this.btnAnnouncement.Location = new System.Drawing.Point(12, 313);
             this.btnAnnouncement.Name = "btnAnnouncement";
-            this.btnAnnouncement.Size = new System.Drawing.Size(203, 55);
+            this.btnAnnouncement.Size = new System.Drawing.Size(223, 55);
             this.btnAnnouncement.TabIndex = 15;
             this.btnAnnouncement.Text = "Announcement";
             this.btnAnnouncement.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@ namespace testing
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(32, 238);
+            this.btnHome.Location = new System.Drawing.Point(12, 238);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(203, 55);
+            this.btnHome.Size = new System.Drawing.Size(223, 55);
             this.btnHome.TabIndex = 14;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@ namespace testing
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGreen;
             this.pictureBox1.Location = new System.Drawing.Point(-5, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 859);
@@ -163,26 +163,35 @@ namespace testing
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(103, 203);
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(0, 199);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 17);
-            this.lblName.TabIndex = 23;
+            this.lblName.Size = new System.Drawing.Size(240, 28);
+            this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(94, 174);
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(0, 165);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(73, 17);
-            this.lblUsername.TabIndex = 22;
+            this.lblUsername.Size = new System.Drawing.Size(240, 32);
+            this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1480, 848);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
@@ -205,7 +214,6 @@ namespace testing
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

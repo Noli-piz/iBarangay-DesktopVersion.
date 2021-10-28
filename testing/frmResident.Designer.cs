@@ -132,7 +132,7 @@ namespace testing
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 24;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data1.Size = new System.Drawing.Size(1175, 633);
+            this.data1.Size = new System.Drawing.Size(1164, 633);
             this.data1.TabIndex = 4;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 

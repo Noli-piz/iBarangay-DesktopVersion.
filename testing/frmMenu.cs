@@ -42,6 +42,10 @@ namespace testing
         private void btnHome_Click(object sender, EventArgs e)
         {
             ClearPanel();
+
+            frmHome frm = new frmHome() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

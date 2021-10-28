@@ -317,7 +317,8 @@ namespace testing
 
         private void frmResident_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (videoCaptureDevice.IsRunning == true)
+                videoCaptureDevice.Stop();
         }
 
         //SaveImage

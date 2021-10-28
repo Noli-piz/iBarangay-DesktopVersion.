@@ -21,6 +21,7 @@ using MySql.Data.MySqlClient;
 using Microsoft.WindowsAzure.Storage;
 using System.Net;
 using testing.Properties;
+using AForge.Imaging.Filters;
 
 namespace testing
 {
@@ -239,7 +240,9 @@ namespace testing
 
         private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
+            //ResizeNearestNeighbor filter = new ResizeNearestNeighbor(400, 300);
             Bitmap bit = (Bitmap)eventArgs.Frame.Clone();
+            //pictureBox1.Image = filter.Apply(bit);
             pictureBox1.Image = bit;
         }
 
@@ -261,7 +264,7 @@ namespace testing
                 varBmp = null;
 
                 path = @"D:\ImageProject\a.png";
-                UploadImage();
+                //UploadImage();
                 btnOpenCamera_Click(sender, e);
             }
             else

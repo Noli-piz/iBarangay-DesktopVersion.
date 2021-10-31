@@ -91,7 +91,8 @@ namespace testing
                         AL.Add(jo["Date"]);
                         AL.Add(jo["StartTime"]);
                         AL.Add(jo["EndTime"]);
-                        AL.Add(jo["Status"]);
+                        string Status = jo["Status"].ToString() == "True" ? "Done" : "Not Done";
+                        AL.Add(Status);
                         if (jo["Status"].ToString() == "True")
                         {
                             colorInt.Add(i);
@@ -101,7 +102,7 @@ namespace testing
                     }
 
                     
-                    for (int x = 0; x < data1.Rows.Count; x++)
+                    for (int x = 0; x <= data1.Rows.Count; x++)
                     {
                         if ( colorInt.Contains(x))
                         {

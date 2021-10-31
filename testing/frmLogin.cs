@@ -69,5 +69,18 @@ namespace testing
         {
 
         }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            tbPassword.PasswordChar = tbPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbPassword.PasswordChar.ToString() == "*")
+            {
+                btnHide.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
+        }
     }
 }

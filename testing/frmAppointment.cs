@@ -55,6 +55,9 @@ namespace testing
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
             btn.Text = "View/Edit";
+            //btn.FlatStyle = FlatStyle.Popup;
+            //btn.DefaultCellStyle.ForeColor = Color.White;
+            //btn.DefaultCellStyle.BackColor = Color.PaleVioletRed;
             btn.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn);
         }
@@ -114,12 +117,7 @@ namespace testing
                 }
 
 
-
-                data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                data1.Columns["ID"].Visible = false;
                 data1.Visible = true;
             }
             catch (Exception ex)

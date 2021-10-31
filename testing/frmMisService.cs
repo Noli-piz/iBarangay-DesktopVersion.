@@ -110,12 +110,7 @@ namespace testing
                 }
 
 
-
-                data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                data1.Columns["ID"].Visible = false;
                 data1.Visible = true;
             }
             catch (Exception ex)

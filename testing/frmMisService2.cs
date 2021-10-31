@@ -104,8 +104,16 @@ namespace testing
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         lblQuantity.Text = jo["Quantity"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
-                        dtDeadline.Value = DateTime.ParseExact(jo["Deadline"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
-                        
+                        //String vl = jo["Deadline"].ToString();
+                        //if (vl == "0000-00-00")
+                        //{
+                        //    dtDeadline.Value = DateTime.ParseExact(jo["Deadline"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        //}
+                        //else
+                        //{
+                        //    dtDeadline.Value = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM-dd"), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        //}
+
                         currentDeadline = jo["Deadline"].ToString();
                         currentStatus = jo["Status"].ToString();
                     }

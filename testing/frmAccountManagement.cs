@@ -44,9 +44,9 @@ namespace testing
             data1.Columns.Add("", "ID.");
             data1.Columns.Add("", "Username");
             data1.Columns.Add("", "Fullname");
-            data1.Columns.Add("", "Voter Status");
+            data1.Columns.Add("", "Voter Stat");
             data1.Columns.Add("", "Validation");
-            data1.Columns.Add("", "Account Status");
+            data1.Columns.Add("", "Accnt Stat");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";

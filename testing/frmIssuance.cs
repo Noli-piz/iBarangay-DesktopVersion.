@@ -49,7 +49,7 @@ namespace testing
             data1.Columns.Add("age", "Age");
             data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("gen", "Gender");
-            data1.Columns.Add("vstatus", "Voter Status");
+            data1.Columns.Add("vstatus", "Voter Stat.");
             data1.Columns.Add("blotter", "Blotter Case");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -182,8 +182,9 @@ namespace testing
 
             }else if (e.ColumnIndex == 9)
             {
-                vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
-                vwr.ShowDialog(this);
+                //vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
+                //vwr.ShowDialog(this);
+                MessageBox.Show("This Certificate is not available right now.");
             }
         }
 

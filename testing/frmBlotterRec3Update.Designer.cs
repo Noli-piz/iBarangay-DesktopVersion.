@@ -77,27 +77,30 @@ namespace testing
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(794, 54);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(792, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 17);
+            this.label3.Size = new System.Drawing.Size(265, 28);
             this.label3.TabIndex = 20;
             this.label3.Text = "Enter name for non-residents";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(794, 126);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(792, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(89, 28);
             this.label2.TabIndex = 19;
             this.label2.Text = "Assailant";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 54);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 17);
+            this.label1.Size = new System.Drawing.Size(236, 28);
             this.label1.TabIndex = 18;
             this.label1.Text = "Search name for residents";
             // 
@@ -125,7 +128,7 @@ namespace testing
             // 
             // btnEnter
             // 
-            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnter.Location = new System.Drawing.Point(1118, 71);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(90, 36);
@@ -136,15 +139,15 @@ namespace testing
             // 
             // tbEnterName
             // 
-            this.tbEnterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEnterName.Location = new System.Drawing.Point(797, 77);
+            this.tbEnterName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEnterName.Location = new System.Drawing.Point(797, 72);
             this.tbEnterName.Name = "tbEnterName";
-            this.tbEnterName.Size = new System.Drawing.Size(315, 30);
+            this.tbEnterName.Size = new System.Drawing.Size(315, 34);
             this.tbEnterName.TabIndex = 14;
             // 
             // btnSearch1
             // 
-            this.btnSearch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch1.Location = new System.Drawing.Point(410, 71);
             this.btnSearch1.Name = "btnSearch1";
             this.btnSearch1.Size = new System.Drawing.Size(90, 36);
@@ -155,10 +158,10 @@ namespace testing
             // tbSearch1
             // 
             this.tbSearch1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.tbSearch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch1.Location = new System.Drawing.Point(45, 77);
+            this.tbSearch1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch1.Location = new System.Drawing.Point(45, 72);
             this.tbSearch1.Name = "tbSearch1";
-            this.tbSearch1.Size = new System.Drawing.Size(348, 30);
+            this.tbSearch1.Size = new System.Drawing.Size(348, 34);
             this.tbSearch1.TabIndex = 11;
             this.tbSearch1.TextChanged += new System.EventHandler(this.tbSearch1_TextChanged);
             // 

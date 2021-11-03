@@ -56,7 +56,8 @@ namespace testing
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(515, 47);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(505, 48);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(113, 37);
             this.btnSearch.TabIndex = 0;
@@ -66,7 +67,8 @@ namespace testing
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(641, 48);
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(624, 48);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(113, 37);
             this.btnClear.TabIndex = 1;
@@ -77,6 +79,7 @@ namespace testing
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(1076, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 37);
@@ -88,9 +91,9 @@ namespace testing
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(12, 51);
+            this.tbSearch.Location = new System.Drawing.Point(12, 49);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(259, 34);
+            this.tbSearch.Size = new System.Drawing.Size(329, 34);
             this.tbSearch.TabIndex = 3;
             // 
             // data1
@@ -182,6 +185,7 @@ namespace testing
             // btnActive
             // 
             this.btnActive.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnActive.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActive.Location = new System.Drawing.Point(1076, 298);
             this.btnActive.Name = "btnActive";
             this.btnActive.Size = new System.Drawing.Size(190, 31);
@@ -193,6 +197,7 @@ namespace testing
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(1076, 509);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(190, 31);
@@ -203,6 +208,7 @@ namespace testing
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(1076, 720);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(190, 31);
@@ -252,9 +258,9 @@ namespace testing
             "Compliant",
             "Assailant(resident)",
             "Assailant(non-resident)"});
-            this.cbCategory.Location = new System.Drawing.Point(286, 51);
+            this.cbCategory.Location = new System.Drawing.Point(347, 50);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(212, 33);
+            this.cbCategory.Size = new System.Drawing.Size(152, 33);
             this.cbCategory.TabIndex = 14;
             // 
             // frmBlotterRec

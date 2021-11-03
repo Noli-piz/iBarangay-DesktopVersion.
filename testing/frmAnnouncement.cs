@@ -8,12 +8,18 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
+
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
 
 namespace testing
 {
@@ -140,32 +146,38 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (tbSubject.Text != "" && rbDetails.Text !="") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_announcement_insert.php";
+                    var uri = host.IP() + "/iBar/ibar_announcement_insert.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["Subject"] = tbSubject.Text;
-                    datas["Details"] = rbDetails.Text;
-                    datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
-                    datas["Level"] = cbLevel.SelectedItem.ToString();
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Subject"] = tbSubject.Text;
+                        datas["Details"] = rbDetails.Text;
+                        datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
+                        datas["Level"] = cbLevel.SelectedItem.ToString();
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                        SendNot(tbSubject.Text ,  rbDetails.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                    MessageBox.Show("Please fill-up Subject or Details");
                 }
-
             }
             catch (Exception ex)
             {
@@ -183,6 +195,52 @@ namespace testing
         {
             tbSubject.Text = "";
             rbDetails.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void SendNot(string sub, string det)
+        {
+            try
+            {
+                FirebaseApp.Create(new AppOptions()
+                {
+
+                    Credential = GoogleCredential.FromFile("private_key.json")
+
+                    // Put in debug folder
+                    //Credential = GoogleCredential.FromFile("private_key.json")
+                });
+
+                var topic = "ibarangay";
+                var message = new FirebaseAdmin.Messaging.Message()
+                {
+                    //Data = new Dictionary<string, string>()
+                    //{
+                    //    { "myData", "1337" },
+                    //},
+                    //Token = "eKrRrmcSQiumMk-1oy7dox:APA91bG_Od6P5rlBMP6GyIK3WUZNwbuW18nYBxx4dJDLW5zLwLg4x4_2bDwzkQA5dscFOnYZaQ7dAOFplFfuZhIfa7y9bOb9UktLIQx7RC29EDbzlNn3DFWkoVEbUdxkUaeY3UNrTePX",
+
+                    Notification = new Notification()
+                    {
+                        Title = "Announcement!",
+                        Body ="Subject: "+ sub +" \nDetails: "+ det
+                    },
+                    Topic = topic
+                };
+
+                // Send a message to the device corresponding to the provided
+                // registration token.
+                string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
+                // Response is a message ID string.
+                MessageBox.Show("Sending Announcement to Residents....");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

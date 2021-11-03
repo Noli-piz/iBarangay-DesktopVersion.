@@ -45,7 +45,7 @@ namespace testing
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(564, 48);
+            this.btnCancel.Location = new System.Drawing.Point(564, 49);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 36);
@@ -57,7 +57,7 @@ namespace testing
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(453, 48);
+            this.btnSearch.Location = new System.Drawing.Point(453, 49);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 36);
@@ -82,7 +82,7 @@ namespace testing
             this.cbCategory.Items.AddRange(new object[] {
             "ID",
             "Name"});
-            this.cbCategory.Location = new System.Drawing.Point(291, 48);
+            this.cbCategory.Location = new System.Drawing.Point(291, 49);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(156, 36);

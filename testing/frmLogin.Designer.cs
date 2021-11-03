@@ -44,11 +44,12 @@ namespace testing
             // 
             // btnLogin
             // 
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(680, 435);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(266, 55);
             this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Log In";
+            this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -169,7 +170,7 @@ namespace testing
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1049, 601);
             this.Name = "frmLogin";
-            this.Text = "Form1";
+            this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -45,11 +45,11 @@ namespace testing
             data1.Columns.Add("", "Full Name");
             data1.Columns.Add("", "Birthdate");
             data1.Columns.Add("", "Gender");
-            data1.Columns.Add("", "Voter Status");
+            data1.Columns.Add("", "Voter Stat.");
             data1.Columns.Add("", "Blotter Case");
             data1.Columns.Add("", "Type of Certificate");
             data1.Columns.Add("", "Requested Date");
-            data1.Columns.Add("", "Request Status");
+            data1.Columns.Add("", "Request Stat.");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";

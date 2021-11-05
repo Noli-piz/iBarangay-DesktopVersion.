@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -19,7 +22,7 @@ namespace testing
     public partial class frmRequest2 : Form
     {
         csHostConfiguration host = new csHostConfiguration();
-        private String ID = "", ResID;
+        private String ID = "", ResID, ResUsername="";
 
         public frmRequest2(String id, String ResID)
         {
@@ -67,6 +70,7 @@ namespace testing
                         lblCurrentStatus.Text = jo["Status"].ToString();
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
+                        ResUsername = jo["Username"].ToString();
                     }
                 }
                 else if (success == "0")
@@ -82,38 +86,45 @@ namespace testing
         }
 
 
+        // Submit
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-
-                DateTime dateToday = DateTime.Now;
-
-                var uri = host.IP() + "/iBar/ibar_request_update.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (Convert.ToString(cbStatus.SelectedItem) != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
-                    datas["Status"] = cbStatus.SelectedItem.ToString();
+                    DateTime dateToday = DateTime.Now;
 
-                    csUser user = new csUser();
-                    datas["UserID"] = user.strID();
+                    var uri = host.IP() + "/iBar/ibar_request_update.php";
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["Status"] = cbStatus.SelectedItem.ToString();
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Update Successfully");
+                        csUser user = new csUser();
+                        datas["UserID"] = user.strID();
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                        SendNotif(ResUsername, Convert.ToString(cbStatus.SelectedItem));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show("Please Select a Status.");
                 }
-
             }
             catch (Exception ex)
             {
@@ -123,6 +134,7 @@ namespace testing
 
         }
         
+        //Load the comboboxes
         private void LoadComboBoxes()
         {
             csComboBoxValues cbValues = new csComboBoxValues();
@@ -134,11 +146,13 @@ namespace testing
 
 
 
+        // Cancel/ Close the current forms 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// Generating Documents
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             if (lblDocument.Text == "Barangay Clearance")
@@ -155,6 +169,53 @@ namespace testing
             else if ( lblDocument.Text == "Indigency" )
             {
 
+            }
+            else
+            {
+                MessageBox.Show("Not available");
+            }
+        }
+
+
+        //Sending Notification
+        private void SendNotif(string username,string Stat)
+        {
+            try
+            {
+                if (FirebaseApp.DefaultInstance == null)
+                {
+                    FirebaseApp.Create(new AppOptions()
+                    {
+                        // Put in debug folder
+                        Credential = GoogleCredential.FromFile("private_key.json")
+                    });
+                }
+                var topic = username;
+                var message = new FirebaseAdmin.Messaging.Message()
+                {
+                    //Data = new Dictionary<string, string>()
+                    //{
+                    //    { "myData", "1337" },
+                    //},
+                    //Token = "eKrRrmcSQiumMk-1oy7dox:APA91bG_Od6P5rlBMP6GyIK3WUZNwbuW18nYBxx4dJDLW5zLwLg4x4_2bDwzkQA5dscFOnYZaQ7dAOFplFfuZhIfa7y9bOb9UktLIQx7RC29EDbzlNn3DFWkoVEbUdxkUaeY3UNrTePX",
+
+                    Notification = new Notification()
+                    {
+                        Title = "Your Request",
+                        Body = "Status: " + Stat
+                    },
+                    Topic = topic
+                };
+
+                // Send a message to the device corresponding to the provided
+                // registration token.
+                string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
+                // Response is a message ID string.
+                MessageBox.Show("Sending Notification to "+ username +"....");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
     }

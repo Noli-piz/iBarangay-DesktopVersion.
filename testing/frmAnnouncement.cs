@@ -38,6 +38,7 @@ namespace testing
             mnpltDataGrid();
             loadData();
             LoadCombobox();
+
         }
 
         private void mnpltDataGrid()
@@ -167,7 +168,7 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Insert Successfully");
-                        SendNot(tbSubject.Text ,  rbDetails.Text);
+                        SendNotif(tbSubject.Text ,  rbDetails.Text);
                     }
                     else
                     {
@@ -197,23 +198,21 @@ namespace testing
             rbDetails.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void SendNot(string sub, string det)
+        private void SendNotif(string sub, string det)
         {
             try
             {
-                FirebaseApp.Create(new AppOptions()
+                if (FirebaseApp.DefaultInstance == null)
                 {
+                    FirebaseApp.Create(new AppOptions()
+                    {
 
-                    Credential = GoogleCredential.FromFile("private_key.json")
+                        Credential = GoogleCredential.FromFile("private_key.json")
 
-                    // Put in debug folder
-                    //Credential = GoogleCredential.FromFile("private_key.json")
-                });
-
+                        // Put in debug folder
+                        //Credential = GoogleCredential.FromFile("private_key.json")
+                    });
+                }
                 var topic = "ibarangay";
                 var message = new FirebaseAdmin.Messaging.Message()
                 {
@@ -240,6 +239,26 @@ namespace testing
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(checkEm("thisismenolidgmail.com").ToString());
+        }
+
+        private bool checkEm(String email)
+        {
+            try
+            {
+
+                var add = new System.Net.Mail.MailAddress(email);
+                return add.Address == email;
+
+            }
+            catch (Exception es)
+            {
+                return false;
             }
         }
     }

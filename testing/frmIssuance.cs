@@ -313,6 +313,5 @@ namespace testing
             data1.Rows.Clear();
             LoadData();
         }
-       
     }
 }

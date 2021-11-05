@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -17,7 +20,7 @@ namespace testing
     public partial class frmAccountMngmnt2 : Form
     {
         csHostConfiguration host = new csHostConfiguration();
-        String ID;
+        String ID, resUsername="";
 
         public frmAccountMngmnt2(String id)
         {
@@ -64,6 +67,7 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Update Successfully");
+                        SendNotif(resUsername, cbValid.SelectedItem.ToString());
                         this.Close();
                     }
                     else
@@ -111,6 +115,7 @@ namespace testing
                         //jo["id_announcement"];
                         lblName.Text = jo["Fname"].ToString() +" "+ jo["Mname"].ToString() + " " + jo["Lname"].ToString() +" "+ jo["Sname"].ToString();
                         tbUsername.Text = jo["Username"].ToString();
+                        resUsername = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
                         cbAccountStat.Text = jo["Status"].ToString() == "0"? "Enabled" : "Disabled";
                         cbValid.Text = jo["Valid"].ToString() == "0" ? "Not Validated" : "Validated";
@@ -133,6 +138,38 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+
+        private void SendNotif(string username, string Stat)
+        {
+            try
+            {
+                if (FirebaseApp.DefaultInstance == null)
+                {
+                    FirebaseApp.Create(new AppOptions()
+                    {
+                        Credential = GoogleCredential.FromFile("private_key.json")
+                    });
+                }
+                var topic = username;
+                var message = new FirebaseAdmin.Messaging.Message()
+                {
+                    Notification = new Notification()
+                    {
+                        Title = "Verfication Info.",
+                        Body = "Status: " + Stat
+                    },
+                    Topic = topic
+                };
+
+                string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
+                MessageBox.Show("Sending Announcement to Residents....");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -161,6 +198,7 @@ namespace testing
                 pbImage2.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
             }
         }
+
 
         private void loadComboBox()
         {

@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -19,7 +22,7 @@ namespace testing
     {
         csMisService ser = new csMisService();
         csHostConfiguration host = new csHostConfiguration();
-        string ID = "", currentDeadline = "", currentStatus;
+        string ID = "", currentDeadline = "", currentStatus, resUsername="";
 
         public frmMisService2(String id)
         {
@@ -104,6 +107,8 @@ namespace testing
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         lblQuantity.Text = jo["Quantity"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
+                        resUsername = jo["Username"].ToString();
+
                         //String vl = jo["Deadline"].ToString();
                         //if (vl == "0000-00-00")
                         //{
@@ -191,39 +196,45 @@ namespace testing
 
                 try
                 {
+                    if (Convert.ToString(cbStatus.SelectedItem) != "")
+                    { 
+                        DateTime dateToday = DateTime.Now;
 
-                    DateTime dateToday = DateTime.Now;
+                        var uri = host.IP() + "/iBar/ibar_misservice_update.php";
 
-                    var uri = host.IP() + "/iBar/ibar_misservice_update.php";
+                        string responseFromServer;
+                        using (var wb = new WebClient())
+                        {
+                            var datas = new NameValueCollection();
+                            datas["Quantity"] = lblQuantity.Text;
+                            datas["ItemName"] = lblItem.Text;
+                            datas["Category"] = cbStatus.SelectedItem.ToString();
+                            datas["Status"] = cbStatus.SelectedItem.ToString();
+                            datas["Deadline"] = dtDeadline.Value.Date.ToString("yyyy-MM-dd");
+                            datas["ID"] = ID;
 
-                    string responseFromServer;
-                    using (var wb = new WebClient())
-                    {
-                        var datas = new NameValueCollection();
-                        datas["Quantity"] = lblQuantity.Text;
-                        datas["ItemName"] = lblItem.Text;
-                        datas["Category"] = cbStatus.SelectedItem.ToString();
-                        datas["Status"] = cbStatus.SelectedItem.ToString();
-                        datas["Deadline"] = dtDeadline.Value.Date.ToString("yyyy-MM-dd");
-                        datas["ID"] = ID;
+                            var response = wb.UploadValues(uri, "POST", datas);
+                            responseFromServer = Encoding.UTF8.GetString(response);
+                        }
 
-                        var response = wb.UploadValues(uri, "POST", datas);
-                        responseFromServer = Encoding.UTF8.GetString(response);
-                    }
+                        if (responseFromServer == "Operation Success")
+                        {
+                            MessageBox.Show("Update Successfully");
+                            currentStatus = cbStatus.SelectedItem.ToString();
+                            lblCurrentStatus.Text = cbStatus.SelectedItem.ToString();
 
-                    if (responseFromServer == "Operation Success")
-                    {
-                        MessageBox.Show("Update Successfully");
-                        currentStatus = cbStatus.SelectedItem.ToString();
-                        lblCurrentStatus.Text = cbStatus.SelectedItem.ToString();
-
-                        ResetList();
+                            ResetList();
+                            SendNotif(resUsername, Convert.ToString(cbStatus.SelectedItem));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update Failed " + responseFromServer);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Update Failed " + responseFromServer);
+                        MessageBox.Show("Please Select a Status.");
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -270,6 +281,39 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private void SendNotif(string username, string Stat)
+        {
+            try
+            {
+                if (FirebaseApp.DefaultInstance == null)
+                {
+                    FirebaseApp.Create(new AppOptions()
+                    {
+
+                        Credential = GoogleCredential.FromFile("private_key.json")
+                    });
+                }
+
+                var topic = username;
+                var message = new FirebaseAdmin.Messaging.Message()
+                {
+                    Notification = new Notification()
+                    {
+                        Title = "Miscellaneous Services",
+                        Body = "Status: " + Stat
+                    },
+                    Topic = topic
+                };
+
+                string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
+                MessageBox.Show("Sending Notification to "+ resUsername +"....");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 

@@ -14,11 +14,11 @@ namespace testing
         [STAThread]
         static void Main()
         {
-            //csConnection s = new csConnection();
+            csConnection s = new csConnection();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTesting());
+            Application.Run(new frmMenu());
         }
     }
 }

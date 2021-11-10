@@ -116,7 +116,8 @@ namespace testing
                     foreach (var jo in (JArray)((JObject)data)["issuance"])
                     {
 
-                        String localURL = @"D:\TempImage\temp.png";
+                        //String localURL = @"D:\TempImage\temp.png";
+                        String localURL = @"C:\temp.png";
                         using (WebClient client = new WebClient())
                         {
                             try
@@ -177,9 +178,9 @@ namespace testing
                     }
 
                     ReportDocument cryRpt = new ReportDocument();
-                    cryRpt.Load("C:\\Users\\Lenovo\\source\\repos\\testing\\testing\\rptBrgyClearance.rpt");
+                    //cryRpt.Load("C:\\Users\\Lenovo\\source\\repos\\testing\\testing\\rptBrgyClearance.rpt");
                     //MessageBox.Show(Application.StartupPath);
-                    //cryRpt.Load("\\testing\\testing\\rptBrgyClearance.rpt");
+                    cryRpt.Load("rptBrgyClearance.rpt");
                     cryRpt.SetDataSource(ds);
 
                     crystalReportViewer1.ReportSource = cryRpt;

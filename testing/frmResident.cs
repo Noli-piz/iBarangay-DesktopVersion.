@@ -264,6 +264,8 @@ namespace testing
         {
             frmResident_insert frm = new frmResident_insert();
             frm.ShowDialog(this);
+            data1.Rows.Clear();
+            LoadData();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

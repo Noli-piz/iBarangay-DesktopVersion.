@@ -92,6 +92,7 @@ namespace testing
 
             blot.UpdateData();
             MessageBox.Show(blot.Message);
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

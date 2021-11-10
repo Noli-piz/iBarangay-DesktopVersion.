@@ -38,6 +38,7 @@ namespace testing
 
             blot.InsertData();
             MessageBox.Show(blot.Message);
+            this.Close();
         }
 
         private void loadComboBox()

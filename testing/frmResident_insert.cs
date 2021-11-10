@@ -71,6 +71,7 @@ namespace testing
             {
                 res.ResetData();
                 Reset();
+                this.Close();
             }
         }
 
@@ -225,7 +226,7 @@ namespace testing
         {
             if (btnOpenCamera.Text == "Open Camera") {
                 videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
-                videoCaptureDevice.VideoResolution = videoCaptureDevice.VideoCapabilities[2];
+                videoCaptureDevice.VideoResolution = videoCaptureDevice.VideoCapabilities[1];
                 videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
                 videoCaptureDevice.Start();
                 btnOpenCamera.Text = "Close Camera";
@@ -264,7 +265,7 @@ namespace testing
                 varBmp = null;
 
                 path = @"D:\ImageProject\a.png";
-                //UploadImage();
+                UploadImage();
                 btnOpenCamera_Click(sender, e);
             }
             else

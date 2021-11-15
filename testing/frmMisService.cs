@@ -111,7 +111,9 @@ namespace testing
 
 
                 data1.Columns["ID"].Visible = false;
-                data1.Visible = true;
+                data1.AutoResizeColumns();
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             }
             catch (Exception ex)
             {

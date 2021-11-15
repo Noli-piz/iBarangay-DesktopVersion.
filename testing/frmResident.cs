@@ -48,6 +48,7 @@ namespace testing
             data1.Columns.Add("id", "ID.");
             data1.Columns.Add("fullname", "Full Name");
             data1.Columns.Add("bday", "Birthdate");
+            data1.Columns.Add("age", "Age");
             data1.Columns.Add("gender", "Gender");
             data1.Columns.Add("cstatus", "Civil Stat");
             data1.Columns.Add("vstatus", "Voter Stat");
@@ -88,6 +89,7 @@ namespace testing
                         ID.Add(jo["id_resident"].ToString());
                         AL.Add(jo["Fname"] +" "+ jo["Mname"] +" "+ jo["Lname"] +" "+ jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
+                        AL.Add(jo["Age"]);
                         AL.Add(jo["Gender"]);
                         AL.Add(jo["CivilStatus"]);
                         AL.Add(jo["VoterStatus"]);
@@ -114,11 +116,7 @@ namespace testing
                 data1.Columns["ID"].Visible = false;
 
                 data1.AutoResizeColumns();
-                data1.AutoResizeRows();
-
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                data1.Visible = true;
             }
             catch (Exception ex)
             {
@@ -174,7 +172,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 7)
+                if (e.ColumnIndex == 8)
                 {
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();

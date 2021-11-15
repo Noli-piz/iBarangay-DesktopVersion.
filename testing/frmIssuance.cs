@@ -104,7 +104,8 @@ namespace testing
                 }
 
                 data1.Columns["ID"].Visible = false;
-                data1.Visible = true;
+                data1.AutoResizeColumns();
+
             }
             catch (Exception e)
             {

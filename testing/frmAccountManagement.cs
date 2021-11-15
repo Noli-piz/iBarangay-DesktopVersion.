@@ -40,13 +40,13 @@ namespace testing
             data1.Columns.Clear();
             data1.Visible = false;
 
-            data1.Columns.Add("", "No.");
-            data1.Columns.Add("", "ID.");
-            data1.Columns.Add("", "Username");
-            data1.Columns.Add("", "Fullname");
-            data1.Columns.Add("", "Voter Stat");
-            data1.Columns.Add("", "Validation");
-            data1.Columns.Add("", "Accnt Stat");
+            data1.Columns.Add("no", "No.");
+            data1.Columns.Add("id", "ID.");
+            data1.Columns.Add("uname", "Username");
+            data1.Columns.Add("fname", "Fullname");
+            data1.Columns.Add("vstat", "Voter Stat");
+            data1.Columns.Add("vld", "Validation");
+            data1.Columns.Add("astat", "Accnt Stat");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
@@ -54,6 +54,9 @@ namespace testing
             btn.Text = "View/Edit";
             btn.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn);
+
+            data1.Columns["ID"].Visible = false;
+
         }
 
         private async void loadData()

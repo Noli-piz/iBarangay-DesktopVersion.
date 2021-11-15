@@ -146,7 +146,7 @@ namespace testing
         {
             ArrStatusService = new ArrayList()
             {
-                "Pending", "Approved", "Disapproved", "Barrowed", "Returned" 
+                "Pending", "Approved", "Disapproved", "Borrowed", "Returned" 
             };
         }
 

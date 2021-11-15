@@ -156,15 +156,15 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1031, 554);
-            this.Controls.Add(this.btnHide);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbUsertype);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.btnHide);
+            this.Controls.Add(this.cbUsertype);
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

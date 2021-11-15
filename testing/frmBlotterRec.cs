@@ -54,6 +54,9 @@ namespace testing
             btn.Text = "View/Edit";
             btn.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn);
+
+            data1.Columns["ID"].Visible = false;
+
         }
 
         private async void LoadData()

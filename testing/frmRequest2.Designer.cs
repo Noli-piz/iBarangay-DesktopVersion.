@@ -44,6 +44,8 @@ namespace testing
             this.lblCurrentStatus = new System.Windows.Forms.Label();
             this.lblDeliveryOption = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.rbNote = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +90,7 @@ namespace testing
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(544, 650);
+            this.btnCancel.Location = new System.Drawing.Point(589, 741);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 37);
             this.btnCancel.TabIndex = 4;
@@ -98,7 +100,7 @@ namespace testing
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(658, 650);
+            this.btnSubmit.Location = new System.Drawing.Point(703, 741);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(109, 37);
             this.btnSubmit.TabIndex = 5;
@@ -148,7 +150,7 @@ namespace testing
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(544, 561);
+            this.btnGenerate.Location = new System.Drawing.Point(589, 663);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(223, 56);
             this.btnGenerate.TabIndex = 10;
@@ -196,11 +198,33 @@ namespace testing
             this.label8.TabIndex = 13;
             this.label8.Text = "Delivery Option:";
             // 
+            // rbNote
+            // 
+            this.rbNote.BackColor = System.Drawing.Color.White;
+            this.rbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNote.Location = new System.Drawing.Point(213, 567);
+            this.rbNote.Name = "rbNote";
+            this.rbNote.Size = new System.Drawing.Size(570, 79);
+            this.rbNote.TabIndex = 15;
+            this.rbNote.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(46, 570);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 25);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Note/ Message*";
+            // 
             // frmRequest2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 716);
+            this.ClientSize = new System.Drawing.Size(852, 800);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.rbNote);
             this.Controls.Add(this.lblDeliveryOption);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblCurrentStatus);
@@ -241,5 +265,7 @@ namespace testing
         private System.Windows.Forms.Label lblCurrentStatus;
         private System.Windows.Forms.Label lblDeliveryOption;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox rbNote;
+        private System.Windows.Forms.Label label6;
     }
 }

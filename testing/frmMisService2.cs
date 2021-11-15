@@ -43,7 +43,7 @@ namespace testing
             {
                 cbStatus.Items.Clear();
                 LoadComboBoxes();
-                cbStatus.Items.Remove("Barrowed");
+                cbStatus.Items.Remove("Borrowed");
                 cbStatus.Items.Remove("Returned");
             }
             else if (currentStatus == "Approved")
@@ -62,10 +62,10 @@ namespace testing
                 cbStatus.Items.Add("Dispproved");
                 cbStatus.SelectedIndex = 0;
             }
-            else if (currentStatus == "Barrowed")
+            else if (currentStatus == "Borrowed")
             {
                 cbStatus.Items.Clear();
-                cbStatus.Items.Add("Barrowed");
+                cbStatus.Items.Add("Borrowed");
                 cbStatus.Items.Add("Returned");
                 cbStatus.SelectedIndex = 0;
 
@@ -108,6 +108,7 @@ namespace testing
                         lblQuantity.Text = jo["Quantity"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
                         resUsername = jo["Username"].ToString();
+                        rbNote.Text = jo["Note"].ToString();
 
                         //String vl = jo["Deadline"].ToString();
                         //if (vl == "0000-00-00")
@@ -172,9 +173,9 @@ namespace testing
             }
             else if ("Disapproved" == currentStatus)
             {
-                if (cbStatus.SelectedItem.ToString() == "Barrowed")
+                if (cbStatus.SelectedItem.ToString() == "Borrowed")
                 {
-                    MessageBox.Show("Unable to Update the item to 'Barrowed' from 'Disapproved' Status.");
+                    MessageBox.Show("Unable to Update the item to 'Borrowed' from 'Disapproved' Status.");
                 }
                 else if (cbStatus.SelectedItem.ToString() == "Returned")
                 {
@@ -211,6 +212,7 @@ namespace testing
                             datas["Category"] = cbStatus.SelectedItem.ToString();
                             datas["Status"] = cbStatus.SelectedItem.ToString();
                             datas["Deadline"] = dtDeadline.Value.Date.ToString("yyyy-MM-dd");
+                            datas["Note"] = rbNote.Text=="" ? "NONE" : rbNote.Text;
                             datas["ID"] = ID;
 
                             var response = wb.UploadValues(uri, "POST", datas);
@@ -224,7 +226,7 @@ namespace testing
                             lblCurrentStatus.Text = cbStatus.SelectedItem.ToString();
 
                             ResetList();
-                            SendNotif(resUsername, Convert.ToString(cbStatus.SelectedItem));
+                            SendNotif(resUsername, Convert.ToString(cbStatus.SelectedItem), rbNote.Text);
                         }
                         else
                         {
@@ -284,7 +286,7 @@ namespace testing
             }
         }
 
-        private void SendNotif(string username, string Stat)
+        private void SendNotif(string username, string Stat, string Note)
         {
             try
             {
@@ -298,12 +300,14 @@ namespace testing
                 }
 
                 var topic = username;
+                string body = Note == ""? "Status: " + Stat : "Status: " + Stat + "\nNote: " + Note;
+
                 var message = new FirebaseAdmin.Messaging.Message()
                 {
                     Notification = new Notification()
                     {
                         Title = "Miscellaneous Services",
-                        Body = "Status: " + Stat
+                        Body = body
                     },
                     Topic = topic
                 };

@@ -102,7 +102,6 @@ namespace testing
 
                 data1.AutoResizeColumns();
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.Visible = true;
             }
             catch (Exception e)
             {

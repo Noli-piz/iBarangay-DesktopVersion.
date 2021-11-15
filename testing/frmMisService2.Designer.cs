@@ -47,6 +47,8 @@ namespace testing
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtDeadline = new System.Windows.Forms.DateTimePicker();
+            this.rbNote = new System.Windows.Forms.RichTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDeliveryOption
@@ -131,7 +133,7 @@ namespace testing
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(698, 747);
+            this.btnSubmit.Location = new System.Drawing.Point(712, 787);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(109, 37);
             this.btnSubmit.TabIndex = 20;
@@ -141,7 +143,7 @@ namespace testing
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(584, 747);
+            this.btnCancel.Location = new System.Drawing.Point(598, 787);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 37);
             this.btnCancel.TabIndex = 19;
@@ -227,11 +229,33 @@ namespace testing
             this.dtDeadline.Size = new System.Drawing.Size(222, 22);
             this.dtDeadline.TabIndex = 33;
             // 
+            // rbNote
+            // 
+            this.rbNote.BackColor = System.Drawing.Color.White;
+            this.rbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNote.Location = new System.Drawing.Point(235, 660);
+            this.rbNote.Name = "rbNote";
+            this.rbNote.Size = new System.Drawing.Size(572, 88);
+            this.rbNote.TabIndex = 34;
+            this.rbNote.Text = "";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(55, 660);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(153, 25);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Note/ Message*";
+            // 
             // frmMisService2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 798);
+            this.ClientSize = new System.Drawing.Size(861, 836);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.rbNote);
             this.Controls.Add(this.dtDeadline);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblQuantity);
@@ -278,5 +302,7 @@ namespace testing
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtDeadline;
+        private System.Windows.Forms.RichTextBox rbNote;
+        private System.Windows.Forms.Label label9;
     }
 }

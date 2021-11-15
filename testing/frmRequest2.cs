@@ -71,6 +71,7 @@ namespace testing
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
                         ResUsername = jo["Username"].ToString();
+                        rbNote.Text = jo["Note"].ToString();
                     }
                 }
                 else if (success == "0")
@@ -103,6 +104,8 @@ namespace testing
                         var datas = new NameValueCollection();
                         datas["ID"] = ID;
                         datas["Status"] = cbStatus.SelectedItem.ToString();
+                        datas["Note"] = rbNote.Text==""? "NONE" : rbNote.Text;
+
 
                         csUser user = new csUser();
                         datas["UserID"] = user.strID();
@@ -114,7 +117,7 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Update Successfully");
-                        SendNotif(ResUsername, Convert.ToString(cbStatus.SelectedItem));
+                        SendNotif(ResUsername, Convert.ToString(cbStatus.SelectedItem), rbNote.Text);
                     }
                     else
                     {
@@ -178,7 +181,7 @@ namespace testing
 
 
         //Sending Notification
-        private void SendNotif(string username,string Stat)
+        private void SendNotif(string username,string Stat, string Note)
         {
             try
             {
@@ -191,6 +194,8 @@ namespace testing
                     });
                 }
                 var topic = username;
+                string body = Note == "" ? "Status: " + Stat : "Status: " + Stat + "\nNote: " + Note;
+
                 var message = new FirebaseAdmin.Messaging.Message()
                 {
                     //Data = new Dictionary<string, string>()
@@ -202,7 +207,7 @@ namespace testing
                     Notification = new Notification()
                     {
                         Title = "Your Request",
-                        Body = "Status: " + Stat
+                        Body = body
                     },
                     Topic = topic
                 };

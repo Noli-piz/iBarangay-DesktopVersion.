@@ -348,7 +348,6 @@
     <Compile Include="csConnection.cs" />
     <Compile Include="csHostConfiguration.cs" />
     <Compile Include="csLogin.cs" />
-    <Compile Include="csMaintenance.cs" />
     <Compile Include="csMisService.cs" />
     <Compile Include="csRand.cs" />
     <Compile Include="csResidents.cs" />
@@ -622,6 +621,48 @@
     <Compile Include="SimpleScheduleDataProvider.Designer.cs">
       <DependentUpon>SimpleScheduleDataProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabAlertLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabAlertLevel.Designer.cs">
+      <DependentUpon>tabAlertLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabCertificates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabCertificates.Designer.cs">
+      <DependentUpon>tabCertificates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabCivilStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabCivilStatus.Designer.cs">
+      <DependentUpon>tabCivilStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabDeliveryOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabDeliveryOptions.Designer.cs">
+      <DependentUpon>tabDeliveryOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabGender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabGender.Designer.cs">
+      <DependentUpon>tabGender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabItems.Designer.cs">
+      <DependentUpon>tabItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabPurok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabPurok.Designer.cs">
+      <DependentUpon>tabPurok.cs</DependentUpon>
+    </Compile>
     <Compile Include="vwrAppointmentReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -778,6 +819,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleScheduleDataProvider.resx">
       <DependentUpon>SimpleScheduleDataProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabAlertLevel.resx">
+      <DependentUpon>tabAlertLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabCertificates.resx">
+      <DependentUpon>tabCertificates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabCivilStatus.resx">
+      <DependentUpon>tabCivilStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabDeliveryOptions.resx">
+      <DependentUpon>tabDeliveryOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabGender.resx">
+      <DependentUpon>tabGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabItems.resx">
+      <DependentUpon>tabItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabPurok.resx">
+      <DependentUpon>tabPurok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vwrAppointmentReport.resx">
       <DependentUpon>vwrAppointmentReport.cs</DependentUpon>

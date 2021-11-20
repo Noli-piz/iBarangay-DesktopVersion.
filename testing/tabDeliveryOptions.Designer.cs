@@ -72,7 +72,7 @@ namespace testing
             this.mtrData4.EnableHeadersVisualStyles = false;
             this.mtrData4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtrData4.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtrData4.Location = new System.Drawing.Point(12, 12);
+            this.mtrData4.Location = new System.Drawing.Point(1, 3);
             this.mtrData4.Name = "mtrData4";
             this.mtrData4.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -87,7 +87,7 @@ namespace testing
             this.mtrData4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mtrData4.RowTemplate.Height = 24;
             this.mtrData4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mtrData4.Size = new System.Drawing.Size(614, 595);
+            this.mtrData4.Size = new System.Drawing.Size(586, 633);
             this.mtrData4.TabIndex = 4;
             this.mtrData4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mtrData4_CellClick);
             // 
@@ -95,7 +95,7 @@ namespace testing
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnCancel.Location = new System.Drawing.Point(644, 512);
+            this.btnCancel.Location = new System.Drawing.Point(664, 512);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(126, 49);
             this.btnCancel.TabIndex = 15;
@@ -106,7 +106,7 @@ namespace testing
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnDelete.Location = new System.Drawing.Point(937, 512);
+            this.btnDelete.Location = new System.Drawing.Point(957, 512);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(126, 49);
             this.btnDelete.TabIndex = 14;
@@ -118,7 +118,7 @@ namespace testing
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnUpdate.Location = new System.Drawing.Point(776, 512);
+            this.btnUpdate.Location = new System.Drawing.Point(796, 512);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 49);
             this.btnUpdate.TabIndex = 13;
@@ -130,7 +130,7 @@ namespace testing
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAdd.Location = new System.Drawing.Point(937, 445);
+            this.btnAdd.Location = new System.Drawing.Point(957, 445);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(126, 49);
             this.btnAdd.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace testing
             this.tbDeliveryOpt.CustomButton.Visible = false;
             this.tbDeliveryOpt.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbDeliveryOpt.Lines = new string[0];
-            this.tbDeliveryOpt.Location = new System.Drawing.Point(644, 159);
+            this.tbDeliveryOpt.Location = new System.Drawing.Point(664, 159);
             this.tbDeliveryOpt.MaxLength = 32767;
             this.tbDeliveryOpt.Name = "tbDeliveryOpt";
             this.tbDeliveryOpt.PasswordChar = '\0';
@@ -182,7 +182,7 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 637);
+            this.ClientSize = new System.Drawing.Size(1095, 633);
             this.Controls.Add(this.tbDeliveryOpt);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);

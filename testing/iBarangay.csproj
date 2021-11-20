@@ -341,6 +341,9 @@
     <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
       <HintPath>..\packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsFormsCalendar, Version=1.1.4610.23063, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsFormsCalendar.1.1.0\lib\WindowsFormsCalendar.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="csBlotter.cs" />
@@ -397,6 +400,12 @@
     </Compile>
     <Compile Include="frmAppointment_update.Designer.cs">
       <DependentUpon>frmAppointment_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAppoint_insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppoint_insert.Designer.cs">
+      <DependentUpon>frmAppoint_insert.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBlotterRec2Update.cs">
       <SubType>Form</SubType>
@@ -701,6 +710,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppointment_update.resx">
       <DependentUpon>frmAppointment_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppoint_insert.resx">
+      <DependentUpon>frmAppoint_insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBlotterRec2Update.resx">
       <DependentUpon>frmBlotterRec2Update.cs</DependentUpon>

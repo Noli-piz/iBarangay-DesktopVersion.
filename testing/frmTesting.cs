@@ -20,6 +20,8 @@ namespace testing
     {
         private List<CalendarItem> _items = new List<CalendarItem>();
         csHostConfiguration host = new csHostConfiguration();
+        CalendarItem item;
+
         public frmTesting()
         {
             InitializeComponent();
@@ -27,10 +29,11 @@ namespace testing
 
         private void frmTesting_Load(object sender, EventArgs e)
         {
-            DateTime newDate = DateTime.Now;
-            CalendarItem item = new CalendarItem(calendar1, DateTime.Now.AddHours(-4), newDate, "TEST");
-            _items.Add(item);
             LoadData();
+            LoadItems();
+
+            DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
+            calendar1.SetViewRange(sunday, sunday.AddDays(6));
         }
 
         private async void LoadData()
@@ -66,10 +69,11 @@ namespace testing
                         DateTime dte2 = DateTime.ParseExact(jo["EndTime"].ToString(), "yyyy-MM-dd HH:mm tt", null);
 
 
-                        CalendarItem item = new CalendarItem(calendar1, dte1, dte2, info);
+                        item = new CalendarItem(calendar1, dte1, dte2, info);
                         _items.Add(item);
 
                     }
+                    calendar1.SetViewRange(monthView1.SelectionStart.Date, monthView1.SelectionEnd.Date);
 
                 }
                 else if (success == "0")
@@ -87,6 +91,11 @@ namespace testing
 
         private void calendar1_LoadItems(object sender, CalendarLoadEventArgs e)
         {
+            LoadItems();
+        }
+
+        private void LoadItems()
+        {
             foreach (CalendarItem calendarItem in _items)
             {
                 if (this.calendar1.ViewIntersects(calendarItem))
@@ -94,6 +103,7 @@ namespace testing
                     this.calendar1.Items.Add(calendarItem);
                 }
             }
+
         }
 
         private void monthView1_SelectionChanged(object sender, EventArgs e)
@@ -101,16 +111,29 @@ namespace testing
             calendar1.SetViewRange(monthView1.SelectionStart.Date, monthView1.SelectionEnd.Date);
         }
 
-        private void calendar1_Click(object sender, EventArgs e)
-        {
-
-            //MessageBox.Show("Putang");
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAppoint_insert frm = new frmAppoint_insert();
             frm.ShowDialog(this);
+
+            reloadData();
+        }
+
+        private void calendar1_ItemSelected(object sender, CalendarItemEventArgs e)
+        {
+            MessageBox.Show( e.Item.Text.ToString() + e.Item.Date );
+            frmAppoint_update frm = new frmAppoint_update(e.Item.Text);
+            frm.ShowDialog(this);
+
+            reloadData();
+        }
+
+        private void reloadData()
+        {
+            _items.Clear();
+            LoadData();
+            LoadItems();
+
         }
     }
 }

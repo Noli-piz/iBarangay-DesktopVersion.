@@ -407,6 +407,12 @@
     <Compile Include="frmAppoint_insert.Designer.cs">
       <DependentUpon>frmAppoint_insert.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAppoint_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppoint_update.Designer.cs">
+      <DependentUpon>frmAppoint_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBlotterRec2Update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -713,6 +719,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppoint_insert.resx">
       <DependentUpon>frmAppoint_insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppoint_update.resx">
+      <DependentUpon>frmAppoint_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBlotterRec2Update.resx">
       <DependentUpon>frmBlotterRec2Update.cs</DependentUpon>

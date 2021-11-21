@@ -63,7 +63,6 @@ namespace testing
             // 
             // calendar1
             // 
-            this.calendar1.AllowDrop = true;
             this.calendar1.AllowItemEdit = false;
             this.calendar1.AllowItemResize = false;
             this.calendar1.AllowNew = false;
@@ -71,7 +70,7 @@ namespace testing
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.calendar1.BackColor = System.Drawing.Color.LightGray;
-            this.calendar1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar1.ItemsBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.calendar1.ItemsFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar1.ItemsForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -82,7 +81,7 @@ namespace testing
             this.calendar1.TabIndex = 0;
             this.calendar1.Text = "calendar1";
             this.calendar1.LoadItems += new WindowsFormsCalendar.Calendar.CalendarLoadEventHandler(this.calendar1_LoadItems);
-            this.calendar1.Click += new System.EventHandler(this.calendar1_Click);
+            this.calendar1.ItemSelected += new WindowsFormsCalendar.Calendar.CalendarItemEventHandler(this.calendar1_ItemSelected);
             // 
             // panel1
             // 

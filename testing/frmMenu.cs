@@ -97,7 +97,7 @@ namespace testing
         private void btnMain_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            frmAppointment frm = new frmAppointment() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmAppoint frm = new frmAppoint() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
         }

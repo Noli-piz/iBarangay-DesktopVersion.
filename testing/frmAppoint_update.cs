@@ -18,11 +18,14 @@ namespace testing
     {
         csHostConfiguration host = new csHostConfiguration();
         private string content = "";
+        DateTime startDate , endDate;
 
-        public frmAppoint_update(string content)
+        public frmAppoint_update(string content, DateTime startDate, DateTime endDate)
         {
             InitializeComponent();
             this.content = content;
+            this.startDate = startDate;
+            this.endDate = endDate;
         }
 
         private void frmAppoint_update_Load(object sender, EventArgs e)
@@ -51,6 +54,9 @@ namespace testing
                     datas["StartTime"] = dtStartDate.Value.ToString("yyyy-MM-dd ") + dtStartTime.Value.ToString("HH:mm tt");
                     datas["EndTime"] = dtEndDate.Value.ToString("yyyy-MM-dd ") + dtEndTime.Value.ToString("HH:mm tt");
                     datas["Status"] = cbDone.Checked ? "True" : "False";
+
+                    datas["StartTimeFilter"] = startDate.ToString("yyyy-MM-dd HH:mm tt");
+                    datas["EndTimeFilter"] = endDate.ToString("yyyy-MM-dd HH:mm tt");
 
                     csUser user = new csUser();
                     datas["UserID"] = user.strID();
@@ -91,6 +97,11 @@ namespace testing
                 {
                     var datas = new NameValueCollection();
                     datas["content"] = content;
+                    datas["StartTime"] = startDate.ToString("yyyy-MM-dd HH:mm tt");
+                    datas["EndTime"] = endDate.ToString("yyyy-MM-dd HH:mm tt");
+
+                    datas["StartTimeFilter"] = startDate.ToString("yyyy-MM-dd HH:mm tt");
+                    datas["EndTimeFilter"] = endDate.ToString("yyyy-MM-dd HH:mm tt");
 
                     csUser user = new csUser();
                     datas["UserID"] = user.strID();
@@ -131,6 +142,8 @@ namespace testing
                 {
                     var datas = new NameValueCollection();
                     datas["ID"] = content;
+                    datas["StartTime"] = startDate.ToString("yyyy-MM-dd HH:mm tt");
+                    datas["EndTime"] = endDate.ToString("yyyy-MM-dd HH:mm tt");
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);

@@ -479,11 +479,11 @@
     <Compile Include="frmResident_update.Designer.cs">
       <DependentUpon>frmResident_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTesting.cs">
+    <Compile Include="frmAppoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTesting.Designer.cs">
-      <DependentUpon>frmTesting.cs</DependentUpon>
+    <Compile Include="frmAppoint.Designer.cs">
+      <DependentUpon>frmAppoint.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserMngmnt3.cs">
       <SubType>Form</SubType>
@@ -756,8 +756,8 @@
     <EmbeddedResource Include="frmResident_update.resx">
       <DependentUpon>frmResident_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTesting.resx">
-      <DependentUpon>frmTesting.cs</DependentUpon>
+    <EmbeddedResource Include="frmAppoint.resx">
+      <DependentUpon>frmAppoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserMngmnt3.resx">
       <DependentUpon>frmUserMngmnt3.cs</DependentUpon>

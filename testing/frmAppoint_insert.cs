@@ -15,20 +15,54 @@ namespace testing
     public partial class frmAppoint_insert : Form
     {
         csHostConfiguration host = new csHostConfiguration();
+        DateTime dateStart, dateEnd;
 
         public frmAppoint_insert()
         {
             InitializeComponent();
         }
 
+        public void fetchDate(DateTime dateStart, DateTime dateEnd)
+        {
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+
+            dtStartDate.Value = dateStart;
+            dtStartTime.Value = dateStart;
+            dtEndDate.Value = dateEnd;
+            dtEndTime.Value = dateEnd;
+        }
+
         private void frmAppoint_insert_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void dtTimeAndDate_ValueChanged(object sender, EventArgs e)
+        {
+
+            if (dtStartDate.Value > dtEndDate.Value)
+            {
+                dtStartDate.Value = dtEndDate.Value;
+                MessageBox.Show("Unable to Perform Action");
+            }
+            else if (dtStartDate.Value == dtEndDate.Value)
+            {
+                if (dtStartTime.Value.TimeOfDay > dtEndTime.Value.TimeOfDay)
+                {
+                    dtStartTime.Value = dtEndTime.Value.AddHours(-1);
+                    MessageBox.Show("Unable to Perform Action");
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             try
             {
 

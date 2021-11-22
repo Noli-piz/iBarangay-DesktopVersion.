@@ -16,13 +16,13 @@ using WindowsFormsCalendar;
 
 namespace testing
 {
-    public partial class frmTesting : Form
+    public partial class frmAppoint : Form
     {
         private List<CalendarItem> _items = new List<CalendarItem>();
         csHostConfiguration host = new csHostConfiguration();
-        CalendarItem item;
+        private Random rnd = new Random();
 
-        public frmTesting()
+        public frmAppoint()
         {
             InitializeComponent();
         }
@@ -34,6 +34,7 @@ namespace testing
 
             DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
             calendar1.SetViewRange(sunday, sunday.AddDays(6));
+            calendar1.BackColor = Color.Red;
         }
 
         private async void LoadData()
@@ -51,6 +52,12 @@ namespace testing
                 List<int> colorInt = new List<int>();
                 if (success == "1")
                 {
+                    List<Color> colorList = new List<Color>();
+                    colorList.Add(Color.Red);
+                    colorList.Add(Color.Blue);
+                    colorList.Add(Color.Green);
+                    colorList.Add(Color.Yellow);
+
                     foreach (var jo in (JArray)((JObject)data)["appointment"])
                     {
                         //AL.Add(jo["id_appointment"]);
@@ -68,12 +75,18 @@ namespace testing
                         DateTime dte1 = DateTime.ParseExact(jo["StartTime"].ToString(), "yyyy-MM-dd HH:mm tt", null);
                         DateTime dte2 = DateTime.ParseExact(jo["EndTime"].ToString(), "yyyy-MM-dd HH:mm tt", null);
 
+                        CalendarItem item = new CalendarItem(this.calendar1, dte1, dte2, info);
 
-                        item = new CalendarItem(calendar1, dte1, dte2, info);
+                        if (jo["Status"].ToString() == "true" || jo["Status"].ToString() == "True")
+                        {
+                            item.PatternColor = Color.Black;
+                        }
+
+                        item.BackgroundColor = colorList[rnd.Next(3)];
+
                         _items.Add(item);
 
                     }
-                    calendar1.SetViewRange(monthView1.SelectionStart.Date, monthView1.SelectionEnd.Date);
 
                 }
                 else if (success == "0")
@@ -121,8 +134,7 @@ namespace testing
 
         private void calendar1_ItemSelected(object sender, CalendarItemEventArgs e)
         {
-            MessageBox.Show( e.Item.Text.ToString() + e.Item.Date );
-            frmAppoint_update frm = new frmAppoint_update(e.Item.Text);
+            frmAppoint_update frm = new frmAppoint_update(e.Item.Text, e.Item.Date, e.Item.EndDate);
             frm.ShowDialog(this);
 
             reloadData();
@@ -133,7 +145,15 @@ namespace testing
             _items.Clear();
             LoadData();
             LoadItems();
-
         }
+
+        private void calendar1_ItemCreating(object sender, CalendarItemCancelEventArgs e)
+        {
+            frmAppoint_insert frm = new frmAppoint_insert();
+            frm.fetchDate(e.Item.Date, e.Item.EndDate);
+            frm.ShowDialog(this);
+
+            reloadData();
+        } 
     }
 }

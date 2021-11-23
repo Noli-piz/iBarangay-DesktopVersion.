@@ -15,17 +15,16 @@ namespace testing
     public partial class frmAppoint_insert : Form
     {
         csHostConfiguration host = new csHostConfiguration();
-        DateTime dateStart, dateEnd;
 
         public frmAppoint_insert()
         {
             InitializeComponent();
+            dtEndDate.Value = DateTime.Now;
         }
 
-        public void fetchDate(DateTime dateStart, DateTime dateEnd)
+        public frmAppoint_insert(DateTime dateStart, DateTime dateEnd)
         {
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
+            InitializeComponent();
 
             dtStartDate.Value = dateStart;
             dtStartTime.Value = dateStart;
@@ -41,12 +40,12 @@ namespace testing
         private void dtTimeAndDate_ValueChanged(object sender, EventArgs e)
         {
 
-            if (dtStartDate.Value > dtEndDate.Value)
+            if (dtStartDate.Value.Date > dtEndDate.Value.Date)
             {
-                dtStartDate.Value = dtEndDate.Value;
-                MessageBox.Show("Unable to Perform Action");
+                dtStartDate.Value = dtEndDate.Value.Date;
+                MessageBox.Show("Unable to Perform Action" );
             }
-            else if (dtStartDate.Value == dtEndDate.Value)
+            else if (dtStartDate.Value.Date == dtEndDate.Value.Date)
             {
                 if (dtStartTime.Value.TimeOfDay > dtEndTime.Value.TimeOfDay)
                 {
@@ -58,7 +57,15 @@ namespace testing
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            foreach (Control field in frmResident_insert.ActiveForm.Controls)
+            {
+                if (field is TextBox)
+                    ((TextBox)field).Clear();
+                if (field is RichTextBox)
+                    ((RichTextBox)field).Clear();
+                if (field is CheckBox)
+                    ((CheckBox)field).Checked = false;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Syncfusion.Windows.Forms.Schedule;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,9 +31,7 @@ namespace testing
             LoadData();
             LoadItems();
 
-            DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
-            calendar1.SetViewRange(sunday, sunday.AddDays(6));
-            calendar1.BackColor = Color.Red;
+
         }
 
         private async void LoadData()
@@ -80,6 +77,7 @@ namespace testing
                         if (jo["Status"].ToString() == "true" || jo["Status"].ToString() == "True")
                         {
                             item.PatternColor = Color.Black;
+                            item.Pattern = System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal;
                         }
 
                         item.BackgroundColor = colorList[rnd.Next(3)];
@@ -88,6 +86,8 @@ namespace testing
 
                     }
 
+                    DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
+                    calendar1.SetViewRange(sunday, sunday.AddDays(6));
                 }
                 else if (success == "0")
                 {
@@ -149,11 +149,10 @@ namespace testing
 
         private void calendar1_ItemCreating(object sender, CalendarItemCancelEventArgs e)
         {
-            frmAppoint_insert frm = new frmAppoint_insert();
-            frm.fetchDate(e.Item.Date, e.Item.EndDate);
+            frmAppoint_insert frm = new frmAppoint_insert(e.Item.StartDate, e.Item.EndDate);
             frm.ShowDialog(this);
 
             reloadData();
-        } 
+        }
     }
 }

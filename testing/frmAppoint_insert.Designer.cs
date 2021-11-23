@@ -46,6 +46,7 @@ namespace testing
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // dtStartDate
@@ -77,11 +78,13 @@ namespace testing
             this.dtEndDate.Size = new System.Drawing.Size(418, 35);
             this.dtEndDate.Style = MetroFramework.MetroColorStyle.Black;
             this.dtEndDate.TabIndex = 1;
+            this.dtEndDate.Value = new System.DateTime(2050, 11, 23, 10, 0, 0, 0);
             this.dtEndDate.ValueChanged += new System.EventHandler(this.dtTimeAndDate_ValueChanged);
             // 
             // dtStartTime
             // 
             this.dtStartTime.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtStartTime.CalendarForeColor = System.Drawing.Color.Black;
             this.dtStartTime.CustomFormat = "hh:mm tt";
             this.dtStartTime.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -242,12 +245,37 @@ namespace testing
             this.label7.TabIndex = 31;
             this.label7.Text = "End Time";
             // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSize = false;
+            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.materialButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(301, 658);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(130, 50);
+            this.materialButton1.TabIndex = 43;
+            this.materialButton1.Text = "UPDATE";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = true;
+            this.materialButton1.UseMnemonic = false;
+            this.materialButton1.UseVisualStyleBackColor = false;
+            // 
             // frmAppoint_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(774, 752);
+            this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -296,5 +324,6 @@ namespace testing
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

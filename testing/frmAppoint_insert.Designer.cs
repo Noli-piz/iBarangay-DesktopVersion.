@@ -33,12 +33,10 @@ namespace testing
             this.dtEndDate = new MetroFramework.Controls.MetroDateTime();
             this.dtStartTime = new System.Windows.Forms.DateTimePicker();
             this.dtEndTime = new System.Windows.Forms.DateTimePicker();
-            this.btnClear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbDone = new System.Windows.Forms.CheckBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.rbDetails = new System.Windows.Forms.RichTextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbTitle = new System.Windows.Forms.TextBox();
@@ -46,7 +44,8 @@ namespace testing
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // dtStartDate
@@ -62,7 +61,7 @@ namespace testing
             this.dtStartDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtStartDate.Size = new System.Drawing.Size(418, 35);
             this.dtStartDate.Style = MetroFramework.MetroColorStyle.Black;
-            this.dtStartDate.TabIndex = 0;
+            this.dtStartDate.TabIndex = 3;
             this.dtStartDate.ValueChanged += new System.EventHandler(this.dtTimeAndDate_ValueChanged);
             // 
             // dtEndDate
@@ -77,7 +76,7 @@ namespace testing
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(418, 35);
             this.dtEndDate.Style = MetroFramework.MetroColorStyle.Black;
-            this.dtEndDate.TabIndex = 1;
+            this.dtEndDate.TabIndex = 5;
             this.dtEndDate.Value = new System.DateTime(2050, 11, 23, 10, 0, 0, 0);
             this.dtEndDate.ValueChanged += new System.EventHandler(this.dtTimeAndDate_ValueChanged);
             // 
@@ -107,23 +106,9 @@ namespace testing
             this.dtEndTime.Name = "dtEndTime";
             this.dtEndTime.ShowUpDown = true;
             this.dtEndTime.Size = new System.Drawing.Size(179, 43);
-            this.dtEndTime.TabIndex = 5;
+            this.dtEndTime.TabIndex = 6;
             this.dtEndTime.Value = new System.DateTime(2021, 11, 20, 22, 0, 0, 0);
             this.dtEndTime.ValueChanged += new System.EventHandler(this.dtTimeAndDate_ValueChanged);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(466, 672);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(125, 45);
-            this.btnClear.TabIndex = 27;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label6
             // 
@@ -162,23 +147,9 @@ namespace testing
             this.cbDone.Location = new System.Drawing.Point(43, 620);
             this.cbDone.Name = "cbDone";
             this.cbDone.Size = new System.Drawing.Size(190, 36);
-            this.cbDone.TabIndex = 23;
+            this.cbDone.TabIndex = 8;
             this.cbDone.Text = "Mark as Done.";
             this.cbDone.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(60)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(617, 672);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 45);
-            this.btnAdd.TabIndex = 22;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // rbDetails
             // 
@@ -186,7 +157,7 @@ namespace testing
             this.rbDetails.Location = new System.Drawing.Point(43, 333);
             this.rbDetails.Name = "rbDetails";
             this.rbDetails.Size = new System.Drawing.Size(684, 262);
-            this.rbDetails.TabIndex = 21;
+            this.rbDetails.TabIndex = 7;
             this.rbDetails.Text = "";
             // 
             // tbName
@@ -195,7 +166,7 @@ namespace testing
             this.tbName.Location = new System.Drawing.Point(398, 61);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(329, 38);
-            this.tbName.TabIndex = 20;
+            this.tbName.TabIndex = 2;
             // 
             // tbTitle
             // 
@@ -203,7 +174,7 @@ namespace testing
             this.tbTitle.Location = new System.Drawing.Point(43, 61);
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(329, 38);
-            this.tbTitle.TabIndex = 19;
+            this.tbTitle.TabIndex = 1;
             // 
             // label3
             // 
@@ -245,29 +216,125 @@ namespace testing
             this.label7.TabIndex = 31;
             this.label7.Text = "End Time";
             // 
-            // materialButton1
+            // btnClear
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.materialButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(301, 658);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(130, 50);
-            this.materialButton1.TabIndex = 43;
-            this.materialButton1.Text = "UPDATE";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = true;
-            this.materialButton1.UseMnemonic = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.btnClear.Location = new System.Drawing.Point(403, 674);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
+            this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.Red;
+            this.btnClear.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnClear.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
+            this.btnClear.OverrideDefault.Border.Color2 = System.Drawing.Color.Red;
+            this.btnClear.OverrideDefault.Border.ColorAngle = 145F;
+            this.btnClear.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnClear.OverrideDefault.Border.Rounding = 5;
+            this.btnClear.OverrideDefault.Border.Width = 1;
+            this.btnClear.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnClear.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnClear.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnClear.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnClear.Size = new System.Drawing.Size(153, 50);
+            this.btnClear.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.btnClear.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.btnClear.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnClear.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClear.StateCommon.Border.Color2 = System.Drawing.Color.Red;
+            this.btnClear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnClear.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnClear.StateCommon.Border.Rounding = 5;
+            this.btnClear.StateCommon.Border.Width = 1;
+            this.btnClear.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnClear.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnClear.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClear.StatePressed.Back.Color2 = System.Drawing.Color.Red;
+            this.btnClear.StatePressed.Back.ColorAngle = 135F;
+            this.btnClear.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClear.StatePressed.Border.Color2 = System.Drawing.Color.Red;
+            this.btnClear.StatePressed.Border.ColorAngle = 135F;
+            this.btnClear.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnClear.StatePressed.Border.Rounding = 5;
+            this.btnClear.StatePressed.Border.Width = 1;
+            this.btnClear.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClear.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClear.StateTracking.Back.ColorAngle = 45F;
+            this.btnClear.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClear.StateTracking.Border.Color2 = System.Drawing.Color.Red;
+            this.btnClear.StateTracking.Border.ColorAngle = 45F;
+            this.btnClear.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnClear.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnClear.StateTracking.Border.Rounding = 5;
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Values.Text = "CLEAR";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(574, 673);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnAdd.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.OverrideDefault.Border.ColorAngle = 145F;
+            this.btnAdd.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAdd.OverrideDefault.Border.Rounding = 5;
+            this.btnAdd.OverrideDefault.Border.Width = 1;
+            this.btnAdd.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAdd.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAdd.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnAdd.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnAdd.Size = new System.Drawing.Size(153, 50);
+            this.btnAdd.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnAdd.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.btnAdd.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAdd.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAdd.StateCommon.Border.Rounding = 5;
+            this.btnAdd.StateCommon.Border.Width = 1;
+            this.btnAdd.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAdd.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAdd.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btnAdd.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btnAdd.StatePressed.Back.ColorAngle = 135F;
+            this.btnAdd.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btnAdd.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btnAdd.StatePressed.Border.ColorAngle = 135F;
+            this.btnAdd.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAdd.StatePressed.Border.Rounding = 5;
+            this.btnAdd.StatePressed.Border.Width = 1;
+            this.btnAdd.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnAdd.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnAdd.StateTracking.Back.ColorAngle = 45F;
+            this.btnAdd.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnAdd.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnAdd.StateTracking.Border.ColorAngle = 45F;
+            this.btnAdd.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAdd.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAdd.StateTracking.Border.Rounding = 5;
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Values.Text = "ADD";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmAppoint_insert
             // 
@@ -275,7 +342,8 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(774, 752);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -287,8 +355,6 @@ namespace testing
             this.Controls.Add(this.dtEndTime);
             this.Controls.Add(this.rbDetails);
             this.Controls.Add(this.cbDone);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -311,12 +377,10 @@ namespace testing
         private MetroFramework.Controls.MetroDateTime dtEndDate;
         private System.Windows.Forms.DateTimePicker dtStartTime;
         private System.Windows.Forms.DateTimePicker dtEndTime;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cbDone;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.RichTextBox rbDetails;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbTitle;
@@ -324,6 +388,7 @@ namespace testing
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
     }
 }

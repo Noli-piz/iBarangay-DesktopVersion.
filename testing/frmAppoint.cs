@@ -30,8 +30,6 @@ namespace testing
         {
             LoadData();
             LoadItems();
-
-
         }
 
         private async void LoadData()

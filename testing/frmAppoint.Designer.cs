@@ -32,10 +32,10 @@ namespace testing
             this.monthView1 = new WindowsFormsCalendar.MonthView();
             this.calendar1 = new WindowsFormsCalendar.Calendar();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.btnAdd = new MaterialSkin.Controls.MaterialButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.materialCard1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthView1
@@ -58,7 +58,7 @@ namespace testing
             this.monthView1.Name = "monthView1";
             this.monthView1.SelectionMode = WindowsFormsCalendar.MonthViewSelection.Week;
             this.monthView1.Size = new System.Drawing.Size(414, 303);
-            this.monthView1.TabIndex = 0;
+            this.monthView1.TabIndex = 2;
             this.monthView1.Text = "monthView1";
             this.monthView1.TodayBorderColor = System.Drawing.Color.Red;
             this.monthView1.SelectionChanged += new System.EventHandler(this.monthView1_SelectionChanged);
@@ -76,12 +76,12 @@ namespace testing
             this.calendar1.ItemsBackgroundColor = System.Drawing.Color.White;
             this.calendar1.ItemsFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar1.ItemsForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.calendar1.Location = new System.Drawing.Point(7, 5);
+            this.calendar1.Location = new System.Drawing.Point(4, 0);
             this.calendar1.Margin = new System.Windows.Forms.Padding(4);
             this.calendar1.Name = "calendar1";
             this.calendar1.Scrollbars = WindowsFormsCalendar.CalendarScrollBars.Both;
-            this.calendar1.Size = new System.Drawing.Size(954, 746);
-            this.calendar1.TabIndex = 0;
+            this.calendar1.Size = new System.Drawing.Size(952, 711);
+            this.calendar1.TabIndex = 3;
             this.calendar1.Text = "calendar1";
             this.calendar1.LoadItems += new WindowsFormsCalendar.Calendar.CalendarLoadEventHandler(this.calendar1_LoadItems);
             this.calendar1.ItemCreating += new WindowsFormsCalendar.Calendar.CalendarItemCancelEventHandler(this.calendar1_ItemCreating);
@@ -101,32 +101,15 @@ namespace testing
             this.materialCard1.Size = new System.Drawing.Size(430, 331);
             this.materialCard1.TabIndex = 4;
             // 
-            // materialCard2
-            // 
-            this.materialCard2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialCard2.Controls.Add(this.calendar1);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(447, 4);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(968, 761);
-            this.materialCard2.TabIndex = 5;
-            // 
             // btnAdd
             // 
             this.btnAdd.AutoEllipsis = true;
             this.btnAdd.AutoSize = false;
+            this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAdd.Depth = 0;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Roboto Medium", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.HighEmphasis = true;
             this.btnAdd.Icon = null;
             this.btnAdd.Location = new System.Drawing.Point(52, 51);
@@ -135,12 +118,23 @@ namespace testing
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAdd.Size = new System.Drawing.Size(343, 71);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "New Appointment";
             this.btnAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAdd.UseAccentColor = false;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.calendar1);
+            this.panel1.Location = new System.Drawing.Point(455, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 715);
+            this.panel1.TabIndex = 6;
             // 
             // frmAppoint
             // 
@@ -148,7 +142,7 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1417, 773);
-            this.Controls.Add(this.materialCard2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,7 +150,7 @@ namespace testing
             this.Text = "Appointment";
             this.Load += new System.EventHandler(this.frmTesting_Load);
             this.materialCard1.ResumeLayout(false);
-            this.materialCard2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,7 +159,7 @@ namespace testing
         private WindowsFormsCalendar.MonthView monthView1;
         private WindowsFormsCalendar.Calendar calendar1;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialButton btnAdd;
+        private System.Windows.Forms.Panel panel1;
     }
 }

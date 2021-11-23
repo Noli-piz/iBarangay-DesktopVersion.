@@ -47,10 +47,10 @@ namespace testing
             }
             else if (dtStartDate.Value.Date == dtEndDate.Value.Date)
             {
-                if (dtStartTime.Value.TimeOfDay > dtEndTime.Value.TimeOfDay)
+                if (dtStartTime.Value.TimeOfDay >= dtEndTime.Value.TimeOfDay)
                 {
                     dtStartTime.Value = dtEndTime.Value.AddHours(-1);
-                    MessageBox.Show("Unable to Perform Action");
+                    MessageBox.Show("Unable to Perform Action" + dtStartDate.Value.Date.ToString());
                 }
             }
         }

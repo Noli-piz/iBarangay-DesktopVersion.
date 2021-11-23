@@ -26,6 +26,8 @@ namespace testing
             this.content = content;
             this.startDate = startDate;
             this.endDate = endDate;
+
+            //63, 81, 181
         }
 
         private void frmAppoint_update_Load(object sender, EventArgs e)
@@ -125,6 +127,24 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private void dtTimeAndDate_ValueChanged(object sender, EventArgs e)
+        {
+
+            if (dtStartDate.Value.Date > dtEndDate.Value.Date)
+            {
+                dtStartDate.Value = dtEndDate.Value.Date;
+                MessageBox.Show("Unable to Perform Action");
+            }
+            else if (dtStartDate.Value.Date == dtEndDate.Value.Date)
+            {
+                if (dtStartTime.Value.TimeOfDay >= dtEndTime.Value.TimeOfDay)
+                {
+                    dtStartTime.Value = dtEndTime.Value.AddHours(-1);
+                    MessageBox.Show("Unable to Perform Action" + dtStartDate.Value.Date.ToString());
+                }
             }
         }
 

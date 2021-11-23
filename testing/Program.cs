@@ -18,7 +18,7 @@ namespace testing
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAppoint_insert());
+            Application.Run(new frmMenu());
         }
     }
 }

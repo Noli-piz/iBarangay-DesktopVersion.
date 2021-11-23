@@ -68,7 +68,7 @@ namespace testing
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(228, 55);
-            this.btnHome.TabIndex = 3;
+            this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -84,7 +84,7 @@ namespace testing
             this.btnResident.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnResident.Name = "btnResident";
             this.btnResident.Size = new System.Drawing.Size(228, 55);
-            this.btnResident.TabIndex = 4;
+            this.btnResident.TabIndex = 2;
             this.btnResident.Text = "Resident Records";
             this.btnResident.UseVisualStyleBackColor = false;
             this.btnResident.Click += new System.EventHandler(this.button2_Click);
@@ -100,7 +100,7 @@ namespace testing
             this.btnBlotter.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnBlotter.Name = "btnBlotter";
             this.btnBlotter.Size = new System.Drawing.Size(228, 55);
-            this.btnBlotter.TabIndex = 5;
+            this.btnBlotter.TabIndex = 3;
             this.btnBlotter.Text = "Blotter Records";
             this.btnBlotter.UseVisualStyleBackColor = false;
             this.btnBlotter.Click += new System.EventHandler(this.button3_Click);
@@ -116,7 +116,7 @@ namespace testing
             this.btnIssue.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(228, 55);
-            this.btnIssue.TabIndex = 6;
+            this.btnIssue.TabIndex = 4;
             this.btnIssue.Text = "Issue Certificate";
             this.btnIssue.UseVisualStyleBackColor = false;
             this.btnIssue.Click += new System.EventHandler(this.button4_Click);
@@ -132,7 +132,7 @@ namespace testing
             this.btnRequest.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(228, 55);
-            this.btnRequest.TabIndex = 7;
+            this.btnRequest.TabIndex = 5;
             this.btnRequest.Text = "Request Module";
             this.btnRequest.UseVisualStyleBackColor = false;
             this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
@@ -161,7 +161,7 @@ namespace testing
             this.btnMisService.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnMisService.Name = "btnMisService";
             this.btnMisService.Size = new System.Drawing.Size(228, 55);
-            this.btnMisService.TabIndex = 8;
+            this.btnMisService.TabIndex = 6;
             this.btnMisService.Text = "Miscellaneous Services";
             this.btnMisService.UseVisualStyleBackColor = false;
             this.btnMisService.Click += new System.EventHandler(this.btnMisService_Click);
@@ -177,7 +177,7 @@ namespace testing
             this.tbnAppointment.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.tbnAppointment.Name = "tbnAppointment";
             this.tbnAppointment.Size = new System.Drawing.Size(228, 55);
-            this.tbnAppointment.TabIndex = 9;
+            this.tbnAppointment.TabIndex = 7;
             this.tbnAppointment.Text = "Appointment";
             this.tbnAppointment.UseVisualStyleBackColor = false;
             this.tbnAppointment.Click += new System.EventHandler(this.btnMain_Click);
@@ -193,7 +193,7 @@ namespace testing
             this.button8.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(228, 55);
-            this.button8.TabIndex = 10;
+            this.button8.TabIndex = 8;
             this.button8.Text = "Logout";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);

@@ -40,12 +40,15 @@ namespace testing
             this.dtStartTime = new System.Windows.Forms.DateTimePicker();
             this.dtEndDate = new MetroFramework.Controls.MetroDateTime();
             this.dtStartDate = new MetroFramework.Controls.MetroDateTime();
-            this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pbColor = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -161,6 +164,7 @@ namespace testing
             // 
             // dtStartDate
             // 
+            this.dtStartDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStartDate.CustomFormat = "MMMM dd, yyyy";
             this.dtStartDate.FontSize = MetroFramework.MetroDateTimeSize.Tall;
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -170,66 +174,6 @@ namespace testing
             this.dtStartDate.Size = new System.Drawing.Size(418, 35);
             this.dtStartDate.TabIndex = 3;
             this.dtStartDate.ValueChanged += new System.EventHandler(this.dtTimeAndDate_ValueChanged);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(574, 673);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
-            this.btnUpdate.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
-            this.btnUpdate.OverrideDefault.Back.ColorAngle = 0F;
-            this.btnUpdate.OverrideDefault.Border.Color1 = System.Drawing.Color.Green;
-            this.btnUpdate.OverrideDefault.Border.Color2 = System.Drawing.Color.Green;
-            this.btnUpdate.OverrideDefault.Border.ColorAngle = 145F;
-            this.btnUpdate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.OverrideDefault.Border.Rounding = 5;
-            this.btnUpdate.OverrideDefault.Border.Width = 1;
-            this.btnUpdate.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnUpdate.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnUpdate.OverrideDefault.Content.ShortText.ColorAngle = 145F;
-            this.btnUpdate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnUpdate.Size = new System.Drawing.Size(153, 50);
-            this.btnUpdate.StateCommon.Back.Color1 = System.Drawing.Color.Green;
-            this.btnUpdate.StateCommon.Back.Color2 = System.Drawing.Color.Green;
-            this.btnUpdate.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.btnUpdate.StateCommon.Border.Color1 = System.Drawing.Color.Green;
-            this.btnUpdate.StateCommon.Border.Color2 = System.Drawing.Color.Green;
-            this.btnUpdate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnUpdate.StateCommon.Border.Rounding = 5;
-            this.btnUpdate.StateCommon.Border.Width = 1;
-            this.btnUpdate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnUpdate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.StatePressed.Back.Color1 = System.Drawing.Color.LimeGreen;
-            this.btnUpdate.StatePressed.Back.Color2 = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.StatePressed.Back.ColorAngle = 135F;
-            this.btnUpdate.StatePressed.Border.Color1 = System.Drawing.Color.Green;
-            this.btnUpdate.StatePressed.Border.Color2 = System.Drawing.Color.Green;
-            this.btnUpdate.StatePressed.Border.ColorAngle = 135F;
-            this.btnUpdate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.StatePressed.Border.Rounding = 5;
-            this.btnUpdate.StatePressed.Border.Width = 1;
-            this.btnUpdate.StateTracking.Back.Color1 = System.Drawing.Color.DarkSeaGreen;
-            this.btnUpdate.StateTracking.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
-            this.btnUpdate.StateTracking.Back.ColorAngle = 45F;
-            this.btnUpdate.StateTracking.Border.Color1 = System.Drawing.Color.DarkSeaGreen;
-            this.btnUpdate.StateTracking.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
-            this.btnUpdate.StateTracking.Border.ColorAngle = 45F;
-            this.btnUpdate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnUpdate.StateTracking.Border.Rounding = 5;
-            this.btnUpdate.TabIndex = 10;
-            this.btnUpdate.Values.Text = "UPDATE";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -271,65 +215,200 @@ namespace testing
             this.label5.TabIndex = 46;
             this.label5.Text = "Start Time";
             // 
+            // pbColor
+            // 
+            this.pbColor.Location = new System.Drawing.Point(730, 267);
+            this.pbColor.Name = "pbColor";
+            this.pbColor.Size = new System.Drawing.Size(32, 26);
+            this.pbColor.TabIndex = 48;
+            this.pbColor.TabStop = false;
+            this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(574, 674);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnUpdate.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnUpdate.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnUpdate.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnUpdate.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnUpdate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnUpdate.OverrideDefault.Border.Rounding = 25;
+            this.btnUpdate.OverrideDefault.Border.Width = 1;
+            this.btnUpdate.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnUpdate.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnUpdate.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnUpdate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnUpdate.Size = new System.Drawing.Size(153, 50);
+            this.btnUpdate.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnUpdate.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnUpdate.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnUpdate.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnUpdate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnUpdate.StateCommon.Border.Rounding = 25;
+            this.btnUpdate.StateCommon.Border.Width = 1;
+            this.btnUpdate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnUpdate.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnUpdate.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnUpdate.StatePressed.Back.ColorAngle = 135F;
+            this.btnUpdate.StatePressed.Border.ColorAngle = 135F;
+            this.btnUpdate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdate.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnUpdate.StatePressed.Border.Rounding = 25;
+            this.btnUpdate.StatePressed.Border.Width = 1;
+            this.btnUpdate.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.btnUpdate.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnUpdate.StateTracking.Back.ColorAngle = 45F;
+            this.btnUpdate.StateTracking.Border.ColorAngle = 45F;
+            this.btnUpdate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnUpdate.StateTracking.Border.Rounding = 25;
+            this.btnUpdate.StateTracking.Border.Width = 1;
+            this.btnUpdate.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnUpdate.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.Values.Text = "SAVE";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(403, 674);
+            this.btnDelete.Location = new System.Drawing.Point(402, 674);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
-            this.btnDelete.OverrideDefault.Back.Color2 = System.Drawing.Color.Red;
+            this.btnDelete.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnDelete.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnDelete.OverrideDefault.Back.ColorAngle = 0F;
             this.btnDelete.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
             this.btnDelete.OverrideDefault.Border.Color2 = System.Drawing.Color.Red;
-            this.btnDelete.OverrideDefault.Border.ColorAngle = 145F;
+            this.btnDelete.OverrideDefault.Border.ColorAngle = 0F;
             this.btnDelete.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnDelete.OverrideDefault.Border.Rounding = 5;
+            this.btnDelete.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnDelete.OverrideDefault.Border.Rounding = 25;
             this.btnDelete.OverrideDefault.Border.Width = 1;
-            this.btnDelete.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnDelete.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnDelete.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.btnDelete.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.Red;
             this.btnDelete.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnDelete.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.btnDelete.Size = new System.Drawing.Size(153, 50);
-            this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.Red;
-            this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnDelete.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.Red;
             this.btnDelete.StateCommon.Border.Color2 = System.Drawing.Color.Red;
             this.btnDelete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnDelete.StateCommon.Border.Rounding = 5;
+            this.btnDelete.StateCommon.Border.Rounding = 25;
             this.btnDelete.StateCommon.Border.Width = 1;
-            this.btnDelete.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnDelete.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.StatePressed.Back.Color1 = System.Drawing.Color.Red;
             this.btnDelete.StatePressed.Back.Color2 = System.Drawing.Color.Red;
             this.btnDelete.StatePressed.Back.ColorAngle = 135F;
-            this.btnDelete.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDelete.StatePressed.Border.Color1 = System.Drawing.Color.Red;
             this.btnDelete.StatePressed.Border.Color2 = System.Drawing.Color.Red;
             this.btnDelete.StatePressed.Border.ColorAngle = 135F;
             this.btnDelete.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnDelete.StatePressed.Border.Rounding = 5;
+            this.btnDelete.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnDelete.StatePressed.Border.Rounding = 25;
             this.btnDelete.StatePressed.Border.Width = 1;
-            this.btnDelete.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDelete.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Red;
             this.btnDelete.StateTracking.Back.ColorAngle = 45F;
-            this.btnDelete.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.btnDelete.StateTracking.Border.Color2 = System.Drawing.Color.Red;
-            this.btnDelete.StateTracking.Border.ColorAngle = 45F;
+            this.btnDelete.StateTracking.Border.Color1 = System.Drawing.Color.Red;
+            this.btnDelete.StateTracking.Border.ColorAngle = 1F;
             this.btnDelete.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDelete.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnDelete.StateTracking.Border.Rounding = 5;
+            this.btnDelete.StateTracking.Border.Rounding = 25;
+            this.btnDelete.StateTracking.Border.Width = 1;
+            this.btnDelete.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Red;
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Values.Text = "DELETE";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(43, 674);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnCancel.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.btnCancel.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnCancel.OverrideDefault.Border.Color1 = System.Drawing.Color.Black;
+            this.btnCancel.OverrideDefault.Border.Color2 = System.Drawing.Color.Black;
+            this.btnCancel.OverrideDefault.Border.ColorAngle = 145F;
+            this.btnCancel.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancel.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnCancel.OverrideDefault.Border.Rounding = 25;
+            this.btnCancel.OverrideDefault.Border.Width = 1;
+            this.btnCancel.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btnCancel.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.btnCancel.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnCancel.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnCancel.Size = new System.Drawing.Size(153, 50);
+            this.btnCancel.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnCancel.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnCancel.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnCancel.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.btnCancel.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.btnCancel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancel.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnCancel.StateCommon.Border.Rounding = 25;
+            this.btnCancel.StateCommon.Border.Width = 1;
+            this.btnCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btnCancel.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.btnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.StatePressed.Back.ColorAngle = 135F;
+            this.btnCancel.StatePressed.Border.Color1 = System.Drawing.Color.Red;
+            this.btnCancel.StatePressed.Border.Color2 = System.Drawing.Color.Red;
+            this.btnCancel.StatePressed.Border.ColorAngle = 135F;
+            this.btnCancel.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancel.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnCancel.StatePressed.Border.Rounding = 25;
+            this.btnCancel.StatePressed.Border.Width = 1;
+            this.btnCancel.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.btnCancel.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Red;
+            this.btnCancel.StateTracking.Back.ColorAngle = 45F;
+            this.btnCancel.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.btnCancel.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.btnCancel.StateTracking.Border.ColorAngle = 45F;
+            this.btnCancel.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnCancel.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnCancel.StateTracking.Border.Rounding = 25;
+            this.btnCancel.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnCancel.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Values.Text = "CANCEL";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmAppoint_update
             // 
@@ -337,6 +416,10 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(774, 752);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.pbColor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -344,8 +427,6 @@ namespace testing
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.cbDone);
             this.Controls.Add(this.rbDetails);
             this.Controls.Add(this.dtEndTime);
@@ -355,9 +436,13 @@ namespace testing
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.tbTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAppoint_update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Update Appointment";
             this.Load += new System.EventHandler(this.frmAppoint_update_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,11 +460,13 @@ namespace testing
         private System.Windows.Forms.DateTimePicker dtStartTime;
         private MetroFramework.Controls.MetroDateTime dtEndDate;
         private MetroFramework.Controls.MetroDateTime dtStartDate;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbColor;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
     }
 }

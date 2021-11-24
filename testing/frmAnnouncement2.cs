@@ -143,6 +143,7 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Delete Successfully");
+                    this.Close();
                 }
                 else
                 {

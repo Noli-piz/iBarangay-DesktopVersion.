@@ -30,6 +30,12 @@ namespace testing
         {
             LoadData();
             LoadItems();
+
+            CalendarColorTable calendarColorTable = new CalendarColorTable();
+            calendarColorTable.Background = Color.Blue;
+            calendarColorTable.DayBorder = Color.Blue;
+            calendarColorTable.ItemBorder = Color.Blue;
+            calendar1.BackColor = Color.Blue;
         }
 
         private async void LoadData()
@@ -79,13 +85,20 @@ namespace testing
                         }
 
                         item.BackgroundColor = colorList[rnd.Next(3)];
-
                         _items.Add(item);
 
                     }
 
                     DateTime sunday = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
                     calendar1.SetViewRange(sunday, sunday.AddDays(6));
+
+
+
+                    //DateTime date = DateTime.Now;
+                    //var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
+                    //var lastDayOfMonth = new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month));
+                    //calendar1.SetViewRange(firstDayOfMonth, lastDayOfMonth);
+
                 }
                 else if (success == "0")
                 {

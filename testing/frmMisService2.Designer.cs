@@ -275,6 +275,7 @@ namespace testing
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmMisService2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMisService2";
             this.Load += new System.EventHandler(this.frmMisService2_Load);
             this.ResumeLayout(false);

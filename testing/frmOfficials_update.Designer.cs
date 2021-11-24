@@ -136,6 +136,7 @@ namespace testing
             this.Controls.Add(this.tbFullname);
             this.Controls.Add(this.btnUpdate);
             this.Name = "frmOfficials_update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOfficials_update";
             this.Load += new System.EventHandler(this.frmOfficials_update_Load);
             this.ResumeLayout(false);

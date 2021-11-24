@@ -195,6 +195,7 @@ namespace testing
             this.Controls.Add(this.tbSearch1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBlotterRec3Insert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmBlotterRec3";
             this.Load += new System.EventHandler(this.frmBlotterRec3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();

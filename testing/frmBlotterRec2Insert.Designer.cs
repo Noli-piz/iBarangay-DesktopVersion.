@@ -312,6 +312,7 @@ namespace testing
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label1);
             this.Name = "frmBlotterRec2Insert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddNewBlotter";
             this.Load += new System.EventHandler(this.frmAddNewBlotter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();

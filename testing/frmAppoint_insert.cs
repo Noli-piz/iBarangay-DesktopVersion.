@@ -99,6 +99,7 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Insert Successfully");
+                    this.Close();
                 }
                 else
                 {
@@ -110,6 +111,12 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

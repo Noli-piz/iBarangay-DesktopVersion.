@@ -161,16 +161,40 @@ namespace testing
         private void btnHide1_Click(object sender, EventArgs e)
         {
             tbCurrentPass.PasswordChar = tbCurrentPass.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbCurrentPass.PasswordChar.ToString() == "*")
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
 
         private void btnHide2_Click(object sender, EventArgs e)
         {
             tbNewPass.PasswordChar = tbNewPass.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbNewPass.PasswordChar.ToString() == "*")
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
 
         private void btnHide3_Click(object sender, EventArgs e)
         {
             tbRetypePassword.PasswordChar = tbRetypePassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbRetypePassword.PasswordChar.ToString() == "*")
+            {
+                btnHide3.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide3.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
     }
 }

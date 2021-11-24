@@ -241,6 +241,7 @@ namespace testing
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmRequest2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmRequest2";
             this.Load += new System.EventHandler(this.frmRequest2_Load);
             this.ResumeLayout(false);

@@ -124,6 +124,7 @@ namespace testing
             this.Controls.Add(this.tbFullname);
             this.Controls.Add(this.btnInsert);
             this.Name = "frmOfficials_insert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOfficials_insert";
             this.ResumeLayout(false);
             this.PerformLayout();

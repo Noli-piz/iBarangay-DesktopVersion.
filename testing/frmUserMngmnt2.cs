@@ -94,11 +94,27 @@ namespace testing
         private void btnHide1_Click(object sender, EventArgs e)
         {
             tbPassword.PasswordChar = tbPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbPassword.PasswordChar.ToString() == "*")
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
 
         private void btnHide2_Click(object sender, EventArgs e)
         {
             tbRetypePassword.PasswordChar = tbRetypePassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbRetypePassword.PasswordChar.ToString() == "*")
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
     }
 }

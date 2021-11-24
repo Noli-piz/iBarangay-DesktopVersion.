@@ -67,7 +67,6 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Update Successfully");
-                        SendNotif(resUsername, cbValid.SelectedItem.ToString());
                         this.Close();
                     }
                     else
@@ -111,14 +110,22 @@ namespace testing
                 {
                     foreach (var jo in (JArray)((JObject)data)["account"])
                     {
-
-                        //jo["id_announcement"];
                         lblName.Text = jo["Fname"].ToString() +" "+ jo["Mname"].ToString() + " " + jo["Lname"].ToString() +" "+ jo["Sname"].ToString();
+                        lblGender.Text = jo["Gender"].ToString();
+                        lblBirthDate.Text = jo["Birthdate"].ToString();
+                        lblBirthplace.Text = jo["Birthplace"].ToString();
+                        lblVstat.Text = jo["VoterStatus"].ToString()== "Yes" ? "Registered" : "Not Registered";
+                        lblCedula.Text = jo["CedulaNo"].ToString();
+                        lblContact.Text = jo["ContactNo"].ToString();
+                        lblCivilstat.Text = jo["CivilStatus"].ToString();
+                        lblDoR.Text = jo["DateOfRegistration"].ToString();
+
                         tbUsername.Text = jo["Username"].ToString();
                         resUsername = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
                         cbAccountStat.Text = jo["Status"].ToString() == "0"? "Enabled" : "Disabled";
                         cbValid.Text = jo["Valid"].ToString() == "0" ? "Not Validated" : "Validated";
+                        DownloadImage3(jo["Image"].ToString());
 
                         string valid = jo["img_idcloseup"].ToString();
                         if ( valid != "0")
@@ -141,7 +148,12 @@ namespace testing
             }
         }
 
+        //Send Notification
+        private void btnPush_Click(object sender, EventArgs e)
+        {
 
+            SendNotif(resUsername, cbValid.SelectedItem.ToString());
+        }
         private void SendNotif(string username, string Stat)
         {
             try
@@ -165,7 +177,7 @@ namespace testing
                 };
 
                 string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
-                MessageBox.Show("Sending Announcement to Residents....");
+                MessageBox.Show("Pushing Notification to Resident....");
             }
             catch (Exception e)
             {
@@ -173,6 +185,7 @@ namespace testing
             }
         }
 
+        //
         private async void DownloadImage(String url)
         {
             var request = WebRequest.Create(url);
@@ -199,6 +212,29 @@ namespace testing
             }
         }
 
+        private async void DownloadImage3(String url)
+        {
+            try
+            {
+                var request = WebRequest.Create(url);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+
+                    Image img = new Bitmap(stream);
+                    pbProfile.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+                }
+            }
+            catch (WebException e)
+            {
+                MessageBox.Show("Please check your Internet. Images may not load properly.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
 
         private void loadComboBox()
         {
@@ -217,18 +253,47 @@ namespace testing
         private void btnHide1_Click(object sender, EventArgs e)
         {
             tbCPassword.PasswordChar = tbCPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
-
+            if (tbCPassword.PasswordChar.ToString() == "*")
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide1.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
 
         private void btnHide2_Click(object sender, EventArgs e)
         {
             tbNPassword.PasswordChar = tbNPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbNPassword.PasswordChar.ToString() == "*")
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide2.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
         }
+
 
         private void btnHide3_Click(object sender, EventArgs e)
         {
             tbRPassword.PasswordChar = tbRPassword.PasswordChar.ToString() == "*" ? '\0' : '*';
+            if (tbRPassword.PasswordChar.ToString() == "*")
+            {
+                btnHide3.Image = Properties.Resources.sharp_visibility_off_black_18dp;
+            }
+            else
+            {
+                btnHide3.Image = Properties.Resources.sharp_visibility_black_18dp;
+            }
 
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -70,7 +70,6 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Update Successfully");
-                    this.Close();
                 }
                 else
                 {
@@ -146,6 +145,21 @@ namespace testing
                     MessageBox.Show("Unable to Perform Action" + dtStartDate.Value.Date.ToString());
                 }
             }
+        }
+
+        private void pbColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog()== DialogResult.OK)
+            {
+                pbColor.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
 
         private async void SelectData()

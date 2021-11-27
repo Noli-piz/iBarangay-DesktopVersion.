@@ -127,7 +127,9 @@ namespace testing
             pictureBox2.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,pictureBox2.Width, pictureBox2.Height,90,90));
         }
 
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -927,6 +927,8 @@
     <None Include="Resources\handshake.png" />
     <None Include="Resources\problem.png" />
     <None Include="Resources\Menu.png" />
+    <Content Include="Resources\MenuBG.png" />
+    <None Include="Resources\MenuBG1.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

@@ -158,6 +158,7 @@ namespace testing
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(238, 36);
             this.cbStatus.TabIndex = 57;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -314,6 +315,7 @@ namespace testing
             this.Name = "frmBlotterRec2Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmBlotterRec2Update";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBlotterRec2Update_FormClosing);
             this.Load += new System.EventHandler(this.frmBlotterRec2Update_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
             this.ResumeLayout(false);

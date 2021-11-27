@@ -15,13 +15,16 @@ namespace testing
     public partial class frmAppoint_insert : Form
     {
         csHostConfiguration host = new csHostConfiguration();
+        public String GetMyResult;
 
+        //when button is click
         public frmAppoint_insert()
         {
             InitializeComponent();
             dtEndDate.Value = DateTime.Now;
         }
 
+        //when calendar is click
         public frmAppoint_insert(DateTime dateStart, DateTime dateEnd)
         {
             InitializeComponent();
@@ -31,6 +34,15 @@ namespace testing
             dtEndDate.Value = dateEnd;
             dtEndTime.Value = dateEnd;
         }
+
+        // For blotter
+        public frmAppoint_insert(string subject)
+        {
+            InitializeComponent();
+            dtEndDate.Value = DateTime.Now;
+            tbTitle.Text = subject;
+        }
+
 
         private void frmAppoint_insert_Load(object sender, EventArgs e)
         {
@@ -99,6 +111,7 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Insert Successfully");
+                    GetMyResult = "Added";
                     this.Close();
                 }
                 else

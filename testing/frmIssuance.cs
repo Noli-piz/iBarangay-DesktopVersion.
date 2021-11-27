@@ -53,7 +53,7 @@ namespace testing
             data1.Columns.Add("blotter", "Blotter Case");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "Action";
+            btn.HeaderText = "Documents";
             btn.Text = "Barangay Clearance";
             btn.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn);
@@ -62,7 +62,6 @@ namespace testing
             btn2.Text = "Good Moral";
             btn2.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn2);
-            data1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
         }
 
 
@@ -159,33 +158,41 @@ namespace testing
 
         private void btnGenerate_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            try
             {
-                DataGridViewRow row = data1.Rows[e.RowIndex];
-                String identifier = row.Cells[1].Value.ToString();
-
-                string inputPurpose = "";
-                DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
-                if (dialogResult == DialogResult.OK)
+                if (e.ColumnIndex == 8)
                 {
-                    if (inputPurpose == "")
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    string inputPurpose = "";
+                    DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
+                    if (dialogResult == DialogResult.OK)
                     {
-                        MessageBox.Show("Please input the Purpose for Requesting of this Document.");
+                        if (inputPurpose == "")
+                        {
+                            MessageBox.Show("Please input the Purpose for Requesting of this Document.");
+                        }
+                        else
+                        {
+                            vwrBrgyClearance vwr = new vwrBrgyClearance(identifier, inputPurpose);
+                            vwr.ShowDialog(this);
+                        }
                     }
-                    else
-                    {
-                        vwrBrgyClearance vwr = new vwrBrgyClearance(identifier, inputPurpose);
-                        vwr.ShowDialog(this);
-                    }
+
+
+
                 }
-                
-
-
-            }else if (e.ColumnIndex == 9)
+                else if (e.ColumnIndex == 9)
+                {
+                    //vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
+                    //vwr.ShowDialog(this);
+                    MessageBox.Show("This Certificate is not available right now.");
+                }
+            }
+            catch (Exception ex)
             {
-                //vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
-                //vwr.ShowDialog(this);
-                MessageBox.Show("This Certificate is not available right now.");
+
             }
         }
 

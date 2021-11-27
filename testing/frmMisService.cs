@@ -46,15 +46,21 @@ namespace testing
             data1.Columns.Add("vstatus", "Voter Stat.");
             data1.Columns.Add("item", "Item");
             data1.Columns.Add("quan", "Quantity");
-            data1.Columns.Add("date", "Requested Date");
-            data1.Columns.Add("rstatus", "Request Stat.");
+            data1.Columns.Add("date", "Req Date");
+            data1.Columns.Add("rstatus", "Req Stat.");
             data1.Columns.Add("dead", "Deadline");
 
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.HeaderText = "Action";
+            //btn.Name = "btnGenerate";
+            //btn.Text = "View";
+            //btn.UseColumnTextForButtonValue = true;
+            //data1.Columns.Add(btn);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
-            btn.Text = "View";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
         }
 
@@ -111,8 +117,8 @@ namespace testing
 
 
                 data1.Columns["ID"].Visible = false;
+                data1.Columns["bday"].Visible = false;
                 data1.AutoResizeColumns();
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
             catch (Exception ex)

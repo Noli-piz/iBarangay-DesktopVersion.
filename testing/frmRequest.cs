@@ -43,19 +43,25 @@ namespace testing
             data1.Columns.Add("id", "ID");
             data1.Columns.Add("resid", "ResID.");
             data1.Columns.Add("", "Full Name");
-            data1.Columns.Add("", "Birthdate");
+            data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("", "Gender");
             data1.Columns.Add("", "Voter Stat.");
             data1.Columns.Add("", "Blotter Case");
             data1.Columns.Add("", "Type of Certificate");
-            data1.Columns.Add("", "Requested Date");
-            data1.Columns.Add("", "Request Stat.");
+            data1.Columns.Add("", "Req Date");
+            data1.Columns.Add("", "Req Stat.");
 
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.HeaderText = "Action";
+            //btn.Name = "btnGenerate";
+            //btn.Text = "View";
+            //btn.UseColumnTextForButtonValue = true;
+            //data1.Columns.Add(btn);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
-            btn.Text = "View";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
         }
 
@@ -99,9 +105,8 @@ namespace testing
 
                 data1.Columns["ID"].Visible = false;
                 data1.Columns["resid"].Visible = false;
+                data1.Columns["bday"].Visible = false;
 
-                data1.AutoResizeColumns();
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception e)
             {

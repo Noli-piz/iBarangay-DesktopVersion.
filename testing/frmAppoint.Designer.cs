@@ -73,7 +73,7 @@ namespace testing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.calendar1.BackColor = System.Drawing.Color.LightGray;
             this.calendar1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.calendar1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.calendar1.ItemsBackgroundColor = System.Drawing.Color.White;
             this.calendar1.ItemsFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar1.ItemsForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));

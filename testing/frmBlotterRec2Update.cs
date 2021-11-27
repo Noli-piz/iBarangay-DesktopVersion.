@@ -97,8 +97,31 @@ namespace testing
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            blot.Reset();
             this.Close();
+        }
+
+        private void frmBlotterRec2Update_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            blot.Reset();
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbStatus.SelectedItem.ToString() == "Scheduled" )
+            {
+                using (frmAppoint_insert frm = new frmAppoint_insert("Blotter"))
+                {
+                    frm.ShowDialog();
+
+                    string result = frm.GetMyResult;
+
+                    if (result != "Added")
+                    {
+                        MessageBox.Show("Unable to set Schedule.");
+                        cbStatus.SelectedIndex = 0;
+                    }
+                }
+            }
         }
     }
 }

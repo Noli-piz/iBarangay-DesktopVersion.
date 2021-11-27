@@ -16,5 +16,12 @@ namespace testing
         {
             InitializeComponent();
         }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

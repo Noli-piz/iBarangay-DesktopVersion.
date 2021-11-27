@@ -54,13 +54,17 @@ namespace testing
             data1.Columns.Add("vstatus", "Voter Stat");
 
 
-            //DataGridViewImageColumn btn = new DataGridViewImageColumn();
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.HeaderText = "Action";
+            //btn.Name = "btnGenerate";
+            //btn.Text = "Edit";
+            //btn.UseColumnTextForButtonValue = true;
+            //data1.Columns.Add(btn);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
-            //btn.Image = Properties.Resources.edit1;
-            btn.Text = "Edit";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
         }
 

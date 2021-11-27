@@ -114,6 +114,7 @@ namespace testing
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(238, 36);
             this.cbStatus.TabIndex = 34;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // label8
             // 

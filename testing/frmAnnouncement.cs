@@ -46,7 +46,6 @@ namespace testing
             ID.Clear();
             data1.Rows.Clear();
             data1.Columns.Clear();
-            data1.Visible = false;
 
             data1.Columns.Add("no", "No.");
             data1.Columns.Add("id", "ID.");
@@ -55,11 +54,18 @@ namespace testing
             data1.Columns.Add("date", "Date");
             data1.Columns.Add("lvl", "Level");
 
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.HeaderText = "Action";
+            //btn.Name = "btnGenerate";
+            //btn.Text = "View/Edit";
+            //btn.UseColumnTextForButtonValue = true;
+            //data1.Columns.Add(btn);
+
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
-            btn.Text = "View/Edit";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
 
             data1.Columns["ID"].Visible = false;
@@ -99,10 +105,6 @@ namespace testing
                 {
                     MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
                 }
-
-                data1.AutoResizeColumns();
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                data1.Visible = true;
             }
             catch (Exception e)
             {
@@ -179,7 +181,7 @@ namespace testing
                 }
                 else
                 {
-                    MessageBox.Show("Please fill-up Subject or Details");
+                    MessageBox.Show("Please fill-up all fields.");
                 }
             }
             catch (Exception ex)

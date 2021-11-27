@@ -243,7 +243,7 @@ namespace testing
         {
             ArrBlotterStat = new ArrayList()
             {
-                "Scheduled", "Active", "Settled"
+                 "Active", "Scheduled", "Settled"
             };
         }
 

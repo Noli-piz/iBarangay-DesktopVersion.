@@ -36,12 +36,12 @@ namespace testing
             this.btnBlotter = new System.Windows.Forms.Button();
             this.btnIssue = new System.Windows.Forms.Button();
             this.btnRequest = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMisService = new System.Windows.Forms.Button();
             this.tbnAppointment = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@ namespace testing
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(235, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 848);
+            this.panel1.Size = new System.Drawing.Size(1659, 1021);
             this.panel1.TabIndex = 1;
             // 
             // btnHome
@@ -137,19 +137,6 @@ namespace testing
             this.btnRequest.UseVisualStyleBackColor = false;
             this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = global::testing.Properties.Resources._1024px_Sangguniang_Kabataan_logo_svg;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 140);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnMisService
             // 
             this.btnMisService.BackColor = System.Drawing.Color.White;
@@ -209,6 +196,7 @@ namespace testing
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUsername.Visible = false;
             // 
             // lblName
             // 
@@ -221,13 +209,29 @@ namespace testing
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblName.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = global::testing.Properties.Resources.Balangkas_Logo;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(40, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(155, 140);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1480, 848);
+            this.BackgroundImage = global::testing.Properties.Resources.greenlantern;
+            this.ClientSize = new System.Drawing.Size(1882, 1021);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);
@@ -240,6 +244,7 @@ namespace testing
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1498, 895);
             this.Name = "frmMenu";

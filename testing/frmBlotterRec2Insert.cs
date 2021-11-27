@@ -77,5 +77,24 @@ namespace testing
         {
             this.Close();
         }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbStatus.SelectedItem.ToString() == "Scheduled")
+            {
+                using (frmAppoint_insert frm = new frmAppoint_insert("Blotter"))
+                {
+                    frm.ShowDialog();
+
+                    string result = frm.GetMyResult;
+
+                    if (result != "Added")
+                    {
+                        MessageBox.Show("Unable to set Schedule.");
+                        cbStatus.SelectedIndex = 0;
+                    }
+                }
+            }
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace testing
             data1.Columns.Add("", "Gender");
             data1.Columns.Add("", "Voter Stat.");
             data1.Columns.Add("", "Blotter Case");
-            data1.Columns.Add("", "Type of Certificate");
+            data1.Columns.Add("", "Type of Cert.");
             data1.Columns.Add("", "Req Date");
             data1.Columns.Add("", "Req Stat.");
 

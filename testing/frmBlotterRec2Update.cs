@@ -14,7 +14,7 @@ namespace testing
     public partial class frmBlotterRec2Update : Form
     {
         csBlotter blot = new csBlotter();
-
+        int count;
         public frmBlotterRec2Update()
         {
             InitializeComponent();
@@ -107,7 +107,7 @@ namespace testing
 
         private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbStatus.SelectedItem.ToString() == "Scheduled" )
+            if (cbStatus.SelectedItem.ToString() == "Scheduled" && count >= 2)
             {
                 using (frmAppoint_insert frm = new frmAppoint_insert("Blotter"))
                 {
@@ -122,6 +122,11 @@ namespace testing
                     }
                 }
             }
+        }
+
+        private void cbStatus_MouseClick(object sender, MouseEventArgs e)
+        {
+            count++;
         }
     }
 }

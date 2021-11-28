@@ -80,9 +80,9 @@ namespace testing
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1076, 48);
+            this.button3.Location = new System.Drawing.Point(1020, 48);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 37);
+            this.button3.Size = new System.Drawing.Size(220, 37);
             this.button3.TabIndex = 2;
             this.button3.Text = "Add new Blotter";
             this.button3.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@ namespace testing
             this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
-            this.data1.RowTemplate.Height = 50;
+            this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data1.Size = new System.Drawing.Size(1032, 653);
             this.data1.TabIndex = 4;
@@ -154,7 +154,7 @@ namespace testing
             // 
             // btnActive
             // 
-            this.btnActive.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActive.FlatAppearance.BorderSize = 0;
             this.btnActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActive.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,7 +168,7 @@ namespace testing
             // 
             // button5
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +181,7 @@ namespace testing
             // 
             // button6
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +194,7 @@ namespace testing
             // 
             // lblActiveCases
             // 
-            this.lblActiveCases.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblActiveCases.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblActiveCases.AutoSize = true;
             this.lblActiveCases.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblActiveCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,7 +208,7 @@ namespace testing
             // 
             // lblSettledCases
             // 
-            this.lblSettledCases.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSettledCases.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSettledCases.AutoSize = true;
             this.lblSettledCases.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSettledCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,7 +222,7 @@ namespace testing
             // 
             // lblScheduledCases
             // 
-            this.lblScheduledCases.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblScheduledCases.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblScheduledCases.AutoSize = true;
             this.lblScheduledCases.BackColor = System.Drawing.Color.White;
             this.lblScheduledCases.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -251,7 +251,7 @@ namespace testing
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::testing.Properties.Resources.calendar;
             this.pictureBox3.Location = new System.Drawing.Point(1076, 569);
@@ -263,7 +263,7 @@ namespace testing
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::testing.Properties.Resources.handshake;
             this.pictureBox2.Location = new System.Drawing.Point(1076, 358);
@@ -275,7 +275,7 @@ namespace testing
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::testing.Properties.Resources.problem;
             this.pictureBox1.Location = new System.Drawing.Point(1076, 147);

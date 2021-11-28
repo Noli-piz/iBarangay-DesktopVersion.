@@ -173,6 +173,36 @@ namespace testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap round_account_circle_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("round_account_circle_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_account_circle_black_18dp1 {
+            get {
+                object obj = ResourceManager.GetObject("round_account_circle_black_18dp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_lock_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("round_lock_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sharp_visibility_black_18dp {
             get {
                 object obj = ResourceManager.GetObject("sharp_visibility_black_18dp", resourceCulture);

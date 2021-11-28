@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 using MySql.Data.MySqlClient;
 
 namespace testing
@@ -219,15 +220,18 @@ namespace testing
                 p.ColumnCount = 2;
                 p.Dock = DockStyle.Fill;
                 p.Height = 40;
-                p.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+                p.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
                 p.Visible = true;
 
                 Label l = new Label();
                 l.Text = str.name.ToString();
                 l.Margin = new Padding(5, 5, 5, 10);
                 l.Visible = true;
+                l.Font = new Font("Arial", 12, FontStyle.Regular);
+                l.AutoSize = true;
+                l.MaximumSize = new Size(300,40);
 
-                Button btn = new Button();
+                MetroButton btn = new MetroButton();
                 btn.Text = "Remove";
                 btn.Tag = str.id.ToString();
                 btn.Name = str.name.ToString();

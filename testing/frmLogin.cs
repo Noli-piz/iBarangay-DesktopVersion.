@@ -24,7 +24,7 @@ namespace testing
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == null || tbUsername.Text == "")
+            if (tbPassword.Text == null || tbPassword.Text == "")
             {
                 MessageBox.Show("Username is Empty!");
             }
@@ -39,13 +39,13 @@ namespace testing
             else
             {
                 csLogin cs = new csLogin();
-                cs.Login(tbUsername.Text, tbPassword.Text, cbUsertype.SelectedItem.ToString());
+                cs.Login(tbPassword.Text, tbPassword.Text, cbUsertype.SelectedItem.ToString());
 
                 MessageBox.Show(cs.Message);
                 if (cs.Message == "Login Success")
                 {
                     csUser us = new csUser();
-                    us.usercredentials(tbUsername.Text);
+                    us.usercredentials(tbPassword.Text);
 
                     if (cs.uType == "Admin")
                     {

@@ -152,9 +152,9 @@ namespace testing
         private void btnPush_Click(object sender, EventArgs e)
         {
 
-            SendNotif(resUsername, cbValid.SelectedItem.ToString());
+            SendNotif(resUsername, cbValid.SelectedItem.ToString(), rbMessage.Text);
         }
-        private void SendNotif(string username, string Stat)
+        private void SendNotif(string username, string Stat, string Message)
         {
             try
             {
@@ -171,7 +171,7 @@ namespace testing
                     Notification = new Notification()
                     {
                         Title = "Verfication Info.",
-                        Body = "Status: " + Stat
+                        Body = "Status: " + Stat +"\n Information: " + Message
                     },
                     Topic = topic
                 };

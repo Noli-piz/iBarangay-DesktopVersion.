@@ -36,8 +36,8 @@ namespace testing
 
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
-                cboCamera.Items.Add(filterInfo.Name);
-            cboCamera.SelectedIndex = 0;
+                mcboCamera.Items.Add(filterInfo.Name);
+            mcboCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
         }   
 
@@ -66,6 +66,7 @@ namespace testing
             {
                 res.ResetData();
                 Reset();
+                this.Close();
             }
         }
 
@@ -293,19 +294,19 @@ namespace testing
         VideoCaptureDevice videoCaptureDevice;
         private void btnOpenCamera_Click(object sender, EventArgs e)
         {
-            if (btnOpenCamera.Text == "Open Camera")
+            if (btnOpenCamera.Text == "Open Cam")
             {
-                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[mcboCamera.SelectedIndex].MonikerString);
                 videoCaptureDevice.VideoResolution = videoCaptureDevice.VideoCapabilities[2];
                 videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
                 videoCaptureDevice.Start();
-                btnOpenCamera.Text = "Close Camera";
+                btnOpenCamera.Text = "Close Cam";
             }
             else
             {
                 videoCaptureDevice.Stop();
                 pictureBox1.Image = null;
-                btnOpenCamera.Text = "Open Camera";
+                btnOpenCamera.Text = "Open Cam";
             }
         }
 
@@ -319,6 +320,21 @@ namespace testing
         {
             if (videoCaptureDevice.IsRunning == true)
                 videoCaptureDevice.Stop();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         //SaveImage

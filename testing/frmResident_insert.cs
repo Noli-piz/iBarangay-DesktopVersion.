@@ -40,8 +40,8 @@ namespace testing
 
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
-                cboCamera.Items.Add(filterInfo.Name);
-            cboCamera.SelectedIndex = 0;
+                mcboCamera.Items.Add(filterInfo.Name);
+            mcboCamera.SelectedIndex = 0;
             videoCaptureDevice = new VideoCaptureDevice();
         }
 
@@ -224,18 +224,18 @@ namespace testing
         VideoCaptureDevice videoCaptureDevice;
         private void btnOpenCamera_Click(object sender, EventArgs e)
         {
-            if (btnOpenCamera.Text == "Open Camera") {
-                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
+            if (btnOpenCamera.Text == "Open Cam") {
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[mcboCamera.SelectedIndex].MonikerString);
                 videoCaptureDevice.VideoResolution = videoCaptureDevice.VideoCapabilities[1];
                 videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
                 videoCaptureDevice.Start();
-                btnOpenCamera.Text = "Close Camera";
+                btnOpenCamera.Text = "Close Cam";
             }
             else
             {
                 videoCaptureDevice.Stop();
                 pictureBox1.Image = null;
-                btnOpenCamera.Text = "Open Camera";
+                btnOpenCamera.Text = "Open Cam";
             }
         }
 
@@ -270,7 +270,7 @@ namespace testing
             }
             else
             {
-                MessageBox.Show("some");
+                MessageBox.Show("Something went wrong.");
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MetroFramework.Controls;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -245,8 +246,11 @@ namespace testing
                 l.Text = str.name.ToString();
                 l.Margin = new Padding(5, 5, 5, 10);
                 l.Visible = true;
+                l.Font = new Font("Arial", 12, FontStyle.Regular);
+                l.AutoSize = true;
+                l.MaximumSize = new Size(300, 40);
 
-                Button btn = new Button();
+                MetroButton btn = new MetroButton();
                 btn.Text = "Remove";
                 btn.Tag = str.id.ToString();
                 btn.Name = str.name.ToString();

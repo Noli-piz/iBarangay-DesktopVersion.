@@ -96,7 +96,7 @@ namespace testing
             this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
-            this.data1.RowTemplate.Height = 50;
+            this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data1.ShowCellToolTips = false;
             this.data1.ShowEditingIcon = false;

@@ -87,7 +87,7 @@ namespace testing
                         AL.Add(jo["id_blotter"]);
                         AL.Add(jo["Compliant"]);
                         AL.Add(jo["Assailant1"] +" "+ jo["Assailant2"]);
-                        AL.Add(jo["Details"]);
+                        AL.Add(jo["Details"].ToString().Length > 20 ? jo["Details"].ToString().Substring(0,20) + "..." : jo["Details"]);
                         AL.Add(jo["Status"]);
                         AL.Add(jo["Date"]);
                         data1.Rows.Add(AL.ToArray());
@@ -99,8 +99,6 @@ namespace testing
                     MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
                 }
 
-                data1.AutoResizeColumns();
-                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception e)
             {

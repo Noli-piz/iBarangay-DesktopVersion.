@@ -13,7 +13,6 @@ namespace testing
     public partial class frmBlotterRec2Insert : Form
     {
         csBlotter blot = new csBlotter();
-
         public frmBlotterRec2Insert()
         {
             InitializeComponent();
@@ -22,6 +21,7 @@ namespace testing
         private void frmAddNewBlotter_Load(object sender, EventArgs e)
         {
             loadComboBox();
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

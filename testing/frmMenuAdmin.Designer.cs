@@ -230,6 +230,7 @@ namespace testing
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(1498, 895);
             this.Name = "frmMenuAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuAdmin";
             this.Load += new System.EventHandler(this.frmMenuAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

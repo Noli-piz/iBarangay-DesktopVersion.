@@ -13,7 +13,7 @@ namespace testing
 
         public void loadKeys()
         {
-            sendgridKey = "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";
+            sendgridKey = "";
             sendgridEmail = "sti_ibarangay@outlook.com";
         }
 

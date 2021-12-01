@@ -930,6 +930,7 @@
     <None Include="Resources\round_account_circle_black_18dp.png" />
     <None Include="Resources\round_account_circle_black_18dp1.png" />
     <None Include="Resources\round_lock_black_18dp.png" />
+    <None Include="Resources\outline_search_black_18dp.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

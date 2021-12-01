@@ -201,7 +201,7 @@ namespace testing
         {
             try
             {
-                if (Convert.ToString(cbCategory.SelectedItem) != "")
+                if (Convert.ToString(kcbCategory.SelectedItem) != "")
                 {
                     data1.Rows.Clear();
                     var uri = host.IP() + "/iBar/ibar_resident_search.php";
@@ -211,7 +211,7 @@ namespace testing
                     {
                         var datas = new NameValueCollection();
                         datas["ID"] = tbSearch.Text;
-                        datas["Category"] = cbCategory.SelectedItem.ToString();
+                        datas["Category"] = kcbCategory.SelectedItem.ToString();
 
                         var response = wb.UploadValues(uri, "POST", datas);
                         responseFromServer = Encoding.UTF8.GetString(response);
@@ -232,6 +232,7 @@ namespace testing
                             ID.Add(jo["id_resident"].ToString());
                             AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
                             AL.Add(jo["Birthdate"]);
+                            AL.Add(jo["Age"]);
                             AL.Add(jo["Gender"]);
                             AL.Add(jo["CivilStatus"]);
                             AL.Add(jo["VoterStatus"]);
@@ -273,6 +274,8 @@ namespace testing
         private void btnClear_Click(object sender, EventArgs e)
         {
             tbSearch.Text = "";
+            data1.Rows.Clear();
+            LoadData();
         }
     }
 }

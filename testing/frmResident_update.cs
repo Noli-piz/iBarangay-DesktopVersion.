@@ -354,7 +354,7 @@ namespace testing
             }
             else
             {
-                MessageBox.Show("some");
+                MessageBox.Show("Something went wrong.");
             }
         }
     }

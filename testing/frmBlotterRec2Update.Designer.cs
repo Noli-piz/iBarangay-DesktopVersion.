@@ -72,6 +72,7 @@ namespace testing
             // 
             // tbWitness
             // 
+            this.tbWitness.BackColor = System.Drawing.Color.White;
             this.tbWitness.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbWitness.Location = new System.Drawing.Point(506, 137);
             this.tbWitness.Name = "tbWitness";
@@ -101,6 +102,7 @@ namespace testing
             // 
             // rbDetails
             // 
+            this.rbDetails.BackColor = System.Drawing.Color.White;
             this.rbDetails.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDetails.Location = new System.Drawing.Point(56, 495);
             this.rbDetails.Name = "rbDetails";
@@ -145,6 +147,7 @@ namespace testing
             // 
             // cbType
             // 
+            this.cbType.BackColor = System.Drawing.Color.White;
             this.cbType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(506, 202);
@@ -154,6 +157,7 @@ namespace testing
             // 
             // cbStatus
             // 
+            this.cbStatus.BackColor = System.Drawing.Color.White;
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(60, 408);
@@ -205,6 +209,7 @@ namespace testing
             // 
             // tbRespondent
             // 
+            this.tbRespondent.BackColor = System.Drawing.Color.White;
             this.tbRespondent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRespondent.Location = new System.Drawing.Point(506, 66);
             this.tbRespondent.Name = "tbRespondent";
@@ -223,6 +228,7 @@ namespace testing
             // 
             // tbLocation
             // 
+            this.tbLocation.BackColor = System.Drawing.Color.White;
             this.tbLocation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLocation.Location = new System.Drawing.Point(505, 344);
             this.tbLocation.Multiline = true;
@@ -252,6 +258,7 @@ namespace testing
             // 
             // tbComplainant
             // 
+            this.tbComplainant.BackColor = System.Drawing.Color.White;
             this.tbComplainant.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbComplainant.Location = new System.Drawing.Point(60, 66);
             this.tbComplainant.Name = "tbComplainant";

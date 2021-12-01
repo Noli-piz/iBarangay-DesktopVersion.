@@ -163,6 +163,16 @@ namespace testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap outline_search_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_search_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap problem {
             get {
                 object obj = ResourceManager.GetObject("problem", resourceCulture);

@@ -170,8 +170,8 @@ namespace testing
                 {
                     Notification = new Notification()
                     {
-                        Title = "Verfication Info.",
-                        Body = "Status: " + Stat +"\n Information: " + Message
+                        Title = "Verification Info.",
+                        Body = "Status: " + Stat +"\nInformation: " + Message
                     },
                     Topic = topic
                 };

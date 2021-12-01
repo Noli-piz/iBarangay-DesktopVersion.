@@ -29,6 +29,7 @@ namespace testing
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuAdmin));
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.btnGReports = new System.Windows.Forms.Button();
@@ -228,10 +229,11 @@ namespace testing
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1498, 895);
             this.Name = "frmMenuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMenuAdmin";
+            this.Text = "iBarangay";
             this.Load += new System.EventHandler(this.frmMenuAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

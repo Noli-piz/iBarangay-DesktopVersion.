@@ -289,6 +289,9 @@ namespace testing
         private void btnClear_Click(object sender, EventArgs e)
         {
             tbSearch.Text = "";
+            data1.Rows.Clear();
+            LoadData();
+
         }
     }
 }

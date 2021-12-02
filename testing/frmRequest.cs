@@ -42,6 +42,7 @@ namespace testing
             data1.Columns.Add("", "No.");
             data1.Columns.Add("id", "ID");
             data1.Columns.Add("resid", "ResID.");
+            data1.Columns.Add("idaccount", "ID Account.");
             data1.Columns.Add("", "Full Name");
             data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("", "Gender");
@@ -63,6 +64,11 @@ namespace testing
             btn.Name = "btnGenerate";
             btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
+
+            data1.Columns["ID"].Visible = false;
+            data1.Columns["resid"].Visible = false;
+            data1.Columns["idaccount"].Visible = false;
+            data1.Columns["bday"].Visible = false;
         }
 
         private async void loadData()
@@ -86,6 +92,7 @@ namespace testing
                         AL.Add(i.ToString());
                         AL.Add(jo["id_request"]);
                         AL.Add(jo["id_resident"].ToString());
+                        AL.Add(jo["id_account"].ToString());
                         AL.Add(jo["Fname"] +" " + jo["Mname"] +" "+ jo["Lname"]+" "+ jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);
@@ -103,9 +110,7 @@ namespace testing
                     MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
                 }
 
-                data1.Columns["ID"].Visible = false;
-                data1.Columns["resid"].Visible = false;
-                data1.Columns["bday"].Visible = false;
+
 
             }
             catch (Exception e)
@@ -119,14 +124,15 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 11)
+                if (e.ColumnIndex == 12)
                 {
 
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
-                    String resID = row.Cells[2].Value.ToString();
+                    String idresident = row.Cells[2].Value.ToString();
+                    String idaccount = row.Cells[3].Value.ToString();
 
-                    frmRequest2 frm = new frmRequest2(identifier, resID);
+                    frmRequest2 frm = new frmRequest2(identifier, idresident, idaccount);
                     frm.ShowDialog(this);
 
                     ID.Clear();

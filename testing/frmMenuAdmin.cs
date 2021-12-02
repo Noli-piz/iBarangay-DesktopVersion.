@@ -71,6 +71,10 @@ namespace testing
         private void btnMain_Click(object sender, EventArgs e)
         {
             ClearPanel();
+
+            frmMaintenance frm = new frmMaintenance() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

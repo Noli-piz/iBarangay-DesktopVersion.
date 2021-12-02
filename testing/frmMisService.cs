@@ -41,6 +41,7 @@ namespace testing
 
             data1.Columns.Add("no", "No.");
             data1.Columns.Add("id", "ID");
+            data1.Columns.Add("idaccount", "ID Account");
             data1.Columns.Add("fullname", "Full Name");
             data1.Columns.Add("bday", "Birthdate");
             data1.Columns.Add("vstatus", "Voter Stat.");
@@ -62,6 +63,11 @@ namespace testing
             btn.Name = "btnGenerate";
             btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
+
+
+            data1.Columns["ID"].Visible = false;
+            data1.Columns["idaccount"].Visible = false;
+            data1.Columns["bday"].Visible = false;
         }
 
         private async void LoadData()
@@ -86,6 +92,7 @@ namespace testing
                         AL = new ArrayList();
                         AL.Add(i.ToString());
                         AL.Add(jo["id_misservices"]);
+                        AL.Add(jo["id_account"]);
                         ID.Add(jo["id_misservices"].ToString());
                         AL.Add(jo["Fname"] +" "+ jo["Mname"] +" "+ jo["Lname"] + " " + jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
@@ -116,8 +123,6 @@ namespace testing
                 }
 
 
-                data1.Columns["ID"].Visible = false;
-                data1.Columns["bday"].Visible = false;
                 data1.AutoResizeColumns();
 
             }
@@ -131,16 +136,17 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 10)
+                if (e.ColumnIndex == 11)
                 {
                     DataGridViewRow row = data1.Rows[e.RowIndex];
-                    String identifier = row.Cells[1].Value.ToString();
+                    String IdforItem = row.Cells[1].Value.ToString();
+                    String IdForAcc = row.Cells[2].Value.ToString();
 
                     //csMisService ser = new csMisService();
                     //ser.GetID(identifier);
 
                     ////ser.GetID(ID[e.RowIndex].ToString());
-                    frmMisService2 frm = new frmMisService2(identifier);
+                    frmMisService2 frm = new frmMisService2(IdforItem, IdForAcc);
                     frm.ShowDialog(this);
 
                     ID.Clear();

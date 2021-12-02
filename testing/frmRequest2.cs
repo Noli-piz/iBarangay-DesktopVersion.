@@ -22,22 +22,23 @@ namespace testing
     public partial class frmRequest2 : Form
     {
         csHostConfiguration host = new csHostConfiguration();
-        private String ID = "", ResID, ResUsername="";
+        private String ID = "", idresident, idaccount, ResUsername="";
 
-        public frmRequest2(String id, String ResID)
+        public frmRequest2(String id, string idresident, string idaccount)
         {
             InitializeComponent();
             ID = id;
-            this.ResID = ResID;
+            this.idresident = idresident;
+            this.idaccount = idaccount;
         }
 
         private void frmRequest2_Load(object sender, EventArgs e)
         {
             LoadComboBoxes();
             SelectData();
+            mnpltDataGrid();
+            LoadData();
         }
-
-
 
 
         private async void SelectData()
@@ -62,8 +63,16 @@ namespace testing
                 {
                     foreach (var jo in (JArray)((JObject)data)["request"])
                     {
+                        //Resident Info
+                        lblFullname.Text = jo["Fullname"].ToString();
+                        lblEmail.Text = jo["Email"].ToString();
+                        lblUsername.Text = jo["Username"].ToString();
+                        lblContact.Text = jo["ContactNo"].ToString();
+                        lblCedula.Text = jo["CedulaNo"].ToString();
+                        lblVoterStatus.Text = jo["VoterStatus"].ToString();
+                        lblBlotterCase.Text = jo["Blotter"].ToString();
 
-                        //jo["id_announcement"];
+                        //Request Info
                         lblDocument.Text = jo["Types"].ToString();
                         lblDate.Text = jo["DateOfRequest"].ToString();
                         rbPurpose.Text = jo["Purpose"].ToString();
@@ -83,6 +92,99 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+        }
+
+        private void mnpltDataGrid()
+        {
+            data1.Rows.Clear();
+            data1.Columns.Clear();
+
+            data1.Columns.Add("no", "No.");
+            data1.Columns.Add("id", "ID");
+            data1.Columns.Add("types", "Types");
+            data1.Columns.Add("date", "Req Date");
+            data1.Columns.Add("rstatus", "Req Stat.");
+            data1.Columns.Add("dstatus", "Delivery Opt.");
+            data1.Columns.Add("prps", "Purpose");
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Text = "SELECT";
+            btn.UseColumnTextForButtonValue = true;
+            data1.Columns.Add(btn);
+        }
+
+        private async void LoadData()
+        {
+            try
+            {
+                var uri = host.IP() + "/iBar/ibar_request_specific_data.php";
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["ID"] = idaccount;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                ArrayList AL = new ArrayList();
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+
+                List<int> colorInt = new List<int>();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["request"])
+                    {
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(jo["id_request"]);
+                        AL.Add(jo["Types"]);
+                        AL.Add(jo["DateOfRequest"]);
+                        AL.Add(jo["Status"]);
+                        AL.Add(jo["Options"]);
+                        AL.Add(jo["Purpose"]);
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+
+                }
+
+
+                data1.Columns["ID"].Visible = false;
+                data1.AutoResizeColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btnGenerate_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 7)
+                {
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    ID = row.Cells[1].Value.ToString();
+
+                    SelectData();
+                }
+            }
+            catch (ArgumentOutOfRangeException outOfRange)
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -118,6 +220,10 @@ namespace testing
                     {
                         MessageBox.Show("Update Successfully");
                         SendNotif(ResUsername, Convert.ToString(cbStatus.SelectedItem), rbNote.Text);
+
+
+                        data1.Rows.Clear();
+                        LoadData();
                     }
                     else
                     {
@@ -160,18 +266,18 @@ namespace testing
         {
             if (lblDocument.Text == "Barangay Clearance")
             {
-                vwrBrgyClearance vwr = new vwrBrgyClearance(ResID, rbPurpose.Text);
+                vwrBrgyClearance vwr = new vwrBrgyClearance(idresident, rbPurpose.Text);
                 vwr.ShowDialog(this);
 
 
             }
             else if(lblDocument.Text == "Good Moral")
             {
-
+                MessageBox.Show("The Selected Document is not Available!");
             }
             else if ( lblDocument.Text == "Indigency" )
             {
-
+                MessageBox.Show("The Selected Document is not Available!");
             }
             else
             {

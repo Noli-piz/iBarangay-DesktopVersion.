@@ -4,6 +4,7 @@ using Google.Apis.Auth.OAuth2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,12 +24,13 @@ namespace testing
     {
         csMisService ser = new csMisService();
         csHostConfiguration host = new csHostConfiguration();
-        string ID = "", currentDeadline = "", currentStatus, resUsername="";
+        string ID = "", IdAccount, currentDeadline = "", currentStatus, resUsername="";
 
-        public frmMisService2(String id)
+        public frmMisService2(String id, string IdAccount)
         {
             InitializeComponent();
             this.ID = id;
+            this.IdAccount = IdAccount;
         }
 
         private void frmMisService2_Load(object sender, EventArgs e)
@@ -35,6 +38,8 @@ namespace testing
             LoadComboBoxes();
             SelectData();
             ResetList();
+            mnpltDataGrid();
+            LoadData();
         }
     
         private void ResetList()
@@ -100,12 +105,23 @@ namespace testing
                 {
                     foreach (var jo in (JArray)((JObject)data)["service"])
                     {
+                        //Resident Info
+                        lblFullname.Text = jo["Fullname"].ToString();
+                        lblEmail.Text = jo["Email"].ToString();
+                        lblUsername.Text = jo["Username"].ToString();
+                        lblContact.Text = jo["ContactNo"].ToString();
+                        lblCedula.Text = jo["CedulaNo"].ToString();
+                        lblVoterStatus.Text = jo["VoterStatus"].ToString();
+                        lblBlotterCase.Text = jo["Blotter"].ToString();
+
+                        //Items Info
                         lblItem.Text = jo["ItemName"].ToString();
                         lblDate.Text = jo["DateOfRequest"].ToString();
                         rbPurpose.Text = jo["Purpose"].ToString();
                         lblCurrentStatus.Text = jo["Status"].ToString();
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         lblQuantity.Text = jo["Quantity"].ToString();
+                        lblRentDate.Text = jo["RentDate"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
                         resUsername = jo["Username"].ToString();
                         rbNote.Text = jo["Note"].ToString();
@@ -137,6 +153,103 @@ namespace testing
         }
 
 
+        private void mnpltDataGrid()
+        {
+            data1.Rows.Clear();
+            data1.Columns.Clear();
+
+            data1.Columns.Add("no", "No.");
+            data1.Columns.Add("id", "ID");
+            data1.Columns.Add("item", "Item");
+            data1.Columns.Add("quan", "Quantity");
+            data1.Columns.Add("date", "Req Date");
+            data1.Columns.Add("rstatus", "Req Stat.");
+            data1.Columns.Add("dead", "Deadline");
+            data1.Columns.Add("dead", "Rent Date");
+            data1.Columns.Add("dstatus", "Delivery Opt.");
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Text = "SELECT";
+            btn.UseColumnTextForButtonValue = true;
+            data1.Columns.Add(btn);
+        }
+
+        private  async void LoadData()
+        {
+            try
+            {
+                var uri = host.IP() + "/iBar/ibar_misservice_specific_data.php";
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["ID"] = IdAccount;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                ArrayList AL = new ArrayList();
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+
+                List<int> colorInt = new List<int>();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["service"])
+                    {
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(jo["id_misservices"]);
+                        AL.Add(jo["ItemName"]);
+                        AL.Add(jo["Quantity"]);
+                        AL.Add(jo["DateOfRequest"]);
+                        AL.Add(jo["Status"]);
+                        AL.Add(jo["Deadline"]);
+                        AL.Add(jo["RentDate"]);
+                        AL.Add(jo["Options"]);
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+
+                }
+
+
+                data1.Columns["ID"].Visible = false;
+                data1.AutoResizeColumns();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btnGenerate_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 9)
+                {
+                    DataGridViewRow row = data1.Rows[e.RowIndex];
+                    ID = row.Cells[1].Value.ToString();
+
+                    SelectData();
+                    ResetList();
+                }
+            }
+            catch (ArgumentOutOfRangeException outOfRange)
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -227,6 +340,9 @@ namespace testing
 
                             ResetList();
                             SendNotif(resUsername, Convert.ToString(cbStatus.SelectedItem), rbNote.Text);
+
+                            data1.Rows.Clear();
+                            LoadData();
                         }
                         else
                         {

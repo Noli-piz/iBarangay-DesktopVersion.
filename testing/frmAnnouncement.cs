@@ -173,6 +173,8 @@ namespace testing
                     {
                         MessageBox.Show("Insert Successfully");
                         SendNotif(tbSubject.Text ,  rbDetails.Text);
+                        tbSubject.Text = "";
+                        rbDetails.Text="";
                     }
                     else
                     {
@@ -248,17 +250,15 @@ namespace testing
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(checkEm("thisismenolidgmail.com").ToString());
+            MessageBox.Show(checkEm("thisismenoli@gmail.com").ToString());
         }
 
         private bool checkEm(String email)
         {
             try
             {
-
                 var add = new System.Net.Mail.MailAddress(email);
                 return add.Address == email;
-
             }
             catch (Exception es)
             {

@@ -151,7 +151,7 @@ namespace testing
         //Send Notification
         private void btnPush_Click(object sender, EventArgs e)
         {
-
+            btnUpdate_Click(sender, e);
             SendNotif(resUsername, cbValid.SelectedItem.ToString(), rbMessage.Text);
         }
         private void SendNotif(string username, string Stat, string Message)

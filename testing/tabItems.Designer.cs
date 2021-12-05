@@ -39,16 +39,16 @@ namespace testing
             this.tbItemName = new MetroFramework.Controls.MetroTextBox();
             this.tbQuantity = new MetroFramework.Controls.MetroTextBox();
             this.tbDelivery = new MetroFramework.Controls.MetroTextBox();
-            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mtrData6)).BeginInit();
             this.SuspendLayout();
             // 
             // mtrData6
             // 
+            this.mtrData6.AllowUserToAddRows = false;
+            this.mtrData6.AllowUserToDeleteRows = false;
+            this.mtrData6.AllowUserToOrderColumns = true;
             this.mtrData6.AllowUserToResizeRows = false;
-            this.mtrData6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.mtrData6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mtrData6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.mtrData6.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -74,8 +74,9 @@ namespace testing
             this.mtrData6.EnableHeadersVisualStyles = false;
             this.mtrData6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtrData6.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtrData6.Location = new System.Drawing.Point(0, 0);
+            this.mtrData6.Location = new System.Drawing.Point(12, 61);
             this.mtrData6.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.mtrData6.MultiSelect = false;
             this.mtrData6.Name = "mtrData6";
             this.mtrData6.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -86,19 +87,19 @@ namespace testing
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.mtrData6.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.mtrData6.RowHeadersVisible = false;
             this.mtrData6.RowHeadersWidth = 51;
             this.mtrData6.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mtrData6.RowTemplate.Height = 24;
             this.mtrData6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mtrData6.Size = new System.Drawing.Size(566, 637);
+            this.mtrData6.Size = new System.Drawing.Size(679, 581);
             this.mtrData6.TabIndex = 4;
             this.mtrData6.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mtrData6_CellClick);
             // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAdd.Location = new System.Drawing.Point(929, 472);
+            this.btnAdd.Location = new System.Drawing.Point(983, 450);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(126, 49);
             this.btnAdd.TabIndex = 5;
@@ -108,9 +109,8 @@ namespace testing
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnUpdate.Location = new System.Drawing.Point(768, 539);
+            this.btnUpdate.Location = new System.Drawing.Point(851, 450);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 49);
             this.btnUpdate.TabIndex = 6;
@@ -120,9 +120,8 @@ namespace testing
             // 
             // btnDelete
             // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnDelete.Location = new System.Drawing.Point(929, 539);
+            this.btnDelete.Location = new System.Drawing.Point(719, 450);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(126, 49);
             this.btnDelete.TabIndex = 7;
@@ -132,7 +131,6 @@ namespace testing
             // 
             // tbItemName
             // 
-            this.tbItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -141,7 +139,7 @@ namespace testing
             this.tbItemName.CustomButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tbItemName.CustomButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.tbItemName.CustomButton.Image = null;
-            this.tbItemName.CustomButton.Location = new System.Drawing.Point(267, 1);
+            this.tbItemName.CustomButton.Location = new System.Drawing.Point(369, 1);
             this.tbItemName.CustomButton.Name = "";
             this.tbItemName.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.tbItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -151,7 +149,7 @@ namespace testing
             this.tbItemName.CustomButton.Visible = false;
             this.tbItemName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbItemName.Lines = new string[0];
-            this.tbItemName.Location = new System.Drawing.Point(616, 133);
+            this.tbItemName.Location = new System.Drawing.Point(719, 148);
             this.tbItemName.MaxLength = 32767;
             this.tbItemName.Name = "tbItemName";
             this.tbItemName.PasswordChar = '\0';
@@ -162,7 +160,7 @@ namespace testing
             this.tbItemName.SelectionStart = 0;
             this.tbItemName.ShortcutsEnabled = false;
             this.tbItemName.ShowClearButton = true;
-            this.tbItemName.Size = new System.Drawing.Size(301, 35);
+            this.tbItemName.Size = new System.Drawing.Size(403, 35);
             this.tbItemName.TabIndex = 8;
             this.tbItemName.UseSelectable = true;
             this.tbItemName.WaterMark = "Item Name";
@@ -172,12 +170,11 @@ namespace testing
             // 
             // tbQuantity
             // 
-            this.tbQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.tbQuantity.CustomButton.Image = null;
-            this.tbQuantity.CustomButton.Location = new System.Drawing.Point(267, 1);
+            this.tbQuantity.CustomButton.Location = new System.Drawing.Point(369, 1);
             this.tbQuantity.CustomButton.Name = "";
             this.tbQuantity.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.tbQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -187,7 +184,7 @@ namespace testing
             this.tbQuantity.CustomButton.Visible = false;
             this.tbQuantity.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbQuantity.Lines = new string[0];
-            this.tbQuantity.Location = new System.Drawing.Point(616, 203);
+            this.tbQuantity.Location = new System.Drawing.Point(719, 237);
             this.tbQuantity.MaxLength = 32767;
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.PasswordChar = '\0';
@@ -197,7 +194,7 @@ namespace testing
             this.tbQuantity.SelectionLength = 0;
             this.tbQuantity.SelectionStart = 0;
             this.tbQuantity.ShortcutsEnabled = true;
-            this.tbQuantity.Size = new System.Drawing.Size(301, 35);
+            this.tbQuantity.Size = new System.Drawing.Size(403, 35);
             this.tbQuantity.TabIndex = 9;
             this.tbQuantity.UseSelectable = true;
             this.tbQuantity.WaterMark = "Quantity";
@@ -206,12 +203,11 @@ namespace testing
             // 
             // tbDelivery
             // 
-            this.tbDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.tbDelivery.CustomButton.Image = null;
-            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(267, 1);
+            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(369, 1);
             this.tbDelivery.CustomButton.Name = "";
             this.tbDelivery.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.tbDelivery.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -221,7 +217,7 @@ namespace testing
             this.tbDelivery.CustomButton.Visible = false;
             this.tbDelivery.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbDelivery.Lines = new string[0];
-            this.tbDelivery.Location = new System.Drawing.Point(616, 267);
+            this.tbDelivery.Location = new System.Drawing.Point(719, 324);
             this.tbDelivery.MaxLength = 32767;
             this.tbDelivery.Name = "tbDelivery";
             this.tbDelivery.PasswordChar = '\0';
@@ -231,31 +227,30 @@ namespace testing
             this.tbDelivery.SelectionLength = 0;
             this.tbDelivery.SelectionStart = 0;
             this.tbDelivery.ShortcutsEnabled = true;
-            this.tbDelivery.Size = new System.Drawing.Size(301, 35);
+            this.tbDelivery.Size = new System.Drawing.Size(403, 35);
             this.tbDelivery.TabIndex = 10;
             this.tbDelivery.UseSelectable = true;
             this.tbDelivery.WaterMark = "Delivery Fee";
             this.tbDelivery.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbDelivery.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btnCancel
+            // label1
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnCancel.Location = new System.Drawing.Point(592, 539);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(126, 49);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseSelectable = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 32);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ITEMS";
             // 
             // tabItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 633);
-            this.Controls.Add(this.btnCancel);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1163, 692);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDelivery);
             this.Controls.Add(this.tbQuantity);
             this.Controls.Add(this.tbItemName);
@@ -263,11 +258,13 @@ namespace testing
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.mtrData6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tabItems";
             this.Text = "tabItems";
             this.Load += new System.EventHandler(this.tabItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mtrData6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -280,6 +277,6 @@ namespace testing
         private MetroFramework.Controls.MetroTextBox tbItemName;
         private MetroFramework.Controls.MetroTextBox tbQuantity;
         private MetroFramework.Controls.MetroTextBox tbDelivery;
-        private MetroFramework.Controls.MetroButton btnCancel;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -22,6 +22,8 @@ namespace testing
             csUser user = new csUser();
             lblUsername.Text = user.username();
             lblName.Text = user.name();
+
+            btnHome_Click(sender, e);
         }
         private void btnAnnouncement_Click(object sender, EventArgs e)
         {
@@ -97,6 +99,10 @@ namespace testing
         private void btnHome_Click(object sender, EventArgs e)
         {
             ClearPanel();
+
+            frmHomeAdmin frm = new frmHomeAdmin() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
         }
 
 

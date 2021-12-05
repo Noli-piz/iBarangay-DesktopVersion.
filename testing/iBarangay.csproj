@@ -921,6 +921,7 @@
     <None Include="Resources\sharp_visibility_off_black_18dp.png" />
     <None Include="Resources\Balangkas_Logo.png" />
     <None Include="Resources\calendar.png" />
+    <None Include="Resources\disableaccount.png" />
     <Content Include="Resources\edit icon.png" />
     <None Include="Resources\greenlantern.png" />
     <None Include="Resources\transparent.png" />
@@ -931,6 +932,13 @@
     <None Include="Resources\round_account_circle_black_18dp1.png" />
     <None Include="Resources\round_lock_black_18dp.png" />
     <None Include="Resources\outline_search_black_18dp.png" />
+    <None Include="Resources\file %281%29.png" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\male.png" />
+    <None Include="Resources\fingerprint.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\kyc.png" />
+    <None Include="Resources\people.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

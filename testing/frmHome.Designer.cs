@@ -30,7 +30,6 @@ namespace testing
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotalResidents = new System.Windows.Forms.Label();
             this.lblTotalMale = new System.Windows.Forms.Label();
@@ -39,22 +38,16 @@ namespace testing
             this.lblActiveCases = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblTotalPending = new System.Windows.Forms.Label();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
@@ -62,36 +55,31 @@ namespace testing
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::testing.Properties.Resources.Balangkas_Logo;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 482);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(319, 318);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label4.Location = new System.Drawing.Point(337, 699);
+            this.label4.Location = new System.Drawing.Point(167, 706);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(810, 104);
+            this.label4.Size = new System.Drawing.Size(1047, 87);
             this.label4.TabIndex = 7;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -171,21 +159,6 @@ namespace testing
             this.lblTotalPending.Text = "100";
             this.lblTotalPending.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel1.TabIndex = 20;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label11);
@@ -206,21 +179,6 @@ namespace testing
             this.label5.TabIndex = 13;
             this.label5.Text = "TOTAL RESIDENTS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel2.TabIndex = 20;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // panel2
             // 
@@ -244,21 +202,6 @@ namespace testing
             this.label1.Text = "TOTAL MALE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // metroPanel3
-            // 
-            this.metroPanel3.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel3.TabIndex = 20;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -280,21 +223,6 @@ namespace testing
             this.label2.TabIndex = 13;
             this.label2.Text = "TOTAL FEMALE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // metroPanel4
-            // 
-            this.metroPanel4.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel4.TabIndex = 20;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
             // 
             // panel6
             // 
@@ -318,21 +246,6 @@ namespace testing
             this.label6.Text = "TOTAL PENDING REQUEST";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // metroPanel5
-            // 
-            this.metroPanel5.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel5.HorizontalScrollbarBarColor = true;
-            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel5.TabIndex = 20;
-            this.metroPanel5.VerticalScrollbarBarColor = true;
-            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.VerticalScrollbarSize = 10;
-            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -354,21 +267,6 @@ namespace testing
             this.label7.TabIndex = 13;
             this.label7.Text = "TOTAL REGISTERED VOTER";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // metroPanel6
-            // 
-            this.metroPanel6.BackgroundImage = global::testing.Properties.Resources.problem;
-            this.metroPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroPanel6.HorizontalScrollbarBarColor = true;
-            this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.HorizontalScrollbarSize = 10;
-            this.metroPanel6.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel6.Name = "metroPanel6";
-            this.metroPanel6.Size = new System.Drawing.Size(200, 138);
-            this.metroPanel6.TabIndex = 20;
-            this.metroPanel6.VerticalScrollbarBarColor = true;
-            this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.VerticalScrollbarSize = 10;
             // 
             // materialCard1
             // 
@@ -400,7 +298,7 @@ namespace testing
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(429, 48);
+            this.materialCard2.Location = new System.Drawing.Point(429, 46);
             this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
@@ -463,6 +361,109 @@ namespace testing
             this.materialCard6.Size = new System.Drawing.Size(378, 190);
             this.materialCard6.TabIndex = 25;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::testing.Properties.Resources.Balangkas_Logo;
+            this.pictureBox4.Location = new System.Drawing.Point(45, 697);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackgroundImage = global::testing.Properties.Resources.house;
+            this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel2.TabIndex = 20;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.BackgroundImage = global::testing.Properties.Resources.male;
+            this.metroPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel3.TabIndex = 20;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.BackgroundImage = global::testing.Properties.Resources.female;
+            this.metroPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel4.TabIndex = 20;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackgroundImage = global::testing.Properties.Resources.problem;
+            this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel1.TabIndex = 20;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel6
+            // 
+            this.metroPanel6.BackgroundImage = global::testing.Properties.Resources.fingerprint;
+            this.metroPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel6.HorizontalScrollbarBarColor = true;
+            this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel6.HorizontalScrollbarSize = 10;
+            this.metroPanel6.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel6.Name = "metroPanel6";
+            this.metroPanel6.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel6.TabIndex = 20;
+            this.metroPanel6.VerticalScrollbarBarColor = true;
+            this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel6.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel5
+            // 
+            this.metroPanel5.BackgroundImage = global::testing.Properties.Resources.file__1_;
+            this.metroPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(200, 138);
+            this.metroPanel5.TabIndex = 20;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,13 +489,13 @@ namespace testing
             this.Name = "frmHome";
             this.Text = "frmHome";
             this.Load += new System.EventHandler(this.frmHome_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

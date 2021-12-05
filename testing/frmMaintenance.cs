@@ -24,33 +24,75 @@ namespace testing
         }
         private void frmMaintenance_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAlertLevels_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+
             tabAlertLevel frm = new tabAlertLevel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabAlertLevel.Controls.Add(frm);
+            this.panel1.Controls.Add(frm);
             frm.Show();
+        }
 
-            tabCertificates frm2 = new tabCertificates() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabCertificate.Controls.Add(frm2);
-            frm2.Show();
+        private void btnCertificate_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
 
-            tabCivilStatus frm3 = new tabCivilStatus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabCivilStatus.Controls.Add(frm3);
-            frm3.Show();
+            tabCertificates frm = new tabCertificates() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
 
-            tabDeliveryOptions frm4 = new tabDeliveryOptions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabdeliveryoption.Controls.Add(frm4);
-            frm4.Show();
+        private void btnCivilStatus_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
 
-            tabGender frm5 = new tabGender() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabGender.Controls.Add(frm5);
-            frm5.Show();
+            tabCivilStatus frm = new tabCivilStatus() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
 
-            tabItems frm6 = new tabItems() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabItems.Controls.Add(frm6);
-            frm6.Show();
+        private void btnDeliveryOpt_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
 
-            tabPurok frm7 = new tabPurok() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.tabPurok.Controls.Add(frm7);
-            frm7.Show();
+            tabDeliveryOptions frm = new tabDeliveryOptions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnGender_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+
+            tabGender frm = new tabGender() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+
+            tabItems frm = new tabItems() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnPurok_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+
+            tabPurok frm = new tabPurok() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel1.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void ClearPanel()
+        {
+            this.panel1.Controls.Clear();
         }
     }
 }

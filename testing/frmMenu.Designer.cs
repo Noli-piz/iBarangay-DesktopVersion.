@@ -54,7 +54,7 @@ namespace testing
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(235, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 1021);
+            this.panel1.Size = new System.Drawing.Size(1250, 850);
             this.panel1.TabIndex = 1;
             // 
             // btnHome
@@ -231,7 +231,7 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.BackgroundImage = global::testing.Properties.Resources.greenlantern;
-            this.ClientSize = new System.Drawing.Size(1480, 1021);
+            this.ClientSize = new System.Drawing.Size(1480, 848);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);

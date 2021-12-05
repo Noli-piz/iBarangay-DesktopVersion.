@@ -37,6 +37,7 @@ namespace testing
         private void frmMenu_Load(object sender, EventArgs e)
         {
             //RoundImage();
+            btnHome_Click(sender, e);
         }
 
         private void btnHome_Click(object sender, EventArgs e)

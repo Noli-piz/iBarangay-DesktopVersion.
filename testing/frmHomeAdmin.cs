@@ -29,25 +29,7 @@ namespace testing
             fetchCount();
         }
 
-        public async Task SendEmailAsync()
-        {
-            csApiKey ApiKey = new csApiKey();
-            ApiKey.loadKeys();
 
-            var client = new SendGridClient(ApiKey.getSendGridKey());
-            var msg = new SendGridMessage()
-            {
-
-                From = new EmailAddress(ApiKey.getSendGridEmail(), "iBarangay"),
-                Subject = "Sending with SendGrid is Fun",
-                PlainTextContent = "COntext",
-                HtmlContent = "<strong>aHtml Content</strong>"
-            };
-
-            msg.AddTo(new EmailAddress("thisismenoli11@gmail.com", "Test-user"));
-            var response = await client.SendEmailAsync(msg);
-            MessageBox.Show(response.IsSuccessStatusCode.ToString());
-        }
 
         private async void fetchCount()
         {

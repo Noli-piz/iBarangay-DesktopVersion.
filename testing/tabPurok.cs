@@ -89,28 +89,34 @@ namespace testing
         {
             try
             {
+                if (tbName.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                DateTime dateToday = DateTime.Now;
+                    var uri = host.IP() + "/iBar/ibar_purok_insert.php";
 
-                var uri = host.IP() + "/iBar/ibar_purok_insert.php";
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Purok"] = tbName.Text;
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["Purok"] = tbName.Text;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                        tbName.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                    MessageBox.Show("Please enter a purok name.");
                 }
             }
             catch (Exception ex)
@@ -128,30 +134,37 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (ID !="" && tbName.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_purok_update.php";
+                    var uri = host.IP() + "/iBar/ibar_purok_update.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
-                    datas["Purok"] = tbName.Text;
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["Purok"] = tbName.Text;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Update Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                        ID = "";
+                        tbName.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show("Unable to Update.");
                 }
-
             }
             catch (Exception ex)
             {
@@ -169,27 +182,35 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (ID != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_purok_delete.php";
+                    var uri = host.IP() + "/iBar/ibar_purok_delete.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Delete Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Delete Successfully");
+                        ID = "";
+                        tbName.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Delete Failed " + responseFromServer);
+                        MessageBox.Show("Unable to delete.");
                 }
 
             }

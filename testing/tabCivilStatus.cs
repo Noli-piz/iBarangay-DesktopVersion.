@@ -90,28 +90,33 @@ namespace testing
         {
             try
             {
+                if (tbTypes.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                DateTime dateToday = DateTime.Now;
+                    var uri = host.IP() + "/iBar/ibar_civilstatus_insert.php";
 
-                var uri = host.IP() + "/iBar/ibar_civilstatus_insert.php";
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Types"] = tbTypes.Text;
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["Types"] = tbTypes.Text;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                    MessageBox.Show("Please enter a name.");
                 }
             }
             catch (Exception ex)

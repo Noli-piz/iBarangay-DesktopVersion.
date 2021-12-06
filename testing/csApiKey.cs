@@ -13,8 +13,12 @@ namespace testing
 
         public void loadKeys()
         {
-            sendgridKey = "";
             sendgridEmail = "sti_ibarangay@outlook.com";
+        }
+
+        public void setSendGridKey(String key)
+        {
+            sendgridKey = key;
         }
 
         public string getSendGridKey()

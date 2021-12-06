@@ -11,12 +11,18 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections;
+using System.IO;
+using Microsoft.WindowsAzure.Storage;
+using System.Net;
+using testing.Properties;
+using System.Collections.Specialized;
 
 namespace testing
 {
     public partial class tabAlertLevel : Form
     {
-        csHostConfiguration host = new csHostConfiguration();
+        private csHostConfiguration host = new csHostConfiguration();
+        private string path, strImageUrl="", ID="";
         public tabAlertLevel()
         {
             InitializeComponent();
@@ -80,6 +86,280 @@ namespace testing
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (strImageUrl != "" && tbName.Text != "")
+                {
+
+                    DateTime dateToday = DateTime.Now;
+
+                    var uri = host.IP() + "/iBar/ibar_alertlevel_insert.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["LevelName"] = tbName.Text;
+                        datas["ImageLocation"] = strImageUrl ;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                        tbName.Text = "";
+                        strImageUrl = "";
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid input or image.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ID !="") {
+                    DateTime dateToday = DateTime.Now;
+
+                    var uri = host.IP() + "/iBar/ibar_alertlevel_delete.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Delete Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show(responseFromServer);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Unable to Delete.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                mtrData1.Rows.Clear();
+                loadDataAlert();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ID !="" && tbName.Text != "") {
+                    DateTime dateToday = DateTime.Now;
+
+                    var uri = host.IP() + "/iBar/ibar_alertlevel_update.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["LevelName"] = tbName.Text;
+                        datas["ImageLocation"] = strImageUrl;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed " + responseFromServer);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Unable to Update.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Select Image";
+            ofd.Filter = "Image files | *.jpg; *.png";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                path = ofd.FileName;
+                UploadImage();
+            }
+            ofd.Dispose();
+        }
+
+        private void mtrData1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 4)
+                {
+                    DataGridViewRow row = mtrData1.Rows[e.RowIndex];
+                    String identifier = row.Cells[1].Value.ToString();
+
+                    LoadSpecific(identifier);
+
+
+
+                    mtrData1.Rows.Clear();
+                    loadDataAlert();
+                }
+            }
+            catch (ArgumentOutOfRangeException outOfRange)
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private async void LoadSpecific(String id)
+        {
+            ID = id;
+            try
+            {
+
+                DateTime dateToday = DateTime.Now;
+
+                var uri = host.IP() + "/iBar/ibar_alertlevel_specific.php";
+
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["ID"] = ID;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+                if (success == "1")
+                {
+                    foreach (var jo in (JArray)((JObject)data)["alert"])
+                    {
+                        tbName.Text = jo["LevelName"].ToString();
+                        strImageUrl = jo["ImageLocation"].ToString();
+                        DownloadImage();
+                    }
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private async void UploadImage()
+        {
+            try
+            {
+                lblProgress.Visible = true;
+                lblProgress.Text = "Uploading...";
+
+                byte[] file = System.IO.File.ReadAllBytes(path);
+                MemoryStream inputStream = new MemoryStream(file);
+
+
+                var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=ibarangaystorage;AccountKey=SuJ5YP5ovCzjeBc9sLKwbbhrk8GIWjrSyO493EnTRLc7tpNxApS/sdsIvk+qXWOhohgVASKI6VjFgrCYGYiuEw==;EndpointSuffix=core.windows.net");
+                var client = account.CreateCloudBlobClient();
+                var container = client.GetContainerReference("profileimages");
+                await container.CreateIfNotExistsAsync();
+                var name = Guid.NewGuid().ToString();
+                var blockBlob = container.GetBlockBlobReference($"{name}.png");
+                await blockBlob.UploadFromStreamAsync(inputStream);
+                string URL = blockBlob.Uri.OriginalString;
+                strImageUrl = URL;
+
+                MessageBox.Show("Upload Successful");
+                DownloadImage();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "Upload Failed");
+            }
+        }
+
+        private async void DownloadImage()
+        {
+            try
+            {
+                lblProgress.Text = "Loading...";
+
+                var request = WebRequest.Create(strImageUrl);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+
+                    Image img = new Bitmap(stream);
+                    pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+                }
+            }
+            catch (Exception ex)
+            {
+                Image img = Resources.noimg;
+                pictureBox1.Image = img.GetThumbnailImage(200, 200, null, new IntPtr());
+            }
+            finally
+            {
+                lblProgress.Text = "";
             }
         }
 

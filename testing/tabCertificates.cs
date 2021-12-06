@@ -92,30 +92,35 @@ namespace testing
         {
             try
             {
-
-                DateTime dateToday = DateTime.Now;
-
-                var uri = host.IP() + "/iBar/ibar_certificates_insert.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (tbTypes.Text != "" && tbDocFee.Text != "" && tbDelivery.Text != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["Types"] = tbTypes.Text;
-                    datas["DocFee"] = tbDocFee.Text;
-                    datas["DeliveryFee"] = tbDelivery.Text;
+                    DateTime dateToday = DateTime.Now;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
+                    var uri = host.IP() + "/iBar/ibar_certificates_insert.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Types"] = tbTypes.Text;
+                        datas["DocFee"] = tbDocFee.Text;
+                        datas["DeliveryFee"] = tbDelivery.Text;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
-
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
-                }
-                else
-                {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                else{
+                    MessageBox.Show("Please fill up all fields.");
                 }
             }
             catch (Exception ex)
@@ -133,32 +138,41 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (ID != "" && tbTypes.Text != "" && tbDocFee.Text !="" && tbDelivery.Text !="") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_certificates_update.php";
+                    var uri = host.IP() + "/iBar/ibar_certificates_update.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
-                    datas["Types"] = tbTypes.Text;
-                    datas["DocFee"] = tbDocFee.Text;
-                    datas["DeliveryFee"] = tbDelivery.Text;
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["Types"] = tbTypes.Text;
+                        datas["DocFee"] = tbDocFee.Text;
+                        datas["DeliveryFee"] = tbDelivery.Text;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Update Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                        ID = "";
+                        tbTypes.Text = "";
+                        tbDocFee.Text = "";
+                        tbDelivery.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show("Unable to Update.");
                 }
-
             }
             catch (Exception ex)
             {
@@ -176,29 +190,38 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (ID !="") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_certificates_delete.php";
+                    var uri = host.IP() + "/iBar/ibar_certificates_delete.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Delete Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Delete Successfully");
+                        ID = "";
+                        tbTypes.Text = "";
+                        tbDocFee.Text = "";
+                        tbDelivery.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Delete Failed " + responseFromServer);
+                    MessageBox.Show("Unable to delete.");
                 }
-
             }
             catch (Exception ex)
             {

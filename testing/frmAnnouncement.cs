@@ -68,6 +68,9 @@ namespace testing
             btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
 
+
+            //data1.Columns["btnGenerate2"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
             data1.Columns["ID"].Visible = false;
         }
 

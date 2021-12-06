@@ -38,7 +38,6 @@ namespace testing
             //ID.Clear();
             data1.Rows.Clear();
             data1.Columns.Clear();
-            data1.Visible = false;
 
             data1.Columns.Add("no", "No.");
             data1.Columns.Add("id", "ID.");
@@ -46,11 +45,17 @@ namespace testing
             data1.Columns.Add("dtls", "Position 1");
             data1.Columns.Add("date", "Position 2");
 
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.HeaderText = "Action";
+            //btn.Name = "btnGenerate";
+            //btn.Text = "View/Edit";
+            //btn.UseColumnTextForButtonValue = true;
+            //data1.Columns.Add(btn);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
             btn.HeaderText = "Action";
             btn.Name = "btnGenerate";
-            btn.Text = "View/Edit";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Image = Properties.Resources.edit_icon;
             data1.Columns.Add(btn);
 
             data1.Columns["ID"].Visible = false;
@@ -96,7 +101,6 @@ namespace testing
 
                 data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 data1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                data1.Visible = true;
             }
             catch (Exception ex)
             {

@@ -75,7 +75,7 @@ namespace testing
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data1.DefaultCellStyle = dataGridViewCellStyle3;
             this.data1.EnableHeadersVisualStyles = false;
-            this.data1.Location = new System.Drawing.Point(12, 125);
+            this.data1.Location = new System.Drawing.Point(12, 157);
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -90,7 +90,7 @@ namespace testing
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data1.Size = new System.Drawing.Size(1176, 671);
+            this.data1.Size = new System.Drawing.Size(1176, 639);
             this.data1.TabIndex = 0;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data1_CellClick);
             // 

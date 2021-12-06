@@ -90,28 +90,33 @@ namespace testing
         {
             try
             {
+                if (tbIdentities.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                DateTime dateToday = DateTime.Now;
+                    var uri = host.IP() + "/iBar/ibar_gender_insert.php";
 
-                var uri = host.IP() + "/iBar/ibar_gender_insert.php";
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Identities"] = tbIdentities.Text;
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["Identities"] = tbIdentities.Text;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                    MessageBox.Show("Unable to Add.");
                 }
             }
             catch (Exception ex)
@@ -129,30 +134,35 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
+                if (ID !="" && tbIdentities.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                var uri = host.IP() + "/iBar/ibar_gender_update.php";
+                    var uri = host.IP() + "/iBar/ibar_gender_update.php";
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
-                    datas["Identities"] = tbIdentities.Text;
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["Identities"] = tbIdentities.Text;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Update Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show("Unable to Update.");
                 }
-
             }
             catch (Exception ex)
             {
@@ -170,29 +180,35 @@ namespace testing
         {
             try
             {
-                DateTime dateToday = DateTime.Now;
-
-                var uri = host.IP() + "/iBar/ibar_gender_delete.php";
-
-                string responseFromServer;
-                using (var wb = new WebClient())
+                if (ID != "")
                 {
-                    var datas = new NameValueCollection();
-                    datas["ID"] = ID;
+                    DateTime dateToday = DateTime.Now;
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
+                    var uri = host.IP() + "/iBar/ibar_gender_delete.php";
 
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Delete Successfully");
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Delete Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Delete Failed " + responseFromServer);
+                    MessageBox.Show("Unable to Delete.");
                 }
-
             }
             catch (Exception ex)
             {

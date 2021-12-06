@@ -98,7 +98,7 @@ namespace testing
         {
             try
             {
-
+                if (tbItemName.Text != "" && tbDelivery.Text != "" && tbQuantity.Text != "") {
                     DateTime dateToday = DateTime.Now;
 
                     var uri = host.IP() + "/iBar/ibar_items_insert.php";
@@ -123,6 +123,11 @@ namespace testing
                     {
                         MessageBox.Show("Insert Failed " + responseFromServer);
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Unable to Add.");
+                }
             }
             catch (Exception ex)
             {
@@ -163,8 +168,6 @@ namespace testing
         private void LoadSpecific(String id)
         {
             ID = id;
-            MessageBox.Show(id+"");
-
             try
             {
 

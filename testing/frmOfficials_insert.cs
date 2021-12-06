@@ -24,32 +24,36 @@ namespace testing
         {
             try
             {
+                if (tbFullname.Text != "") {
+                    DateTime dateToday = DateTime.Now;
 
-                DateTime dateToday = DateTime.Now;
+                    var uri = host.IP() + "/iBar/ibar_official_insert.php";
 
-                var uri = host.IP() +"/iBar/ibar_official_insert.php";
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Fname"] = tbFullname.Text;
+                        datas["Position1"] = tbPos1.Text;
+                        datas["Position2"] = tbPost2.Text;
 
-                string responseFromServer;
-                using (var wb = new WebClient())
-                {
-                    var datas = new NameValueCollection();
-                    datas["Fname"] = tbFullname.Text;
-                    datas["Position1"] = tbPos1.Text;
-                    datas["Position2"] = tbPost2.Text;
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
 
-                    var response = wb.UploadValues(uri, "POST", datas);
-                    responseFromServer = Encoding.UTF8.GetString(response);
-                }
-
-                if (responseFromServer == "Operation Success")
-                {
-                    MessageBox.Show("Insert Successfully");
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Insert Failed " + responseFromServer);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Insert Failed " + responseFromServer);
+                    MessageBox.Show("Please enter a valid name.");
                 }
-
             }
             catch (Exception ex)
             {

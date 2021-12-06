@@ -939,6 +939,8 @@
     <None Include="Resources\house.png" />
     <None Include="Resources\kyc.png" />
     <None Include="Resources\people.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\upload %281%29.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

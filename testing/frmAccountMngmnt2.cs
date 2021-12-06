@@ -3,6 +3,8 @@ using FirebaseAdmin.Messaging;
 using Google.Apis.Auth.OAuth2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,6 +13,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,8 +22,9 @@ namespace testing
 {
     public partial class frmAccountMngmnt2 : Form
     {
-        csHostConfiguration host = new csHostConfiguration();
-        String ID, resUsername="";
+        private csHostConfiguration host = new csHostConfiguration();
+        private csApiKey api = new csApiKey();
+        private String ID, resUsername="";
 
         public frmAccountMngmnt2(String id)
         {
@@ -32,6 +36,13 @@ namespace testing
         {
             loadComboBox();
             SelectData();
+            SelectApiKey();
+
+            if (label2.Visible == false)
+            {
+                label6.Location = new Point(25, 109);
+                cbAccountStat.Location = new Point(150, 102);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -67,7 +78,6 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Update Successfully");
-                        this.Close();
                     }
                     else
                     {
@@ -119,6 +129,7 @@ namespace testing
                         lblContact.Text = jo["ContactNo"].ToString();
                         lblCivilstat.Text = jo["CivilStatus"].ToString();
                         lblDoR.Text = jo["DateOfRegistration"].ToString();
+                        lblEmail.Text = jo["Email"].ToString();
 
                         tbUsername.Text = jo["Username"].ToString();
                         resUsername = jo["Username"].ToString();
@@ -144,16 +155,68 @@ namespace testing
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
+        }
+
+        private async void SelectApiKey() {
+
+            try
+            {
+
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_getapikey.php";
+                string responseBody = await client.GetStringAsync(uri);
+
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
+                if (success == "1")
+                {
+                    foreach (var jo in (JArray)((JObject)data)["info"])
+                    {
+                        api.setSendGridKey(jo["ApiKey"].ToString());
+                        api.loadKeys();
+                    }
+                }
+                else if (success == "0")
+                {
+                    cbEmail.Enabled = false;
+                    cbNotification.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         //Send Notification
         private void btnPush_Click(object sender, EventArgs e)
         {
-            btnUpdate_Click(sender, e);
-            SendNotif(resUsername, cbValid.SelectedItem.ToString(), rbMessage.Text);
+            if (rbMessage.Text != "") {
+                if (cbNotification.Checked == true || cbEmail.Checked == true) {
+                    btnUpdate_Click(sender, e);
+                    if (cbNotification.Checked == true) {
+                        SendNotif(resUsername, cbValid.SelectedItem.ToString(), rbMessage.Text);
+                    }
+
+                    if (cbEmail.Checked == true)
+                    {
+                        SendEmail(lblEmail.Text, cbValid.SelectedItem.ToString(), rbMessage.Text);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please check atleast one(1) category of notification!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a message.");
+            }
         }
+
+
         private void SendNotif(string username, string Stat, string Message)
         {
             try
@@ -170,7 +233,7 @@ namespace testing
                 {
                     Notification = new Notification()
                     {
-                        Title = "Verification Info.",
+                        Title = "Account Validation Info.",
                         Body = "Status: " + Stat +"\nInformation: " + Message
                     },
                     Topic = topic
@@ -181,8 +244,40 @@ namespace testing
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Something went wrong with push notification.");
             }
+        }
+
+        public async void SendEmail(string email, string Stat , string Message)
+        {
+            try
+            {
+                var client = new SendGridClient(api.getSendGridKey());
+                var msg = new SendGridMessage()
+                {
+
+                    From = new EmailAddress(api.getSendGridEmail(), "iBarangay"),
+                    Subject = "Account Validation Info.",
+                    PlainTextContent = "Account Validation \n Status: " + Stat + "Information: " + Message,
+                    HtmlContent = "<h3> Account Validation</h3> <br><strong>Status:</strong> " + Stat + "<br><strong>Information: </strong>" + Message
+                };
+
+                msg.AddTo(new EmailAddress(lblEmail.Text, "Test-user"));
+                var response = await client.SendEmailAsync(msg);
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Successfully send an email.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to send an email.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wrong with sending email.");
+            }
+
         }
 
         //

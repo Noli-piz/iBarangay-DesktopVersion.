@@ -38,138 +38,156 @@ namespace testing
             this.btnBarangay = new System.Windows.Forms.Button();
             this.btnAnnouncement = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.White;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogout.FlatAppearance.BorderSize = 3;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(12, 774);
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(74, 895);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(223, 55);
+            this.btnLogout.Size = new System.Drawing.Size(300, 55);
             this.btnLogout.TabIndex = 21;
             this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnMain
             // 
-            this.btnMain.BackColor = System.Drawing.Color.White;
-            this.btnMain.FlatAppearance.BorderSize = 0;
+            this.btnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnMain.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnMain.FlatAppearance.BorderSize = 3;
+            this.btnMain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.Location = new System.Drawing.Point(12, 698);
+            this.btnMain.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.ForeColor = System.Drawing.Color.White;
+            this.btnMain.Location = new System.Drawing.Point(74, 818);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(223, 55);
+            this.btnMain.Size = new System.Drawing.Size(300, 55);
             this.btnMain.TabIndex = 20;
             this.btnMain.Text = "Maintenance Module";
+            this.btnMain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMain.UseVisualStyleBackColor = false;
             this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // btnGReports
             // 
-            this.btnGReports.BackColor = System.Drawing.Color.White;
-            this.btnGReports.FlatAppearance.BorderSize = 0;
+            this.btnGReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnGReports.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGReports.FlatAppearance.BorderSize = 3;
+            this.btnGReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGReports.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGReports.Location = new System.Drawing.Point(12, 621);
+            this.btnGReports.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGReports.ForeColor = System.Drawing.Color.White;
+            this.btnGReports.Location = new System.Drawing.Point(74, 742);
             this.btnGReports.Name = "btnGReports";
-            this.btnGReports.Size = new System.Drawing.Size(223, 55);
+            this.btnGReports.Size = new System.Drawing.Size(300, 55);
             this.btnGReports.TabIndex = 19;
             this.btnGReports.Text = "Generate Reports";
+            this.btnGReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGReports.UseVisualStyleBackColor = false;
             this.btnGReports.Click += new System.EventHandler(this.btnGReports_Click);
             // 
             // btnAccount
             // 
-            this.btnAccount.BackColor = System.Drawing.Color.White;
-            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnAccount.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAccount.FlatAppearance.BorderSize = 3;
+            this.btnAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.Location = new System.Drawing.Point(12, 545);
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.Location = new System.Drawing.Point(74, 666);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(223, 55);
+            this.btnAccount.Size = new System.Drawing.Size(300, 55);
             this.btnAccount.TabIndex = 18;
-            this.btnAccount.Text = "Account Mgmt";
+            this.btnAccount.Text = "Account Management";
+            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccount.UseVisualStyleBackColor = false;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnUser
             // 
-            this.btnUser.BackColor = System.Drawing.Color.White;
-            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnUser.FlatAppearance.BorderSize = 3;
+            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.Location = new System.Drawing.Point(12, 469);
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.Location = new System.Drawing.Point(74, 590);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(223, 55);
+            this.btnUser.Size = new System.Drawing.Size(300, 55);
             this.btnUser.TabIndex = 17;
-            this.btnUser.Text = "User Mgmt";
+            this.btnUser.Text = "User Management";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnBarangay
             // 
-            this.btnBarangay.BackColor = System.Drawing.Color.White;
-            this.btnBarangay.FlatAppearance.BorderSize = 0;
+            this.btnBarangay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnBarangay.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBarangay.FlatAppearance.BorderSize = 3;
+            this.btnBarangay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBarangay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBarangay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBarangay.Location = new System.Drawing.Point(12, 389);
+            this.btnBarangay.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarangay.ForeColor = System.Drawing.Color.White;
+            this.btnBarangay.Location = new System.Drawing.Point(74, 514);
             this.btnBarangay.Name = "btnBarangay";
-            this.btnBarangay.Size = new System.Drawing.Size(223, 55);
+            this.btnBarangay.Size = new System.Drawing.Size(300, 55);
             this.btnBarangay.TabIndex = 16;
             this.btnBarangay.Text = "Barangay Officials";
+            this.btnBarangay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBarangay.UseVisualStyleBackColor = false;
             this.btnBarangay.Click += new System.EventHandler(this.btnBarangay_Click);
             // 
             // btnAnnouncement
             // 
-            this.btnAnnouncement.BackColor = System.Drawing.Color.White;
-            this.btnAnnouncement.FlatAppearance.BorderSize = 0;
+            this.btnAnnouncement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnAnnouncement.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAnnouncement.FlatAppearance.BorderSize = 3;
+            this.btnAnnouncement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAnnouncement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnnouncement.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnouncement.Location = new System.Drawing.Point(12, 313);
+            this.btnAnnouncement.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnouncement.ForeColor = System.Drawing.Color.White;
+            this.btnAnnouncement.Location = new System.Drawing.Point(74, 438);
             this.btnAnnouncement.Name = "btnAnnouncement";
-            this.btnAnnouncement.Size = new System.Drawing.Size(223, 55);
+            this.btnAnnouncement.Size = new System.Drawing.Size(300, 55);
             this.btnAnnouncement.TabIndex = 15;
             this.btnAnnouncement.Text = "Announcement";
+            this.btnAnnouncement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnnouncement.UseVisualStyleBackColor = false;
             this.btnAnnouncement.Click += new System.EventHandler(this.btnAnnouncement_Click);
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(12, 238);
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(74, 362);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(223, 55);
+            this.btnHome.Size = new System.Drawing.Size(300, 55);
             this.btnHome.TabIndex = 14;
             this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = global::testing.Properties.Resources.Balangkas_Logo;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(166, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -178,44 +196,60 @@ namespace testing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(233, -2);
+            this.panel1.Location = new System.Drawing.Point(368, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1252, 848);
+            this.panel1.Size = new System.Drawing.Size(1347, 1058);
             this.panel1.TabIndex = 1;
             // 
             // lblName
             // 
-            this.lblName.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(0, 199);
+            this.lblName.Location = new System.Drawing.Point(0, 297);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(227, 28);
+            this.lblName.Size = new System.Drawing.Size(370, 28);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblUsername
             // 
-            this.lblUsername.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblUsername.BackColor = System.Drawing.Color.White;
             this.lblUsername.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(0, 165);
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(0, 254);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(227, 32);
+            this.lblUsername.Size = new System.Drawing.Size(370, 37);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = global::testing.Properties.Resources.Balangkas_Logo;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(361, 196);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
             // frmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::testing.Properties.Resources.greenlantern;
-            this.ClientSize = new System.Drawing.Size(1480, 848);
+            this.ClientSize = new System.Drawing.Size(1715, 1055);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogout);
@@ -230,7 +264,7 @@ namespace testing
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1498, 895);
+            this.MinimumSize = new System.Drawing.Size(1418, 978);
             this.Name = "frmMenuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "iBarangay";
@@ -250,9 +284,9 @@ namespace testing
         private System.Windows.Forms.Button btnBarangay;
         private System.Windows.Forms.Button btnAnnouncement;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

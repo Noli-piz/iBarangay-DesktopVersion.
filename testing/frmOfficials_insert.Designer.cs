@@ -230,6 +230,9 @@ namespace testing
             this.Controls.Add(this.tbPost2);
             this.Controls.Add(this.tbPos1);
             this.Controls.Add(this.tbFullname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmOfficials_insert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Official";

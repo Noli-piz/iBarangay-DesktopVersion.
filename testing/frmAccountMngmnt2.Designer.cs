@@ -50,6 +50,8 @@ namespace testing
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.cbNotification = new System.Windows.Forms.CheckBox();
+            this.cbEmail = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.rbMessage = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.btnPush = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -76,10 +78,8 @@ namespace testing
             this.label10 = new System.Windows.Forms.Label();
             this.pbProfile = new System.Windows.Forms.PictureBox();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.cbEmail = new System.Windows.Forms.CheckBox();
-            this.cbNotification = new System.Windows.Forms.CheckBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage2)).BeginInit();
             this.materialCard1.SuspendLayout();
@@ -324,6 +324,26 @@ namespace testing
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(607, 512);
             this.materialCard1.TabIndex = 23;
+            // 
+            // cbNotification
+            // 
+            this.cbNotification.AutoSize = true;
+            this.cbNotification.Location = new System.Drawing.Point(302, 401);
+            this.cbNotification.Name = "cbNotification";
+            this.cbNotification.Size = new System.Drawing.Size(197, 21);
+            this.cbNotification.TabIndex = 26;
+            this.cbNotification.Text = "Send Via Push Notification";
+            this.cbNotification.UseVisualStyleBackColor = true;
+            // 
+            // cbEmail
+            // 
+            this.cbEmail.AutoSize = true;
+            this.cbEmail.Location = new System.Drawing.Point(302, 362);
+            this.cbEmail.Name = "cbEmail";
+            this.cbEmail.Size = new System.Drawing.Size(125, 21);
+            this.cbEmail.TabIndex = 25;
+            this.cbEmail.Text = "Send Via Email";
+            this.cbEmail.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
@@ -794,25 +814,15 @@ namespace testing
             this.materialCard3.Size = new System.Drawing.Size(607, 303);
             this.materialCard3.TabIndex = 27;
             // 
-            // cbEmail
+            // lblEmail
             // 
-            this.cbEmail.AutoSize = true;
-            this.cbEmail.Location = new System.Drawing.Point(302, 362);
-            this.cbEmail.Name = "cbEmail";
-            this.cbEmail.Size = new System.Drawing.Size(125, 21);
-            this.cbEmail.TabIndex = 25;
-            this.cbEmail.Text = "Send Via Email";
-            this.cbEmail.UseVisualStyleBackColor = true;
-            // 
-            // cbNotification
-            // 
-            this.cbNotification.AutoSize = true;
-            this.cbNotification.Location = new System.Drawing.Point(302, 401);
-            this.cbNotification.Name = "cbNotification";
-            this.cbNotification.Size = new System.Drawing.Size(197, 21);
-            this.cbNotification.TabIndex = 26;
-            this.cbNotification.Text = "Send Via Push Notification";
-            this.cbNotification.UseVisualStyleBackColor = true;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(205, 26);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(59, 28);
+            this.lblEmail.TabIndex = 15;
+            this.lblEmail.Text = "Email";
             // 
             // label20
             // 
@@ -823,16 +833,6 @@ namespace testing
             this.label20.Size = new System.Drawing.Size(63, 28);
             this.label20.TabIndex = 14;
             this.label20.Text = "Email:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(205, 26);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(59, 28);
-            this.lblEmail.TabIndex = 15;
-            this.lblEmail.Text = "Email";
             // 
             // frmAccountMngmnt2
             // 
@@ -845,7 +845,9 @@ namespace testing
             this.Controls.Add(this.materialCard3);
             this.Controls.Add(this.materialCard2);
             this.Controls.Add(this.materialCard1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAccountMngmnt2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Account Management";

@@ -369,7 +369,9 @@ namespace testing
             this.Controls.Add(this.btnHide3);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbLevelOfAccess);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUserMngmnt3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update User";

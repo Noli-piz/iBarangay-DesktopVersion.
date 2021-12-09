@@ -389,7 +389,9 @@ namespace testing
             this.Controls.Add(this.btnSearch1);
             this.Controls.Add(this.tbSearch1);
             this.Controls.Add(this.materialCard1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBlotterRec3Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Assailants";

@@ -168,6 +168,9 @@ namespace testing
                         datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
                         datas["Level"] = cbLevel.SelectedItem.ToString();
 
+                        csUser user = new csUser();
+                        datas["UserID"] = user.strID();
+
                         var response = wb.UploadValues(uri, "POST", datas);
                         responseFromServer = Encoding.UTF8.GetString(response);
                     }

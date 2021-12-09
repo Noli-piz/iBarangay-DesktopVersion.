@@ -435,7 +435,7 @@ namespace testing
             this.Controls.Add(this.dtStartDate);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.tbTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAppoint_update";

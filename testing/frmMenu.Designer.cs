@@ -52,164 +52,186 @@ namespace testing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(235, -2);
+            this.panel1.Location = new System.Drawing.Point(368, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1250, 850);
+            this.panel1.Size = new System.Drawing.Size(1347, 1058);
             this.panel1.TabIndex = 1;
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.BorderSize = 3;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(12, 234);
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(74, 362);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(228, 55);
+            this.btnHome.Size = new System.Drawing.Size(300, 55);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnResident
             // 
-            this.btnResident.BackColor = System.Drawing.Color.White;
+            this.btnResident.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnResident.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnResident.FlatAppearance.BorderSize = 0;
+            this.btnResident.FlatAppearance.BorderSize = 3;
+            this.btnResident.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnResident.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResident.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResident.Location = new System.Drawing.Point(12, 309);
+            this.btnResident.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResident.ForeColor = System.Drawing.Color.White;
+            this.btnResident.Location = new System.Drawing.Point(74, 438);
             this.btnResident.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnResident.Name = "btnResident";
-            this.btnResident.Size = new System.Drawing.Size(228, 55);
+            this.btnResident.Size = new System.Drawing.Size(300, 55);
             this.btnResident.TabIndex = 2;
             this.btnResident.Text = "Resident Records";
+            this.btnResident.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResident.UseVisualStyleBackColor = false;
             this.btnResident.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBlotter
             // 
-            this.btnBlotter.BackColor = System.Drawing.Color.White;
+            this.btnBlotter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnBlotter.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBlotter.FlatAppearance.BorderSize = 0;
+            this.btnBlotter.FlatAppearance.BorderSize = 3;
+            this.btnBlotter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBlotter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlotter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlotter.Location = new System.Drawing.Point(12, 385);
+            this.btnBlotter.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlotter.ForeColor = System.Drawing.Color.White;
+            this.btnBlotter.Location = new System.Drawing.Point(74, 514);
             this.btnBlotter.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnBlotter.Name = "btnBlotter";
-            this.btnBlotter.Size = new System.Drawing.Size(228, 55);
+            this.btnBlotter.Size = new System.Drawing.Size(300, 55);
             this.btnBlotter.TabIndex = 3;
             this.btnBlotter.Text = "Blotter Records";
+            this.btnBlotter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBlotter.UseVisualStyleBackColor = false;
             this.btnBlotter.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnIssue
             // 
-            this.btnIssue.BackColor = System.Drawing.Color.White;
+            this.btnIssue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnIssue.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnIssue.FlatAppearance.BorderSize = 0;
+            this.btnIssue.FlatAppearance.BorderSize = 3;
+            this.btnIssue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIssue.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssue.Location = new System.Drawing.Point(12, 465);
+            this.btnIssue.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssue.ForeColor = System.Drawing.Color.White;
+            this.btnIssue.Location = new System.Drawing.Point(74, 590);
             this.btnIssue.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnIssue.Name = "btnIssue";
-            this.btnIssue.Size = new System.Drawing.Size(228, 55);
+            this.btnIssue.Size = new System.Drawing.Size(300, 55);
             this.btnIssue.TabIndex = 4;
             this.btnIssue.Text = "Issue Certificate";
+            this.btnIssue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIssue.UseVisualStyleBackColor = false;
             this.btnIssue.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnRequest
             // 
-            this.btnRequest.BackColor = System.Drawing.Color.White;
+            this.btnRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRequest.FlatAppearance.BorderSize = 0;
+            this.btnRequest.FlatAppearance.BorderSize = 3;
+            this.btnRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequest.Location = new System.Drawing.Point(12, 541);
+            this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequest.ForeColor = System.Drawing.Color.White;
+            this.btnRequest.Location = new System.Drawing.Point(74, 666);
             this.btnRequest.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(228, 55);
+            this.btnRequest.Size = new System.Drawing.Size(300, 55);
             this.btnRequest.TabIndex = 5;
             this.btnRequest.Text = "Request Module";
+            this.btnRequest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRequest.UseVisualStyleBackColor = false;
             this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnMisService
             // 
-            this.btnMisService.BackColor = System.Drawing.Color.White;
+            this.btnMisService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.btnMisService.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMisService.FlatAppearance.BorderSize = 0;
+            this.btnMisService.FlatAppearance.BorderSize = 3;
+            this.btnMisService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnMisService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMisService.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMisService.Location = new System.Drawing.Point(12, 617);
+            this.btnMisService.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisService.ForeColor = System.Drawing.Color.White;
+            this.btnMisService.Location = new System.Drawing.Point(74, 742);
             this.btnMisService.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnMisService.Name = "btnMisService";
-            this.btnMisService.Size = new System.Drawing.Size(228, 55);
+            this.btnMisService.Size = new System.Drawing.Size(300, 55);
             this.btnMisService.TabIndex = 6;
             this.btnMisService.Text = "Miscellaneous Services";
+            this.btnMisService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMisService.UseVisualStyleBackColor = false;
             this.btnMisService.Click += new System.EventHandler(this.btnMisService_Click);
             // 
             // tbnAppointment
             // 
-            this.tbnAppointment.BackColor = System.Drawing.Color.White;
+            this.tbnAppointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.tbnAppointment.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.tbnAppointment.FlatAppearance.BorderSize = 0;
+            this.tbnAppointment.FlatAppearance.BorderSize = 3;
+            this.tbnAppointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.tbnAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbnAppointment.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnAppointment.Location = new System.Drawing.Point(12, 691);
+            this.tbnAppointment.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnAppointment.ForeColor = System.Drawing.Color.White;
+            this.tbnAppointment.Location = new System.Drawing.Point(74, 818);
             this.tbnAppointment.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.tbnAppointment.Name = "tbnAppointment";
-            this.tbnAppointment.Size = new System.Drawing.Size(228, 55);
+            this.tbnAppointment.Size = new System.Drawing.Size(300, 55);
             this.tbnAppointment.TabIndex = 7;
             this.tbnAppointment.Text = "Appointment";
+            this.tbnAppointment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tbnAppointment.UseVisualStyleBackColor = false;
             this.tbnAppointment.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
             this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.BorderSize = 3;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(12, 770);
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(74, 895);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(228, 55);
+            this.button8.Size = new System.Drawing.Size(300, 55);
             this.button8.TabIndex = 8;
             this.button8.Text = "Logout";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // lblUsername
             // 
-            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.BackColor = System.Drawing.Color.White;
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(0, 165);
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(0, 254);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(229, 32);
+            this.lblUsername.Size = new System.Drawing.Size(365, 37);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblUsername.Visible = false;
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblName
             // 
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(0, 199);
+            this.lblName.Location = new System.Drawing.Point(0, 297);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(229, 28);
+            this.lblName.Size = new System.Drawing.Size(370, 28);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblName.Visible = false;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -218,9 +240,9 @@ namespace testing
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::testing.Properties.Resources.Balangkas_Logo;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(40, 22);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 140);
+            this.pictureBox2.Size = new System.Drawing.Size(361, 196);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -229,9 +251,9 @@ namespace testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::testing.Properties.Resources.greenlantern;
-            this.ClientSize = new System.Drawing.Size(1480, 848);
+            this.ClientSize = new System.Drawing.Size(1715, 1055);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);
@@ -246,7 +268,7 @@ namespace testing
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1498, 895);
+            this.MinimumSize = new System.Drawing.Size(1418, 978);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "iBarangay";

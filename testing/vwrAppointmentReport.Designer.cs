@@ -46,6 +46,10 @@ namespace testing
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
+            // rptAppointmentReport1
+            // 
+            this.rptAppointmentReport1.InitReport += new System.EventHandler(this.rptAppointmentReport1_InitReport);
+            // 
             // vwrAppointmentReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

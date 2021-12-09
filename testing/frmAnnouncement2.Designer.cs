@@ -40,13 +40,14 @@ namespace testing
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblHistory = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbLevel
             // 
             this.cbLevel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLevel.FormattingEnabled = true;
-            this.cbLevel.Location = new System.Drawing.Point(23, 215);
+            this.cbLevel.Location = new System.Drawing.Point(22, 227);
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(410, 36);
             this.cbLevel.TabIndex = 28;
@@ -55,7 +56,7 @@ namespace testing
             // 
             this.dtDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDate.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDate.Location = new System.Drawing.Point(24, 130);
+            this.dtDate.Location = new System.Drawing.Point(23, 142);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(409, 38);
             this.dtDate.TabIndex = 27;
@@ -64,7 +65,7 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 184);
+            this.label4.Location = new System.Drawing.Point(18, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 28);
             this.label4.TabIndex = 26;
@@ -74,7 +75,7 @@ namespace testing
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 99);
+            this.label3.Location = new System.Drawing.Point(18, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 28);
             this.label3.TabIndex = 25;
@@ -84,7 +85,7 @@ namespace testing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 278);
+            this.label2.Location = new System.Drawing.Point(18, 290);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 28);
             this.label2.TabIndex = 24;
@@ -94,7 +95,7 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 20);
+            this.label1.Location = new System.Drawing.Point(18, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 28);
             this.label1.TabIndex = 23;
@@ -103,7 +104,7 @@ namespace testing
             // rbDetails
             // 
             this.rbDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDetails.Location = new System.Drawing.Point(23, 309);
+            this.rbDetails.Location = new System.Drawing.Point(22, 321);
             this.rbDetails.Name = "rbDetails";
             this.rbDetails.Size = new System.Drawing.Size(560, 237);
             this.rbDetails.TabIndex = 22;
@@ -112,7 +113,7 @@ namespace testing
             // tbSubject
             // 
             this.tbSubject.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSubject.Location = new System.Drawing.Point(24, 51);
+            this.tbSubject.Location = new System.Drawing.Point(23, 63);
             this.tbSubject.Name = "tbSubject";
             this.tbSubject.Size = new System.Drawing.Size(409, 38);
             this.tbSubject.TabIndex = 21;
@@ -303,12 +304,25 @@ namespace testing
             this.btnUpdate.Values.Text = "SAVE";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // lblHistory
+            // 
+            this.lblHistory.AutoSize = true;
+            this.lblHistory.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistory.ForeColor = System.Drawing.Color.Blue;
+            this.lblHistory.Location = new System.Drawing.Point(510, 18);
+            this.lblHistory.Name = "lblHistory";
+            this.lblHistory.Size = new System.Drawing.Size(94, 19);
+            this.lblHistory.TabIndex = 34;
+            this.lblHistory.Text = "[View History]";
+            this.lblHistory.Click += new System.EventHandler(this.lblHistory_Click);
+            // 
             // frmAnnouncement2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(616, 689);
+            this.Controls.Add(this.lblHistory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -320,7 +334,9 @@ namespace testing
             this.Controls.Add(this.dtDate);
             this.Controls.Add(this.rbDetails);
             this.Controls.Add(this.tbSubject);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAnnouncement2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update Announcement";
@@ -342,5 +358,6 @@ namespace testing
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdate;
+        private System.Windows.Forms.Label lblHistory;
     }
 }

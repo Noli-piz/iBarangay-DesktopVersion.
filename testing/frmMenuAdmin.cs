@@ -105,6 +105,14 @@ namespace testing
             frm.Show();
         }
 
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

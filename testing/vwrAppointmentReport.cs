@@ -33,6 +33,11 @@ namespace testing
             loadData();
         }
 
+        private void rptAppointmentReport1_InitReport(object sender, EventArgs e)
+        {
+
+        }
+
         private async void loadData()
         {
             try

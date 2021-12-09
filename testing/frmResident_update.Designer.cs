@@ -726,7 +726,9 @@ namespace testing
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialCard2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1052, 766);
             this.Name = "frmResident_update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

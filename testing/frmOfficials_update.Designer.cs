@@ -297,6 +297,9 @@ namespace testing
             this.Controls.Add(this.tbPos2);
             this.Controls.Add(this.tbPos1);
             this.Controls.Add(this.tbFullname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmOfficials_update";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -63,12 +63,13 @@ namespace testing
 
                 data1.Columns.Add("no", "No.");
                 data1.Columns.Add("id", "ID.");
-                data1.Columns.Add("sbjct", "Fullname");
-                data1.Columns.Add("dtls", "Name");
+                data1.Columns.Add("sbjct", "Processed By");
+                data1.Columns.Add("dtls", "Processed For");
                 data1.Columns.Add("date", "Types");
                 data1.Columns.Add("lvl", "Purpose");
                 data1.Columns.Add("lvl", "Date");
 
+                data1.Columns["id"].Visible = false;
 
                 var uri = host.IP() + "/iBar/ibar_reportissuance.php";
 
@@ -132,16 +133,18 @@ namespace testing
                 data1.Rows.Clear();
                 data1.Columns.Clear();
 
-                data1.Columns.Add("", "No.");
-                data1.Columns.Add("", "ID.");
-                data1.Columns.Add("", "Fullname");
+                data1.Columns.Add("no", "No.");
+                data1.Columns.Add("id", "ID.");
+                data1.Columns.Add("", "Processed By");
                 data1.Columns.Add("", "Username");
-                data1.Columns.Add("", "Name");
+                data1.Columns.Add("", "Processed For");
                 data1.Columns.Add("", "Purpose");
-                data1.Columns.Add("", "DateOfRequest");
+                data1.Columns.Add("", "Requested Date");
                 data1.Columns.Add("", "Status");
-                data1.Columns.Add("", "Option");
+                data1.Columns.Add("", "Delivery Opt.");
                 data1.Columns.Add("", "Date");
+
+                data1.Columns["id"].Visible = false;
 
 
                 var uri = host.IP() + "/iBar/ibar_reportrequest.php";
@@ -210,16 +213,16 @@ namespace testing
                 data1.Columns.Clear();
 
                 data1.Columns.Add("", "No.");
-                data1.Columns.Add("", "ID.");
+                data1.Columns.Add("id", "ID.");
                 data1.Columns.Add("", "Fullname");
                 data1.Columns.Add("", "Title");
                 data1.Columns.Add("", "Name");
-                data1.Columns.Add("", "apDate");
-                data1.Columns.Add("", "Start Time");
-                data1.Columns.Add("", "End Time");
+                data1.Columns.Add("", "Start Date");
+                data1.Columns.Add("", "End Date");
                 data1.Columns.Add("", "Details");
-                data1.Columns.Add("", "Status");
-                data1.Columns.Add("", "Date");
+                data1.Columns.Add("", "Action Taken");
+                data1.Columns.Add("", "Modified Date");
+                data1.Columns["id"].Visible = false;
 
 
                 var uri = host.IP() + "/iBar/ibar_reportappointment.php";
@@ -254,7 +257,6 @@ namespace testing
                         AL.Add(jo["Fullname"]);
                         AL.Add(jo["Title"]);
                         AL.Add(jo["Name"]);
-                        AL.Add(jo["apDate"]);
                         AL.Add(jo["StartTime"]);
                         AL.Add(jo["EndTime"]);
                         AL.Add(jo["Details"]);

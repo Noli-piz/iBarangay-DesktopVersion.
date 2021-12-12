@@ -68,6 +68,8 @@ namespace testing
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbMname = new System.Windows.Forms.TextBox();
+            this.rbHouseNoAndStreet = new System.Windows.Forms.RichTextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,9 +78,10 @@ namespace testing
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 47);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 249);
+            this.pictureBox1.Size = new System.Drawing.Size(218, 203);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -86,16 +89,18 @@ namespace testing
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(155, 166);
+            this.lblProgress.Location = new System.Drawing.Point(116, 135);
+            this.lblProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(65, 17);
+            this.lblProgress.Size = new System.Drawing.Size(48, 13);
             this.lblProgress.TabIndex = 37;
             this.lblProgress.Text = "Progress";
             this.lblProgress.Visible = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(36, 645);
+            this.btnCancel.Location = new System.Drawing.Point(23, 568);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnCancel.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -114,7 +119,7 @@ namespace testing
             this.btnCancel.OverrideDefault.Content.ShortText.ColorAngle = 145F;
             this.btnCancel.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnCancel.Size = new System.Drawing.Size(153, 50);
+            this.btnCancel.Size = new System.Drawing.Size(115, 41);
             this.btnCancel.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnCancel.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCancel.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -159,7 +164,8 @@ namespace testing
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(829, 645);
+            this.btnSubmit.Location = new System.Drawing.Point(786, 568);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnSubmit.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -177,7 +183,7 @@ namespace testing
             this.btnSubmit.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnSubmit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnSubmit.Size = new System.Drawing.Size(153, 50);
+            this.btnSubmit.Size = new System.Drawing.Size(115, 41);
             this.btnSubmit.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnSubmit.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnSubmit.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -220,7 +226,8 @@ namespace testing
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(650, 645);
+            this.btnClear.Location = new System.Drawing.Point(652, 568);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -239,7 +246,7 @@ namespace testing
             this.btnClear.OverrideDefault.Content.ShortText.ColorAngle = 145F;
             this.btnClear.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnClear.Size = new System.Drawing.Size(153, 50);
+            this.btnClear.Size = new System.Drawing.Size(115, 41);
             this.btnClear.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnClear.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnClear.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -286,17 +293,18 @@ namespace testing
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(19, 42);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Location = new System.Drawing.Point(14, 34);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(324, 476);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard1.Size = new System.Drawing.Size(243, 387);
             this.materialCard1.TabIndex = 41;
             // 
             // btnCapture
             // 
-            this.btnCapture.Location = new System.Drawing.Point(189, 369);
+            this.btnCapture.Location = new System.Drawing.Point(142, 300);
+            this.btnCapture.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
             this.btnCapture.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
@@ -306,7 +314,7 @@ namespace testing
             this.btnCapture.OverrideDefault.Border.Rounding = 5;
             this.btnCapture.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnCapture.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapture.Size = new System.Drawing.Size(139, 48);
+            this.btnCapture.Size = new System.Drawing.Size(104, 39);
             this.btnCapture.StateCommon.Back.Color1 = System.Drawing.Color.Green;
             this.btnCapture.StateCommon.Back.Color2 = System.Drawing.Color.Green;
             this.btnCapture.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -325,7 +333,8 @@ namespace testing
             // 
             // btnOpenCamera
             // 
-            this.btnOpenCamera.Location = new System.Drawing.Point(38, 369);
+            this.btnOpenCamera.Location = new System.Drawing.Point(28, 300);
+            this.btnOpenCamera.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenCamera.Name = "btnOpenCamera";
             this.btnOpenCamera.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
             this.btnOpenCamera.OverrideDefault.Back.Color2 = System.Drawing.Color.Red;
@@ -335,7 +344,7 @@ namespace testing
             this.btnOpenCamera.OverrideDefault.Border.Rounding = 5;
             this.btnOpenCamera.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnOpenCamera.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenCamera.Size = new System.Drawing.Size(145, 48);
+            this.btnOpenCamera.Size = new System.Drawing.Size(109, 39);
             this.btnOpenCamera.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.btnOpenCamera.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.btnOpenCamera.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -362,15 +371,17 @@ namespace testing
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(169, 425);
+            this.label15.Location = new System.Drawing.Point(127, 345);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 17);
+            this.label15.Size = new System.Drawing.Size(16, 13);
             this.label15.TabIndex = 44;
             this.label15.Text = "or";
             // 
             // btnChooseFile
             // 
-            this.btnChooseFile.Location = new System.Drawing.Point(38, 450);
+            this.btnChooseFile.Location = new System.Drawing.Point(28, 366);
+            this.btnChooseFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnChooseFile.Name = "btnChooseFile";
             this.btnChooseFile.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnChooseFile.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -380,7 +391,7 @@ namespace testing
             this.btnChooseFile.OverrideDefault.Border.Rounding = 5;
             this.btnChooseFile.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnChooseFile.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseFile.Size = new System.Drawing.Size(290, 48);
+            this.btnChooseFile.Size = new System.Drawing.Size(218, 39);
             this.btnChooseFile.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnChooseFile.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnChooseFile.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -397,10 +408,11 @@ namespace testing
             // mcboCamera
             // 
             this.mcboCamera.FormattingEnabled = true;
-            this.mcboCamera.ItemHeight = 24;
-            this.mcboCamera.Location = new System.Drawing.Point(38, 318);
+            this.mcboCamera.ItemHeight = 23;
+            this.mcboCamera.Location = new System.Drawing.Point(28, 258);
+            this.mcboCamera.Margin = new System.Windows.Forms.Padding(2);
             this.mcboCamera.Name = "mcboCamera";
-            this.mcboCamera.Size = new System.Drawing.Size(290, 30);
+            this.mcboCamera.Size = new System.Drawing.Size(218, 29);
             this.mcboCamera.TabIndex = 0;
             this.mcboCamera.UseSelectable = true;
             // 
@@ -408,9 +420,10 @@ namespace testing
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(706, 58);
+            this.label7.Location = new System.Drawing.Point(597, 106);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 19);
+            this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 15;
             this.label7.Text = "Gender:";
             // 
@@ -418,9 +431,10 @@ namespace testing
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(706, 127);
+            this.label8.Location = new System.Drawing.Point(594, 160);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 19);
+            this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Purok:";
             // 
@@ -428,36 +442,40 @@ namespace testing
             // 
             this.cbGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(706, 82);
+            this.cbGender.Location = new System.Drawing.Point(594, 121);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(283, 36);
+            this.cbGender.Size = new System.Drawing.Size(261, 29);
             this.cbGender.TabIndex = 9;
             // 
             // cbCivilStatus
             // 
             this.cbCivilStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCivilStatus.FormattingEnabled = true;
-            this.cbCivilStatus.Location = new System.Drawing.Point(400, 530);
+            this.cbCivilStatus.Location = new System.Drawing.Point(594, 68);
+            this.cbCivilStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbCivilStatus.Name = "cbCivilStatus";
-            this.cbCivilStatus.Size = new System.Drawing.Size(278, 36);
+            this.cbCivilStatus.Size = new System.Drawing.Size(261, 29);
             this.cbCivilStatus.TabIndex = 8;
             // 
             // cbPurok
             // 
             this.cbPurok.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPurok.FormattingEnabled = true;
-            this.cbPurok.Location = new System.Drawing.Point(706, 151);
+            this.cbPurok.Location = new System.Drawing.Point(594, 180);
+            this.cbPurok.Margin = new System.Windows.Forms.Padding(2);
             this.cbPurok.Name = "cbPurok";
-            this.cbPurok.Size = new System.Drawing.Size(283, 36);
+            this.cbPurok.Size = new System.Drawing.Size(261, 29);
             this.cbPurok.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(400, 504);
+            this.label6.Location = new System.Drawing.Point(594, 47);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 19);
+            this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Civil Status:";
             // 
@@ -465,19 +483,21 @@ namespace testing
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(706, 196);
+            this.label9.Location = new System.Drawing.Point(594, 216);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 19);
+            this.label9.Size = new System.Drawing.Size(95, 13);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Voter Status:";
+            this.label9.Text = "Registered Voter:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(400, 403);
+            this.label4.Location = new System.Drawing.Point(300, 327);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 19);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Place of Birth:";
             // 
@@ -485,16 +505,19 @@ namespace testing
             // 
             this.cbVoterStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVoterStatus.FormattingEnabled = true;
-            this.cbVoterStatus.Location = new System.Drawing.Point(706, 222);
+            this.cbVoterStatus.Location = new System.Drawing.Point(594, 237);
+            this.cbVoterStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbVoterStatus.Name = "cbVoterStatus";
-            this.cbVoterStatus.Size = new System.Drawing.Size(283, 36);
+            this.cbVoterStatus.Size = new System.Drawing.Size(261, 29);
             this.cbVoterStatus.TabIndex = 11;
             // 
             // rtbBirthPlace
             // 
-            this.rtbBirthPlace.Location = new System.Drawing.Point(400, 429);
+            this.rtbBirthPlace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbBirthPlace.Location = new System.Drawing.Point(300, 349);
+            this.rtbBirthPlace.Margin = new System.Windows.Forms.Padding(2);
             this.rtbBirthPlace.Name = "rtbBirthPlace";
-            this.rtbBirthPlace.Size = new System.Drawing.Size(278, 70);
+            this.rtbBirthPlace.Size = new System.Drawing.Size(261, 58);
             this.rtbBirthPlace.TabIndex = 7;
             this.rtbBirthPlace.Text = "";
             // 
@@ -502,9 +525,10 @@ namespace testing
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(706, 334);
+            this.label10.Location = new System.Drawing.Point(594, 328);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 19);
+            this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Contact No:";
             // 
@@ -512,9 +536,10 @@ namespace testing
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(400, 334);
+            this.label5.Location = new System.Drawing.Point(300, 271);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Birth Date:";
             // 
@@ -522,26 +547,29 @@ namespace testing
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(706, 403);
+            this.label11.Location = new System.Drawing.Point(594, 384);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 19);
+            this.label11.Size = new System.Drawing.Size(81, 13);
             this.label11.TabIndex = 22;
             this.label11.Text = "Email Address:";
             // 
             // tbSname
             // 
             this.tbSname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSname.Location = new System.Drawing.Point(400, 291);
+            this.tbSname.Location = new System.Drawing.Point(300, 236);
+            this.tbSname.Margin = new System.Windows.Forms.Padding(2);
             this.tbSname.Name = "tbSname";
-            this.tbSname.Size = new System.Drawing.Size(275, 34);
+            this.tbSname.Size = new System.Drawing.Size(261, 29);
             this.tbSname.TabIndex = 4;
             // 
             // tbContactNo
             // 
             this.tbContactNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContactNo.Location = new System.Drawing.Point(706, 360);
+            this.tbContactNo.Location = new System.Drawing.Point(594, 349);
+            this.tbContactNo.Margin = new System.Windows.Forms.Padding(2);
             this.tbContactNo.Name = "tbContactNo";
-            this.tbContactNo.Size = new System.Drawing.Size(283, 34);
+            this.tbContactNo.Size = new System.Drawing.Size(261, 29);
             this.tbContactNo.TabIndex = 13;
             // 
             // dtBirthDate
@@ -549,26 +577,29 @@ namespace testing
             this.dtBirthDate.CustomFormat = "MMM dd, yyyy";
             this.dtBirthDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBirthDate.Location = new System.Drawing.Point(400, 360);
+            this.dtBirthDate.Location = new System.Drawing.Point(300, 292);
+            this.dtBirthDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(275, 34);
+            this.dtBirthDate.Size = new System.Drawing.Size(261, 29);
             this.dtBirthDate.TabIndex = 6;
             // 
             // tbEmailAddress
             // 
             this.tbEmailAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmailAddress.Location = new System.Drawing.Point(706, 425);
+            this.tbEmailAddress.Location = new System.Drawing.Point(594, 402);
+            this.tbEmailAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmailAddress.Name = "tbEmailAddress";
-            this.tbEmailAddress.Size = new System.Drawing.Size(283, 34);
+            this.tbEmailAddress.Size = new System.Drawing.Size(261, 29);
             this.tbEmailAddress.TabIndex = 14;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(400, 265);
+            this.label12.Location = new System.Drawing.Point(300, 215);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 19);
+            this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 31;
             this.label12.Text = "Suffix Name:";
             // 
@@ -576,35 +607,39 @@ namespace testing
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(706, 265);
+            this.label13.Location = new System.Drawing.Point(594, 272);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 19);
+            this.label13.Size = new System.Drawing.Size(64, 13);
             this.label13.TabIndex = 33;
             this.label13.Text = "Cedula No:";
             // 
             // tbLname
             // 
             this.tbLname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLname.Location = new System.Drawing.Point(400, 222);
+            this.tbLname.Location = new System.Drawing.Point(300, 180);
+            this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
-            this.tbLname.Size = new System.Drawing.Size(275, 34);
+            this.tbLname.Size = new System.Drawing.Size(261, 29);
             this.tbLname.TabIndex = 3;
             // 
             // tbCedulaNo
             // 
             this.tbCedulaNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCedulaNo.Location = new System.Drawing.Point(706, 291);
+            this.tbCedulaNo.Location = new System.Drawing.Point(594, 293);
+            this.tbCedulaNo.Margin = new System.Windows.Forms.Padding(2);
             this.tbCedulaNo.Name = "tbCedulaNo";
-            this.tbCedulaNo.Size = new System.Drawing.Size(283, 34);
+            this.tbCedulaNo.Size = new System.Drawing.Size(261, 29);
             this.tbCedulaNo.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(400, 196);
+            this.label3.Location = new System.Drawing.Point(300, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 19);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Last Name:";
             // 
@@ -613,26 +648,29 @@ namespace testing
             this.dtDateOfRgstrtn.CustomFormat = "MMM dd, yyyy";
             this.dtDateOfRgstrtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateOfRgstrtn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateOfRgstrtn.Location = new System.Drawing.Point(706, 513);
+            this.dtDateOfRgstrtn.Location = new System.Drawing.Point(594, 474);
+            this.dtDateOfRgstrtn.Margin = new System.Windows.Forms.Padding(2);
             this.dtDateOfRgstrtn.Name = "dtDateOfRgstrtn";
-            this.dtDateOfRgstrtn.Size = new System.Drawing.Size(280, 34);
+            this.dtDateOfRgstrtn.Size = new System.Drawing.Size(259, 29);
             this.dtDateOfRgstrtn.TabIndex = 15;
             // 
             // tbFname
             // 
             this.tbFname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFname.Location = new System.Drawing.Point(400, 84);
+            this.tbFname.Location = new System.Drawing.Point(300, 68);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";
-            this.tbFname.Size = new System.Drawing.Size(275, 34);
+            this.tbFname.Size = new System.Drawing.Size(261, 29);
             this.tbFname.TabIndex = 1;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(706, 480);
+            this.label14.Location = new System.Drawing.Point(594, 447);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 19);
+            this.label14.Size = new System.Drawing.Size(111, 13);
             this.label14.TabIndex = 36;
             this.label14.Text = "Date of Registration";
             // 
@@ -640,9 +678,10 @@ namespace testing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(400, 127);
+            this.label2.Location = new System.Drawing.Point(300, 103);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 19);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Middle Name:";
             // 
@@ -650,40 +689,65 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(400, 58);
+            this.label1.Location = new System.Drawing.Point(300, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 19);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "First Name:";
             // 
             // tbMname
             // 
             this.tbMname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMname.Location = new System.Drawing.Point(400, 153);
+            this.tbMname.Location = new System.Drawing.Point(300, 124);
+            this.tbMname.Margin = new System.Windows.Forms.Padding(2);
             this.tbMname.Name = "tbMname";
-            this.tbMname.Size = new System.Drawing.Size(275, 34);
+            this.tbMname.Size = new System.Drawing.Size(261, 29);
             this.tbMname.TabIndex = 2;
+            // 
+            // rbHouseNoAndStreet
+            // 
+            this.rbHouseNoAndStreet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHouseNoAndStreet.Location = new System.Drawing.Point(297, 445);
+            this.rbHouseNoAndStreet.Margin = new System.Windows.Forms.Padding(2);
+            this.rbHouseNoAndStreet.Name = "rbHouseNoAndStreet";
+            this.rbHouseNoAndStreet.Size = new System.Drawing.Size(261, 58);
+            this.rbHouseNoAndStreet.TabIndex = 45;
+            this.rbHouseNoAndStreet.Text = "";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(297, 423);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(120, 13);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "House No. and Street:";
             // 
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(365, 42);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Location = new System.Drawing.Point(277, 34);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(646, 564);
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.Size = new System.Drawing.Size(632, 506);
             this.materialCard2.TabIndex = 42;
             // 
             // frmResident_insert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::testing.Properties.Resources.transparent;
-            this.ClientSize = new System.Drawing.Size(1034, 719);
+            this.ClientSize = new System.Drawing.Size(945, 638);
+            this.Controls.Add(this.rbHouseNoAndStreet);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.dtBirthDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label14);
@@ -725,9 +789,10 @@ namespace testing
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialCard2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1052, 766);
+            this.MinimumSize = new System.Drawing.Size(793, 630);
             this.Name = "frmResident_insert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add New Resident Records";
@@ -780,6 +845,8 @@ namespace testing
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbMname;
+        private System.Windows.Forms.RichTextBox rbHouseNoAndStreet;
+        private System.Windows.Forms.Label label16;
         private MaterialSkin.Controls.MaterialCard materialCard2;
     }
 }

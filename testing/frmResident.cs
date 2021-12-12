@@ -184,7 +184,7 @@ namespace testing
                     csResidents res = new csResidents();
                     res.GetID(identifier);
 
-                    frmResident_update frm = new frmResident_update();
+                    frmResident_update frm = new frmResident_update(identifier);
                     frm.ShowDialog(this);
 
                     ID.Clear();

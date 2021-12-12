@@ -2,8 +2,11 @@
 using AForge.Video.DirectShow;
 using Firebase.Storage;
 using Microsoft.WindowsAzure.Storage;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,6 +15,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,12 +25,14 @@ namespace testing
 {
     public partial class frmResident_update : Form
     {
+        csHostConfiguration host = new csHostConfiguration();
         csResidents res = new csResidents();
-        String path = "", strImageUrl;
+        String path = "", strImageUrl, ID;
 
-        public frmResident_update()
+        public frmResident_update(string id)
         {
             InitializeComponent();
+            ID = id;
         }
 
         private void frmUpdateResident_Load(object sender, EventArgs e)
@@ -43,53 +49,163 @@ namespace testing
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            res.Fname = tbFname.Text;
-            res.Mname = tbMname.Text;
-            res.Lname = tbLname.Text;
-            res.Sname = tbSname.Text;
-            res.BirthPlace = rtbBirthPlace.Text;
-            res.BirthDate = dtBirthDate.Value.ToString("yyyy-MM-dd");
-            res.CivilStatus = cbCivilStatus.SelectedItem.ToString();
-            res.Gender = cbGender.SelectedItem.ToString();
-            res.Purok = cbPurok.SelectedItem.ToString();
-            res.VoterStatus = cbVoterStatus.SelectedItem.ToString();
-            res.CedulaNo = tbCedulaNo.Text;
-            res.ContactNo = tbContactNo.Text;
-            res.Email = tbEmailAddress.Text;
-            res.DateOfRegistration = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+            //res.Fname = tbFname.Text;
+            //res.Mname = tbMname.Text;
+            //res.Lname = tbLname.Text;
+            //res.Sname = tbSname.Text;
+            //res.BirthPlace = rtbBirthPlace.Text;
+            //res.BirthDate = dtBirthDate.Value.ToString("yyyy-MM-dd");
+            //res.CivilStatus = cbCivilStatus.SelectedItem.ToString();
+            //res.Gender = cbGender.SelectedItem.ToString();
+            //res.Purok = cbPurok.SelectedItem.ToString();
+            //res.VoterStatus = cbVoterStatus.SelectedItem.ToString();
+            //res.CedulaNo = tbCedulaNo.Text;
+            //res.ContactNo = tbContactNo.Text;
+            //res.Email = tbEmailAddress.Text;
+            //res.DateOfRegistration = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+            //res.HouseNoAndStreet = rbHouseNoAndStreet.Text;
 
-            res.UpdateData();
+            //res.UpdateData();
 
-            string message = res.Message;
-            MessageBox.Show(message);
-            if (message == "Successfully Updated")
+            //string message = res.Message;
+            //MessageBox.Show(message);
+            //if (message == "Successfully Updated")
+            //{
+            //    res.ResetData();
+            //    Reset();
+            //    this.Close();
+            //}
+
+            try
             {
-                res.ResetData();
-                Reset();
-                this.Close();
+                if (tbFname.Text != "" && tbLname.Text != "")
+                {
+                    DateTime dateToday = DateTime.Now;
+
+                    var uri = host.IP() + "/iBar/ibar_resident_update.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["ID"] = ID;
+                        datas["Fname"] = tbFname.Text;
+                        datas["Mname"] = tbMname.Text;
+                        datas["Lname"] = tbLname.Text;
+                        datas["Sname"] = tbSname.Text;
+                        datas["Birthplace"] = rtbBirthPlace.Text;
+                        datas["Birthdate"] = dtBirthDate.Value.ToString("yyyy-MM-dd");
+                        datas["CivilStatus"] = cbCivilStatus.SelectedItem.ToString();
+                        datas["Gender"] = cbGender.SelectedItem.ToString();
+                        datas["id_purok"] = cbPurok.SelectedItem.ToString();
+                        datas["VoterStatus"] = cbVoterStatus.SelectedItem.ToString();
+                        datas["DateOfRegistration"] = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+                        datas["CedulaNo"] = tbCedulaNo.Text;
+                        datas["ContactNo"] = tbCedulaNo.Text;
+                        datas["Email"] = tbEmailAddress.Text;
+                        datas["Image"] = strImageUrl;
+                        datas["HouseAndStreet"] = rbHouseNoAndStreet.Text;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Update Successfully");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(responseFromServer);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill-up all fields.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
 
-        private void LoadData()
+        private async void LoadData()
         {
-            res.retrieveData();
-            tbFname.Text = res.Fname;
-            tbMname.Text = res.Mname;
-            tbLname.Text = res.Lname;
-            tbSname.Text = res.Sname;
-            rtbBirthPlace.Text = res.BirthPlace;
-            dtBirthDate.Value = DateTime.ParseExact(res.BirthDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            cbCivilStatus.Text = res.CivilStatus;
-            cbGender.Text = res.Gender;
-            cbPurok.Text = res.Purok;
-            cbVoterStatus.Text = res.VoterStatus;
+            //res.retrieveData();
+            //tbFname.Text = res.Fname;
+            //tbMname.Text = res.Mname;
+            //tbLname.Text = res.Lname;
+            //tbSname.Text = res.Sname;
+            //rtbBirthPlace.Text = res.BirthPlace;
+            //dtBirthDate.Value = DateTime.ParseExact(res.BirthDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            //cbCivilStatus.Text = res.CivilStatus;
+            //cbGender.Text = res.Gender;
+            //cbPurok.Text = res.Purok;
+            //cbVoterStatus.Text = res.VoterStatus;
+            //rbHouseNoAndStreet.Text = res.HouseNoAndStreet;
 
-            tbCedulaNo.Text = res.CedulaNo;
-            tbContactNo.Text = res.ContactNo;
-            tbEmailAddress.Text = res.Email;
-            dtDateOfRgstrtn.Value = DateTime.ParseExact(res.DateOfRegistration,"yyyy-MM-dd", CultureInfo.InvariantCulture);
-            //DownloadImage();
-            DownloadImage(res.Image);
+            //tbCedulaNo.Text = res.CedulaNo;
+            //tbContactNo.Text = res.ContactNo;
+            //tbEmailAddress.Text = res.Email;
+            //dtDateOfRgstrtn.Value = DateTime.ParseExact(res.DateOfRegistration,"yyyy-MM-dd", CultureInfo.InvariantCulture);
+            ////DownloadImage();
+            //DownloadImage(res.Image);
+
+
+            try
+            {
+                var uri = host.IP() + "/iBar/ibar_resident_specific.php";
+
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    var datas = new NameValueCollection();
+                    datas["ID"] = ID;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+
+                if (success == "1")
+                {
+                    foreach (var jo in (JArray)((JObject)data)["resident"])
+                    {
+                        tbFname.Text = jo["Fname"].ToString();
+                        tbMname.Text = jo["Mname"].ToString();
+                        tbLname.Text = jo["Lname"].ToString();
+                        tbSname.Text = jo["Sname"].ToString();
+                        rtbBirthPlace.Text = jo["Birthplace"].ToString();
+                        dtBirthDate.Value = DateTime.ParseExact(jo["Birthdate"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        cbCivilStatus.Text = jo["CivilStatus"].ToString();
+                        cbGender.Text = jo["Gender"].ToString();
+                        cbPurok.Text = jo["Purok"].ToString();
+                        cbVoterStatus.Text = jo["VoterStatus"].ToString();
+                        rbHouseNoAndStreet.Text = jo["HouseNoAndStreet"].ToString();
+
+                        tbCedulaNo.Text = jo["CedulaNo"].ToString();
+                        tbContactNo.Text = jo["ContactNo"].ToString();
+                        tbEmailAddress.Text = jo["Email"].ToString();
+                        dtDateOfRgstrtn.Value = DateTime.ParseExact(jo["DateOfRegistration"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        DownloadImage(jo["Image"].ToString());
+
+                    }
+
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -115,7 +231,7 @@ namespace testing
                 var blockBlob = container.GetBlockBlobReference($"{name}.png");
                 await blockBlob.UploadFromStreamAsync(inputStream);
                 string URL = blockBlob.Uri.OriginalString;
-                String strImageUrl = URL;
+                strImageUrl = URL;
 
 
                 MessageBox.Show("Upload Successful");
@@ -320,21 +436,6 @@ namespace testing
         {
             if (videoCaptureDevice.IsRunning == true)
                 videoCaptureDevice.Stop();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         //SaveImage

@@ -22,11 +22,13 @@ using Microsoft.WindowsAzure.Storage;
 using System.Net;
 using testing.Properties;
 using AForge.Imaging.Filters;
+using System.Collections.Specialized;
 
 namespace testing
 {
     public partial class frmResident_insert : Form
     {
+        csHostConfiguration host = new csHostConfiguration();
         csResidents res = new csResidents();
         String path ="", strImageUrl;
 
@@ -48,30 +50,85 @@ namespace testing
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            res.Fname = tbFname.Text;
-            res.Mname = tbMname.Text;
-            res.Lname = tbLname.Text;
-            res.Sname = tbSname.Text;
-            res.BirthPlace = rtbBirthPlace.Text;
-            res.BirthDate = dtBirthDate.Value.ToString("yyyy-MM-dd");
-            res.CivilStatus = cbCivilStatus.SelectedItem.ToString();
-            res.Gender = cbGender.SelectedItem.ToString();
-            res.Purok = cbPurok.SelectedItem.ToString();
-            res.VoterStatus = cbVoterStatus.SelectedItem.ToString();
-            res.CedulaNo = tbCedulaNo.Text;
-            res.ContactNo = tbContactNo.Text;
-            res.Email = tbEmailAddress.Text;
-            res.DateOfRegistration = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+            //res.Fname = tbFname.Text;
+            //res.Mname = tbMname.Text;
+            //res.Lname = tbLname.Text;
+            //res.Sname = tbSname.Text;
+            //res.BirthPlace = rtbBirthPlace.Text;
+            //res.BirthDate = dtBirthDate.Value.ToString("yyyy-MM-dd");
+            //res.CivilStatus = cbCivilStatus.SelectedItem.ToString();
+            //res.Gender = cbGender.SelectedItem.ToString();
+            //res.Purok = cbPurok.SelectedItem.ToString();
+            //res.VoterStatus = cbVoterStatus.SelectedItem.ToString();
+            //res.CedulaNo = tbCedulaNo.Text;
+            //res.ContactNo = tbContactNo.Text;
+            //res.Email = tbEmailAddress.Text;
+            //res.DateOfRegistration = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+            //res.HouseNoAndStreet = rbHouseNoAndStreet.Text;
 
-            res.InsertData();
+            //res.InsertData();
 
-            string message = res.Message;
-            MessageBox.Show(message);
-            if (message== "Successfully Added")
+            //string message = res.Message;
+            //MessageBox.Show(message);
+            //if (message== "Successfully Added")
+            //{
+            //    res.ResetData();
+            //    Reset();
+            //    this.Close();
+            //}
+
+            try
             {
-                res.ResetData();
-                Reset();
-                this.Close();
+                if (tbFname.Text != "" && tbLname.Text != "")
+                {
+                    DateTime dateToday = DateTime.Now;
+
+                    var uri = host.IP() + "/iBar/ibar_resident_insert.php";
+
+                    string responseFromServer;
+                    using (var wb = new WebClient())
+                    {
+                        var datas = new NameValueCollection();
+                        datas["Fname"] = tbFname.Text;
+                        datas["Mname"] = tbMname.Text;
+                        datas["Lname"] = tbLname.Text;
+                        datas["Sname"] = tbSname.Text;
+                        datas["Birthplace"] = rtbBirthPlace.Text;
+                        datas["Birthdate"] = dtBirthDate.Value.ToString("yyyy-MM-dd");
+                        datas["CivilStatus"] = cbCivilStatus.SelectedItem.ToString();
+                        datas["Gender"] = cbGender.SelectedItem.ToString();
+                        datas["id_purok"] = cbPurok.SelectedItem.ToString();
+                        datas["VoterStatus"] = cbVoterStatus.SelectedItem.ToString();
+                        datas["DateOfRegistration"] = dtDateOfRgstrtn.Value.ToString("yyyy-MM-dd");
+                        datas["CedulaNo"] = tbCedulaNo.Text;
+                        datas["ContactNo"] = tbCedulaNo.Text;
+                        datas["Email"] = tbEmailAddress.Text;
+                        datas["Image"] = strImageUrl;
+                        datas["HouseAndStreet"] = rbHouseNoAndStreet.Text;
+
+                        var response = wb.UploadValues(uri, "POST", datas);
+                        responseFromServer = Encoding.UTF8.GetString(response);
+                    }
+
+                    if (responseFromServer == "Operation Success")
+                    {
+                        MessageBox.Show("Insert Successfully");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show( responseFromServer);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please fill-up all fields.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
 

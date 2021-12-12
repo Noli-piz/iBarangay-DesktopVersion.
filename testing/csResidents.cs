@@ -18,9 +18,9 @@ namespace testing
 
                 String table, query, value, finalquery;
 
-                table = "(Fname, Mname, Lname, Sname, Birthplace, Birthdate, CivilStatus, Gender, id_purok, VoterStatus, DateOfRegistration, ContactNo, CedulaNo, Email, Image)";
+                table = "(Fname, Mname, Lname, Sname, Birthplace, Birthdate, CivilStatus, Gender, id_purok, VoterStatus, DateOfRegistration, ContactNo, CedulaNo, Email, Image, HouseNoAndStreet)";
                 query = "(SELECT id_purok FROM tbl_purok WHERE Name = '" + Purok +"')";
-                value = Fname + "','" + Mname + "','" + Lname +"','"+ Sname +"','"+ BirthPlace +"','"+ BirthDate + "','" + CivilStatus +"','"+ Gender +"',"+ query +",'"+ VoterStatus + "','" + DateOfRegistration +"','"+ ContactNo + "','" + CedulaNo + "','" + Email + "','" + Image;
+                value = Fname + "','" + Mname + "','" + Lname +"','"+ Sname +"','"+ BirthPlace +"','"+ BirthDate + "','" + CivilStatus +"','"+ Gender +"',"+ query +",'"+ VoterStatus + "','" + DateOfRegistration +"','"+ ContactNo + "','" + CedulaNo + "','" + Email + "','" + Image +"','" + HouseNoAndStreet;
                 finalquery = "INSERT INTO "+ cs.DBname() +".tbl_residentinfo" + table + " VALUES('" + value + "');";
 
 
@@ -50,7 +50,7 @@ namespace testing
                 String query = "UPDATE "+cs.DBname()+".tbl_residentinfo " +
                                "SET Fname=@fname, Mname=@mname, Lname=@lname, Sname=@sname, Birthplace=@bplace, Birthdate=@bday, CivilStatus=@cstatus, Gender=@gender, " +
                                "id_purok=(SELECT id_purok FROM tbl_purok WHERE Name =@purok ), VoterStatus=@vstatus, CedulaNo=@cedno, ContactNo=@conno, Email=@email, " +
-                               "DateOfRegistration=@dor, Image=@img " +
+                               "DateOfRegistration=@dor, Image=@img, HouseNoAndStreet=@hn " +
                                "WHERE id_resident =@id";
                 
                 
@@ -72,6 +72,7 @@ namespace testing
                 cmd.Parameters.AddWithValue("@email",Email);
                 cmd.Parameters.AddWithValue("@dor",DateOfRegistration);
                 cmd.Parameters.AddWithValue("@img",Image);
+                cmd.Parameters.AddWithValue("@hn",HouseNoAndStreet);
                 cmd.Parameters.AddWithValue("@id",strID);
                 cmd.Connection = cs.conn;
 
@@ -119,7 +120,8 @@ namespace testing
                     CedulaNo = rdr[13].ToString();
                     Email = rdr[14].ToString();
                     Image = rdr[15].ToString();
-                    Purok = rdr[16].ToString();
+                    HouseNoAndStreet = rdr[16].ToString();
+                    Purok = rdr[17].ToString();
                 }
 
                 cmd.Dispose();
@@ -149,6 +151,7 @@ namespace testing
             Email = "";
             DateOfRegistration = "";
             Image = "";
+            HouseNoAndStreet = "";
         }
 
         public string Message { get; set; }
@@ -182,6 +185,7 @@ namespace testing
         public string DateOfRegistration { get; set; }
 
         public string Image { get; set; }
+        public string HouseNoAndStreet { get; set; }
 
         public static string strID;
 

@@ -34,6 +34,7 @@ namespace testing
             tabAlertLevel frm = new tabAlertLevel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
+
         }
 
         private void btnCertificate_Click(object sender, EventArgs e)
@@ -43,6 +44,9 @@ namespace testing
             tabCertificates frm = new tabCertificates() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.panel1.Controls.Add(frm);
             frm.Show();
+
+            //btnAlertLevels.Refresh();
+
         }
 
         private void btnCivilStatus_Click(object sender, EventArgs e)

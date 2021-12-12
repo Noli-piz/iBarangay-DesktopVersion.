@@ -142,7 +142,7 @@ namespace testing
                 if (dtStartTime.Value.TimeOfDay >= dtEndTime.Value.TimeOfDay)
                 {
                     dtStartTime.Value = dtEndTime.Value.AddHours(-1);
-                    MessageBox.Show("Unable to Perform Action" + dtStartDate.Value.Date.ToString());
+                    MessageBox.Show("Unable to Perform Action");
                 }
             }
         }

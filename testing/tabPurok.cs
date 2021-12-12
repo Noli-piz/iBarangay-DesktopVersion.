@@ -40,12 +40,20 @@ namespace testing
             mtrData7.Columns.Add("id", "ID.");
             mtrData7.Columns.Add("prk", "Name");
 
-            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-            btn1.HeaderText = "Action";
-            btn1.Name = "btnGenerate";
-            btn1.Text = "View/Edit";
-            btn1.UseColumnTextForButtonValue = true;
-            mtrData7.Columns.Add(btn1);
+            //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            //btn1.HeaderText = "Action";
+            //btn1.Name = "btnGenerate";
+            //btn1.Text = "View/Edit";
+            //btn1.UseColumnTextForButtonValue = true;
+            //mtrData7.Columns.Add(btn1);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Image = Properties.Resources.edit_icon;
+            mtrData7.Columns.Add(btn);
+
+            mtrData7.Columns["id"].Visible = false;
         }
 
 
@@ -255,7 +263,6 @@ namespace testing
         private void LoadSpecific(String id)
         {
             ID = id;
-            MessageBox.Show(id + "");
 
             try
             {

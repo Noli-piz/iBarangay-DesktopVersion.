@@ -42,12 +42,20 @@ namespace testing
             mtrData2.Columns.Add("docfee", "Document Fee");
             mtrData2.Columns.Add("delfee", "Delivery Fee");
 
-            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-            btn1.HeaderText = "Action";
-            btn1.Name = "btnGenerate";
-            btn1.Text = "View/Edit";
-            btn1.UseColumnTextForButtonValue = true;
-            mtrData2.Columns.Add(btn1);
+            //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            //btn1.HeaderText = "Action";
+            //btn1.Name = "btnGenerate";
+            //btn1.Text = "View/Edit";
+            //btn1.UseColumnTextForButtonValue = true;
+            //mtrData2.Columns.Add(btn1);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Image = Properties.Resources.edit_icon;
+            mtrData2.Columns.Add(btn);
+
+            mtrData2.Columns["id"].Visible = false;
         }
 
         private async void loadDataCertificates()
@@ -113,6 +121,10 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Insert Successfully");
+                        ID = "";
+                        tbTypes.Text = "";
+                        tbDocFee.Text = "";
+                        tbDelivery.Text = "";
                     }
                     else
                     {
@@ -264,7 +276,6 @@ namespace testing
         private void LoadSpecific(String id)
         {
             ID = id;
-            MessageBox.Show(id + "");
 
             try
             {

@@ -45,12 +45,20 @@ namespace testing
             mtrData1.Columns.Add("lvl", "Level Name");
             mtrData1.Columns.Add("img", "Image Location");
 
-            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-            btn1.HeaderText = "Action";
-            btn1.Name = "btnGenerate";
-            btn1.Text = "View/Edit";
-            btn1.UseColumnTextForButtonValue = true;
-            mtrData1.Columns.Add(btn1);
+            //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            //btn1.HeaderText = "Action";
+            //btn1.Name = "btnGenerate";
+            //btn1.Text = "View/Edit";
+            //btn1.UseColumnTextForButtonValue = true;
+            //mtrData1.Columns.Add(btn1);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Image = Properties.Resources.edit_icon;
+            mtrData1.Columns.Add(btn);
+
+            mtrData1.Columns["id"].Visible = false;
         }
 
         private async void loadDataAlert()
@@ -115,7 +123,9 @@ namespace testing
                     {
                         MessageBox.Show("Insert Successfully");
                         tbName.Text = "";
-                        strImageUrl = "";
+                        strImageUrl = ""; 
+                        pictureBox1.Image = Properties.Resources.upload__1_;
+
 
                     }
                     else
@@ -131,6 +141,11 @@ namespace testing
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                mtrData1.Rows.Clear();
+                loadDataAlert();
             }
         }
 
@@ -156,6 +171,12 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Delete Successfully");
+                        ID = "";
+                        tbName.Text = "";
+                        strImageUrl = "";
+                        pictureBox1.Image = Properties.Resources.upload__1_;
+
+
                     }
                     else
                     {
@@ -176,6 +197,7 @@ namespace testing
             {
                 mtrData1.Rows.Clear();
                 loadDataAlert();
+
             }
         }
 
@@ -203,6 +225,11 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Update Successfully");
+                        ID = "";
+                        tbName.Text = "";
+                        strImageUrl = "";
+                        pictureBox1.Image = Properties.Resources.upload__1_;
+
                     }
                     else
                     {
@@ -218,6 +245,11 @@ namespace testing
             {
                 MessageBox.Show(ex.Message);
 
+            }
+            finally
+            {
+                mtrData1.Rows.Clear();
+                loadDataAlert();
             }
         }
 

@@ -42,12 +42,20 @@ namespace testing
             mtrData4.Columns.Add("id", "ID.");
             mtrData4.Columns.Add("opt", "Options");
 
-            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-            btn1.HeaderText = "Action";
-            btn1.Name = "btnGenerate";
-            btn1.Text = "View/Edit";
-            btn1.UseColumnTextForButtonValue = true;
-            mtrData4.Columns.Add(btn1);
+            //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            //btn1.HeaderText = "Action";
+            //btn1.Name = "btnGenerate";
+            //btn1.Text = "View/Edit";
+            //btn1.UseColumnTextForButtonValue = true;
+            //mtrData4.Columns.Add(btn1);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Image = Properties.Resources.edit_icon;
+            mtrData4.Columns.Add(btn);
+
+            mtrData4.Columns["id"].Visible = false;
         }
 
         private async void loadDataDelivery()
@@ -107,6 +115,8 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Insert Successfully");
+                    ID = "";
+                    tbDeliveryOpt.Text = "";
                 }
                 else
                 {
@@ -146,10 +156,12 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Update Successfully");
+                    ID = "";
+                    tbDeliveryOpt.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show(responseFromServer);
                 }
 
             }
@@ -186,6 +198,8 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Delete Successfully");
+                    ID = "";
+                    tbDeliveryOpt.Text = "";
                 }
                 else
                 {
@@ -234,7 +248,6 @@ namespace testing
         private void LoadSpecific(String id)
         {
             ID = id;
-            MessageBox.Show(id + "");
 
             try
             {

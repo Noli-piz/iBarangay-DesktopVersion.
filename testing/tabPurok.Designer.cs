@@ -38,6 +38,7 @@ namespace testing
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.tbName = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mtrData7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@ namespace testing
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.mtrData7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.mtrData7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mtrData7.ColumnHeadersHeight = 30;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -85,7 +86,7 @@ namespace testing
             this.mtrData7.RowHeadersVisible = false;
             this.mtrData7.RowHeadersWidth = 51;
             this.mtrData7.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.mtrData7.RowTemplate.Height = 24;
+            this.mtrData7.RowTemplate.Height = 40;
             this.mtrData7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mtrData7.Size = new System.Drawing.Size(679, 581);
             this.mtrData7.TabIndex = 6;
@@ -148,7 +149,7 @@ namespace testing
             this.tbName.MaxLength = 32767;
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
-            this.tbName.PromptText = "Purok Name";
+            this.tbName.PromptText = "Enter Purok Name";
             this.tbName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbName.SelectedText = "";
             this.tbName.SelectionLength = 0;
@@ -158,7 +159,7 @@ namespace testing
             this.tbName.Size = new System.Drawing.Size(403, 35);
             this.tbName.TabIndex = 16;
             this.tbName.UseSelectable = true;
-            this.tbName.WaterMark = "Purok Name";
+            this.tbName.WaterMark = "Enter Purok Name";
             this.tbName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.WithError = true;
@@ -173,12 +174,23 @@ namespace testing
             this.label1.TabIndex = 18;
             this.label1.Text = "PUROK";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(714, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 35);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Purok Name";
+            // 
             // tabPurok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1163, 692);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnDelete);
@@ -202,5 +214,6 @@ namespace testing
         private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroTextBox tbName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

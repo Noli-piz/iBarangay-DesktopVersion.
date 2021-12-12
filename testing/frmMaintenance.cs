@@ -24,7 +24,7 @@ namespace testing
         }
         private void frmMaintenance_Load(object sender, EventArgs e)
         {
-
+            btnAlertLevels_Click(sender, e);
         }
 
         private void btnAlertLevels_Click(object sender, EventArgs e)

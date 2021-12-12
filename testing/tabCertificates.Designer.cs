@@ -40,6 +40,9 @@ namespace testing
             this.btnUpdate = new MetroFramework.Controls.MetroButton();
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mtrData2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +65,7 @@ namespace testing
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.mtrData2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.mtrData2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mtrData2.ColumnHeadersHeight = 30;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -88,7 +91,7 @@ namespace testing
             this.mtrData2.RowHeadersVisible = false;
             this.mtrData2.RowHeadersWidth = 51;
             this.mtrData2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.mtrData2.RowTemplate.Height = 30;
+            this.mtrData2.RowTemplate.Height = 40;
             this.mtrData2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mtrData2.Size = new System.Drawing.Size(679, 581);
             this.mtrData2.TabIndex = 3;
@@ -114,7 +117,7 @@ namespace testing
             this.tbDelivery.MaxLength = 32767;
             this.tbDelivery.Name = "tbDelivery";
             this.tbDelivery.PasswordChar = '\0';
-            this.tbDelivery.PromptText = "Delivery Fee";
+            this.tbDelivery.PromptText = "Enter Delivery Fee";
             this.tbDelivery.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbDelivery.SelectedText = "";
             this.tbDelivery.SelectionLength = 0;
@@ -123,7 +126,7 @@ namespace testing
             this.tbDelivery.Size = new System.Drawing.Size(390, 35);
             this.tbDelivery.TabIndex = 17;
             this.tbDelivery.UseSelectable = true;
-            this.tbDelivery.WaterMark = "Delivery Fee";
+            this.tbDelivery.WaterMark = "Enter Delivery Fee";
             this.tbDelivery.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbDelivery.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -147,7 +150,7 @@ namespace testing
             this.tbDocFee.MaxLength = 32767;
             this.tbDocFee.Name = "tbDocFee";
             this.tbDocFee.PasswordChar = '\0';
-            this.tbDocFee.PromptText = "Document Fee";
+            this.tbDocFee.PromptText = "Enter Document Fee";
             this.tbDocFee.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbDocFee.SelectedText = "";
             this.tbDocFee.SelectionLength = 0;
@@ -156,7 +159,7 @@ namespace testing
             this.tbDocFee.Size = new System.Drawing.Size(390, 35);
             this.tbDocFee.TabIndex = 16;
             this.tbDocFee.UseSelectable = true;
-            this.tbDocFee.WaterMark = "Document Fee";
+            this.tbDocFee.WaterMark = "Enter Document Fee";
             this.tbDocFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbDocFee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -184,7 +187,7 @@ namespace testing
             this.tbTypes.MaxLength = 32767;
             this.tbTypes.Name = "tbTypes";
             this.tbTypes.PasswordChar = '\0';
-            this.tbTypes.PromptText = "Document Type";
+            this.tbTypes.PromptText = "Enter Document Type";
             this.tbTypes.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbTypes.SelectedText = "";
             this.tbTypes.SelectionLength = 0;
@@ -194,7 +197,7 @@ namespace testing
             this.tbTypes.Size = new System.Drawing.Size(390, 35);
             this.tbTypes.TabIndex = 15;
             this.tbTypes.UseSelectable = true;
-            this.tbTypes.WaterMark = "Document Type";
+            this.tbTypes.WaterMark = "Enter Document Type";
             this.tbTypes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbTypes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTypes.WithError = true;
@@ -202,7 +205,7 @@ namespace testing
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnDelete.Location = new System.Drawing.Point(854, 420);
+            this.btnDelete.Location = new System.Drawing.Point(722, 420);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(126, 49);
             this.btnDelete.TabIndex = 14;
@@ -213,7 +216,7 @@ namespace testing
             // btnUpdate
             // 
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnUpdate.Location = new System.Drawing.Point(722, 420);
+            this.btnUpdate.Location = new System.Drawing.Point(854, 420);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 49);
             this.btnUpdate.TabIndex = 13;
@@ -242,12 +245,45 @@ namespace testing
             this.label1.TabIndex = 19;
             this.label1.Text = "CERTIFICATES";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(717, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 28);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Document Type";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(717, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 28);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Document Fee";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(717, 271);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 28);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Delivery Fee";
+            // 
             // tabCertificates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1163, 692);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDelivery);
             this.Controls.Add(this.tbDocFee);
@@ -276,5 +312,8 @@ namespace testing
         private MetroFramework.Controls.MetroButton btnUpdate;
         private MetroFramework.Controls.MetroButton btnAdd;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

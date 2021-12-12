@@ -95,7 +95,7 @@ namespace testing
             // 
             // btnPurok
             // 
-            this.btnPurok.Location = new System.Drawing.Point(987, 90);
+            this.btnPurok.Location = new System.Drawing.Point(669, 90);
             this.btnPurok.Name = "btnPurok";
             this.btnPurok.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnPurok.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -155,6 +155,9 @@ namespace testing
             this.btnCertificate.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
             this.btnCertificate.OverrideDefault.Back.ColorAngle = 0F;
             this.btnCertificate.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnCertificate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCertificate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnCertificate.OverrideDefault.Border.Rounding = 0;
             this.btnCertificate.OverrideDefault.Border.Width = 1;
@@ -167,6 +170,9 @@ namespace testing
             this.btnCertificate.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnCertificate.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnCertificate.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnCertificate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCertificate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnCertificate.StateCommon.Border.Rounding = 0;
             this.btnCertificate.StateCommon.Border.Width = 1;
@@ -177,6 +183,9 @@ namespace testing
             this.btnCertificate.StatePressed.Back.Color2 = System.Drawing.Color.White;
             this.btnCertificate.StatePressed.Back.ColorAngle = 135F;
             this.btnCertificate.StatePressed.Border.ColorAngle = 135F;
+            this.btnCertificate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCertificate.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnCertificate.StatePressed.Border.Rounding = 0;
             this.btnCertificate.StatePressed.Border.Width = 0;
@@ -184,6 +193,9 @@ namespace testing
             this.btnCertificate.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnCertificate.StateTracking.Back.ColorAngle = 45F;
             this.btnCertificate.StateTracking.Border.ColorAngle = 45F;
+            this.btnCertificate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCertificate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnCertificate.StateTracking.Border.Rounding = 0;
             this.btnCertificate.StateTracking.Border.Width = 1;
@@ -195,7 +207,7 @@ namespace testing
             // 
             // btnCivilStatus
             // 
-            this.btnCivilStatus.Location = new System.Drawing.Point(351, 90);
+            this.btnCivilStatus.Location = new System.Drawing.Point(354, 29);
             this.btnCivilStatus.Name = "btnCivilStatus";
             this.btnCivilStatus.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnCivilStatus.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -249,11 +261,12 @@ namespace testing
             this.btnCivilStatus.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnCivilStatus.TabIndex = 39;
             this.btnCivilStatus.Values.Text = "CIVIL STATUS";
+            this.btnCivilStatus.Visible = false;
             this.btnCivilStatus.Click += new System.EventHandler(this.btnCivilStatus_Click);
             // 
             // btnGender
             // 
-            this.btnGender.Location = new System.Drawing.Point(669, 90);
+            this.btnGender.Location = new System.Drawing.Point(672, 29);
             this.btnGender.Name = "btnGender";
             this.btnGender.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnGender.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -307,6 +320,7 @@ namespace testing
             this.btnGender.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnGender.TabIndex = 41;
             this.btnGender.Values.Text = "GENDER";
+            this.btnGender.Visible = false;
             this.btnGender.Click += new System.EventHandler(this.btnGender_Click);
             // 
             // btnDeliveryOpt
@@ -369,7 +383,7 @@ namespace testing
             // 
             // btnItems
             // 
-            this.btnItems.Location = new System.Drawing.Point(828, 90);
+            this.btnItems.Location = new System.Drawing.Point(351, 90);
             this.btnItems.Name = "btnItems";
             this.btnItems.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnItems.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;

@@ -40,6 +40,8 @@ namespace testing
             this.tbName = new MetroFramework.Controls.MetroTextBox();
             this.lblProgress = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mtrData1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +64,7 @@ namespace testing
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.mtrData1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.mtrData1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mtrData1.ColumnHeadersHeight = 30;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -89,7 +91,7 @@ namespace testing
             this.mtrData1.RowHeadersVisible = false;
             this.mtrData1.RowHeadersWidth = 51;
             this.mtrData1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.mtrData1.RowTemplate.Height = 24;
+            this.mtrData1.RowTemplate.Height = 40;
             this.mtrData1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mtrData1.Size = new System.Drawing.Size(679, 581);
             this.mtrData1.TabIndex = 3;
@@ -162,7 +164,7 @@ namespace testing
             this.tbName.MaxLength = 32767;
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
-            this.tbName.PromptText = "Alert Level Name";
+            this.tbName.PromptText = "Enter Alert Level Name";
             this.tbName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbName.SelectedText = "";
             this.tbName.SelectionLength = 0;
@@ -172,7 +174,7 @@ namespace testing
             this.tbName.Size = new System.Drawing.Size(390, 35);
             this.tbName.TabIndex = 23;
             this.tbName.UseSelectable = true;
-            this.tbName.WaterMark = "Alert Level Name";
+            this.tbName.WaterMark = "Enter Alert Level Name";
             this.tbName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.WithError = true;
@@ -204,12 +206,34 @@ namespace testing
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(737, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 35);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Alert Level Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(737, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 35);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Icon/ Image";
+            // 
             // tabAlertLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1163, 692);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.pictureBox1);
@@ -239,5 +263,7 @@ namespace testing
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTextBox tbName;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

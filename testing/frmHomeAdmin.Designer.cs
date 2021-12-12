@@ -445,7 +445,7 @@ namespace testing
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label4.Location = new System.Drawing.Point(126, 610);
+            this.label4.Location = new System.Drawing.Point(140, 658);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(1047, 87);
             this.label4.TabIndex = 28;
@@ -456,7 +456,7 @@ namespace testing
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::testing.Properties.Resources.Balangkas_Logo;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 597);
+            this.pictureBox4.Location = new System.Drawing.Point(26, 645);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(100, 100);

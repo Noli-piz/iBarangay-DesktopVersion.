@@ -43,16 +43,26 @@ namespace testing
             mtrData6.Columns.Add("no", "No.");
             mtrData6.Columns.Add("id", "ID.");
             mtrData6.Columns.Add("itm", "Item Name");
-            mtrData6.Columns.Add("quan", "Quantity");
+            mtrData6.Columns.Add("rquan", "Reserved Quantity");
+            mtrData6.Columns.Add("bquan", "Borrowed Quantity");
+            mtrData6.Columns.Add("aquan", "Available Quantity");
             mtrData6.Columns.Add("tquan", "Total Quantity");
-            mtrData6.Columns.Add("dfee", "DeliveryFee");
+            mtrData6.Columns.Add("dfee", "Delivery Fee");
 
-            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-            btn1.HeaderText = "Action";
-            btn1.Name = "btnGenerate";
-            btn1.Text = "View/Edit";
-            btn1.UseColumnTextForButtonValue = true;
-            mtrData6.Columns.Add(btn1);
+            //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            //btn1.HeaderText = "Action";
+            //btn1.Name = "btnGenerate";
+            //btn1.Text = "View/Edit";
+            //btn1.UseColumnTextForButtonValue = true;
+            //mtrData6.Columns.Add(btn1);
+
+            DataGridViewImageColumn btn = new DataGridViewImageColumn();
+            btn.HeaderText = "Action";
+            btn.Name = "btnGenerate";
+            btn.Image = Properties.Resources.edit_icon;
+            mtrData6.Columns.Add(btn);
+
+            mtrData6.Columns["id"].Visible = false;
         }
 
 
@@ -76,6 +86,8 @@ namespace testing
                         AL.Add(i.ToString());
                         AL.Add(jo["id_items"]);
                         AL.Add(jo["ItemName"]);
+                        AL.Add(jo["ReservedQuantity"]);
+                        AL.Add(jo["BorrowedQuantity"]);
                         AL.Add(jo["Quantity"]);
                         AL.Add(jo["TotalQuantity"]);
                         AL.Add(jo["DeliveryFee"]);
@@ -118,6 +130,11 @@ namespace testing
                     if (responseFromServer == "Operation Success")
                     {
                         MessageBox.Show("Insert Successfully");
+
+                        tbItemName.Text = "";
+                        tbQuantity.Text = "";
+                        tbTotalQuantity.Text = "";
+                        tbDelivery.Text = "";
                     }
                     else
                     {
@@ -144,7 +161,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 8)
                 {
                     DataGridViewRow row = mtrData6.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
@@ -191,10 +208,9 @@ namespace testing
                 {
                     foreach (var jo in (JArray)((JObject)data)["item"])
                     {
-
-                        //jo["id_announcement"];
                         tbItemName.Text = jo["ItemName"].ToString();
                         tbQuantity.Text = jo["Quantity"].ToString();
+                        tbTotalQuantity.Text = jo["TotalQuantity"].ToString();
                         tbDelivery.Text = jo["DeliveryFee"].ToString();
                     }
                 }
@@ -236,6 +252,11 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Update Successfully");
+                    ID = "";
+                    tbItemName.Text = "";
+                    tbQuantity.Text = "";
+                    tbTotalQuantity.Text = "";
+                    tbDelivery.Text = "";
                 }
                 else
                 {
@@ -278,6 +299,11 @@ namespace testing
                 if (responseFromServer == "Operation Success")
                 {
                     MessageBox.Show("Delete Successfully");
+                    ID = "";
+                    tbItemName.Text = "";
+                    tbQuantity.Text = "";
+                    tbTotalQuantity.Text = "";
+                    tbDelivery.Text = "";
                 }
                 else
                 {
@@ -298,6 +324,11 @@ namespace testing
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtrData6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -192,6 +192,7 @@ namespace testing
                         tbContactNo.Text = jo["ContactNo"].ToString();
                         tbEmailAddress.Text = jo["Email"].ToString();
                         dtDateOfRgstrtn.Value = DateTime.ParseExact(jo["DateOfRegistration"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        strImageUrl = jo["Image"].ToString();
                         DownloadImage(jo["Image"].ToString());
 
                     }

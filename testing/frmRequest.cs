@@ -228,6 +228,7 @@ namespace testing
                         AL.Add(i.ToString());
                         AL.Add(jo["id_request"]);
                         AL.Add(jo["id_resident"].ToString());
+                        AL.Add(jo["id_account"].ToString());
                         AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Sname"]);
                         AL.Add(jo["Birthdate"]);
                         AL.Add(jo["Gender"]);

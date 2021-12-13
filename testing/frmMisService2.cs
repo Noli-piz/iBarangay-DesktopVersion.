@@ -113,6 +113,7 @@ namespace testing
                         lblCedula.Text = jo["CedulaNo"].ToString();
                         lblVoterStatus.Text = jo["VoterStatus"].ToString();
                         lblBlotterCase.Text = jo["Blotter"].ToString();
+                        lblHouseNo.Text = jo["HouseNoAndStreet"].ToString();
 
                         //Items Info
                         lblItem.Text = jo["ItemName"].ToString();

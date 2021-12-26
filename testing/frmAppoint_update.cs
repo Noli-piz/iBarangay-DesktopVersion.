@@ -73,7 +73,7 @@ namespace testing
                 }
                 else
                 {
-                    MessageBox.Show("Update Failed " + responseFromServer);
+                    MessageBox.Show("Update Failed ");
                 }
 
             }
@@ -118,7 +118,7 @@ namespace testing
                 }
                 else
                 {
-                    MessageBox.Show("Delete Failed " + responseFromServer);
+                    MessageBox.Show("Delete Failed ");
                 }
 
             }

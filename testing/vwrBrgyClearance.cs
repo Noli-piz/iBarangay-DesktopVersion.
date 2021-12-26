@@ -116,8 +116,8 @@ namespace testing
                     foreach (var jo in (JArray)((JObject)data)["issuance"])
                     {
 
-                        //String localURL = @"D:\TempImage\temp.png";
-                        String localURL = @"C:\temp.png";
+                        String localURL = @"D:\TempImage\temp.png";
+                        //String localURL = @"C:\temp.png";
                         using (WebClient client = new WebClient())
                         {
                             try

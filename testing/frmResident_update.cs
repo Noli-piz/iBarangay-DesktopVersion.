@@ -117,7 +117,7 @@ namespace testing
                     }
                     else
                     {
-                        MessageBox.Show(responseFromServer);
+                        MessageBox.Show("Update Failed");
                     }
                 }
                 else

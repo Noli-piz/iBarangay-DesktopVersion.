@@ -81,7 +81,7 @@ namespace testing
                     }
                     else
                     {
-                        MessageBox.Show("Update Failed " + responseFromServer);
+                        MessageBox.Show("Update Failed");
                     }
 
                 }
@@ -130,6 +130,7 @@ namespace testing
                         lblCivilstat.Text = jo["CivilStatus"].ToString();
                         lblDoR.Text = jo["DateOfRegistration"].ToString();
                         lblEmail.Text = jo["Email"].ToString();
+                        lblHouseNo.Text = jo["HouseNoAndStreet"].ToString();
 
                         tbUsername.Text = jo["Username"].ToString();
                         resUsername = jo["Username"].ToString();

@@ -155,7 +155,7 @@ namespace testing
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(150, 489);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(168, 29);
             this.cbStatus.TabIndex = 22;
@@ -165,7 +165,7 @@ namespace testing
             this.rbPurpose.BackColor = System.Drawing.Color.White;
             this.rbPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPurpose.Location = new System.Drawing.Point(142, 389);
-            this.rbPurpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.rbPurpose.Name = "rbPurpose";
             this.rbPurpose.ReadOnly = true;
             this.rbPurpose.Size = new System.Drawing.Size(240, 68);
@@ -257,7 +257,7 @@ namespace testing
             this.dtDeadline.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDeadline.Location = new System.Drawing.Point(150, 533);
-            this.dtDeadline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtDeadline.Margin = new System.Windows.Forms.Padding(2);
             this.dtDeadline.Name = "dtDeadline";
             this.dtDeadline.Size = new System.Drawing.Size(168, 29);
             this.dtDeadline.TabIndex = 33;
@@ -267,7 +267,7 @@ namespace testing
             this.rbNote.BackColor = System.Drawing.Color.White;
             this.rbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNote.Location = new System.Drawing.Point(460, 489);
-            this.rbNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbNote.Margin = new System.Windows.Forms.Padding(2);
             this.rbNote.Name = "rbNote";
             this.rbNote.Size = new System.Drawing.Size(260, 65);
             this.rbNote.TabIndex = 34;
@@ -288,7 +288,7 @@ namespace testing
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.Location = new System.Drawing.Point(794, 614);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnSubmit.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -350,7 +350,7 @@ namespace testing
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(663, 614);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnCancel.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -476,7 +476,7 @@ namespace testing
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(60, 38);
+            this.label12.Location = new System.Drawing.Point(31, 38);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 19);
@@ -488,7 +488,7 @@ namespace testing
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullname.ForeColor = System.Drawing.Color.Green;
-            this.lblFullname.Location = new System.Drawing.Point(127, 36);
+            this.lblFullname.Location = new System.Drawing.Point(98, 36);
             this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(49, 21);
@@ -592,7 +592,7 @@ namespace testing
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(83, 67);
+            this.label21.Location = new System.Drawing.Point(54, 67);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 19);
@@ -603,7 +603,7 @@ namespace testing
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(53, 99);
+            this.label22.Location = new System.Drawing.Point(24, 99);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(74, 19);
@@ -615,7 +615,7 @@ namespace testing
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Green;
-            this.lblEmail.Location = new System.Drawing.Point(127, 63);
+            this.lblEmail.Location = new System.Drawing.Point(98, 63);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(19, 21);
@@ -627,7 +627,7 @@ namespace testing
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.Green;
-            this.lblUsername.Location = new System.Drawing.Point(127, 97);
+            this.lblUsername.Location = new System.Drawing.Point(98, 97);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(19, 21);
@@ -671,7 +671,7 @@ namespace testing
             this.data1.DefaultCellStyle = dataGridViewCellStyle3;
             this.data1.EnableHeadersVisualStyles = false;
             this.data1.Location = new System.Drawing.Point(35, 158);
-            this.data1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data1.Margin = new System.Windows.Forms.Padding(2);
             this.data1.MultiSelect = false;
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
@@ -791,7 +791,7 @@ namespace testing
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialCard2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMisService2";

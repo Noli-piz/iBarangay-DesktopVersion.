@@ -348,7 +348,7 @@ namespace testing
                         }
                         else
                         {
-                            MessageBox.Show("Update Failed " + responseFromServer);
+                            MessageBox.Show("Update Failed ");
                         }
                     }
                     else

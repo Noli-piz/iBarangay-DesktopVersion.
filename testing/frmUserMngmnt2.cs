@@ -56,7 +56,7 @@ namespace testing
                     }
                     else
                     {
-                        MessageBox.Show("Insert Failed " + responseFromServer);
+                        MessageBox.Show("Insert Failed ");
                     }
 
                 }

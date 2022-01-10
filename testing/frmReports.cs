@@ -28,9 +28,11 @@ namespace testing
 
         private void frmReports_Load(object sender, EventArgs e)
         {
-            LoadCombobox();
+            
             IntiallizedProcessedBy();
             IntiallizedStatusRequest();
+            IntiallizedStatusDelivery();
+            LoadCombobox();
         }
 
         private void load()
@@ -38,27 +40,56 @@ namespace testing
             string reports = cbReports.SelectedItem.ToString();
             if (reports == "Issuance Reports")
             {
-                loadData();
+                lblStatus.Visible = false;
+                cbStatus.Visible = false;
 
+                lblDeliveryOpt.Visible = false;
+                cbDeliveryOpt.Visible = false;
+                loadData("0");
             }
             else if (reports == "Request Reports")
             {
-                loadData2();
+                cbStatus.Items.Clear();
+                IntiallizedStatusRequest();
+                lblStatus.Visible = true;
+                cbStatus.Visible = true;
+
+                lblDeliveryOpt.Visible = true;
+                cbDeliveryOpt.Visible = true;
+                loadData2("0", "0", "0");
             }
             else if (reports == "Appointment Reports")
             {
-                loadData3();
+                lblStatus.Visible = false;
+                cbStatus.Visible = false;
+
+                lblDeliveryOpt.Visible = false;
+                cbDeliveryOpt.Visible = false;
+                loadData3("0");
+            }
+            else if (reports == "Miscellaneous Services Reports")
+            {
+                cbStatus.Items.Clear();
+                IntiallizedStatusServices();
+                lblStatus.Visible = true;
+                cbStatus.Visible = true;
+
+                lblDeliveryOpt.Visible = true;
+                cbDeliveryOpt.Visible = true;
+                loadData4("0", "0", "0");
             }
             else
             {
-                loadData();
+                loadData("0");
             }
         }
 
-        private async void loadData()
+        private async void loadData(string ProcessedBy)
         {
             try
             {
+                cbStatus.Hide();
+
                 ID.Clear();
                 data1.Rows.Clear();
                 data1.Columns.Clear();
@@ -84,6 +115,7 @@ namespace testing
                     var datas = new NameValueCollection();
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessedBy;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -125,8 +157,7 @@ namespace testing
             }
         }
 
-
-        private async void loadData2()
+        private async void loadData2(string ProcessedBy, string Status, string DeliveryOptionParameter)
         {
             try
             {
@@ -151,7 +182,6 @@ namespace testing
 
                 var uri = host.IP() + "/iBar/ibar_reportrequest.php";
 
-
                 string responseFromServer;
                 using (var wb = new WebClient())
                 {
@@ -161,6 +191,10 @@ namespace testing
                     var datas = new NameValueCollection();
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessedBy;
+                    datas["Status"] = Status;
+                    datas["DeliveryOpt"] = DeliveryOptionParameter;
+
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -205,7 +239,7 @@ namespace testing
             }
         }
 
-        private async void loadData3()
+        private async void loadData3(string ProcessBy)
         {
             try
             {
@@ -223,7 +257,7 @@ namespace testing
                 data1.Columns.Add("", "End Date");
                 data1.Columns.Add("", "Details");
                 data1.Columns.Add("", "Action Taken");
-                data1.Columns.Add("", "Modified Date");
+                data1.Columns.Add("", "Date Processed");
                 data1.Columns["id"].Visible = false;
 
 
@@ -238,6 +272,7 @@ namespace testing
                     var datas = new NameValueCollection();
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessBy;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -283,6 +318,106 @@ namespace testing
             }
         }
 
+        private async void loadData4(string ProcessBy, string Status, string DeliveryOptionParameter)
+        {
+            try
+            {
+                ID.Clear();
+                data1.Rows.Clear();
+                data1.Columns.Clear();
+
+                data1.Columns.Add("", "No.");
+                data1.Columns.Add("id", "ID.");
+                data1.Columns.Add("", "Processed By");
+                data1.Columns.Add("", "Processed To");
+                data1.Columns.Add("", "ItemName");
+                data1.Columns.Add("", "Quantity");
+                data1.Columns.Add("", "Purpose");
+                data1.Columns.Add("", "Delivery Opt.");
+                data1.Columns.Add("", "Status");
+                data1.Columns.Add("", "Date Processed");
+
+                data1.Columns["id"].Visible = false;
+
+
+                var uri = host.IP() + "/iBar/ibar_reportmiscellaneous.php";
+
+                string responseFromServer;
+                using (var wb = new WebClient())
+                {
+                    string date1 = dtStart.Value.ToString("yyyy-MM-dd");
+                    string date2 = dtEnd.Value.ToString("yyyy-MM-dd");
+
+                    var datas = new NameValueCollection();
+                    datas["Date1"] = date1.ToString();
+                    datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessBy;
+                    datas["Status"] = Status;
+                    datas["DeliveryOpt"] = DeliveryOptionParameter;
+
+                    var response = wb.UploadValues(uri, "POST", datas);
+                    responseFromServer = Encoding.UTF8.GetString(response);
+                }
+
+                ArrayList AL = new ArrayList();
+                var data = JsonConvert.DeserializeObject(responseFromServer);
+                string success = JObject.Parse(responseFromServer)["success"].ToString();
+                if (success == "1")
+                {
+                    int i = 1;
+                    foreach (var jo in (JArray)((JObject)data)["servicereport"])
+                    {
+                        string id = jo["id_misservicesreports"].ToString();
+                        string fullname = jo["Fullname"].ToString();
+                        string username = jo["Username"].ToString();
+                        string fname = jo["Fname"].ToString();
+                        string mname = jo["Mname"].ToString();
+                        string lname = jo["Lname"].ToString();
+                        string sname = jo["Sname"].ToString();
+                        string itemname = jo["ItemName"].ToString();
+                        string quantity = jo["Quantity"].ToString();
+                        string purpose = jo["Purpose"].ToString();
+                        string status = jo["Status"].ToString();
+                        string dor = jo["DateOfRequest"].ToString();
+                        string deadline = jo["Deadline"].ToString();
+                        string note = jo["Note"].ToString();
+                        string options = jo["Options"].ToString();
+                        string dateprocessed = jo["DateProcessed"].ToString();
+
+
+                        AL = new ArrayList();
+                        AL.Add(i.ToString());
+                        AL.Add(id);
+                        AL.Add(fullname);
+                        AL.Add(fname +" "+ mname +" "+ lname +" "+ sname);
+                        AL.Add(itemname);
+                        AL.Add(quantity);
+                        AL.Add(purpose);
+                        AL.Add(options);
+                        AL.Add(status);
+                        AL.Add(dateprocessed);
+
+
+                        data1.Rows.Add(AL.ToArray());
+                        i++;
+                    }
+
+                }
+                else if (success == "0")
+                {
+                    MessageBox.Show(JObject.Parse(responseFromServer)["message"].ToString());
+                }
+
+                data1.AutoResizeColumns();
+                data1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         private void LoadCombobox()
         {
             csComboBoxValues cb = new csComboBoxValues();
@@ -296,30 +431,23 @@ namespace testing
             load();
         }
 
-        private void dtStart_ValueChanged(object sender, EventArgs e)
-        {
-            load();
-        }
-
-        private void dtEnd_ValueChanged(object sender, EventArgs e)
-        {
-            load();
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
             string date1 = dtStart.Value.ToString("yyyy-MM-dd");
             string date2 = dtEnd.Value.ToString("yyyy-MM-dd");
+            string stat = cbStatus.SelectedItem.ToString();
+            string processby = cbProcessBy.SelectedValue.ToString();
+            string delivery = cbDeliveryOpt.SelectedValue.ToString();
 
             string reports = cbReports.SelectedItem.ToString();
             if (reports == "Issuance Reports")
             {
-                vwrIssuanceReports frm = new vwrIssuanceReports(date1, date2);
+                vwrIssuanceReports frm = new vwrIssuanceReports(date1, date2, processby, delivery);
                 frm.ShowDialog(this);
             }
             else if (reports == "Request Reports")
             {
-                vwrRequestReports frm = new vwrRequestReports(date1, date2);
+                vwrRequestReports frm = new vwrRequestReports(date1, date2, processby, stat);
                 frm.ShowDialog(this);
             }
             else if (reports == "Appointment Reports")
@@ -327,10 +455,17 @@ namespace testing
                 vwrAppointmentReport frm = new vwrAppointmentReport(date1, date2);
                 frm.ShowDialog(this);
             }
+            else if (reports == "Miscellaneous Services Reports")
+            {
+                vwrMiscellaneousServices frm = new vwrMiscellaneousServices(date1, date2, processby, stat, delivery);
+                frm.ShowDialog(this);
+            }
             else
             {
                 MessageBox.Show("Not Available");
             }
+
+           
         }
 
         private async void IntiallizedProcessedBy()
@@ -345,8 +480,6 @@ namespace testing
                 string success = JObject.Parse(responseBody)["success"].ToString();
                 if (success == "1")
                 {
-
-
                     cbProcessBy.ValueMember = "Id";
                     cbProcessBy.DisplayMember = "Fullname";
 
@@ -371,7 +504,7 @@ namespace testing
             }
         }
 
-        private async void IntiallizedStatusRequest()
+        private void IntiallizedStatusRequest()
         {
             try
             {
@@ -380,6 +513,7 @@ namespace testing
 
                 cbStatus.Items.Add("All");
                 cbStatus.Items.AddRange(cbValues.GetArrStatus().ToArray());
+                cbStatus.SelectedIndex = 0;
             }
             catch
             {
@@ -387,18 +521,116 @@ namespace testing
             }
         }
 
-        private async void IntiallizedStatus()
+        private void IntiallizedStatusServices()
         {
+            try
+            {
+                csComboBoxValues cbValues = new csComboBoxValues();
+                cbValues.RetrieveArrStatusService();
+
+                cbStatus.Items.Add("All");
+                cbStatus.Items.AddRange(cbValues.GetArrStatusService().ToArray());
+                cbStatus.SelectedIndex = 0;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void IntiallizedStatusDelivery()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_deliveryoptions.php";
+                string responseBody = await client.GetStringAsync(uri);
+
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
+                if (success == "1")
+                {
+                    cbDeliveryOpt.ValueMember = "Id";
+                    cbDeliveryOpt.DisplayMember = "Options";
+
+                    List<DeliveryOptions> items = new List<DeliveryOptions>();
+                    items.Add(new DeliveryOptions { Id = (string)"0", Options = (string)"All" });
+
+                    foreach (var jo in (JArray)((JObject)data)["deliveryoptions"])
+                    {
+                        items.Add(new DeliveryOptions { Id = (string)jo["id_deliveryoption"], Options = (string)jo["Options"] });
+                    }
+
+                    cbDeliveryOpt.DataSource = items;
+                }
+                else if (success == "0")
+                {
+                    //MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            string reports = cbReports.SelectedItem.ToString();
+            string stat = cbStatus.SelectedItem.ToString();
+            string processby = cbProcessBy.SelectedValue.ToString();
+            string deliveryoptions = cbDeliveryOpt.SelectedValue.ToString();
+
+            if (reports == "Issuance Reports")
+            {
+                loadData(processby);
+
+            }
+            else if (reports == "Request Reports")
+            {
+                loadData2(processby, stat, deliveryoptions);
+            }
+            else if (reports == "Appointment Reports")
+            {
+                loadData3(processby);
+            }
+            else if (reports == "Miscellaneous Services Reports")
+            {
+                loadData4(processby , stat, deliveryoptions);
+            }
+            else
+            {
+                loadData(processby);
+            }
+        }
+
+        private void dtStart_ValueChanged(object sender, EventArgs e)
+        {
+            //btnFilter_Click(null, null);
+        }
+
+        private void dtEnd_ValueChanged(object sender, EventArgs e)
+        {
+            //btnFilter_Click(null, null);
 
         }
 
         private void cbProcessBy_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //btnFilter_Click(null, null);
 
         }
 
         private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
+           // btnFilter_Click(null, null);
+
+        }
+
+        private void cbDeliveryOpt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //btnFilter_Click(null, null);
 
         }
     }
@@ -407,5 +639,11 @@ namespace testing
     {
         public string Id { get; set; }
         public string Fullname { get; set; }
+    }
+
+    public class DeliveryOptions
+    {
+        public string Id { get; set; }
+        public string Options { get; set; }
     }
 }

@@ -34,17 +34,8 @@ namespace testing
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.tbSubject = new System.Windows.Forms.TextBox();
-            this.rbDetails = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
-            this.cbLevel = new System.Windows.Forms.ComboBox();
             this.data1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAnn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,103 +44,12 @@ namespace testing
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.Gray;
-            this.lbl1.Location = new System.Drawing.Point(15, 55);
+            this.lbl1.Location = new System.Drawing.Point(15, 80);
             this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(149, 21);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "ANNOUNCEMENT";
-            // 
-            // tbSubject
-            // 
-            this.tbSubject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSubject.Location = new System.Drawing.Point(660, 174);
-            this.tbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbSubject.Name = "tbSubject";
-            this.tbSubject.Size = new System.Drawing.Size(351, 29);
-            this.tbSubject.TabIndex = 1;
-            // 
-            // rbDetails
-            // 
-            this.rbDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbDetails.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDetails.Location = new System.Drawing.Point(660, 361);
-            this.rbDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rbDetails.Name = "rbDetails";
-            this.rbDetails.Size = new System.Drawing.Size(351, 250);
-            this.rbDetails.TabIndex = 3;
-            this.rbDetails.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(656, 151);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 21);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Subject:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(656, 338);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Details";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(656, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Date";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(656, 276);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 21);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Alert Level";
-            // 
-            // dtDate
-            // 
-            this.dtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtDate.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDate.Location = new System.Drawing.Point(660, 235);
-            this.dtDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(351, 29);
-            this.dtDate.TabIndex = 12;
-            // 
-            // cbLevel
-            // 
-            this.cbLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbLevel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLevel.FormattingEnabled = true;
-            this.cbLevel.Location = new System.Drawing.Point(660, 299);
-            this.cbLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbLevel.Name = "cbLevel";
-            this.cbLevel.Size = new System.Drawing.Size(351, 29);
-            this.cbLevel.TabIndex = 13;
             // 
             // data1
             // 
@@ -189,8 +89,8 @@ namespace testing
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data1.DefaultCellStyle = dataGridViewCellStyle3;
             this.data1.EnableHeadersVisualStyles = false;
-            this.data1.Location = new System.Drawing.Point(19, 91);
-            this.data1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data1.Location = new System.Drawing.Point(19, 113);
+            this.data1.Margin = new System.Windows.Forms.Padding(2);
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
             this.data1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -207,136 +107,71 @@ namespace testing
             this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data1.ShowRowErrors = false;
-            this.data1.Size = new System.Drawing.Size(623, 585);
+            this.data1.Size = new System.Drawing.Size(983, 563);
             this.data1.TabIndex = 4;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
-            // btnAdd
+            // btnAnn
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(898, 639);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
-            this.btnAdd.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
-            this.btnAdd.OverrideDefault.Back.ColorAngle = 0F;
-            this.btnAdd.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
-            this.btnAdd.OverrideDefault.Border.ColorAngle = 0F;
-            this.btnAdd.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnAnn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnn.Location = new System.Drawing.Point(699, 35);
+            this.btnAnn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnn.Name = "btnAnn";
+            this.btnAnn.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnAnn.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnAnn.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnAnn.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnAnn.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnAnn.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAdd.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAdd.OverrideDefault.Border.Rounding = 25;
-            this.btnAdd.OverrideDefault.Border.Width = 1;
-            this.btnAdd.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAdd.OverrideDefault.Content.ShortText.ColorAngle = 145F;
-            this.btnAdd.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.btnAdd.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnAdd.Size = new System.Drawing.Size(115, 41);
-            this.btnAdd.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
-            this.btnAdd.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
-            this.btnAdd.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.btnAdd.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
-            this.btnAdd.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnAnn.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAnn.OverrideDefault.Border.Rounding = 25;
+            this.btnAnn.OverrideDefault.Border.Width = 1;
+            this.btnAnn.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAnn.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnAnn.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnn.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnAnn.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnAnn.Size = new System.Drawing.Size(270, 41);
+            this.btnAnn.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnAnn.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnAnn.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.btnAnn.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnAnn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAdd.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAdd.StateCommon.Border.Rounding = 25;
-            this.btnAdd.StateCommon.Border.Width = 1;
-            this.btnAdd.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAdd.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.btnAdd.StatePressed.Back.Color1 = System.Drawing.Color.White;
-            this.btnAdd.StatePressed.Back.Color2 = System.Drawing.Color.White;
-            this.btnAdd.StatePressed.Back.ColorAngle = 135F;
-            this.btnAdd.StatePressed.Border.ColorAngle = 135F;
-            this.btnAdd.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnAnn.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAnn.StateCommon.Border.Rounding = 25;
+            this.btnAnn.StateCommon.Border.Width = 1;
+            this.btnAnn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAnn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnn.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnAnn.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnAnn.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnAnn.StatePressed.Back.ColorAngle = 135F;
+            this.btnAnn.StatePressed.Border.ColorAngle = 135F;
+            this.btnAnn.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAdd.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAdd.StatePressed.Border.Rounding = 25;
-            this.btnAdd.StatePressed.Border.Width = 1;
-            this.btnAdd.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
-            this.btnAdd.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.btnAdd.StateTracking.Back.ColorAngle = 45F;
-            this.btnAdd.StateTracking.Border.ColorAngle = 45F;
-            this.btnAdd.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnAnn.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAnn.StatePressed.Border.Rounding = 25;
+            this.btnAnn.StatePressed.Border.Width = 1;
+            this.btnAnn.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.btnAnn.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnAnn.StateTracking.Back.ColorAngle = 45F;
+            this.btnAnn.StateTracking.Border.ColorAngle = 45F;
+            this.btnAnn.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAdd.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAdd.StateTracking.Border.Rounding = 25;
-            this.btnAdd.StateTracking.Border.Width = 1;
-            this.btnAdd.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAdd.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.btnAdd.TabIndex = 35;
-            this.btnAdd.Values.Text = "ADD";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(741, 639);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.btnClear.OverrideDefault.Back.ColorAngle = 0F;
-            this.btnClear.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
-            this.btnClear.OverrideDefault.Border.Color2 = System.Drawing.Color.Red;
-            this.btnClear.OverrideDefault.Border.ColorAngle = 0F;
-            this.btnClear.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnClear.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnClear.OverrideDefault.Border.Rounding = 25;
-            this.btnClear.OverrideDefault.Border.Width = 1;
-            this.btnClear.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Red;
-            this.btnClear.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.Red;
-            this.btnClear.OverrideDefault.Content.ShortText.ColorAngle = 145F;
-            this.btnClear.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnClear.Size = new System.Drawing.Size(115, 41);
-            this.btnClear.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnClear.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnClear.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.btnClear.StateCommon.Border.Color1 = System.Drawing.Color.Red;
-            this.btnClear.StateCommon.Border.Color2 = System.Drawing.Color.Red;
-            this.btnClear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnClear.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnClear.StateCommon.Border.Rounding = 25;
-            this.btnClear.StateCommon.Border.Width = 1;
-            this.btnClear.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Gray;
-            this.btnClear.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.StatePressed.Back.Color1 = System.Drawing.Color.Red;
-            this.btnClear.StatePressed.Back.Color2 = System.Drawing.Color.Red;
-            this.btnClear.StatePressed.Back.ColorAngle = 135F;
-            this.btnClear.StatePressed.Border.Color1 = System.Drawing.Color.Red;
-            this.btnClear.StatePressed.Border.Color2 = System.Drawing.Color.Red;
-            this.btnClear.StatePressed.Border.ColorAngle = 135F;
-            this.btnClear.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnClear.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnClear.StatePressed.Border.Rounding = 25;
-            this.btnClear.StatePressed.Border.Width = 1;
-            this.btnClear.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnClear.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Red;
-            this.btnClear.StateTracking.Back.ColorAngle = 45F;
-            this.btnClear.StateTracking.Border.Color1 = System.Drawing.Color.Red;
-            this.btnClear.StateTracking.Border.ColorAngle = 1F;
-            this.btnClear.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnClear.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnClear.StateTracking.Border.Rounding = 25;
-            this.btnClear.StateTracking.Border.Width = 1;
-            this.btnClear.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Red;
-            this.btnClear.TabIndex = 34;
-            this.btnClear.Values.Text = "CLEAR";
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnAnn.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAnn.StateTracking.Border.Rounding = 25;
+            this.btnAnn.StateTracking.Border.Width = 1;
+            this.btnAnn.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAnn.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnAnn.TabIndex = 36;
+            this.btnAnn.Values.Text = "ADD ANNOUNCEMENT ";
+            this.btnAnn.Click += new System.EventHandler(this.btnAnn_Click);
             // 
             // frmAnnouncement
             // 
@@ -344,20 +179,11 @@ namespace testing
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 687);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAnn);
             this.Controls.Add(this.data1);
-            this.Controls.Add(this.cbLevel);
-            this.Controls.Add(this.dtDate);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rbDetails);
-            this.Controls.Add(this.tbSubject);
             this.Controls.Add(this.lbl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmAnnouncement";
             this.Text = "frmAnnouncement";
@@ -371,16 +197,7 @@ namespace testing
         #endregion
 
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox tbSubject;
-        private System.Windows.Forms.RichTextBox rbDetails;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtDate;
-        private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.DataGridView data1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAnn;
     }
 }

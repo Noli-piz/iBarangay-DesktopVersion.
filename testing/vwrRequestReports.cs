@@ -21,14 +21,16 @@ namespace testing
     {
         csHostConfiguration host = new csHostConfiguration();
         DTReport ds = new DTReport();
-        String SDate = "", EDate = "";
+        String SDate = "", EDate = "", ProcessBy="", Status="";
 
-        public vwrRequestReports( String SDate, String EDate )
+        public vwrRequestReports(string SDate, string EDate, string ProcessBy, string Status)
         {
             InitializeComponent();
 
             this.SDate = SDate;
             this.EDate = EDate;
+            this.ProcessBy = ProcessBy;
+            this.Status = Status;
         }
 
         private void vwrRequestReports_Load(object sender, EventArgs e)
@@ -53,6 +55,8 @@ namespace testing
                     var datas = new NameValueCollection();
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessBy;
+                    datas["Status"] = Status;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);

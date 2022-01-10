@@ -37,13 +37,10 @@ namespace testing
         {
             mnpltDataGrid();
             loadData();
-            LoadCombobox();
-
         }
 
         private void mnpltDataGrid()
         {
-            ID.Clear();
             data1.Rows.Clear();
             data1.Columns.Clear();
 
@@ -52,6 +49,7 @@ namespace testing
             data1.Columns.Add("sbjct", "Subject");
             data1.Columns.Add("dtls", "Details");
             data1.Columns.Add("date", "Date");
+            data1.Columns.Add("sendto", "Sent To");
             data1.Columns.Add("lvl", "Level");
 
             //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -74,7 +72,6 @@ namespace testing
             data1.Columns["ID"].Visible = false;
         }
 
-        List<string> ID = new List<string>();
         private async void loadData()
         {
             try
@@ -91,14 +88,13 @@ namespace testing
                     int i = 1;
                     foreach (var jo in (JArray)((JObject)data)["announcement"])
                     {
-                        ID.Add(jo["id_announcement"].ToString());
-
                         AL = new ArrayList();
                         AL.Add(i.ToString());
                         AL.Add(jo["id_announcement"]);
                         AL.Add(jo["Subject"]);
                         AL.Add(jo["Details"]);
                         AL.Add(jo["Date"]);
+                        AL.Add(jo["SendTo"]);
                         AL.Add(jo["Level"]);
                         data1.Rows.Add(AL.ToArray());
                         i++;
@@ -119,7 +115,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 7)
                 {
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
@@ -127,7 +123,6 @@ namespace testing
                     frmAnnouncement2 frm = new frmAnnouncement2(identifier);
                     frm.ShowDialog(this);
 
-                    ID.Clear();
                     data1.Rows.Clear();
                     loadData();
                 }
@@ -142,134 +137,13 @@ namespace testing
             }
         }
 
-        private void LoadCombobox()
+        private void btnAnn_Click(object sender, EventArgs e)
         {
-            csComboBoxValues cb = new csComboBoxValues();
-            cb.RetrieveArrLevel();
-            cbLevel.Items.AddRange(cb.GetArrLevel().ToArray());
-            cbLevel.SelectedIndex = 0;
-        }
+            frmAnnouncement_Add frm = new frmAnnouncement_Add();
+            frm.ShowDialog(this);
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (tbSubject.Text != "" && rbDetails.Text !="") {
-                    DateTime dateToday = DateTime.Now;
-
-                    var uri = host.IP() + "/iBar/ibar_announcement_insert.php";
-
-                    string responseFromServer;
-                    using (var wb = new WebClient())
-                    {
-                        var datas = new NameValueCollection();
-                        datas["Subject"] = tbSubject.Text;
-                        datas["Details"] = rbDetails.Text;
-                        datas["Date"] = dtDate.Value.ToString("yyyy-MM-dd");
-                        datas["Level"] = cbLevel.SelectedItem.ToString();
-
-                        csUser user = new csUser();
-                        datas["UserID"] = user.strID();
-
-                        var response = wb.UploadValues(uri, "POST", datas);
-                        responseFromServer = Encoding.UTF8.GetString(response);
-                    }
-
-                    if (responseFromServer == "Operation Success")
-                    {
-                        MessageBox.Show("Insert Successfully");
-                        SendNotif(tbSubject.Text ,  rbDetails.Text);
-                        tbSubject.Text = "";
-                        rbDetails.Text="";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Insert Failed " + responseFromServer);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please fill-up all fields.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-                mnpltDataGrid();
-                loadData();
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            tbSubject.Text = "";
-            rbDetails.Text = "";
-        }
-
-        private void SendNotif(string sub, string det)
-        {
-            try
-            {
-                if (FirebaseApp.DefaultInstance == null)
-                {
-                    FirebaseApp.Create(new AppOptions()
-                    {
-
-                        Credential = GoogleCredential.FromFile("private_key.json")
-
-                        // Put in debug folder
-                        //Credential = GoogleCredential.FromFile("private_key.json")
-                    });
-                }
-                var topic = "ibarangay";
-                var message = new FirebaseAdmin.Messaging.Message()
-                {
-                    //Data = new Dictionary<string, string>()
-                    //{
-                    //    { "myData", "1337" },
-                    //},
-                    //Token = "eKrRrmcSQiumMk-1oy7dox:APA91bG_Od6P5rlBMP6GyIK3WUZNwbuW18nYBxx4dJDLW5zLwLg4x4_2bDwzkQA5dscFOnYZaQ7dAOFplFfuZhIfa7y9bOb9UktLIQx7RC29EDbzlNn3DFWkoVEbUdxkUaeY3UNrTePX",
-
-                    Notification = new Notification()
-                    {
-                        Title = "Announcement!",
-                        Body ="Subject: "+ sub +" \nDetails: "+ det
-                    },
-                    Topic = topic
-                };
-
-                // Send a message to the device corresponding to the provided
-                // registration token.
-                string response = FirebaseMessaging.DefaultInstance.SendAsync(message).Result;
-                // Response is a message ID string.
-                MessageBox.Show("Sending Announcement to Residents....");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(checkEm("thisismenoli@gmail.com").ToString());
-        }
-
-        private bool checkEm(String email)
-        {
-            try
-            {
-                var add = new System.Net.Mail.MailAddress(email);
-                return add.Address == email;
-            }
-            catch (Exception es)
-            {
-                return false;
-            }
+            data1.Rows.Clear();
+            loadData();
         }
     }
 }

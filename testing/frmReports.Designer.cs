@@ -40,10 +40,13 @@ namespace testing
             this.btnPrint = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cbProcessBy = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnFilter = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblDeliveryOpt = new System.Windows.Forms.Label();
+            this.cbDeliveryOpt = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +87,7 @@ namespace testing
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data1.DefaultCellStyle = dataGridViewCellStyle6;
             this.data1.EnableHeadersVisualStyles = false;
-            this.data1.Location = new System.Drawing.Point(9, 193);
+            this.data1.Location = new System.Drawing.Point(9, 201);
             this.data1.Margin = new System.Windows.Forms.Padding(2);
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
@@ -92,7 +95,7 @@ namespace testing
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data1.Size = new System.Drawing.Size(882, 447);
+            this.data1.Size = new System.Drawing.Size(1028, 439);
             this.data1.TabIndex = 0;
             // 
             // dtStart
@@ -100,10 +103,10 @@ namespace testing
             this.dtStart.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStart.Location = new System.Drawing.Point(216, 78);
+            this.dtStart.Location = new System.Drawing.Point(15, 149);
             this.dtStart.Margin = new System.Windows.Forms.Padding(2);
             this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(173, 29);
+            this.dtStart.Size = new System.Drawing.Size(131, 29);
             this.dtStart.TabIndex = 2;
             this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
             // 
@@ -112,10 +115,10 @@ namespace testing
             this.dtEnd.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEnd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEnd.Location = new System.Drawing.Point(430, 78);
+            this.dtEnd.Location = new System.Drawing.Point(178, 149);
             this.dtEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dtEnd.Name = "dtEnd";
-            this.dtEnd.Size = new System.Drawing.Size(178, 29);
+            this.dtEnd.Size = new System.Drawing.Size(135, 29);
             this.dtEnd.TabIndex = 3;
             this.dtEnd.ValueChanged += new System.EventHandler(this.dtEnd_ValueChanged);
             // 
@@ -123,7 +126,7 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 82);
+            this.label1.Location = new System.Drawing.Point(150, 153);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 21);
@@ -134,17 +137,17 @@ namespace testing
             // 
             this.cbReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReports.FormattingEnabled = true;
-            this.cbReports.Location = new System.Drawing.Point(9, 77);
+            this.cbReports.Location = new System.Drawing.Point(9, 72);
             this.cbReports.Margin = new System.Windows.Forms.Padding(2);
             this.cbReports.Name = "cbReports";
-            this.cbReports.Size = new System.Drawing.Size(187, 28);
+            this.cbReports.Size = new System.Drawing.Size(304, 28);
             this.cbReports.TabIndex = 5;
             this.cbReports.SelectedIndexChanged += new System.EventHandler(this.cbReports_SelectedIndexChanged);
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(773, 71);
+            this.btnPrint.Location = new System.Drawing.Point(919, 66);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
@@ -204,10 +207,10 @@ namespace testing
             // 
             this.cbProcessBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProcessBy.FormattingEnabled = true;
-            this.cbProcessBy.Location = new System.Drawing.Point(11, 140);
+            this.cbProcessBy.Location = new System.Drawing.Point(329, 150);
             this.cbProcessBy.Margin = new System.Windows.Forms.Padding(2);
             this.cbProcessBy.Name = "cbProcessBy";
-            this.cbProcessBy.Size = new System.Drawing.Size(187, 28);
+            this.cbProcessBy.Size = new System.Drawing.Size(164, 28);
             this.cbProcessBy.TabIndex = 24;
             this.cbProcessBy.SelectedIndexChanged += new System.EventHandler(this.cbProcessBy_SelectedIndexChanged);
             // 
@@ -215,66 +218,147 @@ namespace testing
             // 
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(216, 140);
+            this.cbStatus.Location = new System.Drawing.Point(499, 149);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(187, 28);
+            this.cbStatus.Size = new System.Drawing.Size(163, 28);
             this.cbStatus.TabIndex = 25;
             this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(421, 140);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(187, 28);
-            this.comboBox3.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 117);
+            this.label2.Location = new System.Drawing.Point(329, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 21);
             this.label2.TabIndex = 27;
             this.label2.Text = "Processed By:";
             // 
-            // label3
+            // lblStatus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(212, 117);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 21);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Status:";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(495, 126);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(55, 21);
+            this.lblStatus.TabIndex = 28;
+            this.lblStatus.Text = "Status:";
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(417, 117);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 21);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Delivery Option:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 120);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 21);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Date Range:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 49);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 21);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Date Types:";
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFilter.Location = new System.Drawing.Point(910, 142);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnFilter.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnFilter.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnFilter.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnFilter.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnFilter.OverrideDefault.Border.Width = 1;
+            this.btnFilter.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnFilter.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnFilter.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnFilter.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnFilter.Size = new System.Drawing.Size(107, 32);
+            this.btnFilter.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnFilter.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnFilter.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnFilter.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnFilter.StateCommon.Border.Width = 1;
+            this.btnFilter.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btnFilter.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnFilter.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnFilter.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnFilter.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnFilter.StatePressed.Back.ColorAngle = 135F;
+            this.btnFilter.StatePressed.Border.ColorAngle = 135F;
+            this.btnFilter.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnFilter.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnFilter.StatePressed.Border.Width = 1;
+            this.btnFilter.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.btnFilter.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnFilter.StateTracking.Back.ColorAngle = 45F;
+            this.btnFilter.StateTracking.Border.ColorAngle = 45F;
+            this.btnFilter.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnFilter.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnFilter.StateTracking.Border.Width = 1;
+            this.btnFilter.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnFilter.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnFilter.TabIndex = 32;
+            this.btnFilter.Values.Text = "APPLY FILTER";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // lblDeliveryOpt
+            // 
+            this.lblDeliveryOpt.AutoSize = true;
+            this.lblDeliveryOpt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeliveryOpt.Location = new System.Drawing.Point(662, 126);
+            this.lblDeliveryOpt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeliveryOpt.Name = "lblDeliveryOpt";
+            this.lblDeliveryOpt.Size = new System.Drawing.Size(122, 21);
+            this.lblDeliveryOpt.TabIndex = 34;
+            this.lblDeliveryOpt.Text = "Delivery Option:";
+            // 
+            // cbDeliveryOpt
+            // 
+            this.cbDeliveryOpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDeliveryOpt.FormattingEnabled = true;
+            this.cbDeliveryOpt.Location = new System.Drawing.Point(666, 149);
+            this.cbDeliveryOpt.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDeliveryOpt.Name = "cbDeliveryOpt";
+            this.cbDeliveryOpt.Size = new System.Drawing.Size(192, 28);
+            this.cbDeliveryOpt.TabIndex = 33;
+            this.cbDeliveryOpt.SelectedIndexChanged += new System.EventHandler(this.cbDeliveryOpt_SelectedIndexChanged);
             // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1046, 650);
+            this.Controls.Add(this.lblDeliveryOpt);
+            this.Controls.Add(this.cbDeliveryOpt);
+            this.Controls.Add(this.btnFilter);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbProcessBy);
             this.Controls.Add(this.btnPrint);
@@ -304,9 +388,12 @@ namespace testing
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnPrint;
         private System.Windows.Forms.ComboBox cbProcessBy;
         private System.Windows.Forms.ComboBox cbStatus;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnFilter;
+        private System.Windows.Forms.Label lblDeliveryOpt;
+        private System.Windows.Forms.ComboBox cbDeliveryOpt;
     }
 }

@@ -20,19 +20,22 @@ namespace testing
 
         csHostConfiguration host = new csHostConfiguration();
         DTReport ds = new DTReport();
-        String SDate = "", EDate = "";
+        String SDate = "", EDate = "", ProcessBy="", Status="", DeliveryOpt="";
 
-        public vwrMiscellaneousServices(String SDate, String EDate)
+        public vwrMiscellaneousServices(string SDate, string EDate, string ProcessBy, string Status, string DeliveryOpt)
         {
             InitializeComponent();
 
             this.SDate = SDate;
             this.EDate = EDate;
+            this.ProcessBy = ProcessBy;
+            this.Status = Status;
+            this.DeliveryOpt = DeliveryOpt;
         }
 
         private void vwrMiscellaneousServices_Load(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
         private async void loadData()
@@ -49,12 +52,16 @@ namespace testing
                     string date2 = EDate;
 
                     var datas = new NameValueCollection();
-                    //datas["Date1"] = date1.ToString();
-                    //datas["Date2"] = date2.ToString();
+                    datas["Date1"] = date1.ToString();
+                    datas["Date2"] = date2.ToString();
+                    datas["ProcessBy"] = ProcessBy;
+                    datas["Status"] = Status;
+                    datas["DeliveryOpt"] = DeliveryOpt;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
                 }
+
 
                 var data = JsonConvert.DeserializeObject(responseFromServer);
                 string success = JObject.Parse(responseFromServer)["success"].ToString();
@@ -63,7 +70,7 @@ namespace testing
                     foreach (var jo in (JArray)((JObject)data)["servicereport"])
                     {
 
-                        string id = jo["id_requestsreports"].ToString();
+                        string id = jo["id_misservicesreports"].ToString();
                         string fullname = jo["Fullname"].ToString();
                         string username = jo["Username"].ToString();
                         string fname = jo["Fname"].ToString();
@@ -78,7 +85,7 @@ namespace testing
                         string deadline = jo["Deadline"].ToString();
                         string note = jo["Note"].ToString();
                         string options = jo["Options"].ToString();
-                        string dateprocessed = jo["Date"].ToString();
+                        string dateprocessed = jo["DateProcessed"].ToString();
 
                         ds.dataMiscellaneousReport.Rows.Add(
                             id,

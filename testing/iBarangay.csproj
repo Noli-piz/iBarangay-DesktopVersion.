@@ -393,12 +393,6 @@
     <Compile Include="frmAnnouncement_Add.Designer.cs">
       <DependentUpon>frmAnnouncement_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAnnouncement_Specific.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAnnouncement_Specific.Designer.cs">
-      <DependentUpon>frmAnnouncement_Specific.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAppointment_update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -745,9 +739,6 @@
     <EmbeddedResource Include="frmAnnouncement_Add.resx">
       <DependentUpon>frmAnnouncement_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAnnouncement_Specific.resx">
-      <DependentUpon>frmAnnouncement_Specific.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAppointment_update.resx">
       <DependentUpon>frmAppointment_update.cs</DependentUpon>
     </EmbeddedResource>
@@ -994,6 +985,10 @@
     <None Include="Resources\people.png" />
     <None Include="Resources\upload.png" />
     <None Include="Resources\upload %281%29.png" />
+    <Content Include="Resources\foldericon.png" />
+    <None Include="Resources\foldericon1.png" />
+    <Content Include="Resources\megaphone %282%29.png" />
+    <None Include="Resources\megaphone.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

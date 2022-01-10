@@ -24,7 +24,7 @@ namespace testing
     {
         private csHostConfiguration host = new csHostConfiguration();
         private csApiKey api = new csApiKey();
-        private String ID, resUsername="";
+        private String ID, resUsername="", strFileDownloadUrl="";
 
         public frmAccountMngmnt2(String id)
         {
@@ -132,6 +132,10 @@ namespace testing
                         lblEmail.Text = jo["Email"].ToString();
                         lblHouseNo.Text = jo["HouseNoAndStreet"].ToString();
 
+                        strFileDownloadUrl = jo["ProofUrl"].ToString();
+                        lblFormerAddress.Text = jo["FormerAddress"].ToString();
+                        lblVoterRegistrationPlace.Text = jo["VoterRegistrationPlace"].ToString();
+
                         tbUsername.Text = jo["Username"].ToString();
                         resUsername = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
@@ -145,8 +149,21 @@ namespace testing
                             DownloadImage(jo["img_idcloseup"].ToString());
                             DownloadImage2(jo["img_facewithid"].ToString());
                         }
-                        
                     }
+
+                    if (strFileDownloadUrl == null || strFileDownloadUrl == "")
+                    {
+                        lblDownloadFile.Visible = false;
+                        btnDownloadFile.Visible = false;
+
+                        txtFormerAddress.Visible = false;
+                        lblFormerAddress.Visible = false;
+
+                        txtVoterRegistrationPlace.Visible = false;
+                        lblVoterRegistrationPlace.Visible = false;
+
+                    }
+
                 }
                 else if (success == "0")
                 {
@@ -216,7 +233,6 @@ namespace testing
                 MessageBox.Show("Please enter a message.");
             }
         }
-
 
         private void SendNotif(string username, string Stat, string Message)
         {
@@ -385,6 +401,22 @@ namespace testing
                 btnHide3.Image = Properties.Resources.sharp_visibility_black_18dp;
             }
 
+        }
+
+        private void btnDownloadFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to download? You will redirected to your default browser.", "Download File", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start(strFileDownloadUrl);
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)

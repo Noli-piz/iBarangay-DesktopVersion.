@@ -333,6 +333,10 @@ namespace testing
                             datas["Note"] = rbNote.Text=="" ? "NONE" : rbNote.Text;
                             datas["ID"] = ID;
 
+                            csUser user = new csUser();
+                            datas["UserID"] = user.strID();
+
+
                             var response = wb.UploadValues(uri, "POST", datas);
                             responseFromServer = Encoding.UTF8.GetString(response);
                         }

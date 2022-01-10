@@ -43,6 +43,7 @@ namespace testing
             data1.Columns.Add("dtls", "Details");
             data1.Columns.Add("date", "Date");
             data1.Columns.Add("lvl", "Level");
+            data1.Columns.Add("sent", "Sent To");
             data1.Columns.Add("actn", "Action");
             data1.Columns.Add("fllnm", "Processed By");
             data1.Columns.Add("dtmdfd", "Date Modified");
@@ -82,6 +83,7 @@ namespace testing
                         AL.Add(jo["Details"]);
                         AL.Add(jo["Date"]);
                         AL.Add(jo["Level"]);
+                        AL.Add(jo["SendTo"]);
                         AL.Add(jo["Action"]);
                         AL.Add(jo["Fullname"]);
                         AL.Add(jo["DateModified"]);

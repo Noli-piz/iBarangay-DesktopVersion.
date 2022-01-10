@@ -263,7 +263,7 @@ namespace testing
                     HtmlContent = "<h3> Account Validation</h3> <br><strong>Status:</strong> " + Stat + "<br><strong>Information: </strong>" + Message
                 };
 
-                msg.AddTo(new EmailAddress(lblEmail.Text, "Test-user"));
+                msg.AddTo(new EmailAddress(lblEmail.Text, ""));
                 var response = await client.SendEmailAsync(msg);
                 if (response.IsSuccessStatusCode)
                 {

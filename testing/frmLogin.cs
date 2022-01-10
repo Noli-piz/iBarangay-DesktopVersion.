@@ -32,22 +32,16 @@ namespace testing
             {
                 MessageBox.Show("Password is Empty!");
             }
-            else if (cbUsertype.SelectedItem.ToString() == "")
-            {
-                MessageBox.Show("Please select Usertype.");
-            }
             else
             {
-                csLogin cs = new csLogin();
-                cs.Login(tbPassword.Text, tbPassword.Text, cbUsertype.SelectedItem.ToString());
+                csUser us = new csUser();
+                us.usercredentials( tbUsername.Text, tbPassword.Text);
 
-                MessageBox.Show(cs.Message);
-                if (cs.Message == "Login Success")
+                MessageBox.Show(us.Message);
+                if (us.Message == "Login Success")
                 {
-                    csUser us = new csUser();
-                    us.usercredentials(tbPassword.Text);
 
-                    if (cs.uType == "Admin")
+                    if (us.getLevelOfAccess() == "Admin")
                     {
                         frmMenuAdmin frm = new frmMenuAdmin();
                         frm.Closed += (s, args) => this.Close();
@@ -81,6 +75,11 @@ namespace testing
             {
                 btnHide.Image = Properties.Resources.sharp_visibility_black_18dp;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

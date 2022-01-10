@@ -77,6 +77,10 @@ namespace testing
             this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lblHouseNo = new System.Windows.Forms.Label();
+            this.lblEndRentDate = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.materialCard1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +89,7 @@ namespace testing
             this.lblDeliveryOption.AutoSize = true;
             this.lblDeliveryOption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryOption.ForeColor = System.Drawing.Color.Green;
-            this.lblDeliveryOption.Location = new System.Drawing.Point(138, 354);
+            this.lblDeliveryOption.Location = new System.Drawing.Point(862, 35);
             this.lblDeliveryOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeliveryOption.Name = "lblDeliveryOption";
             this.lblDeliveryOption.Size = new System.Drawing.Size(56, 21);
@@ -96,7 +100,7 @@ namespace testing
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 358);
+            this.label8.Location = new System.Drawing.Point(750, 37);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 19);
@@ -108,7 +112,7 @@ namespace testing
             this.lblCurrentStatus.AutoSize = true;
             this.lblCurrentStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblCurrentStatus.Location = new System.Drawing.Point(387, 354);
+            this.lblCurrentStatus.Location = new System.Drawing.Point(131, 64);
             this.lblCurrentStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentStatus.Name = "lblCurrentStatus";
             this.lblCurrentStatus.Size = new System.Drawing.Size(90, 21);
@@ -119,7 +123,7 @@ namespace testing
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(290, 358);
+            this.label5.Location = new System.Drawing.Point(26, 66);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 19);
@@ -154,7 +158,7 @@ namespace testing
             // 
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(150, 489);
+            this.cbStatus.Location = new System.Drawing.Point(144, 240);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(168, 29);
@@ -164,7 +168,7 @@ namespace testing
             // 
             this.rbPurpose.BackColor = System.Drawing.Color.White;
             this.rbPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbPurpose.Location = new System.Drawing.Point(142, 389);
+            this.rbPurpose.Location = new System.Drawing.Point(131, 110);
             this.rbPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.rbPurpose.Name = "rbPurpose";
             this.rbPurpose.ReadOnly = true;
@@ -176,7 +180,7 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 493);
+            this.label4.Location = new System.Drawing.Point(34, 244);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 19);
@@ -243,7 +247,7 @@ namespace testing
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 541);
+            this.label6.Location = new System.Drawing.Point(26, 292);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 19);
@@ -256,7 +260,7 @@ namespace testing
             this.dtDeadline.CustomFormat = "MMM dd, yyyy";
             this.dtDeadline.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDeadline.Location = new System.Drawing.Point(150, 533);
+            this.dtDeadline.Location = new System.Drawing.Point(144, 284);
             this.dtDeadline.Margin = new System.Windows.Forms.Padding(2);
             this.dtDeadline.Name = "dtDeadline";
             this.dtDeadline.Size = new System.Drawing.Size(168, 29);
@@ -266,7 +270,7 @@ namespace testing
             // 
             this.rbNote.BackColor = System.Drawing.Color.White;
             this.rbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNote.Location = new System.Drawing.Point(460, 489);
+            this.rbNote.Location = new System.Drawing.Point(454, 240);
             this.rbNote.Margin = new System.Windows.Forms.Padding(2);
             this.rbNote.Name = "rbNote";
             this.rbNote.Size = new System.Drawing.Size(260, 65);
@@ -277,7 +281,7 @@ namespace testing
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(351, 489);
+            this.label9.Location = new System.Drawing.Point(345, 240);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 19);
@@ -287,7 +291,7 @@ namespace testing
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(794, 614);
+            this.btnSubmit.Location = new System.Drawing.Point(912, 662);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
@@ -349,7 +353,7 @@ namespace testing
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(663, 614);
+            this.btnCancel.Location = new System.Drawing.Point(783, 662);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
@@ -414,6 +418,21 @@ namespace testing
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.label23);
+            this.materialCard1.Controls.Add(this.lblEndRentDate);
+            this.materialCard1.Controls.Add(this.cbStatus);
+            this.materialCard1.Controls.Add(this.rbNote);
+            this.materialCard1.Controls.Add(this.label4);
+            this.materialCard1.Controls.Add(this.label9);
+            this.materialCard1.Controls.Add(this.label6);
+            this.materialCard1.Controls.Add(this.dtDeadline);
+            this.materialCard1.Controls.Add(this.label8);
+            this.materialCard1.Controls.Add(this.lblDeliveryOption);
+            this.materialCard1.Controls.Add(this.label5);
+            this.materialCard1.Controls.Add(this.lblCurrentStatus);
+            this.materialCard1.Controls.Add(this.label10);
+            this.materialCard1.Controls.Add(this.lblRentDate);
+            this.materialCard1.Controls.Add(this.rbPurpose);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(11, 290);
@@ -421,14 +440,14 @@ namespace testing
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard1.Size = new System.Drawing.Size(898, 289);
+            this.materialCard1.Size = new System.Drawing.Size(1016, 359);
             this.materialCard1.TabIndex = 89;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(562, 358);
+            this.label10.Location = new System.Drawing.Point(298, 66);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 19);
@@ -440,7 +459,7 @@ namespace testing
             this.lblRentDate.AutoSize = true;
             this.lblRentDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentDate.ForeColor = System.Drawing.Color.Green;
-            this.lblRentDate.Location = new System.Drawing.Point(634, 354);
+            this.lblRentDate.Location = new System.Drawing.Point(376, 64);
             this.lblRentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRentDate.Name = "lblRentDate";
             this.lblRentDate.Size = new System.Drawing.Size(94, 21);
@@ -462,6 +481,14 @@ namespace testing
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.lblHouseNo);
+            this.materialCard2.Controls.Add(this.label17);
+            this.materialCard2.Controls.Add(this.label13);
+            this.materialCard2.Controls.Add(this.lblCedula);
+            this.materialCard2.Controls.Add(this.label16);
+            this.materialCard2.Controls.Add(this.lblEmail);
+            this.materialCard2.Controls.Add(this.lblBlotterCase);
+            this.materialCard2.Controls.Add(this.label21);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(11, 19);
@@ -469,7 +496,7 @@ namespace testing
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard2.Size = new System.Drawing.Size(898, 262);
+            this.materialCard2.Size = new System.Drawing.Size(1016, 262);
             this.materialCard2.TabIndex = 90;
             // 
             // label12
@@ -499,7 +526,7 @@ namespace testing
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(658, 99);
+            this.label13.Location = new System.Drawing.Point(736, 78);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 19);
@@ -511,7 +538,7 @@ namespace testing
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.Green;
-            this.lblCedula.Location = new System.Drawing.Point(739, 97);
+            this.lblCedula.Location = new System.Drawing.Point(817, 76);
             this.lblCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(55, 21);
@@ -522,7 +549,7 @@ namespace testing
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(637, 38);
+            this.label16.Location = new System.Drawing.Point(715, 17);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(100, 19);
@@ -534,7 +561,7 @@ namespace testing
             this.lblBlotterCase.AutoSize = true;
             this.lblBlotterCase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlotterCase.ForeColor = System.Drawing.Color.Red;
-            this.lblBlotterCase.Location = new System.Drawing.Point(739, 36);
+            this.lblBlotterCase.Location = new System.Drawing.Point(817, 15);
             this.lblBlotterCase.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBlotterCase.Name = "lblBlotterCase";
             this.lblBlotterCase.Size = new System.Drawing.Size(19, 21);
@@ -592,7 +619,7 @@ namespace testing
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(54, 67);
+            this.label21.Location = new System.Drawing.Point(101, 48);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 19);
@@ -615,7 +642,7 @@ namespace testing
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Green;
-            this.lblEmail.Location = new System.Drawing.Point(98, 63);
+            this.lblEmail.Location = new System.Drawing.Point(145, 44);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(19, 21);
@@ -689,7 +716,7 @@ namespace testing
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data1.ShowCellToolTips = false;
             this.data1.ShowEditingIcon = false;
-            this.data1.Size = new System.Drawing.Size(850, 99);
+            this.data1.Size = new System.Drawing.Size(980, 110);
             this.data1.TabIndex = 106;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -721,7 +748,7 @@ namespace testing
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(362, 67);
+            this.label17.Location = new System.Drawing.Point(440, 46);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(143, 19);
@@ -733,61 +760,64 @@ namespace testing
             this.lblHouseNo.AutoSize = true;
             this.lblHouseNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouseNo.ForeColor = System.Drawing.Color.Green;
-            this.lblHouseNo.Location = new System.Drawing.Point(510, 65);
+            this.lblHouseNo.Location = new System.Drawing.Point(588, 44);
             this.lblHouseNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHouseNo.Name = "lblHouseNo";
             this.lblHouseNo.Size = new System.Drawing.Size(154, 21);
             this.lblHouseNo.TabIndex = 111;
             this.lblHouseNo.Text = "house  no. and street";
             // 
+            // lblEndRentDate
+            // 
+            this.lblEndRentDate.AutoSize = true;
+            this.lblEndRentDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndRentDate.ForeColor = System.Drawing.Color.Green;
+            this.lblEndRentDate.Location = new System.Drawing.Point(533, 64);
+            this.lblEndRentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEndRentDate.Name = "lblEndRentDate";
+            this.lblEndRentDate.Size = new System.Drawing.Size(94, 21);
+            this.lblEndRentDate.TabIndex = 113;
+            this.lblEndRentDate.Text = "0000-00-00";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(481, 64);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 21);
+            this.label23.TabIndex = 114;
+            this.label23.Text = "until";
+            // 
             // frmMisService2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 677);
-            this.Controls.Add(this.lblHouseNo);
-            this.Controls.Add(this.label17);
+            this.ClientSize = new System.Drawing.Size(1038, 727);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.lblVoterStatus);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.lblBlotterCase);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.lblCedula);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.lblFullname);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblRentDate);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.dtDeadline);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblDeliveryOption);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.lblCurrentStatus);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblItem);
-            this.Controls.Add(this.cbStatus);
-            this.Controls.Add(this.rbPurpose);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rbNote);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialCard2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -798,6 +828,10 @@ namespace testing
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Miscellaneous Services";
             this.Load += new System.EventHandler(this.frmMisService2_Load);
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -850,5 +884,7 @@ namespace testing
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblHouseNo;
+        private System.Windows.Forms.Label lblEndRentDate;
+        private System.Windows.Forms.Label label23;
     }
 }

@@ -45,6 +45,8 @@ namespace testing
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbTotalQuantity = new MetroFramework.Controls.MetroTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbPenalty = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mtrData6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,8 +81,9 @@ namespace testing
             this.mtrData6.EnableHeadersVisualStyles = false;
             this.mtrData6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtrData6.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtrData6.Location = new System.Drawing.Point(12, 61);
-            this.mtrData6.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.mtrData6.Location = new System.Drawing.Point(9, 50);
+            this.mtrData6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtrData6.MaximumSize = new System.Drawing.Size(750, 812);
             this.mtrData6.MultiSelect = false;
             this.mtrData6.Name = "mtrData6";
             this.mtrData6.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -97,7 +100,7 @@ namespace testing
             this.mtrData6.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mtrData6.RowTemplate.Height = 40;
             this.mtrData6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mtrData6.Size = new System.Drawing.Size(783, 581);
+            this.mtrData6.Size = new System.Drawing.Size(587, 472);
             this.mtrData6.TabIndex = 4;
             this.mtrData6.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mtrData6_CellClick);
             this.mtrData6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mtrData6_CellContentClick);
@@ -105,9 +108,10 @@ namespace testing
             // btnAdd
             // 
             this.btnAdd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAdd.Location = new System.Drawing.Point(1111, 504);
+            this.btnAdd.Location = new System.Drawing.Point(840, 441);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(126, 49);
+            this.btnAdd.Size = new System.Drawing.Size(94, 40);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseSelectable = true;
@@ -116,9 +120,10 @@ namespace testing
             // btnUpdate
             // 
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnUpdate.Location = new System.Drawing.Point(979, 504);
+            this.btnUpdate.Location = new System.Drawing.Point(741, 441);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(126, 49);
+            this.btnUpdate.Size = new System.Drawing.Size(94, 40);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseSelectable = true;
@@ -127,9 +132,10 @@ namespace testing
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnDelete.Location = new System.Drawing.Point(847, 504);
+            this.btnDelete.Location = new System.Drawing.Point(642, 441);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 49);
+            this.btnDelete.Size = new System.Drawing.Size(94, 40);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
@@ -145,9 +151,10 @@ namespace testing
             this.tbItemName.CustomButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tbItemName.CustomButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.tbItemName.CustomButton.Image = null;
-            this.tbItemName.CustomButton.Location = new System.Drawing.Point(369, 1);
+            this.tbItemName.CustomButton.Location = new System.Drawing.Point(207, 2);
+            this.tbItemName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbItemName.CustomButton.Name = "";
-            this.tbItemName.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbItemName.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbItemName.CustomButton.TabIndex = 1;
             this.tbItemName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -155,7 +162,8 @@ namespace testing
             this.tbItemName.CustomButton.Visible = false;
             this.tbItemName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbItemName.Lines = new string[0];
-            this.tbItemName.Location = new System.Drawing.Point(845, 120);
+            this.tbItemName.Location = new System.Drawing.Point(634, 98);
+            this.tbItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbItemName.MaxLength = 32767;
             this.tbItemName.Name = "tbItemName";
             this.tbItemName.PasswordChar = '\0';
@@ -166,7 +174,7 @@ namespace testing
             this.tbItemName.SelectionStart = 0;
             this.tbItemName.ShortcutsEnabled = false;
             this.tbItemName.ShowClearButton = true;
-            this.tbItemName.Size = new System.Drawing.Size(403, 35);
+            this.tbItemName.Size = new System.Drawing.Size(302, 28);
             this.tbItemName.TabIndex = 8;
             this.tbItemName.UseSelectable = true;
             this.tbItemName.WaterMark = "Enter Item Name";
@@ -180,9 +188,10 @@ namespace testing
             // 
             // 
             this.tbQuantity.CustomButton.Image = null;
-            this.tbQuantity.CustomButton.Location = new System.Drawing.Point(369, 1);
+            this.tbQuantity.CustomButton.Location = new System.Drawing.Point(207, 2);
+            this.tbQuantity.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbQuantity.CustomButton.Name = "";
-            this.tbQuantity.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbQuantity.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbQuantity.CustomButton.TabIndex = 1;
             this.tbQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -190,7 +199,8 @@ namespace testing
             this.tbQuantity.CustomButton.Visible = false;
             this.tbQuantity.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbQuantity.Lines = new string[0];
-            this.tbQuantity.Location = new System.Drawing.Point(845, 211);
+            this.tbQuantity.Location = new System.Drawing.Point(634, 171);
+            this.tbQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbQuantity.MaxLength = 32767;
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.PasswordChar = '\0';
@@ -200,7 +210,7 @@ namespace testing
             this.tbQuantity.SelectionLength = 0;
             this.tbQuantity.SelectionStart = 0;
             this.tbQuantity.ShortcutsEnabled = true;
-            this.tbQuantity.Size = new System.Drawing.Size(403, 35);
+            this.tbQuantity.Size = new System.Drawing.Size(302, 28);
             this.tbQuantity.TabIndex = 9;
             this.tbQuantity.UseSelectable = true;
             this.tbQuantity.WaterMark = "Enter Available Quantity";
@@ -213,9 +223,10 @@ namespace testing
             // 
             // 
             this.tbDelivery.CustomButton.Image = null;
-            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(369, 1);
+            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(207, 2);
+            this.tbDelivery.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDelivery.CustomButton.Name = "";
-            this.tbDelivery.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbDelivery.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbDelivery.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbDelivery.CustomButton.TabIndex = 1;
             this.tbDelivery.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -223,7 +234,8 @@ namespace testing
             this.tbDelivery.CustomButton.Visible = false;
             this.tbDelivery.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbDelivery.Lines = new string[0];
-            this.tbDelivery.Location = new System.Drawing.Point(845, 392);
+            this.tbDelivery.Location = new System.Drawing.Point(634, 318);
+            this.tbDelivery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDelivery.MaxLength = 32767;
             this.tbDelivery.Name = "tbDelivery";
             this.tbDelivery.PasswordChar = '\0';
@@ -233,7 +245,7 @@ namespace testing
             this.tbDelivery.SelectionLength = 0;
             this.tbDelivery.SelectionStart = 0;
             this.tbDelivery.ShortcutsEnabled = true;
-            this.tbDelivery.Size = new System.Drawing.Size(403, 35);
+            this.tbDelivery.Size = new System.Drawing.Size(302, 28);
             this.tbDelivery.TabIndex = 10;
             this.tbDelivery.UseSelectable = true;
             this.tbDelivery.WaterMark = "Enter Delivery Fee";
@@ -244,9 +256,10 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 32);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 18;
             this.label1.Text = "ITEMS";
             // 
@@ -254,9 +267,10 @@ namespace testing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(840, 82);
+            this.label2.Location = new System.Drawing.Point(630, 67);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 28);
+            this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 20;
             this.label2.Text = "Item Name";
             // 
@@ -264,9 +278,10 @@ namespace testing
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(840, 175);
+            this.label3.Location = new System.Drawing.Point(630, 142);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 35);
+            this.label3.Size = new System.Drawing.Size(137, 21);
             this.label3.TabIndex = 21;
             this.label3.Text = "Available Quantity";
             // 
@@ -274,9 +289,10 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(842, 361);
+            this.label4.Location = new System.Drawing.Point(632, 293);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 28);
+            this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 22;
             this.label4.Text = "Delivery Fee";
             // 
@@ -284,9 +300,10 @@ namespace testing
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(842, 269);
+            this.label5.Location = new System.Drawing.Point(632, 219);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 28);
+            this.label5.Size = new System.Drawing.Size(106, 21);
             this.label5.TabIndex = 24;
             this.label5.Text = "Total Quantity";
             // 
@@ -296,9 +313,10 @@ namespace testing
             // 
             // 
             this.tbTotalQuantity.CustomButton.Image = null;
-            this.tbTotalQuantity.CustomButton.Location = new System.Drawing.Point(369, 1);
+            this.tbTotalQuantity.CustomButton.Location = new System.Drawing.Point(207, 2);
+            this.tbTotalQuantity.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTotalQuantity.CustomButton.Name = "";
-            this.tbTotalQuantity.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbTotalQuantity.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbTotalQuantity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbTotalQuantity.CustomButton.TabIndex = 1;
             this.tbTotalQuantity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -306,7 +324,8 @@ namespace testing
             this.tbTotalQuantity.CustomButton.Visible = false;
             this.tbTotalQuantity.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbTotalQuantity.Lines = new string[0];
-            this.tbTotalQuantity.Location = new System.Drawing.Point(847, 305);
+            this.tbTotalQuantity.Location = new System.Drawing.Point(635, 248);
+            this.tbTotalQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTotalQuantity.MaxLength = 32767;
             this.tbTotalQuantity.Name = "tbTotalQuantity";
             this.tbTotalQuantity.PasswordChar = '\0';
@@ -316,19 +335,67 @@ namespace testing
             this.tbTotalQuantity.SelectionLength = 0;
             this.tbTotalQuantity.SelectionStart = 0;
             this.tbTotalQuantity.ShortcutsEnabled = true;
-            this.tbTotalQuantity.Size = new System.Drawing.Size(403, 35);
+            this.tbTotalQuantity.Size = new System.Drawing.Size(302, 28);
             this.tbTotalQuantity.TabIndex = 23;
             this.tbTotalQuantity.UseSelectable = true;
             this.tbTotalQuantity.WaterMark = "Enter Total Quantity";
             this.tbTotalQuantity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbTotalQuantity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(634, 357);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 21);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Penalty Fee";
+            // 
+            // tbPenalty
+            // 
+            // 
+            // 
+            // 
+            this.tbPenalty.CustomButton.Image = null;
+            this.tbPenalty.CustomButton.Location = new System.Drawing.Point(276, 2);
+            this.tbPenalty.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPenalty.CustomButton.Name = "";
+            this.tbPenalty.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.tbPenalty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbPenalty.CustomButton.TabIndex = 1;
+            this.tbPenalty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbPenalty.CustomButton.UseSelectable = true;
+            this.tbPenalty.CustomButton.Visible = false;
+            this.tbPenalty.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.tbPenalty.Lines = new string[0];
+            this.tbPenalty.Location = new System.Drawing.Point(636, 382);
+            this.tbPenalty.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPenalty.MaxLength = 32767;
+            this.tbPenalty.Name = "tbPenalty";
+            this.tbPenalty.PasswordChar = '\0';
+            this.tbPenalty.PromptText = "Enter Penalty Fee";
+            this.tbPenalty.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbPenalty.SelectedText = "";
+            this.tbPenalty.SelectionLength = 0;
+            this.tbPenalty.SelectionStart = 0;
+            this.tbPenalty.ShortcutsEnabled = true;
+            this.tbPenalty.Size = new System.Drawing.Size(302, 28);
+            this.tbPenalty.TabIndex = 25;
+            this.tbPenalty.UseSelectable = true;
+            this.tbPenalty.WaterMark = "Enter Penalty Fee";
+            this.tbPenalty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbPenalty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // tabItems
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1312, 692);
+            this.ClientSize = new System.Drawing.Size(984, 562);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbPenalty);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbTotalQuantity);
             this.Controls.Add(this.label4);
@@ -343,6 +410,7 @@ namespace testing
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.mtrData6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "tabItems";
             this.Text = "tabItems";
             this.Load += new System.EventHandler(this.tabItems_Load);
@@ -367,5 +435,7 @@ namespace testing
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroTextBox tbTotalQuantity;
+        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroTextBox tbPenalty;
     }
 }

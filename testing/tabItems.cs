@@ -48,6 +48,7 @@ namespace testing
             mtrData6.Columns.Add("aquan", "Available Quantity");
             mtrData6.Columns.Add("tquan", "Total Quantity");
             mtrData6.Columns.Add("dfee", "Delivery Fee");
+            mtrData6.Columns.Add("pfee", "Penalty Fee");
 
             //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
             //btn1.HeaderText = "Action";
@@ -91,6 +92,7 @@ namespace testing
                         AL.Add(jo["Quantity"]);
                         AL.Add(jo["TotalQuantity"]);
                         AL.Add(jo["DeliveryFee"]);
+                        AL.Add(jo["PenaltyFee"]);
                         mtrData6.Rows.Add(AL.ToArray());
                         i++;
                     }
@@ -110,7 +112,7 @@ namespace testing
         {
             try
             {
-                if (tbItemName.Text != "" && tbDelivery.Text != "" && tbQuantity.Text != "") {
+                if (tbItemName.Text != "" && tbDelivery.Text != "" && tbQuantity.Text != "" && tbPenalty.Text != "") {
                     DateTime dateToday = DateTime.Now;
 
                     var uri = host.IP() + "/iBar/ibar_items_insert.php";
@@ -122,6 +124,7 @@ namespace testing
                         datas["Items"] = tbItemName.Text;
                         datas["Quantity"] = tbQuantity.Text;
                         datas["DeliveryFee"] = tbDelivery.Text;
+                        datas["PenaltyFee"] = tbPenalty.Text;
 
                         var response = wb.UploadValues(uri, "POST", datas);
                         responseFromServer = Encoding.UTF8.GetString(response);
@@ -161,7 +164,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 8)
+                if (e.ColumnIndex == 9)
                 {
                     DataGridViewRow row = mtrData6.Rows[e.RowIndex];
                     String identifier = row.Cells[1].Value.ToString();
@@ -212,6 +215,7 @@ namespace testing
                         tbQuantity.Text = jo["Quantity"].ToString();
                         tbTotalQuantity.Text = jo["TotalQuantity"].ToString();
                         tbDelivery.Text = jo["DeliveryFee"].ToString();
+                        tbPenalty.Text = jo["PenaltyFee"].ToString();
                     }
                 }
                 else if (success == "0")
@@ -244,6 +248,7 @@ namespace testing
                     datas["Items"] = tbItemName.Text;
                     datas["Quantity"] = tbQuantity.Text;
                     datas["DeliveryFee"] = tbDelivery.Text;
+                    datas["PenaltyFee"] = tbPenalty.Text;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -257,6 +262,7 @@ namespace testing
                     tbQuantity.Text = "";
                     tbTotalQuantity.Text = "";
                     tbDelivery.Text = "";
+                    tbPenalty.Text = "";
                 }
                 else
                 {
@@ -304,6 +310,7 @@ namespace testing
                     tbQuantity.Text = "";
                     tbTotalQuantity.Text = "";
                     tbDelivery.Text = "";
+                    tbPenalty.Text = "";
                 }
                 else
                 {

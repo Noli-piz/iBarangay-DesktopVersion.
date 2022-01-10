@@ -130,7 +130,7 @@ namespace testing
         {
             ArrStatus = new ArrayList()
             {
-                "Pending", "Approved", "Disapproved", "Delivered"
+                "Pending", "Approved", "Disapproved", "Received"
             };
         }
 

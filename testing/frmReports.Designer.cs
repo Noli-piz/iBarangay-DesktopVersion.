@@ -38,6 +38,12 @@ namespace testing
             this.label1 = new System.Windows.Forms.Label();
             this.cbReports = new System.Windows.Forms.ComboBox();
             this.btnPrint = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cbProcessBy = new System.Windows.Forms.ComboBox();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,14 +84,15 @@ namespace testing
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data1.DefaultCellStyle = dataGridViewCellStyle6;
             this.data1.EnableHeadersVisualStyles = false;
-            this.data1.Location = new System.Drawing.Point(12, 148);
+            this.data1.Location = new System.Drawing.Point(9, 193);
+            this.data1.Margin = new System.Windows.Forms.Padding(2);
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data1.Size = new System.Drawing.Size(1176, 640);
+            this.data1.Size = new System.Drawing.Size(882, 447);
             this.data1.TabIndex = 0;
             // 
             // dtStart
@@ -93,9 +100,10 @@ namespace testing
             this.dtStart.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStart.Location = new System.Drawing.Point(288, 96);
+            this.dtStart.Location = new System.Drawing.Point(216, 78);
+            this.dtStart.Margin = new System.Windows.Forms.Padding(2);
             this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(200, 34);
+            this.dtStart.Size = new System.Drawing.Size(173, 29);
             this.dtStart.TabIndex = 2;
             this.dtStart.ValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
             // 
@@ -104,9 +112,10 @@ namespace testing
             this.dtEnd.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEnd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEnd.Location = new System.Drawing.Point(550, 96);
+            this.dtEnd.Location = new System.Drawing.Point(430, 78);
+            this.dtEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dtEnd.Name = "dtEnd";
-            this.dtEnd.Size = new System.Drawing.Size(200, 34);
+            this.dtEnd.Size = new System.Drawing.Size(178, 29);
             this.dtEnd.TabIndex = 3;
             this.dtEnd.ValueChanged += new System.EventHandler(this.dtEnd_ValueChanged);
             // 
@@ -114,9 +123,10 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(507, 99);
+            this.label1.Location = new System.Drawing.Point(399, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 28);
+            this.label1.Size = new System.Drawing.Size(24, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "to";
             // 
@@ -124,16 +134,18 @@ namespace testing
             // 
             this.cbReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReports.FormattingEnabled = true;
-            this.cbReports.Location = new System.Drawing.Point(12, 95);
+            this.cbReports.Location = new System.Drawing.Point(9, 77);
+            this.cbReports.Margin = new System.Windows.Forms.Padding(2);
             this.cbReports.Name = "cbReports";
-            this.cbReports.Size = new System.Drawing.Size(248, 33);
+            this.cbReports.Size = new System.Drawing.Size(187, 28);
             this.cbReports.TabIndex = 5;
             this.cbReports.SelectedIndexChanged += new System.EventHandler(this.cbReports_SelectedIndexChanged);
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(1031, 87);
+            this.btnPrint.Location = new System.Drawing.Point(773, 71);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnPrint.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -150,7 +162,7 @@ namespace testing
             this.btnPrint.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnPrint.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnPrint.Size = new System.Drawing.Size(130, 40);
+            this.btnPrint.Size = new System.Drawing.Size(98, 32);
             this.btnPrint.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnPrint.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnPrint.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -188,12 +200,83 @@ namespace testing
             this.btnPrint.Values.Text = "PRINT";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // cbProcessBy
+            // 
+            this.cbProcessBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProcessBy.FormattingEnabled = true;
+            this.cbProcessBy.Location = new System.Drawing.Point(11, 140);
+            this.cbProcessBy.Margin = new System.Windows.Forms.Padding(2);
+            this.cbProcessBy.Name = "cbProcessBy";
+            this.cbProcessBy.Size = new System.Drawing.Size(187, 28);
+            this.cbProcessBy.TabIndex = 24;
+            this.cbProcessBy.SelectedIndexChanged += new System.EventHandler(this.cbProcessBy_SelectedIndexChanged);
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(216, 140);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(187, 28);
+            this.cbStatus.TabIndex = 25;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(421, 140);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(187, 28);
+            this.comboBox3.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 21);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Processed By:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(212, 117);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 21);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Status:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(417, 117);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 21);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Delivery Option:";
+            // 
             // frmReports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(900, 650);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbStatus);
+            this.Controls.Add(this.cbProcessBy);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cbReports);
             this.Controls.Add(this.label1);
@@ -201,6 +284,7 @@ namespace testing
             this.Controls.Add(this.dtStart);
             this.Controls.Add(this.data1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReports";
             this.Text = "frmReports";
             this.Load += new System.EventHandler(this.frmReports_Load);
@@ -218,5 +302,11 @@ namespace testing
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbReports;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnPrint;
+        private System.Windows.Forms.ComboBox cbProcessBy;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

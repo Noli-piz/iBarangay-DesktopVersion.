@@ -29,6 +29,8 @@ namespace testing
         private void frmReports_Load(object sender, EventArgs e)
         {
             LoadCombobox();
+            IntiallizedProcessedBy();
+            IntiallizedStatusRequest();
         }
 
         private void load()
@@ -214,7 +216,7 @@ namespace testing
 
                 data1.Columns.Add("", "No.");
                 data1.Columns.Add("id", "ID.");
-                data1.Columns.Add("", "Fullname");
+                data1.Columns.Add("", "Processed By");
                 data1.Columns.Add("", "Title");
                 data1.Columns.Add("", "Name");
                 data1.Columns.Add("", "Start Date");
@@ -330,5 +332,80 @@ namespace testing
                 MessageBox.Show("Not Available");
             }
         }
+
+        private async void IntiallizedProcessedBy()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                var uri = host.IP() + "/iBar/ibar_usermanagement.php";
+                string responseBody = await client.GetStringAsync(uri);
+
+                var data = JsonConvert.DeserializeObject(responseBody);
+                string success = JObject.Parse(responseBody)["success"].ToString();
+                if (success == "1")
+                {
+
+
+                    cbProcessBy.ValueMember = "Id";
+                    cbProcessBy.DisplayMember = "Fullname";
+
+                    List<ProcessedBy> items = new List<ProcessedBy>();
+                    items.Add(new ProcessedBy { Id = (string)"0", Fullname = (string)"All"});
+
+                    foreach (var jo in (JArray)((JObject)data)["users"])
+                    {
+                        items.Add(new ProcessedBy { Id = (string)jo["id_users"], Fullname = (string)jo["Fullname"] });
+                    }
+
+                    cbProcessBy.DataSource = items;
+                }
+                else if (success == "0")
+                {
+                    //MessageBox.Show(JObject.Parse(responseBody)["message"].ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private async void IntiallizedStatusRequest()
+        {
+            try
+            {
+                csComboBoxValues cbValues = new csComboBoxValues();
+                cbValues.RetrieveStatus();
+
+                cbStatus.Items.Add("All");
+                cbStatus.Items.AddRange(cbValues.GetArrStatus().ToArray());
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void IntiallizedStatus()
+        {
+
+        }
+
+        private void cbProcessBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class ProcessedBy
+    {
+        public string Id { get; set; }
+        public string Fullname { get; set; }
     }
 }

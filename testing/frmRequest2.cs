@@ -302,7 +302,8 @@ namespace testing
                     });
                 }
                 var topic = username;
-                string body = Note == "" ? "Status: " + Stat : "Status: " + Stat + "\nNote: " + Note;
+                string body = Note == "" ? "Your request about "+ lblDocument.Text +" is " + Stat 
+                    : "Your request about " + lblDocument.Text + " is " + Stat + "\nNote: " + Note;
 
                 var message = new FirebaseAdmin.Messaging.Message()
                 {
@@ -314,7 +315,7 @@ namespace testing
 
                     Notification = new Notification()
                     {
-                        Title = "Your Request",
+                        Title = "Request",
                         Body = body
                     },
                     Topic = topic

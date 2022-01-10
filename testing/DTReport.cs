@@ -4,5 +4,8 @@
 
     partial class DTReport
     {
+        partial class dataMiscellaneousReportDataTable
+        {
+        }
     }
 }

@@ -56,6 +56,9 @@
     <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Balangkas_Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
@@ -340,7 +343,6 @@
     <Compile Include="csComboBoxValues.cs" />
     <Compile Include="csConnection.cs" />
     <Compile Include="csHostConfiguration.cs" />
-    <Compile Include="csLogin.cs" />
     <Compile Include="csMisService.cs" />
     <Compile Include="csRand.cs" />
     <Compile Include="csResidents.cs" />
@@ -384,6 +386,18 @@
     </Compile>
     <Compile Include="frmAccountMngmnt2.Designer.cs">
       <DependentUpon>frmAccountMngmnt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnnouncement_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnnouncement_Add.Designer.cs">
+      <DependentUpon>frmAnnouncement_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnnouncement_Specific.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnnouncement_Specific.Designer.cs">
+      <DependentUpon>frmAnnouncement_Specific.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAppointment_update.cs">
       <SubType>Form</SubType>
@@ -620,6 +634,12 @@
       <DependentUpon>rptIssuanceReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptMiscellaneousServicesReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMiscellaneousServicesReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptOfficialsName.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -698,6 +718,12 @@
     <Compile Include="vwrIssuanceReports.Designer.cs">
       <DependentUpon>vwrIssuanceReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="vwrMiscellaneousServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrMiscellaneousServices.Designer.cs">
+      <DependentUpon>vwrMiscellaneousServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="vwrRequestReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -715,6 +741,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountMngmnt2.resx">
       <DependentUpon>frmAccountMngmnt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnnouncement_Add.resx">
+      <DependentUpon>frmAnnouncement_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnnouncement_Specific.resx">
+      <DependentUpon>frmAnnouncement_Specific.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppointment_update.resx">
       <DependentUpon>frmAppointment_update.cs</DependentUpon>
@@ -838,6 +870,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIssuanceReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptMiscellaneousServicesReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMiscellaneousServicesReports.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptOfficialsName.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptOfficialsName.cs</LastGenOutput>
@@ -878,6 +914,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vwrIssuanceReports.resx">
       <DependentUpon>vwrIssuanceReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vwrMiscellaneousServices.resx">
+      <DependentUpon>vwrMiscellaneousServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vwrRequestReports.resx">
       <DependentUpon>vwrRequestReports.cs</DependentUpon>
@@ -935,6 +974,7 @@
     <None Include="Resources\Balangkas_Logo.png" />
     <None Include="Resources\calendar.png" />
     <None Include="Resources\disableaccount.png" />
+    <Content Include="Balangkas_Logo.ico" />
     <Content Include="Resources\edit icon.png" />
     <None Include="Resources\greenlantern.png" />
     <None Include="Resources\transparent.png" />

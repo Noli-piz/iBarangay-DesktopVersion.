@@ -15,7 +15,6 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Collections.Specialized;
 using System.Drawing.Printing;
-using testing.Properties;
 using System.IO;
 
 namespace testing

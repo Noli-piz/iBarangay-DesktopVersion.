@@ -123,6 +123,7 @@ namespace testing
                         lblDeliveryOption.Text = jo["Options"].ToString();
                         lblQuantity.Text = jo["Quantity"].ToString();
                         lblRentDate.Text = jo["RentDate"].ToString();
+                        lblEndRentDate.Text = jo["EndRentDate"].ToString();
                         cbStatus.Text = jo["Status"].ToString();
                         resUsername = jo["Username"].ToString();
                         rbNote.Text = jo["Note"].ToString();
@@ -167,7 +168,8 @@ namespace testing
             data1.Columns.Add("date", "Req Date");
             data1.Columns.Add("rstatus", "Req Stat.");
             data1.Columns.Add("dead", "Deadline");
-            data1.Columns.Add("dead", "Rent Date");
+            data1.Columns.Add("start", "Start Rent Date");
+            data1.Columns.Add("end", "End Rent Date");
             data1.Columns.Add("dstatus", "Delivery Opt.");
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -212,6 +214,7 @@ namespace testing
                         AL.Add(jo["Status"]);
                         AL.Add(jo["Deadline"]);
                         AL.Add(jo["RentDate"]);
+                        AL.Add(jo["EndRentDate"]);
                         AL.Add(jo["Options"]);
                         data1.Rows.Add(AL.ToArray());
                         i++;
@@ -234,7 +237,7 @@ namespace testing
         {
             try
             {
-                if (e.ColumnIndex == 9)
+                if (e.ColumnIndex == 10)
                 {
                     DataGridViewRow row = data1.Rows[e.RowIndex];
                     ID = row.Cells[1].Value.ToString();
@@ -365,6 +368,7 @@ namespace testing
         }
 
         String validate = "", message;
+
         private async void ValidateInventory()
         {
             try
@@ -418,13 +422,14 @@ namespace testing
                 }
 
                 var topic = username;
-                string body = Note == ""? "Status: " + Stat : "Status: " + Stat + "\nNote: " + Note;
+                string body = Note == ""? "Your request about " + lblItem.Text + " is " + Stat
+                    : "Your request about " + lblItem.Text + " is " + Stat + "\nNote: " + Note;
 
                 var message = new FirebaseAdmin.Messaging.Message()
                 {
                     Notification = new Notification()
                     {
-                        Title = "Miscellaneous Services",
+                        Title = "Miscellaneous Service",
                         Body = body
                     },
                     Topic = topic

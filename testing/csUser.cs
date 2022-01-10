@@ -14,18 +14,18 @@ namespace testing
     class csUser
     {
         csHostConfiguration host = new csHostConfiguration();
-        private static string id, Username, Name;
+        private static string id, Username, Name, LevelOfAccess;
 
         public csUser()
         {
         }
 
-        public void usercredentials(String uname)
+        public void usercredentials(String uname, String password)
         {
-            getUser(uname);
+            getUser(uname, password);
         }
 
-        private async void getUser(String uname)
+        private async void getUser(String uname, String password)
         {
             try
             {
@@ -36,6 +36,7 @@ namespace testing
                 {
                     var datas = new NameValueCollection();
                     datas["Username"] = uname;
+                    datas["Password"] = password;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -51,6 +52,8 @@ namespace testing
                         id = jo["id_users"].ToString();
                         Username = jo["Username"].ToString();
                         Name = jo["Fullname"].ToString();
+                        LevelOfAccess = jo["LevelOfAccess"].ToString();
+                        Message = JObject.Parse(responseFromServer)["message"].ToString();
                     }
                 }
                 else if (success == "0")
@@ -70,5 +73,6 @@ namespace testing
         public string strID() { return id; }
         public string username() { return Username; }
         public string name()  { return Name; }
+        public string getLevelOfAccess()  { return LevelOfAccess; }
     }
 }

@@ -36,6 +36,7 @@ namespace testing
             this.tbPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tbUsername = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblForgetPass = new System.Windows.Forms.Label();
             this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +68,7 @@ namespace testing
             this.btnHide.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHide.Image = global::testing.Properties.Resources.sharp_visibility_off_black_18dp;
             this.btnHide.Location = new System.Drawing.Point(242, 194);
-            this.btnHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(2);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(25, 18);
             this.btnHide.TabIndex = 10;
@@ -79,7 +80,7 @@ namespace testing
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::testing.Properties.Resources.Balangkas_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(81, 90);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 258);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +90,7 @@ namespace testing
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(36, 188);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(207, 29);
@@ -107,7 +108,7 @@ namespace testing
             // tbUsername
             // 
             this.tbUsername.Location = new System.Drawing.Point(36, 132);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(226, 29);
             this.tbUsername.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -123,6 +124,7 @@ namespace testing
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblForgetPass);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -133,17 +135,31 @@ namespace testing
             this.panel1.Controls.Add(this.kryptonTextBox1);
             this.panel1.Controls.Add(this.kryptonTextBox2);
             this.panel1.Location = new System.Drawing.Point(434, -8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 464);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lblForgetPass
+            // 
+            this.lblForgetPass.AutoSize = true;
+            this.lblForgetPass.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgetPass.ForeColor = System.Drawing.Color.Red;
+            this.lblForgetPass.Location = new System.Drawing.Point(158, 236);
+            this.lblForgetPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblForgetPass.Name = "lblForgetPass";
+            this.lblForgetPass.Size = new System.Drawing.Size(104, 15);
+            this.lblForgetPass.TabIndex = 19;
+            this.lblForgetPass.Text = "Forgot Password?";
+            this.lblForgetPass.Visible = false;
+            this.lblForgetPass.Click += new System.EventHandler(this.lblForgetPass_Click);
+            // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.Location = new System.Drawing.Point(27, 268);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(27, 274);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OverrideDefault.Back.Color1 = System.Drawing.Color.Green;
             this.btnLogin.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
@@ -228,7 +244,7 @@ namespace testing
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(27, 127);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.ReadOnly = true;
             this.kryptonTextBox1.Size = new System.Drawing.Size(246, 41);
@@ -247,7 +263,7 @@ namespace testing
             // kryptonTextBox2
             // 
             this.kryptonTextBox2.Location = new System.Drawing.Point(27, 184);
-            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.PasswordChar = '*';
             this.kryptonTextBox2.ReadOnly = true;
@@ -276,7 +292,7 @@ namespace testing
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(791, 496);
             this.Name = "frmLogin";
@@ -301,6 +317,7 @@ namespace testing
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
+        private System.Windows.Forms.Label lblForgetPass;
     }
 }
 

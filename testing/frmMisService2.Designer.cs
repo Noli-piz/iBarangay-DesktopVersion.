@@ -54,31 +54,32 @@ namespace testing
             this.btnSubmit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.btnChoose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblEndRentDate = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblRentDate = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblFullname = new System.Windows.Forms.Label();
+            this.lblHouseNo = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblBlotterCase = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblFullname = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.lblVoterStatus = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.data1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblHouseNo = new System.Windows.Forms.Label();
-            this.lblEndRentDate = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
@@ -158,7 +159,7 @@ namespace testing
             // 
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(144, 240);
+            this.cbStatus.Location = new System.Drawing.Point(144, 244);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(168, 29);
@@ -180,7 +181,7 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 244);
+            this.label4.Location = new System.Drawing.Point(34, 248);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 19);
@@ -247,7 +248,7 @@ namespace testing
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 292);
+            this.label6.Location = new System.Drawing.Point(26, 296);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 19);
@@ -260,7 +261,7 @@ namespace testing
             this.dtDeadline.CustomFormat = "MMM dd, yyyy";
             this.dtDeadline.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDeadline.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDeadline.Location = new System.Drawing.Point(144, 284);
+            this.dtDeadline.Location = new System.Drawing.Point(144, 288);
             this.dtDeadline.Margin = new System.Windows.Forms.Padding(2);
             this.dtDeadline.Name = "dtDeadline";
             this.dtDeadline.Size = new System.Drawing.Size(168, 29);
@@ -270,10 +271,10 @@ namespace testing
             // 
             this.rbNote.BackColor = System.Drawing.Color.White;
             this.rbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNote.Location = new System.Drawing.Point(454, 240);
+            this.rbNote.Location = new System.Drawing.Point(454, 244);
             this.rbNote.Margin = new System.Windows.Forms.Padding(2);
             this.rbNote.Name = "rbNote";
-            this.rbNote.Size = new System.Drawing.Size(260, 65);
+            this.rbNote.Size = new System.Drawing.Size(510, 95);
             this.rbNote.TabIndex = 34;
             this.rbNote.Text = "";
             // 
@@ -281,7 +282,7 @@ namespace testing
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(345, 240);
+            this.label9.Location = new System.Drawing.Point(345, 244);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 19);
@@ -291,7 +292,7 @@ namespace testing
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(912, 662);
+            this.btnSubmit.Location = new System.Drawing.Point(911, 751);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
@@ -353,7 +354,7 @@ namespace testing
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(783, 662);
+            this.btnCancel.Location = new System.Drawing.Point(782, 751);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
@@ -418,6 +419,7 @@ namespace testing
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.btnChoose);
             this.materialCard1.Controls.Add(this.label23);
             this.materialCard1.Controls.Add(this.lblEndRentDate);
             this.materialCard1.Controls.Add(this.cbStatus);
@@ -440,8 +442,90 @@ namespace testing
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard1.Size = new System.Drawing.Size(1016, 359);
+            this.materialCard1.Size = new System.Drawing.Size(1016, 400);
             this.materialCard1.TabIndex = 89;
+            // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(771, 343);
+            this.btnChoose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnChoose.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnChoose.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.OverrideDefault.Border.Width = 1;
+            this.btnChoose.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnChoose.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoose.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnChoose.Size = new System.Drawing.Size(193, 32);
+            this.btnChoose.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateCommon.Border.Width = 1;
+            this.btnChoose.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoose.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnChoose.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnChoose.StatePressed.Back.ColorAngle = 135F;
+            this.btnChoose.StatePressed.Border.ColorAngle = 135F;
+            this.btnChoose.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StatePressed.Border.Width = 1;
+            this.btnChoose.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.StateTracking.Back.ColorAngle = 45F;
+            this.btnChoose.StateTracking.Border.ColorAngle = 45F;
+            this.btnChoose.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateTracking.Border.Width = 1;
+            this.btnChoose.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.TabIndex = 110;
+            this.btnChoose.Values.Text = "Choose message templates";
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(481, 64);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 21);
+            this.label23.TabIndex = 114;
+            this.label23.Text = "until";
+            // 
+            // lblEndRentDate
+            // 
+            this.lblEndRentDate.AutoSize = true;
+            this.lblEndRentDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndRentDate.ForeColor = System.Drawing.Color.Green;
+            this.lblEndRentDate.Location = new System.Drawing.Point(533, 64);
+            this.lblEndRentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEndRentDate.Name = "lblEndRentDate";
+            this.lblEndRentDate.Size = new System.Drawing.Size(94, 21);
+            this.lblEndRentDate.TabIndex = 113;
+            this.lblEndRentDate.Text = "0000-00-00";
             // 
             // label10
             // 
@@ -499,28 +583,28 @@ namespace testing
             this.materialCard2.Size = new System.Drawing.Size(1016, 262);
             this.materialCard2.TabIndex = 90;
             // 
-            // label12
+            // lblHouseNo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 38);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 19);
-            this.label12.TabIndex = 92;
-            this.label12.Text = "Fullname:";
+            this.lblHouseNo.AutoSize = true;
+            this.lblHouseNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHouseNo.ForeColor = System.Drawing.Color.Green;
+            this.lblHouseNo.Location = new System.Drawing.Point(588, 44);
+            this.lblHouseNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHouseNo.Name = "lblHouseNo";
+            this.lblHouseNo.Size = new System.Drawing.Size(154, 21);
+            this.lblHouseNo.TabIndex = 111;
+            this.lblHouseNo.Text = "house  no. and street";
             // 
-            // lblFullname
+            // label17
             // 
-            this.lblFullname.AutoSize = true;
-            this.lblFullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullname.ForeColor = System.Drawing.Color.Green;
-            this.lblFullname.Location = new System.Drawing.Point(98, 36);
-            this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(49, 21);
-            this.lblFullname.TabIndex = 93;
-            this.lblFullname.Text = "name";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(440, 46);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(143, 19);
+            this.label17.TabIndex = 110;
+            this.label17.Text = "House No. and Street:";
             // 
             // label13
             // 
@@ -556,6 +640,18 @@ namespace testing
             this.label16.TabIndex = 96;
             this.label16.Text = "Blotter Case(s):";
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Green;
+            this.lblEmail.Location = new System.Drawing.Point(131, 44);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(19, 21);
+            this.lblEmail.TabIndex = 104;
+            this.lblEmail.Text = "0";
+            // 
             // lblBlotterCase
             // 
             this.lblBlotterCase.AutoSize = true;
@@ -567,6 +663,40 @@ namespace testing
             this.lblBlotterCase.Size = new System.Drawing.Size(19, 21);
             this.lblBlotterCase.TabIndex = 97;
             this.lblBlotterCase.Text = "0";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(79, 46);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 19);
+            this.label21.TabIndex = 102;
+            this.label21.Text = "Email:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(31, 38);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 19);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "Fullname:";
+            // 
+            // lblFullname
+            // 
+            this.lblFullname.AutoSize = true;
+            this.lblFullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullname.ForeColor = System.Drawing.Color.Green;
+            this.lblFullname.Location = new System.Drawing.Point(98, 36);
+            this.lblFullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullname.Name = "lblFullname";
+            this.lblFullname.Size = new System.Drawing.Size(49, 21);
+            this.lblFullname.TabIndex = 93;
+            this.lblFullname.Text = "name";
             // 
             // label18
             // 
@@ -615,17 +745,6 @@ namespace testing
             this.lblVoterStatus.TabIndex = 101;
             this.lblVoterStatus.Text = "voter stat";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(101, 48);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 19);
-            this.label21.TabIndex = 102;
-            this.label21.Text = "Email:";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -636,18 +755,6 @@ namespace testing
             this.label22.Size = new System.Drawing.Size(74, 19);
             this.label22.TabIndex = 103;
             this.label22.Text = "Username:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Green;
-            this.lblEmail.Location = new System.Drawing.Point(145, 44);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(19, 21);
-            this.lblEmail.TabIndex = 104;
-            this.lblEmail.Text = "0";
             // 
             // lblUsername
             // 
@@ -740,63 +847,16 @@ namespace testing
             this.label14.Location = new System.Drawing.Point(19, 11);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 21);
+            this.label14.Size = new System.Drawing.Size(125, 21);
             this.label14.TabIndex = 108;
-            this.label14.Text = "Resident Info.";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(440, 46);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 19);
-            this.label17.TabIndex = 110;
-            this.label17.Text = "House No. and Street:";
-            // 
-            // lblHouseNo
-            // 
-            this.lblHouseNo.AutoSize = true;
-            this.lblHouseNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHouseNo.ForeColor = System.Drawing.Color.Green;
-            this.lblHouseNo.Location = new System.Drawing.Point(588, 44);
-            this.lblHouseNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHouseNo.Name = "lblHouseNo";
-            this.lblHouseNo.Size = new System.Drawing.Size(154, 21);
-            this.lblHouseNo.TabIndex = 111;
-            this.lblHouseNo.Text = "house  no. and street";
-            // 
-            // lblEndRentDate
-            // 
-            this.lblEndRentDate.AutoSize = true;
-            this.lblEndRentDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndRentDate.ForeColor = System.Drawing.Color.Green;
-            this.lblEndRentDate.Location = new System.Drawing.Point(533, 64);
-            this.lblEndRentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEndRentDate.Name = "lblEndRentDate";
-            this.lblEndRentDate.Size = new System.Drawing.Size(94, 21);
-            this.lblEndRentDate.TabIndex = 113;
-            this.lblEndRentDate.Text = "0000-00-00";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(481, 64);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 21);
-            this.label23.TabIndex = 114;
-            this.label23.Text = "until";
+            this.label14.Text = "Requester Info.";
             // 
             // frmMisService2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1038, 727);
+            this.ClientSize = new System.Drawing.Size(1038, 803);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
@@ -886,5 +946,6 @@ namespace testing
         private System.Windows.Forms.Label lblHouseNo;
         private System.Windows.Forms.Label lblEndRentDate;
         private System.Windows.Forms.Label label23;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnChoose;
     }
 }

@@ -255,6 +255,21 @@ namespace testing
             cbStatus.SelectedIndex = 0;
         }
 
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            using (frmMessageTemplates frm = new frmMessageTemplates())
+            {
+                frm.ShowDialog();
+
+                string result = frm.GetMyMessage;
+
+                if (result != "" && result != null)
+                {
+                    rbNote.Text = result;
+                }
+            }
+        }
+
 
 
         // Cancel/ Close the current forms 

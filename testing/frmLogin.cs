@@ -81,5 +81,14 @@ namespace testing
         {
 
         }
+
+        private void lblForgetPass_Click(object sender, EventArgs e)
+        {
+            frmForgotPassword frm = new frmForgotPassword();
+            frm.Closed += (s, args) => this.Close();
+            frm.Show();
+
+            this.Hide();
+        }
     }
 }

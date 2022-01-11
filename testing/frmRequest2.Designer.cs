@@ -29,10 +29,10 @@ namespace testing
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +72,10 @@ namespace testing
             this.label7 = new System.Windows.Forms.Label();
             this.lblHouseNo = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnChoose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).BeginInit();
+            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +83,7 @@ namespace testing
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(26, 320);
+            this.label1.Location = new System.Drawing.Point(23, 320);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 19);
@@ -92,7 +95,7 @@ namespace testing
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(40, 349);
+            this.label2.Location = new System.Drawing.Point(38, 357);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 19);
@@ -104,7 +107,7 @@ namespace testing
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(412, 343);
+            this.label3.Location = new System.Drawing.Point(647, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 19);
@@ -116,7 +119,7 @@ namespace testing
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(48, 445);
+            this.label4.Location = new System.Drawing.Point(22, 141);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 19);
@@ -127,7 +130,7 @@ namespace testing
             // 
             this.rbPurpose.BackColor = System.Drawing.Color.White;
             this.rbPurpose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbPurpose.Location = new System.Drawing.Point(478, 343);
+            this.rbPurpose.Location = new System.Drawing.Point(713, 29);
             this.rbPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.rbPurpose.Name = "rbPurpose";
             this.rbPurpose.Size = new System.Drawing.Size(264, 68);
@@ -138,7 +141,7 @@ namespace testing
             // 
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(146, 445);
+            this.cbStatus.Location = new System.Drawing.Point(120, 141);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(189, 29);
@@ -149,7 +152,7 @@ namespace testing
             this.lblDocument.AutoSize = true;
             this.lblDocument.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDocument.ForeColor = System.Drawing.Color.Green;
-            this.lblDocument.Location = new System.Drawing.Point(146, 316);
+            this.lblDocument.Location = new System.Drawing.Point(146, 318);
             this.lblDocument.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDocument.Name = "lblDocument";
             this.lblDocument.Size = new System.Drawing.Size(78, 21);
@@ -161,7 +164,7 @@ namespace testing
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Green;
-            this.lblDate.Location = new System.Drawing.Point(146, 345);
+            this.lblDate.Location = new System.Drawing.Point(146, 357);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(94, 21);
@@ -172,7 +175,7 @@ namespace testing
             // 
             this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerate.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerate.Location = new System.Drawing.Point(16, 548);
+            this.btnGenerate.Location = new System.Drawing.Point(16, 596);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(188, 46);
@@ -186,7 +189,7 @@ namespace testing
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(49, 376);
+            this.label5.Location = new System.Drawing.Point(361, 66);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 19);
@@ -198,7 +201,7 @@ namespace testing
             this.lblCurrentStatus.AutoSize = true;
             this.lblCurrentStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblCurrentStatus.Location = new System.Drawing.Point(146, 372);
+            this.lblCurrentStatus.Location = new System.Drawing.Point(462, 66);
             this.lblCurrentStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentStatus.Name = "lblCurrentStatus";
             this.lblCurrentStatus.Size = new System.Drawing.Size(115, 21);
@@ -210,7 +213,7 @@ namespace testing
             this.lblDeliveryOption.AutoSize = true;
             this.lblDeliveryOption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryOption.ForeColor = System.Drawing.Color.Green;
-            this.lblDeliveryOption.Location = new System.Drawing.Point(478, 312);
+            this.lblDeliveryOption.Location = new System.Drawing.Point(478, 318);
             this.lblDeliveryOption.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeliveryOption.Name = "lblDeliveryOption";
             this.lblDeliveryOption.Size = new System.Drawing.Size(56, 21);
@@ -222,7 +225,7 @@ namespace testing
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(370, 316);
+            this.label8.Location = new System.Drawing.Point(370, 320);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 19);
@@ -233,10 +236,10 @@ namespace testing
             // 
             this.rbNote.BackColor = System.Drawing.Color.White;
             this.rbNote.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNote.Location = new System.Drawing.Point(478, 445);
+            this.rbNote.Location = new System.Drawing.Point(545, 141);
             this.rbNote.Margin = new System.Windows.Forms.Padding(2);
             this.rbNote.Name = "rbNote";
-            this.rbNote.Size = new System.Drawing.Size(260, 65);
+            this.rbNote.Size = new System.Drawing.Size(408, 91);
             this.rbNote.TabIndex = 15;
             this.rbNote.Text = "";
             // 
@@ -245,7 +248,7 @@ namespace testing
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(370, 445);
+            this.label6.Location = new System.Drawing.Point(431, 141);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 19);
@@ -255,6 +258,15 @@ namespace testing
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.btnChoose);
+            this.materialCard1.Controls.Add(this.label6);
+            this.materialCard1.Controls.Add(this.rbPurpose);
+            this.materialCard1.Controls.Add(this.label3);
+            this.materialCard1.Controls.Add(this.label5);
+            this.materialCard1.Controls.Add(this.lblCurrentStatus);
+            this.materialCard1.Controls.Add(this.rbNote);
+            this.materialCard1.Controls.Add(this.label4);
+            this.materialCard1.Controls.Add(this.cbStatus);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(16, 291);
@@ -262,13 +274,13 @@ namespace testing
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard1.Size = new System.Drawing.Size(885, 237);
+            this.materialCard1.Size = new System.Drawing.Size(1000, 292);
             this.materialCard1.TabIndex = 17;
             // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(795, 611);
+            this.btnSubmit.Location = new System.Drawing.Point(895, 649);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
@@ -330,7 +342,7 @@ namespace testing
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(676, 611);
+            this.btnCancel.Location = new System.Drawing.Point(776, 649);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
@@ -400,9 +412,9 @@ namespace testing
             this.label14.Location = new System.Drawing.Point(23, 15);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 19);
+            this.label14.Size = new System.Drawing.Size(110, 19);
             this.label14.TabIndex = 126;
-            this.label14.Text = "Resident Info.";
+            this.label14.Text = "Requester Info.";
             // 
             // label11
             // 
@@ -421,57 +433,57 @@ namespace testing
             this.data1.AllowUserToAddRows = false;
             this.data1.AllowUserToDeleteRows = false;
             this.data1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.data1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.data1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.data1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data1.BackgroundColor = System.Drawing.Color.White;
             this.data1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.data1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.data1.ColumnHeadersHeight = 25;
             this.data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data1.DefaultCellStyle = dataGridViewCellStyle15;
             this.data1.EnableHeadersVisualStyles = false;
             this.data1.Location = new System.Drawing.Point(40, 169);
             this.data1.Margin = new System.Windows.Forms.Padding(2);
             this.data1.MultiSelect = false;
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 20;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data1.ShowCellToolTips = false;
             this.data1.ShowEditingIcon = false;
-            this.data1.Size = new System.Drawing.Size(830, 99);
+            this.data1.Size = new System.Drawing.Size(964, 99);
             this.data1.TabIndex = 124;
             this.data1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -492,7 +504,7 @@ namespace testing
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Green;
-            this.lblEmail.Location = new System.Drawing.Point(104, 81);
+            this.lblEmail.Location = new System.Drawing.Point(130, 63);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(19, 21);
@@ -517,7 +529,7 @@ namespace testing
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(57, 83);
+            this.label21.Location = new System.Drawing.Point(83, 65);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(44, 19);
@@ -530,7 +542,7 @@ namespace testing
             this.lblVoterStatus.AutoSize = true;
             this.lblVoterStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVoterStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblVoterStatus.Location = new System.Drawing.Point(447, 117);
+            this.lblVoterStatus.Location = new System.Drawing.Point(479, 99);
             this.lblVoterStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoterStatus.Name = "lblVoterStatus";
             this.lblVoterStatus.Size = new System.Drawing.Size(75, 21);
@@ -542,7 +554,7 @@ namespace testing
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(359, 119);
+            this.label20.Location = new System.Drawing.Point(391, 101);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 19);
@@ -554,7 +566,7 @@ namespace testing
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.ForeColor = System.Drawing.Color.Green;
-            this.lblContact.Location = new System.Drawing.Point(447, 48);
+            this.lblContact.Location = new System.Drawing.Point(479, 30);
             this.lblContact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(60, 21);
@@ -566,7 +578,7 @@ namespace testing
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(359, 50);
+            this.label18.Location = new System.Drawing.Point(391, 32);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 19);
@@ -578,7 +590,7 @@ namespace testing
             this.lblBlotterCase.AutoSize = true;
             this.lblBlotterCase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlotterCase.ForeColor = System.Drawing.Color.Red;
-            this.lblBlotterCase.Location = new System.Drawing.Point(780, 48);
+            this.lblBlotterCase.Location = new System.Drawing.Point(870, 30);
             this.lblBlotterCase.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBlotterCase.Name = "lblBlotterCase";
             this.lblBlotterCase.Size = new System.Drawing.Size(19, 21);
@@ -590,7 +602,7 @@ namespace testing
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(666, 50);
+            this.label16.Location = new System.Drawing.Point(756, 32);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(100, 19);
@@ -603,7 +615,7 @@ namespace testing
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.Green;
-            this.lblCedula.Location = new System.Drawing.Point(780, 117);
+            this.lblCedula.Location = new System.Drawing.Point(870, 99);
             this.lblCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(55, 21);
@@ -615,7 +627,7 @@ namespace testing
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(687, 119);
+            this.label13.Location = new System.Drawing.Point(777, 101);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 19);
@@ -651,6 +663,18 @@ namespace testing
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.lblHouseNo);
+            this.materialCard2.Controls.Add(this.lblContact);
+            this.materialCard2.Controls.Add(this.label17);
+            this.materialCard2.Controls.Add(this.label13);
+            this.materialCard2.Controls.Add(this.lblCedula);
+            this.materialCard2.Controls.Add(this.lblEmail);
+            this.materialCard2.Controls.Add(this.label16);
+            this.materialCard2.Controls.Add(this.label21);
+            this.materialCard2.Controls.Add(this.lblBlotterCase);
+            this.materialCard2.Controls.Add(this.label18);
+            this.materialCard2.Controls.Add(this.label20);
+            this.materialCard2.Controls.Add(this.lblVoterStatus);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(16, 18);
@@ -658,7 +682,7 @@ namespace testing
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard2.Size = new System.Drawing.Size(885, 262);
+            this.materialCard2.Size = new System.Drawing.Size(1000, 262);
             this.materialCard2.TabIndex = 109;
             // 
             // label7
@@ -678,7 +702,7 @@ namespace testing
             this.lblHouseNo.AutoSize = true;
             this.lblHouseNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouseNo.ForeColor = System.Drawing.Color.Green;
-            this.lblHouseNo.Location = new System.Drawing.Point(510, 81);
+            this.lblHouseNo.Location = new System.Drawing.Point(585, 63);
             this.lblHouseNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHouseNo.Name = "lblHouseNo";
             this.lblHouseNo.Size = new System.Drawing.Size(154, 21);
@@ -690,55 +714,93 @@ namespace testing
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(359, 83);
+            this.label17.Location = new System.Drawing.Point(434, 65);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(143, 19);
             this.label17.TabIndex = 128;
             this.label17.Text = "House No. and Street:";
             // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(760, 245);
+            this.btnChoose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Back.ColorAngle = 0F;
+            this.btnChoose.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.OverrideDefault.Border.ColorAngle = 0F;
+            this.btnChoose.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.OverrideDefault.Border.Width = 1;
+            this.btnChoose.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.OverrideDefault.Content.ShortText.ColorAngle = 145F;
+            this.btnChoose.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoose.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnChoose.Size = new System.Drawing.Size(193, 32);
+            this.btnChoose.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateCommon.Border.Width = 1;
+            this.btnChoose.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoose.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnChoose.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnChoose.StatePressed.Back.ColorAngle = 135F;
+            this.btnChoose.StatePressed.Border.ColorAngle = 135F;
+            this.btnChoose.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StatePressed.Border.Width = 1;
+            this.btnChoose.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.btnChoose.StatePressed.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.StateTracking.Back.ColorAngle = 45F;
+            this.btnChoose.StateTracking.Border.ColorAngle = 45F;
+            this.btnChoose.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnChoose.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnChoose.StateTracking.Border.Width = 1;
+            this.btnChoose.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnChoose.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.btnChoose.TabIndex = 130;
+            this.btnChoose.Values.Text = "Choose message templates";
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
+            // 
             // frmRequest2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 677);
-            this.Controls.Add(this.lblHouseNo);
-            this.Controls.Add(this.label17);
+            this.ClientSize = new System.Drawing.Size(1035, 699);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.data1);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.lblVoterStatus);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.lblContact);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.lblBlotterCase);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.lblCedula);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.lblFullname);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.materialCard2);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.rbNote);
             this.Controls.Add(this.lblDeliveryOption);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.lblCurrentStatus);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblDocument);
-            this.Controls.Add(this.cbStatus);
-            this.Controls.Add(this.rbPurpose);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.materialCard1);
@@ -751,7 +813,11 @@ namespace testing
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Request Module";
             this.Load += new System.EventHandler(this.frmRequest2_Load);
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data1)).EndInit();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -798,5 +864,6 @@ namespace testing
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblHouseNo;
         private System.Windows.Forms.Label label17;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnChoose;
     }
 }

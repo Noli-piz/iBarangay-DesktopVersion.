@@ -407,7 +407,7 @@ namespace testing
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to download? You will redirected to your default browser.", "Download File", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to download this? You will redirected to your default browser.", "Download File", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start(strFileDownloadUrl);

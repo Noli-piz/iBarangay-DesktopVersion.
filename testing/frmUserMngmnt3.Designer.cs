@@ -48,6 +48,8 @@ namespace testing
             this.label7 = new System.Windows.Forms.Label();
             this.btnSubmit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnHide1
@@ -56,9 +58,10 @@ namespace testing
             this.btnHide1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHide1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHide1.Image = global::testing.Properties.Resources.sharp_visibility_off_black_18dp;
-            this.btnHide1.Location = new System.Drawing.Point(538, 224);
+            this.btnHide1.Location = new System.Drawing.Point(404, 258);
+            this.btnHide1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHide1.Name = "btnHide1";
-            this.btnHide1.Size = new System.Drawing.Size(51, 26);
+            this.btnHide1.Size = new System.Drawing.Size(38, 21);
             this.btnHide1.TabIndex = 31;
             this.btnHide1.UseVisualStyleBackColor = true;
             this.btnHide1.Click += new System.EventHandler(this.btnHide1_Click);
@@ -69,9 +72,10 @@ namespace testing
             this.btnHide2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHide2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHide2.Image = global::testing.Properties.Resources.sharp_visibility_off_black_18dp;
-            this.btnHide2.Location = new System.Drawing.Point(538, 303);
+            this.btnHide2.Location = new System.Drawing.Point(404, 322);
+            this.btnHide2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHide2.Name = "btnHide2";
-            this.btnHide2.Size = new System.Drawing.Size(51, 26);
+            this.btnHide2.Size = new System.Drawing.Size(38, 21);
             this.btnHide2.TabIndex = 30;
             this.btnHide2.UseVisualStyleBackColor = true;
             this.btnHide2.Click += new System.EventHandler(this.btnHide2_Click);
@@ -79,62 +83,69 @@ namespace testing
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(37, 148);
+            this.tbUsername.Location = new System.Drawing.Point(28, 196);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(474, 38);
+            this.tbUsername.Size = new System.Drawing.Size(356, 32);
             this.tbUsername.TabIndex = 29;
             // 
             // tbRetypePassword
             // 
             this.tbRetypePassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRetypePassword.Location = new System.Drawing.Point(37, 388);
+            this.tbRetypePassword.Location = new System.Drawing.Point(28, 391);
+            this.tbRetypePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbRetypePassword.Name = "tbRetypePassword";
             this.tbRetypePassword.PasswordChar = '*';
-            this.tbRetypePassword.Size = new System.Drawing.Size(474, 38);
+            this.tbRetypePassword.Size = new System.Drawing.Size(356, 32);
             this.tbRetypePassword.TabIndex = 28;
             // 
             // tbNewPass
             // 
             this.tbNewPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNewPass.Location = new System.Drawing.Point(37, 303);
+            this.tbNewPass.Location = new System.Drawing.Point(28, 322);
+            this.tbNewPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbNewPass.Name = "tbNewPass";
             this.tbNewPass.PasswordChar = '*';
-            this.tbNewPass.Size = new System.Drawing.Size(474, 38);
+            this.tbNewPass.Size = new System.Drawing.Size(356, 32);
             this.tbNewPass.TabIndex = 27;
             // 
             // tbFullName
             // 
             this.tbFullName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFullName.Location = new System.Drawing.Point(37, 69);
+            this.tbFullName.Location = new System.Drawing.Point(28, 56);
+            this.tbFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbFullName.Name = "tbFullName";
-            this.tbFullName.Size = new System.Drawing.Size(474, 38);
+            this.tbFullName.Size = new System.Drawing.Size(356, 32);
             this.tbFullName.TabIndex = 26;
             // 
             // cbStatus
             // 
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(37, 544);
+            this.cbStatus.Location = new System.Drawing.Point(28, 518);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(474, 39);
+            this.cbStatus.Size = new System.Drawing.Size(356, 33);
             this.cbStatus.TabIndex = 25;
             // 
             // cbLevelOfAccess
             // 
             this.cbLevelOfAccess.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLevelOfAccess.FormattingEnabled = true;
-            this.cbLevelOfAccess.Location = new System.Drawing.Point(37, 461);
+            this.cbLevelOfAccess.Location = new System.Drawing.Point(28, 451);
+            this.cbLevelOfAccess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbLevelOfAccess.Name = "cbLevelOfAccess";
-            this.cbLevelOfAccess.Size = new System.Drawing.Size(474, 39);
+            this.cbLevelOfAccess.Size = new System.Drawing.Size(356, 33);
             this.cbLevelOfAccess.TabIndex = 24;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 516);
+            this.label6.Location = new System.Drawing.Point(28, 495);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 28);
+            this.label6.Size = new System.Drawing.Size(52, 21);
             this.label6.TabIndex = 21;
             this.label6.Text = "Status";
             // 
@@ -142,9 +153,10 @@ namespace testing
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 433);
+            this.label5.Location = new System.Drawing.Point(28, 428);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 28);
+            this.label5.Size = new System.Drawing.Size(114, 21);
             this.label5.TabIndex = 20;
             this.label5.Text = "Level of Access";
             // 
@@ -152,9 +164,10 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 357);
+            this.label4.Location = new System.Drawing.Point(28, 366);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 28);
+            this.label4.Size = new System.Drawing.Size(134, 21);
             this.label4.TabIndex = 19;
             this.label4.Text = "Re-type Password";
             // 
@@ -162,9 +175,10 @@ namespace testing
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 275);
+            this.label3.Location = new System.Drawing.Point(28, 299);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 28);
+            this.label3.Size = new System.Drawing.Size(152, 21);
             this.label3.TabIndex = 18;
             this.label3.Text = "Enter New Password";
             // 
@@ -172,9 +186,10 @@ namespace testing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 117);
+            this.label2.Location = new System.Drawing.Point(28, 171);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 28);
+            this.label2.Size = new System.Drawing.Size(81, 21);
             this.label2.TabIndex = 17;
             this.label2.Text = "Username";
             // 
@@ -182,9 +197,10 @@ namespace testing
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 38);
+            this.label1.Location = new System.Drawing.Point(28, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 28);
+            this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 16;
             this.label1.Text = "Full Name";
             // 
@@ -194,9 +210,10 @@ namespace testing
             this.btnHide3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHide3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHide3.Image = global::testing.Properties.Resources.sharp_visibility_off_black_18dp;
-            this.btnHide3.Location = new System.Drawing.Point(538, 388);
+            this.btnHide3.Location = new System.Drawing.Point(404, 391);
+            this.btnHide3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHide3.Name = "btnHide3";
-            this.btnHide3.Size = new System.Drawing.Size(51, 26);
+            this.btnHide3.Size = new System.Drawing.Size(38, 21);
             this.btnHide3.TabIndex = 34;
             this.btnHide3.UseVisualStyleBackColor = true;
             this.btnHide3.Click += new System.EventHandler(this.btnHide3_Click);
@@ -204,26 +221,29 @@ namespace testing
             // tbCurrentPass
             // 
             this.tbCurrentPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCurrentPass.Location = new System.Drawing.Point(37, 224);
+            this.tbCurrentPass.Location = new System.Drawing.Point(28, 258);
+            this.tbCurrentPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCurrentPass.Name = "tbCurrentPass";
             this.tbCurrentPass.PasswordChar = '*';
             this.tbCurrentPass.ReadOnly = true;
-            this.tbCurrentPass.Size = new System.Drawing.Size(474, 38);
+            this.tbCurrentPass.Size = new System.Drawing.Size(356, 32);
             this.tbCurrentPass.TabIndex = 33;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 196);
+            this.label7.Location = new System.Drawing.Point(28, 235);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 28);
+            this.label7.Size = new System.Drawing.Size(133, 21);
             this.label7.TabIndex = 32;
             this.label7.Text = "Current Password";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(436, 633);
+            this.btnSubmit.Location = new System.Drawing.Point(327, 590);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnSubmit.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -241,7 +261,7 @@ namespace testing
             this.btnSubmit.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnSubmit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnSubmit.Size = new System.Drawing.Size(153, 50);
+            this.btnSubmit.Size = new System.Drawing.Size(115, 41);
             this.btnSubmit.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnSubmit.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnSubmit.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -283,7 +303,8 @@ namespace testing
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(242, 633);
+            this.btnCancel.Location = new System.Drawing.Point(182, 590);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnCancel.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -302,7 +323,7 @@ namespace testing
             this.btnCancel.OverrideDefault.Content.ShortText.ColorAngle = 145F;
             this.btnCancel.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnCancel.Size = new System.Drawing.Size(153, 50);
+            this.btnCancel.Size = new System.Drawing.Size(115, 41);
             this.btnCancel.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnCancel.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCancel.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -344,12 +365,34 @@ namespace testing
             this.btnCancel.Values.Text = "CANCEL";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(28, 100);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(48, 21);
+            this.lblEmail.TabIndex = 37;
+            this.lblEmail.Text = "Email";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(28, 125);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(356, 32);
+            this.tbEmail.TabIndex = 38;
+            // 
             // frmUserMngmnt3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(616, 715);
+            this.ClientSize = new System.Drawing.Size(462, 639);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label7);
@@ -370,6 +413,7 @@ namespace testing
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbLevelOfAccess);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUserMngmnt3";
@@ -402,5 +446,7 @@ namespace testing
         private System.Windows.Forms.Label label7;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubmit;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox tbEmail;
     }
 }

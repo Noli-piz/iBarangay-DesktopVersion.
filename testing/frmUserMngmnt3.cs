@@ -45,6 +45,7 @@ namespace testing
                         var datas = new NameValueCollection();
                         datas["ID"] = ID;
                         datas["Fullname"] = tbFullName.Text;
+                        datas["Email"] = tbEmail.Text;
                         datas["Username"] = tbUsername.Text;
                         datas["Password"] = tbNewPass.Text == "" ? tbCurrentPass.Text : tbNewPass.Text;
                         datas["LevelOfAccess"] = cbLevelOfAccess.SelectedItem.ToString();
@@ -111,6 +112,7 @@ namespace testing
                         //jo["id_announcement"];
                         tbFullName.Text = jo["Fullname"].ToString();
                         tbUsername.Text = jo["Username"].ToString();
+                        tbEmail.Text = jo["Email"].ToString();
                         tbCurrentPass.Text = jo["Password"].ToString();
                         cbLevelOfAccess.Text = jo["LevelOfAccess"].ToString();
 

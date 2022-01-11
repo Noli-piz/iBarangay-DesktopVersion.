@@ -173,6 +173,16 @@ namespace testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forgotpass {
+            get {
+                object obj = ResourceManager.GetObject("forgotpass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap greenlantern {
             get {
                 object obj = ResourceManager.GetObject("greenlantern", resourceCulture);
@@ -256,6 +266,26 @@ namespace testing.Properties {
         internal static System.Drawing.Bitmap outline_search_black_18dp {
             get {
                 object obj = ResourceManager.GetObject("outline_search_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlock {
+            get {
+                object obj = ResourceManager.GetObject("padlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paperplane {
+            get {
+                object obj = ResourceManager.GetObject("paperplane", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

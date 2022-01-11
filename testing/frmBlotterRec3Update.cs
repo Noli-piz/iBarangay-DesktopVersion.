@@ -229,7 +229,6 @@ namespace testing
 
         private void SelectedAssailant()
         {
-
             boxpanel.Controls.Clear();
             boxpanel.RowCount = blot.GetArrAssailant2().Count;
             int x = 0;

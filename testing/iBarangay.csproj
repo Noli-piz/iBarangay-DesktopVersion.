@@ -363,6 +363,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DTofficials.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmForgotPassword2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword2.Designer.cs">
+      <DependentUpon>frmForgotPassword2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form Issue Certificate\frmIssueBrgyClearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -429,6 +435,18 @@
     <Compile Include="frmBlotterRec3Update.Designer.cs">
       <DependentUpon>frmBlotterRec3Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPassword3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword3.Designer.cs">
+      <DependentUpon>frmForgotPassword3.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +470,18 @@
     </Compile>
     <Compile Include="frmMenuAdmin.Designer.cs">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageTemplates.Designer.cs">
+      <DependentUpon>frmMessageTemplates.cs</DependentUpon>
     </Compile>
     <Compile Include="frmOfficials.cs">
       <SubType>Form</SubType>
@@ -724,6 +754,9 @@
     <Compile Include="vwrRequestReports.Designer.cs">
       <DependentUpon>vwrRequestReports.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmForgotPassword2.resx">
+      <DependentUpon>frmForgotPassword2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form Issue Certificate\frmIssueBrgyClearance.resx">
       <DependentUpon>frmIssueBrgyClearance.cs</DependentUpon>
     </EmbeddedResource>
@@ -757,6 +790,12 @@
     <EmbeddedResource Include="frmBlotterRec3Update.resx">
       <DependentUpon>frmBlotterRec3Update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword3.resx">
+      <DependentUpon>frmForgotPassword3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,6 +807,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAdmin.resx">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageTemplates.resx">
+      <DependentUpon>frmMessageTemplates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOfficials.resx">
       <DependentUpon>frmOfficials.cs</DependentUpon>
@@ -987,8 +1032,11 @@
     <None Include="Resources\upload %281%29.png" />
     <Content Include="Resources\foldericon.png" />
     <None Include="Resources\foldericon1.png" />
+    <None Include="Resources\forgotpass.png" />
     <Content Include="Resources\megaphone %282%29.png" />
     <None Include="Resources\megaphone.png" />
+    <None Include="Resources\paperplane.png" />
+    <None Include="Resources\padlock.png" />
     <Content Include="Resources\white.png" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />

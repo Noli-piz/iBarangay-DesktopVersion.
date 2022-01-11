@@ -373,6 +373,21 @@ namespace testing
 
         String validate = "", message;
 
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            using (frmMessageTemplates frm = new frmMessageTemplates())
+            {
+                frm.ShowDialog();
+
+                string result = frm.GetMyMessage;
+
+                if (result != "" && result != null)
+                {
+                    rbNote.Text = result;
+                }
+            }
+        }
+
         private async void ValidateInventory()
         {
             try

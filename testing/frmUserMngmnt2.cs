@@ -41,6 +41,7 @@ namespace testing
                     {
                         var datas = new NameValueCollection();
                         datas["Fullname"] = tbFullName.Text;
+                        datas["Email"] = tbEmail.Text;
                         datas["Username"] = tbUsername.Text;
                         datas["Password"] = tbPassword.Text;
                         datas["LevelOfAccess"] = cbLevelOfAccess.SelectedItem.ToString();

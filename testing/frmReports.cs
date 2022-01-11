@@ -45,6 +45,7 @@ namespace testing
 
                 lblDeliveryOpt.Visible = false;
                 cbDeliveryOpt.Visible = false;
+
                 loadData("0");
             }
             else if (reports == "Request Reports")
@@ -56,6 +57,7 @@ namespace testing
 
                 lblDeliveryOpt.Visible = true;
                 cbDeliveryOpt.Visible = true;
+
                 loadData2("0", "0", "0");
             }
             else if (reports == "Appointment Reports")

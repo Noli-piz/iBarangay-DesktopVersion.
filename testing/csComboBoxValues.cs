@@ -261,7 +261,7 @@ namespace testing
         {
             ArrReports = new ArrayList()
             {
-                "Issuance Reports", "Request Reports", "Appointment Reports", "Miscellaneous Services Reports"
+                "Issuance Reports", "Request Reports", "Miscellaneous Services Reports"
             };
         }
 

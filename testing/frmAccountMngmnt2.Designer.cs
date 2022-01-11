@@ -58,6 +58,10 @@ namespace testing
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.lblFormerAddress = new System.Windows.Forms.Label();
+            this.txtFormerAddress = new System.Windows.Forms.Label();
+            this.lblVoterRegistrationPlace = new System.Windows.Forms.Label();
+            this.txtVoterRegistrationPlace = new System.Windows.Forms.Label();
             this.lblHouseNo = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lblCivilstat = new System.Windows.Forms.Label();
@@ -84,10 +88,6 @@ namespace testing
             this.btnHide3 = new System.Windows.Forms.Button();
             this.btnHide1 = new System.Windows.Forms.Button();
             this.btnHide2 = new System.Windows.Forms.Button();
-            this.lblVoterRegistrationPlace = new System.Windows.Forms.Label();
-            this.txtVoterRegistrationPlace = new System.Windows.Forms.Label();
-            this.lblFormerAddress = new System.Windows.Forms.Label();
-            this.txtFormerAddress = new System.Windows.Forms.Label();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage2)).BeginInit();
@@ -425,8 +425,8 @@ namespace testing
             this.cbValid.FormattingEnabled = true;
             this.cbValid.ItemHeight = 29;
             this.cbValid.Items.AddRange(new object[] {
-            "Validated",
-            "Not Validated"});
+            "Verified",
+            "Not Verified"});
             this.cbValid.Location = new System.Drawing.Point(12, 273);
             this.cbValid.Margin = new System.Windows.Forms.Padding(2);
             this.cbValid.Name = "cbValid";
@@ -621,6 +621,50 @@ namespace testing
             this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard2.Size = new System.Drawing.Size(1203, 268);
             this.materialCard2.TabIndex = 26;
+            // 
+            // lblFormerAddress
+            // 
+            this.lblFormerAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormerAddress.ForeColor = System.Drawing.Color.Green;
+            this.lblFormerAddress.Location = new System.Drawing.Point(843, 206);
+            this.lblFormerAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFormerAddress.Name = "lblFormerAddress";
+            this.lblFormerAddress.Size = new System.Drawing.Size(326, 41);
+            this.lblFormerAddress.TabIndex = 50;
+            this.lblFormerAddress.Text = "Vstat";
+            // 
+            // txtFormerAddress
+            // 
+            this.txtFormerAddress.AutoSize = true;
+            this.txtFormerAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFormerAddress.Location = new System.Drawing.Point(727, 204);
+            this.txtFormerAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtFormerAddress.Name = "txtFormerAddress";
+            this.txtFormerAddress.Size = new System.Drawing.Size(109, 19);
+            this.txtFormerAddress.TabIndex = 49;
+            this.txtFormerAddress.Text = "Former Address:";
+            // 
+            // lblVoterRegistrationPlace
+            // 
+            this.lblVoterRegistrationPlace.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoterRegistrationPlace.ForeColor = System.Drawing.Color.Green;
+            this.lblVoterRegistrationPlace.Location = new System.Drawing.Point(383, 205);
+            this.lblVoterRegistrationPlace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVoterRegistrationPlace.Name = "lblVoterRegistrationPlace";
+            this.lblVoterRegistrationPlace.Size = new System.Drawing.Size(293, 41);
+            this.lblVoterRegistrationPlace.TabIndex = 48;
+            this.lblVoterRegistrationPlace.Text = "Voter Re";
+            // 
+            // txtVoterRegistrationPlace
+            // 
+            this.txtVoterRegistrationPlace.AutoSize = true;
+            this.txtVoterRegistrationPlace.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVoterRegistrationPlace.Location = new System.Drawing.Point(209, 204);
+            this.txtVoterRegistrationPlace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtVoterRegistrationPlace.Name = "txtVoterRegistrationPlace";
+            this.txtVoterRegistrationPlace.Size = new System.Drawing.Size(157, 19);
+            this.txtVoterRegistrationPlace.TabIndex = 47;
+            this.txtVoterRegistrationPlace.Text = "Voter Registration Place:";
             // 
             // lblHouseNo
             // 
@@ -835,9 +879,9 @@ namespace testing
             this.label10.Location = new System.Drawing.Point(28, -4);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 17);
+            this.label10.Size = new System.Drawing.Size(127, 17);
             this.label10.TabIndex = 28;
-            this.label10.Text = "Profile";
+            this.label10.Text = "Profile Information";
             // 
             // pbProfile
             // 
@@ -944,50 +988,6 @@ namespace testing
             this.btnHide2.TabIndex = 6;
             this.btnHide2.UseVisualStyleBackColor = false;
             this.btnHide2.Click += new System.EventHandler(this.btnHide2_Click);
-            // 
-            // lblVoterRegistrationPlace
-            // 
-            this.lblVoterRegistrationPlace.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoterRegistrationPlace.ForeColor = System.Drawing.Color.Green;
-            this.lblVoterRegistrationPlace.Location = new System.Drawing.Point(383, 205);
-            this.lblVoterRegistrationPlace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVoterRegistrationPlace.Name = "lblVoterRegistrationPlace";
-            this.lblVoterRegistrationPlace.Size = new System.Drawing.Size(293, 41);
-            this.lblVoterRegistrationPlace.TabIndex = 48;
-            this.lblVoterRegistrationPlace.Text = "Voter Re";
-            // 
-            // txtVoterRegistrationPlace
-            // 
-            this.txtVoterRegistrationPlace.AutoSize = true;
-            this.txtVoterRegistrationPlace.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVoterRegistrationPlace.Location = new System.Drawing.Point(209, 204);
-            this.txtVoterRegistrationPlace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtVoterRegistrationPlace.Name = "txtVoterRegistrationPlace";
-            this.txtVoterRegistrationPlace.Size = new System.Drawing.Size(157, 19);
-            this.txtVoterRegistrationPlace.TabIndex = 47;
-            this.txtVoterRegistrationPlace.Text = "Voter Registration Place:";
-            // 
-            // lblFormerAddress
-            // 
-            this.lblFormerAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormerAddress.ForeColor = System.Drawing.Color.Green;
-            this.lblFormerAddress.Location = new System.Drawing.Point(843, 206);
-            this.lblFormerAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFormerAddress.Name = "lblFormerAddress";
-            this.lblFormerAddress.Size = new System.Drawing.Size(326, 41);
-            this.lblFormerAddress.TabIndex = 50;
-            this.lblFormerAddress.Text = "Vstat";
-            // 
-            // txtFormerAddress
-            // 
-            this.txtFormerAddress.AutoSize = true;
-            this.txtFormerAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFormerAddress.Location = new System.Drawing.Point(727, 204);
-            this.txtFormerAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtFormerAddress.Name = "txtFormerAddress";
-            this.txtFormerAddress.Size = new System.Drawing.Size(109, 19);
-            this.txtFormerAddress.TabIndex = 49;
-            this.txtFormerAddress.Text = "Former Address:";
             // 
             // frmAccountMngmnt2
             // 

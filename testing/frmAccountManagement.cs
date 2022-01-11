@@ -170,7 +170,7 @@ namespace testing
                         AL.Add(jo["Username"]);
                         AL.Add(jo["Fname"] + " " + jo["Mname"] + " " + jo["Lname"] + " " + jo["Same"]);
                         AL.Add(jo["VoterStatus"]);
-                        AL.Add(jo["Valid"].ToString() == "0" ? "Not Validated" : "Validated");
+                        AL.Add(jo["Valid"].ToString() == "0" ? "Not Verified" : "Verified");
                         AL.Add(jo["Status"].ToString() == "0" ? "Enabled" : "Disabled");
 
                         data1.Rows.Add(AL.ToArray());

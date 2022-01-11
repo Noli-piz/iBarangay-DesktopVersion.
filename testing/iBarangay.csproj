@@ -507,6 +507,12 @@
     <Compile Include="frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmResidentMoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResidentMoreInfo.Designer.cs">
+      <DependentUpon>frmResidentMoreInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResident_update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +652,18 @@
       <DependentUpon>rptAppointmentReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptIndigency.cs">
+      <DependentUpon>rptIndigency.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptGoodMoral.cs">
+      <DependentUpon>rptGoodMoral.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="rptBrgyClearance.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -735,6 +753,18 @@
     </Compile>
     <Compile Include="vwrBrgyClearance.Designer.cs">
       <DependentUpon>vwrBrgyClearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vwrGoodMoral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrGoodMoral.Designer.cs">
+      <DependentUpon>vwrGoodMoral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vwrIndigency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vwrIndigency.Designer.cs">
+      <DependentUpon>vwrIndigency.cs</DependentUpon>
     </Compile>
     <Compile Include="vwrIssuanceReports.cs">
       <SubType>Form</SubType>
@@ -826,6 +856,9 @@
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmResidentMoreInfo.resx">
+      <DependentUpon>frmResidentMoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmResident_update.resx">
       <DependentUpon>frmResident_update.cs</DependentUpon>
     </EmbeddedResource>
@@ -898,6 +931,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptAppointmentReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptIndigency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIndigency.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGoodMoral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGoodMoral.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptBrgyClearance.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBrgyClearance.cs</LastGenOutput>
@@ -947,6 +988,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vwrBrgyClearance.resx">
       <DependentUpon>vwrBrgyClearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vwrGoodMoral.resx">
+      <DependentUpon>vwrGoodMoral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vwrIndigency.resx">
+      <DependentUpon>vwrIndigency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vwrIssuanceReports.resx">
       <DependentUpon>vwrIssuanceReports.cs</DependentUpon>
@@ -1011,6 +1058,7 @@
     <None Include="Resources\calendar.png" />
     <None Include="Resources\disableaccount.png" />
     <Content Include="Balangkas_Logo.ico" />
+    <None Include="Resources\document.png" />
     <Content Include="Resources\edit icon.png" />
     <None Include="Resources\greenlantern.png" />
     <None Include="Resources\transparent.png" />

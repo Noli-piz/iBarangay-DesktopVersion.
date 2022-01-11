@@ -118,6 +118,7 @@ namespace testing
         private void button1_Click(object sender, EventArgs e)
         {
             frmMenu frm = new frmMenu();
+            frm.EnableSwitch();
             frm.Closed += (s, args) => this.Close();
             frm.Show();
             this.Hide();

@@ -27,7 +27,7 @@ namespace testing
     {
         csHostConfiguration host = new csHostConfiguration();
         csResidents res = new csResidents();
-        String path = "", strImageUrl, ID;
+        String path = "", strImageUrl, ID, strFileDownloadUrl="", strFormerAddress = "", strVoterRegistrationPlace = "";
 
         public frmResident_update(string id)
         {
@@ -134,6 +134,7 @@ namespace testing
 
         private async void LoadData()
         {
+            #region
             //res.retrieveData();
             //tbFname.Text = res.Fname;
             //tbMname.Text = res.Mname;
@@ -153,7 +154,7 @@ namespace testing
             //dtDateOfRgstrtn.Value = DateTime.ParseExact(res.DateOfRegistration,"yyyy-MM-dd", CultureInfo.InvariantCulture);
             ////DownloadImage();
             //DownloadImage(res.Image);
-
+            #endregion
 
             try
             {
@@ -188,6 +189,12 @@ namespace testing
                         cbVoterStatus.Text = jo["VoterStatus"].ToString();
                         rbHouseNoAndStreet.Text = jo["HouseNoAndStreet"].ToString();
 
+
+                        strFileDownloadUrl = jo["ProofUrl"].ToString();
+                        strFormerAddress= jo["FormerAddress"].ToString();
+                        strVoterRegistrationPlace= jo["VoterRegistrationPlace"].ToString();
+
+
                         tbCedulaNo.Text = jo["CedulaNo"].ToString();
                         tbContactNo.Text = jo["ContactNo"].ToString();
                         tbEmailAddress.Text = jo["Email"].ToString();
@@ -197,6 +204,11 @@ namespace testing
 
                     }
 
+
+                    if (strFileDownloadUrl=="" || strFileDownloadUrl==null)
+                    {
+                        btnMoreInfo.Visible = false;
+                    }
                 }
                 else if (success == "0")
                 {
@@ -408,6 +420,13 @@ namespace testing
 
         // Open Camera
         FilterInfoCollection filterInfoCollection;
+
+        private void btnMoreInfo_Click(object sender, EventArgs e)
+        {
+            frmResidentMoreInfo frm = new frmResidentMoreInfo(strFileDownloadUrl, strFormerAddress, strVoterRegistrationPlace);
+            frm.ShowDialog(this);
+        }
+
         VideoCaptureDevice videoCaptureDevice;
         private void btnOpenCamera_Click(object sender, EventArgs e)
         {

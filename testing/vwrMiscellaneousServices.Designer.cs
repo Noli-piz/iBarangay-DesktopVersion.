@@ -44,6 +44,7 @@ namespace testing
             this.crystalReportViewer1.ReportSource = this.rptMiscellaneousServicesReports1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1133, 680);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // vwrMiscellaneousServices
             // 

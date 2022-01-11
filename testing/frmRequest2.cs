@@ -290,11 +290,13 @@ namespace testing
             }
             else if(lblDocument.Text == "Good Moral")
             {
-                MessageBox.Show("The Selected Document is not Available!");
+                vwrGoodMoral vwr = new vwrGoodMoral(idresident, rbPurpose.Text);
+                vwr.ShowDialog(this);
             }
             else if ( lblDocument.Text == "Indigency" )
             {
-                MessageBox.Show("The Selected Document is not Available!");
+                vwrIndigency vwr = new vwrIndigency(idresident, rbPurpose.Text);
+                vwr.ShowDialog(this);
             }
             else
             {

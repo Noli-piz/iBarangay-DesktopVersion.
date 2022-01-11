@@ -29,10 +29,10 @@ namespace testing
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.data1 = new System.Windows.Forms.DataGridView();
             this.btnActive = new System.Windows.Forms.Button();
@@ -60,9 +60,10 @@ namespace testing
             // 
             this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(19, 56);
+            this.tbSearch.Location = new System.Drawing.Point(14, 46);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(268, 27);
+            this.tbSearch.Size = new System.Drawing.Size(201, 22);
             this.tbSearch.TabIndex = 1;
             // 
             // data1
@@ -70,12 +71,12 @@ namespace testing
             this.data1.AllowUserToAddRows = false;
             this.data1.AllowUserToDeleteRows = false;
             this.data1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.data1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.data1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.data1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -84,40 +85,41 @@ namespace testing
             this.data1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.data1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.data1.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data1.DefaultCellStyle = dataGridViewCellStyle3;
             this.data1.EnableHeadersVisualStyles = false;
-            this.data1.Location = new System.Drawing.Point(12, 147);
+            this.data1.Location = new System.Drawing.Point(9, 119);
+            this.data1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data1.Name = "data1";
             this.data1.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.data1.RowHeadersVisible = false;
             this.data1.RowHeadersWidth = 51;
             this.data1.RowTemplate.Height = 30;
             this.data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data1.Size = new System.Drawing.Size(1032, 653);
+            this.data1.Size = new System.Drawing.Size(774, 531);
             this.data1.TabIndex = 4;
             this.data1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnGenerate_CellClick);
             // 
@@ -127,9 +129,10 @@ namespace testing
             this.btnActive.FlatAppearance.BorderSize = 0;
             this.btnActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActive.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActive.Location = new System.Drawing.Point(1076, 298);
+            this.btnActive.Location = new System.Drawing.Point(807, 242);
+            this.btnActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActive.Name = "btnActive";
-            this.btnActive.Size = new System.Drawing.Size(190, 31);
+            this.btnActive.Size = new System.Drawing.Size(142, 25);
             this.btnActive.TabIndex = 8;
             this.btnActive.Text = "Active Cases";
             this.btnActive.UseVisualStyleBackColor = true;
@@ -141,9 +144,10 @@ namespace testing
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1076, 509);
+            this.button5.Location = new System.Drawing.Point(807, 414);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 31);
+            this.button5.Size = new System.Drawing.Size(142, 25);
             this.button5.TabIndex = 9;
             this.button5.Text = "Settled Cases";
             this.button5.UseVisualStyleBackColor = true;
@@ -154,9 +158,10 @@ namespace testing
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1076, 720);
+            this.button6.Location = new System.Drawing.Point(807, 585);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(190, 31);
+            this.button6.Size = new System.Drawing.Size(142, 25);
             this.button6.TabIndex = 10;
             this.button6.Text = "Scheduled Cases";
             this.button6.UseVisualStyleBackColor = true;
@@ -169,9 +174,10 @@ namespace testing
             this.lblActiveCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblActiveCases.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActiveCases.ForeColor = System.Drawing.Color.Red;
-            this.lblActiveCases.Location = new System.Drawing.Point(1071, 234);
+            this.lblActiveCases.Location = new System.Drawing.Point(803, 190);
+            this.lblActiveCases.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblActiveCases.Name = "lblActiveCases";
-            this.lblActiveCases.Size = new System.Drawing.Size(52, 61);
+            this.lblActiveCases.Size = new System.Drawing.Size(42, 49);
             this.lblActiveCases.TabIndex = 11;
             this.lblActiveCases.Text = "0";
             // 
@@ -183,9 +189,10 @@ namespace testing
             this.lblSettledCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSettledCases.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSettledCases.ForeColor = System.Drawing.Color.Green;
-            this.lblSettledCases.Location = new System.Drawing.Point(1071, 445);
+            this.lblSettledCases.Location = new System.Drawing.Point(803, 362);
+            this.lblSettledCases.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSettledCases.Name = "lblSettledCases";
-            this.lblSettledCases.Size = new System.Drawing.Size(52, 61);
+            this.lblSettledCases.Size = new System.Drawing.Size(42, 49);
             this.lblSettledCases.TabIndex = 12;
             this.lblSettledCases.Text = "0";
             // 
@@ -198,9 +205,10 @@ namespace testing
             this.lblScheduledCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblScheduledCases.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScheduledCases.ForeColor = System.Drawing.Color.Blue;
-            this.lblScheduledCases.Location = new System.Drawing.Point(1069, 656);
+            this.lblScheduledCases.Location = new System.Drawing.Point(802, 533);
+            this.lblScheduledCases.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScheduledCases.Name = "lblScheduledCases";
-            this.lblScheduledCases.Size = new System.Drawing.Size(52, 61);
+            this.lblScheduledCases.Size = new System.Drawing.Size(42, 49);
             this.lblScheduledCases.TabIndex = 13;
             this.lblScheduledCases.Text = "0";
             // 
@@ -209,9 +217,10 @@ namespace testing
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::testing.Properties.Resources.calendar;
-            this.pictureBox3.Location = new System.Drawing.Point(1076, 569);
+            this.pictureBox3.Location = new System.Drawing.Point(807, 462);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(190, 145);
+            this.pictureBox3.Size = new System.Drawing.Size(143, 118);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -221,9 +230,10 @@ namespace testing
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::testing.Properties.Resources.handshake;
-            this.pictureBox2.Location = new System.Drawing.Point(1076, 358);
+            this.pictureBox2.Location = new System.Drawing.Point(807, 291);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(143, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -233,9 +243,10 @@ namespace testing
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::testing.Properties.Resources.problem;
-            this.pictureBox1.Location = new System.Drawing.Point(1076, 147);
+            this.pictureBox1.Location = new System.Drawing.Point(807, 119);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -244,11 +255,12 @@ namespace testing
             // 
             this.kryptonTextBox1.AlwaysActive = false;
             this.kryptonTextBox1.Enabled = false;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(13, 47);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(10, 38);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.ReadOnly = true;
             this.kryptonTextBox1.ShortcutsEnabled = false;
-            this.kryptonTextBox1.Size = new System.Drawing.Size(378, 43);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(284, 36);
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Blue;
             this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -264,7 +276,8 @@ namespace testing
             // btnAddBlotter
             // 
             this.btnAddBlotter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBlotter.Location = new System.Drawing.Point(1036, 38);
+            this.btnAddBlotter.Location = new System.Drawing.Point(777, 31);
+            this.btnAddBlotter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddBlotter.Name = "btnAddBlotter";
             this.btnAddBlotter.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.btnAddBlotter.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -282,7 +295,7 @@ namespace testing
             this.btnAddBlotter.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBlotter.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnAddBlotter.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnAddBlotter.Size = new System.Drawing.Size(208, 50);
+            this.btnAddBlotter.Size = new System.Drawing.Size(156, 41);
             this.btnAddBlotter.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.btnAddBlotter.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.btnAddBlotter.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
@@ -319,12 +332,13 @@ namespace testing
             this.btnAddBlotter.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnAddBlotter.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.btnAddBlotter.TabIndex = 40;
-            this.btnAddBlotter.Values.Text = "ADD NEW BLOTTER";
+            this.btnAddBlotter.Values.Text = "ADD REPORT";
             this.btnAddBlotter.Click += new System.EventHandler(this.btn_AddBlotter_Click);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(533, 48);
+            this.kryptonButton1.Location = new System.Drawing.Point(400, 39);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.Red;
@@ -341,7 +355,7 @@ namespace testing
             this.kryptonButton1.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton1.Size = new System.Drawing.Size(130, 40);
+            this.kryptonButton1.Size = new System.Drawing.Size(98, 32);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.kryptonButton1.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -381,7 +395,8 @@ namespace testing
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(397, 48);
+            this.kryptonButton2.Location = new System.Drawing.Point(298, 39);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.Blue;
@@ -398,7 +413,7 @@ namespace testing
             this.kryptonButton2.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton2.OverrideDefault.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton2.Size = new System.Drawing.Size(130, 40);
+            this.kryptonButton2.Size = new System.Drawing.Size(98, 32);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.Blue;
             this.kryptonButton2.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -446,10 +461,11 @@ namespace testing
             "Compliant",
             "Assailant(resident)",
             "Assailant(non-resident)"});
-            this.cbCategory.Location = new System.Drawing.Point(288, 53);
+            this.cbCategory.Location = new System.Drawing.Point(216, 43);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.cbCategory.Size = new System.Drawing.Size(96, 30);
+            this.cbCategory.Size = new System.Drawing.Size(72, 25);
             this.cbCategory.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Blue;
             this.cbCategory.StateCommon.ComboBox.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left;
             this.cbCategory.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -463,10 +479,10 @@ namespace testing
             // 
             // frmBlotterRec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1285, 804);
+            this.ClientSize = new System.Drawing.Size(964, 653);
             this.Controls.Add(this.btnAddBlotter);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonButton2);
@@ -484,6 +500,7 @@ namespace testing
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.kryptonTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBlotterRec";
             this.Text = "frmBlotterRec";
             this.Load += new System.EventHandler(this.frmBlotterRec_Load);

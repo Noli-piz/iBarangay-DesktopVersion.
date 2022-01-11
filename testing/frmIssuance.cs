@@ -62,6 +62,11 @@ namespace testing
             btn2.Text = "Good Moral";
             btn2.UseColumnTextForButtonValue = true;
             data1.Columns.Add(btn2);
+
+            DataGridViewButtonColumn btn3 = new DataGridViewButtonColumn();
+            btn3.Text = "Indigency";
+            btn3.UseColumnTextForButtonValue = true;
+            data1.Columns.Add(btn3);
         }
 
 
@@ -160,10 +165,11 @@ namespace testing
         {
             try
             {
+                DataGridViewRow row = data1.Rows[e.RowIndex];
+                String identifier = row.Cells[1].Value.ToString();
+
                 if (e.ColumnIndex == 8)
                 {
-                    DataGridViewRow row = data1.Rows[e.RowIndex];
-                    String identifier = row.Cells[1].Value.ToString();
 
                     string inputPurpose = "";
                     DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
@@ -185,9 +191,38 @@ namespace testing
                 }
                 else if (e.ColumnIndex == 9)
                 {
-                    //vwrBrgyClearance vwr = new vwrBrgyClearance(ID[e.RowIndex].ToString(), "Purpose");
-                    //vwr.ShowDialog(this);
-                    MessageBox.Show("This Certificate is not available right now.");
+                    string inputPurpose = "";
+                    DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        if (inputPurpose == "")
+                        {
+                            MessageBox.Show("Please input the Purpose for Requesting of this Document.");
+                        }
+                        else
+                        {
+                            vwrGoodMoral vwr = new vwrGoodMoral(identifier, inputPurpose);
+                            vwr.ShowDialog(this);
+                        }
+                    }
+                }
+
+                else if (e.ColumnIndex == 10)
+                {
+                    string inputPurpose = "";
+                    DialogResult dialogResult = ShowInputDialog(ref inputPurpose);
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        if (inputPurpose == "")
+                        {
+                            MessageBox.Show("Please input the Purpose for Requesting of this Document.");
+                        }
+                        else
+                        {
+                            vwrIndigency vwr = new vwrIndigency(identifier, inputPurpose);
+                            vwr.ShowDialog(this);
+                        }
+                    }
                 }
             }
             catch (Exception ex)

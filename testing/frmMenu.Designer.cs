@@ -42,6 +42,7 @@ namespace testing
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSwitch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace testing
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(276, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1010, 860);
             this.panel1.TabIndex = 1;
@@ -110,7 +111,7 @@ namespace testing
             this.btnBlotter.Name = "btnBlotter";
             this.btnBlotter.Size = new System.Drawing.Size(225, 45);
             this.btnBlotter.TabIndex = 3;
-            this.btnBlotter.Text = "Reports";
+            this.btnBlotter.Text = "Incident Reports";
             this.btnBlotter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBlotter.UseVisualStyleBackColor = false;
             this.btnBlotter.Click += new System.EventHandler(this.button3_Click);
@@ -244,12 +245,32 @@ namespace testing
             this.pictureBox2.Image = global::testing.Properties.Resources.Balangkas_Logo;
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(2, 28);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(271, 159);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnSwitch
+            // 
+            this.btnSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(21)))));
+            this.btnSwitch.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSwitch.FlatAppearance.BorderSize = 3;
+            this.btnSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSwitch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwitch.ForeColor = System.Drawing.Color.White;
+            this.btnSwitch.Location = new System.Drawing.Point(56, 790);
+            this.btnSwitch.Margin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.btnSwitch.Name = "btnSwitch";
+            this.btnSwitch.Size = new System.Drawing.Size(225, 45);
+            this.btnSwitch.TabIndex = 9;
+            this.btnSwitch.Text = "Switch to Admin";
+            this.btnSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSwitch.UseVisualStyleBackColor = false;
+            this.btnSwitch.Visible = false;
+            this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
             // 
             // frmMenu
             // 
@@ -258,6 +279,7 @@ namespace testing
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::testing.Properties.Resources.greenlantern;
             this.ClientSize = new System.Drawing.Size(1286, 857);
+            this.Controls.Add(this.btnSwitch);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button8);
@@ -272,11 +294,11 @@ namespace testing
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1068, 802);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "iBarangay";
+            this.Text = "iBarangay - Employee";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -296,5 +318,6 @@ namespace testing
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnSwitch;
     }
 }

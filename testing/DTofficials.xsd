@@ -34,6 +34,16 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ResidentAdditional" msprop:Generator_TableClassName="ResidentAdditionalDataTable" msprop:Generator_TableVarName="tableResidentAdditional" msprop:Generator_RowChangedName="ResidentAdditionalRowChanged" msprop:Generator_TablePropName="ResidentAdditional" msprop:Generator_RowDeletingName="ResidentAdditionalRowDeleting" msprop:Generator_RowChangingName="ResidentAdditionalRowChanging" msprop:Generator_RowEvHandlerName="ResidentAdditionalRowChangeEventHandler" msprop:Generator_RowDeletedName="ResidentAdditionalRowDeleted" msprop:Generator_RowClassName="ResidentAdditionalRow" msprop:Generator_UserTableName="ResidentAdditional" msprop:Generator_RowEvArgName="ResidentAdditionalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Address" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" type="xs:string" minOccurs="0" />
+              <xs:element name="Secretary" msdata:Caption="Position1" msprop:Generator_ColumnVarNameInTable="columnSecretary" msprop:Generator_ColumnPropNameInRow="Secretary" msprop:Generator_ColumnPropNameInTable="SecretaryColumn" msprop:Generator_UserColumnName="Secretary" type="xs:string" minOccurs="0" />
+              <xs:element name="Cedula" msdata:Caption="Position2" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="ID" msdata:PrimaryKey="true">
@@ -42,6 +52,10 @@
     </xs:unique>
     <xs:unique name="Resident_ID" msdata:ConstraintName="ID" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Resident" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ResidentAdditional_ID" msdata:ConstraintName="ID" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ResidentAdditional" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

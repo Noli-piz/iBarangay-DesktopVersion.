@@ -4,6 +4,10 @@
 
     partial class DTofficials
     {
+        partial class ResidentAdditionalDataTable
+        {
+        }
+
         partial class Position2DataTable
         {
         }

@@ -58,7 +58,6 @@ namespace testing
             this.tbFname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btnOpenCamera = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnCapture = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -72,6 +71,8 @@ namespace testing
             this.rbHouseNoAndStreet = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.btnMoreInfo = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -374,18 +375,6 @@ namespace testing
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "First Name:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 202);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
             // 
             // label15
             // 
@@ -753,12 +742,62 @@ namespace testing
             this.materialCard3.Size = new System.Drawing.Size(632, 506);
             this.materialCard3.TabIndex = 87;
             // 
+            // btnMoreInfo
+            // 
+            this.btnMoreInfo.Location = new System.Drawing.Point(14, 473);
+            this.btnMoreInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMoreInfo.Name = "btnMoreInfo";
+            this.btnMoreInfo.OverrideDefault.Back.Color1 = System.Drawing.Color.Red;
+            this.btnMoreInfo.OverrideDefault.Back.Color2 = System.Drawing.Color.Red;
+            this.btnMoreInfo.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnMoreInfo.OverrideDefault.Border.Rounding = 5;
+            this.btnMoreInfo.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnMoreInfo.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoreInfo.Size = new System.Drawing.Size(243, 39);
+            this.btnMoreInfo.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.btnMoreInfo.StateCommon.Back.Color2 = System.Drawing.Color.Red;
+            this.btnMoreInfo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnMoreInfo.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnMoreInfo.StateCommon.Border.Rounding = 5;
+            this.btnMoreInfo.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnMoreInfo.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoreInfo.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.btnMoreInfo.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.btnMoreInfo.StatePressed.Border.Color1 = System.Drawing.Color.Red;
+            this.btnMoreInfo.StatePressed.Border.Color2 = System.Drawing.Color.Red;
+            this.btnMoreInfo.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnMoreInfo.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnMoreInfo.StatePressed.Border.Rounding = 5;
+            this.btnMoreInfo.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.btnMoreInfo.TabIndex = 88;
+            this.btnMoreInfo.Values.Text = "More Information";
+            this.btnMoreInfo.Click += new System.EventHandler(this.btnMoreInfo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 47);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 202);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmResident_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(935, 638);
+            this.Controls.Add(this.btnMoreInfo);
             this.Controls.Add(this.rbHouseNoAndStreet);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.kryptonButton1);
@@ -863,5 +902,6 @@ namespace testing
         private System.Windows.Forms.RichTextBox rbHouseNoAndStreet;
         private System.Windows.Forms.Label label16;
         private MaterialSkin.Controls.MaterialCard materialCard3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnMoreInfo;
     }
 }

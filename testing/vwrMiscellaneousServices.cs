@@ -20,9 +20,14 @@ namespace testing
 
         csHostConfiguration host = new csHostConfiguration();
         DTReport ds = new DTReport();
-        String SDate = "", EDate = "", ProcessBy="", Status="", DeliveryOpt="";
+        String SDate = "", EDate = "", ProcessBy="", Status="", DeliveryOpt="",disabledstatus;
 
-        public vwrMiscellaneousServices(string SDate, string EDate, string ProcessBy, string Status, string DeliveryOpt)
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public vwrMiscellaneousServices(string SDate, string EDate, string ProcessBy, string Status, string DeliveryOpt,string disabledstatus)
         {
             InitializeComponent();
 
@@ -31,6 +36,7 @@ namespace testing
             this.ProcessBy = ProcessBy;
             this.Status = Status;
             this.DeliveryOpt = DeliveryOpt;
+            this.disabledstatus = disabledstatus;
         }
 
         private void vwrMiscellaneousServices_Load(object sender, EventArgs e)
@@ -57,6 +63,7 @@ namespace testing
                     datas["ProcessBy"] = ProcessBy;
                     datas["Status"] = Status;
                     datas["DeliveryOpt"] = DeliveryOpt;
+                    datas["DisableStatus"] = disabledstatus;
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);

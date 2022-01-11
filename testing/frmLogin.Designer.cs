@@ -152,7 +152,6 @@ namespace testing
             this.lblForgetPass.Size = new System.Drawing.Size(104, 15);
             this.lblForgetPass.TabIndex = 19;
             this.lblForgetPass.Text = "Forgot Password?";
-            this.lblForgetPass.Visible = false;
             this.lblForgetPass.Click += new System.EventHandler(this.lblForgetPass_Click);
             // 
             // btnLogin

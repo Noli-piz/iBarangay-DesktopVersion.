@@ -33,6 +33,9 @@ namespace testing
             IntiallizedStatusRequest();
             IntiallizedStatusDelivery();
             LoadCombobox();
+
+
+
         }
 
         private void load()
@@ -118,6 +121,8 @@ namespace testing
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
                     datas["ProcessBy"] = ProcessedBy;
+                    datas["DisableStatus"] = cbDate.Checked == true ? "Disable" : "Enable";
+
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -171,7 +176,7 @@ namespace testing
                 data1.Columns.Add("no", "No.");
                 data1.Columns.Add("id", "ID.");
                 data1.Columns.Add("", "Processed By");
-                data1.Columns.Add("", "Username");
+                data1.Columns.Add("uname", "Username");
                 data1.Columns.Add("", "Processed For");
                 data1.Columns.Add("", "Purpose");
                 data1.Columns.Add("", "Requested Date");
@@ -180,6 +185,7 @@ namespace testing
                 data1.Columns.Add("", "Date");
 
                 data1.Columns["id"].Visible = false;
+                data1.Columns["uname"].Visible = false;
 
 
                 var uri = host.IP() + "/iBar/ibar_reportrequest.php";
@@ -196,6 +202,7 @@ namespace testing
                     datas["ProcessBy"] = ProcessedBy;
                     datas["Status"] = Status;
                     datas["DeliveryOpt"] = DeliveryOptionParameter;
+                    datas["DisableStatus"] = cbDate.Checked == true? "Disable" : "Enable";
 
 
                     var response = wb.UploadValues(uri, "POST", datas);
@@ -275,6 +282,8 @@ namespace testing
                     datas["Date1"] = date1.ToString();
                     datas["Date2"] = date2.ToString();
                     datas["ProcessBy"] = ProcessBy;
+                    datas["DisableStatus"] = cbDate.Checked == true ? "Disable" : "Enable";
+
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -356,6 +365,8 @@ namespace testing
                     datas["ProcessBy"] = ProcessBy;
                     datas["Status"] = Status;
                     datas["DeliveryOpt"] = DeliveryOptionParameter;
+                    datas["DisableStatus"] = cbDate.Checked == true ? "Disable" : "Enable";
+
 
                     var response = wb.UploadValues(uri, "POST", datas);
                     responseFromServer = Encoding.UTF8.GetString(response);
@@ -403,7 +414,6 @@ namespace testing
                         data1.Rows.Add(AL.ToArray());
                         i++;
                     }
-
                 }
                 else if (success == "0")
                 {
@@ -440,26 +450,27 @@ namespace testing
             string stat = cbStatus.SelectedItem.ToString();
             string processby = cbProcessBy.SelectedValue.ToString();
             string delivery = cbDeliveryOpt.SelectedValue.ToString();
+            string disabledstatus = cbDate.Checked == true ? "Disable" : "Enable";
 
             string reports = cbReports.SelectedItem.ToString();
             if (reports == "Issuance Reports")
             {
-                vwrIssuanceReports frm = new vwrIssuanceReports(date1, date2, processby, delivery);
+                vwrIssuanceReports frm = new vwrIssuanceReports(date1, date2, processby, delivery, disabledstatus);
                 frm.ShowDialog(this);
             }
             else if (reports == "Request Reports")
             {
-                vwrRequestReports frm = new vwrRequestReports(date1, date2, processby, stat);
+                vwrRequestReports frm = new vwrRequestReports(date1, date2, processby, stat,delivery , disabledstatus);
                 frm.ShowDialog(this);
             }
             else if (reports == "Appointment Reports")
             {
-                vwrAppointmentReport frm = new vwrAppointmentReport(date1, date2);
+                vwrAppointmentReport frm = new vwrAppointmentReport(date1, date2, disabledstatus);
                 frm.ShowDialog(this);
             }
             else if (reports == "Miscellaneous Services Reports")
             {
-                vwrMiscellaneousServices frm = new vwrMiscellaneousServices(date1, date2, processby, stat, delivery);
+                vwrMiscellaneousServices frm = new vwrMiscellaneousServices(date1, date2, processby, stat, delivery, disabledstatus);
                 frm.ShowDialog(this);
             }
             else
@@ -634,6 +645,22 @@ namespace testing
         {
             //btnFilter_Click(null, null);
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cbDeliveryOpt.SelectedIndex = 0;
+                cbStatus.SelectedIndex = 0;
+                cbProcessBy.SelectedIndex = 0;
+
+                load();
+            }
+            catch
+            {
+
+            }
         }
     }
 

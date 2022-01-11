@@ -34,6 +34,11 @@ namespace testing
             lblName.Text = user.name();
         }
 
+        public void EnableSwitch()
+        {
+            btnSwitch.Visible = true;
+        }
+
         private void frmMenu_Load(object sender, EventArgs e)
         {
             //RoundImage();
@@ -128,7 +133,12 @@ namespace testing
             pictureBox2.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,pictureBox2.Width, pictureBox2.Height,90,90));
         }
 
-
-
+        private void btnSwitch_Click(object sender, EventArgs e)
+        {
+            frmMenuAdmin frm = new frmMenuAdmin();
+            frm.Closed += (s, args) => this.Close();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

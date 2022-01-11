@@ -77,7 +77,8 @@ namespace testing
             this.mtrData2.EnableHeadersVisualStyles = false;
             this.mtrData2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtrData2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtrData2.Location = new System.Drawing.Point(18, 68);
+            this.mtrData2.Location = new System.Drawing.Point(14, 55);
+            this.mtrData2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtrData2.Name = "mtrData2";
             this.mtrData2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -93,7 +94,7 @@ namespace testing
             this.mtrData2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mtrData2.RowTemplate.Height = 40;
             this.mtrData2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mtrData2.Size = new System.Drawing.Size(679, 581);
+            this.mtrData2.Size = new System.Drawing.Size(604, 472);
             this.mtrData2.TabIndex = 3;
             this.mtrData2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mtrData2_CellClick);
             // 
@@ -103,9 +104,10 @@ namespace testing
             // 
             // 
             this.tbDelivery.CustomButton.Image = null;
-            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(356, 1);
+            this.tbDelivery.CustomButton.Location = new System.Drawing.Point(200, 2);
+            this.tbDelivery.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDelivery.CustomButton.Name = "";
-            this.tbDelivery.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbDelivery.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbDelivery.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbDelivery.CustomButton.TabIndex = 1;
             this.tbDelivery.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -113,7 +115,8 @@ namespace testing
             this.tbDelivery.CustomButton.Visible = false;
             this.tbDelivery.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbDelivery.Lines = new string[0];
-            this.tbDelivery.Location = new System.Drawing.Point(722, 304);
+            this.tbDelivery.Location = new System.Drawing.Point(652, 254);
+            this.tbDelivery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDelivery.MaxLength = 32767;
             this.tbDelivery.Name = "tbDelivery";
             this.tbDelivery.PasswordChar = '\0';
@@ -123,7 +126,7 @@ namespace testing
             this.tbDelivery.SelectionLength = 0;
             this.tbDelivery.SelectionStart = 0;
             this.tbDelivery.ShortcutsEnabled = true;
-            this.tbDelivery.Size = new System.Drawing.Size(390, 35);
+            this.tbDelivery.Size = new System.Drawing.Size(292, 28);
             this.tbDelivery.TabIndex = 17;
             this.tbDelivery.UseSelectable = true;
             this.tbDelivery.WaterMark = "Enter Delivery Fee";
@@ -136,9 +139,10 @@ namespace testing
             // 
             // 
             this.tbDocFee.CustomButton.Image = null;
-            this.tbDocFee.CustomButton.Location = new System.Drawing.Point(356, 1);
+            this.tbDocFee.CustomButton.Location = new System.Drawing.Point(200, 2);
+            this.tbDocFee.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDocFee.CustomButton.Name = "";
-            this.tbDocFee.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbDocFee.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbDocFee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbDocFee.CustomButton.TabIndex = 1;
             this.tbDocFee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -146,7 +150,8 @@ namespace testing
             this.tbDocFee.CustomButton.Visible = false;
             this.tbDocFee.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbDocFee.Lines = new string[0];
-            this.tbDocFee.Location = new System.Drawing.Point(722, 212);
+            this.tbDocFee.Location = new System.Drawing.Point(652, 179);
+            this.tbDocFee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDocFee.MaxLength = 32767;
             this.tbDocFee.Name = "tbDocFee";
             this.tbDocFee.PasswordChar = '\0';
@@ -156,7 +161,7 @@ namespace testing
             this.tbDocFee.SelectionLength = 0;
             this.tbDocFee.SelectionStart = 0;
             this.tbDocFee.ShortcutsEnabled = true;
-            this.tbDocFee.Size = new System.Drawing.Size(390, 35);
+            this.tbDocFee.Size = new System.Drawing.Size(292, 28);
             this.tbDocFee.TabIndex = 16;
             this.tbDocFee.UseSelectable = true;
             this.tbDocFee.WaterMark = "Enter Document Fee";
@@ -173,9 +178,10 @@ namespace testing
             this.tbTypes.CustomButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tbTypes.CustomButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.tbTypes.CustomButton.Image = null;
-            this.tbTypes.CustomButton.Location = new System.Drawing.Point(356, 1);
+            this.tbTypes.CustomButton.Location = new System.Drawing.Point(200, 2);
+            this.tbTypes.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTypes.CustomButton.Name = "";
-            this.tbTypes.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.tbTypes.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.tbTypes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbTypes.CustomButton.TabIndex = 1;
             this.tbTypes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -183,7 +189,8 @@ namespace testing
             this.tbTypes.CustomButton.Visible = false;
             this.tbTypes.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tbTypes.Lines = new string[0];
-            this.tbTypes.Location = new System.Drawing.Point(722, 125);
+            this.tbTypes.Location = new System.Drawing.Point(652, 109);
+            this.tbTypes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTypes.MaxLength = 32767;
             this.tbTypes.Name = "tbTypes";
             this.tbTypes.PasswordChar = '\0';
@@ -194,7 +201,7 @@ namespace testing
             this.tbTypes.SelectionStart = 0;
             this.tbTypes.ShortcutsEnabled = false;
             this.tbTypes.ShowClearButton = true;
-            this.tbTypes.Size = new System.Drawing.Size(390, 35);
+            this.tbTypes.Size = new System.Drawing.Size(292, 28);
             this.tbTypes.TabIndex = 15;
             this.tbTypes.UseSelectable = true;
             this.tbTypes.WaterMark = "Enter Document Type";
@@ -205,20 +212,23 @@ namespace testing
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnDelete.Location = new System.Drawing.Point(722, 420);
+            this.btnDelete.Location = new System.Drawing.Point(649, 386);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 49);
+            this.btnDelete.Size = new System.Drawing.Size(94, 40);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnUpdate.Location = new System.Drawing.Point(854, 420);
+            this.btnUpdate.Location = new System.Drawing.Point(684, 328);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(126, 49);
+            this.btnUpdate.Size = new System.Drawing.Size(227, 40);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseSelectable = true;
@@ -227,21 +237,24 @@ namespace testing
             // btnAdd
             // 
             this.btnAdd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnAdd.Location = new System.Drawing.Point(986, 420);
+            this.btnAdd.Location = new System.Drawing.Point(837, 386);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(126, 49);
+            this.btnAdd.Size = new System.Drawing.Size(94, 40);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseSelectable = true;
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 32);
+            this.label1.Size = new System.Drawing.Size(135, 25);
             this.label1.TabIndex = 19;
             this.label1.Text = "CERTIFICATES";
             // 
@@ -249,9 +262,10 @@ namespace testing
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(717, 87);
+            this.label2.Location = new System.Drawing.Point(648, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 28);
+            this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 22;
             this.label2.Text = "Document Type";
             // 
@@ -259,9 +273,10 @@ namespace testing
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(717, 178);
+            this.label3.Location = new System.Drawing.Point(648, 152);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 28);
+            this.label3.Size = new System.Drawing.Size(110, 21);
             this.label3.TabIndex = 23;
             this.label3.Text = "Document Fee";
             // 
@@ -269,18 +284,19 @@ namespace testing
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(717, 271);
+            this.label4.Location = new System.Drawing.Point(648, 227);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 28);
+            this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 24;
             this.label4.Text = "Delivery Fee";
             // 
             // tabCertificates
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1163, 692);
+            this.ClientSize = new System.Drawing.Size(984, 562);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -293,6 +309,7 @@ namespace testing
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.mtrData2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "tabCertificates";
             this.Text = "tabCertificates";
             this.Load += new System.EventHandler(this.tabCertificates_Load);

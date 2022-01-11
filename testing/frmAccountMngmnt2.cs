@@ -140,7 +140,7 @@ namespace testing
                         resUsername = jo["Username"].ToString();
                         tbCPassword.Text = jo["Password"].ToString();
                         cbAccountStat.Text = jo["Status"].ToString() == "0"? "Enabled" : "Disabled";
-                        cbValid.Text = jo["Valid"].ToString() == "0" ? "Not Validated" : "Validated";
+                        cbValid.Text = jo["Valid"].ToString() == "0" ? "Not Verified" : "Verified";
                         DownloadImage3(jo["Image"].ToString());
 
                         string valid = jo["img_idcloseup"].ToString();
@@ -250,7 +250,7 @@ namespace testing
                 {
                     Notification = new Notification()
                     {
-                        Title = "Account Validation Info.",
+                        Title = "Account Verification Info.",
                         Body = "Status: " + Stat +"\nInformation: " + Message
                     },
                     Topic = topic
@@ -274,9 +274,9 @@ namespace testing
                 {
 
                     From = new EmailAddress(api.getSendGridEmail(), "iBarangay"),
-                    Subject = "Account Validation Info.",
-                    PlainTextContent = "Account Validation \n Status: " + Stat + "Information: " + Message,
-                    HtmlContent = "<h3> Account Validation</h3> <br><strong>Status:</strong> " + Stat + "<br><strong>Information: </strong>" + Message
+                    Subject = "Account Verification Info.",
+                    PlainTextContent = "Account Verification \n Status: " + Stat + "Information: " + Message,
+                    HtmlContent = "<h3> Account Verification</h3> <br><strong>Status:</strong> " + Stat + "<br><strong>Information: </strong>" + Message
                 };
 
                 msg.AddTo(new EmailAddress(lblEmail.Text, ""));
